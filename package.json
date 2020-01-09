@@ -1,0 +1,25 @@
+{
+  "name": "energisa",
+  "version": "1.0.0",
+  "description": "layout-em-html",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yusefrich/energisa-website.git"
+  },
+  "keywords": [
+    "energisa"
+  ],
+  "author": "Yusef Richard @yusefrich",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yusefrich/energisa-website/issues"
+  },
+  "homepage": "https://github.com/yusefrich/energisa-website#readme",
+  "dependencies": {
+    "bootstrap": "^4.4.1"
+  }
+}
