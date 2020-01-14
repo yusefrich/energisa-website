@@ -9,13 +9,21 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i&display=swap" rel="stylesheet">
 
-    <title>Hello, world!</title>
+    <title>Energisa</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top  ">
-        <a class="navbar-brand" href="#">Navbar</a>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top " id="menu">
+        <div  class="bg-light menu-bg"></div>
+        <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+        <div class="container">
+        <a class="navbar-brand" href="#">
+            <img class="brand-dark d-none" src="img/logo-dark.png" width="200" alt="">
+            <img class="brand-light d-none" src="img/logo-light.png" width="200" alt="">
+        </a>
+        
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -24,32 +32,27 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link py-4" href="#">Quem somos <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
+                    <a class="nav-link py-4" href="#">Produtos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    <a class="nav-link py-4" href="#">Projetos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link py-4" href="#">Novidades</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link py-4" href="#">Ideias</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                <button class="btn  my-2 my-sm-0" type="submit"><ion-icon class="ion-2x" name="search"></ion-icon></button>
             </form>
         </div>
+    </div>
     </nav>
 
     <section id="home-carrousel">
@@ -95,7 +98,7 @@
         </div>
     </section>
 
-    <section id="home-novidades">
+    <section class="pt-1"  id="home-novidades">
         <div class="container">
             <div class="row mt-5">
                 <div class="col-md-12">
@@ -147,6 +150,40 @@
     </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+    <!-- navbar top opacity -->
+    <script>
+        $( document ).ready(function() {
+
+            var setNavbarOpacity = function() {
+                var o1 = $("#menu").offset();
+                var o2 = $("body").offset();
+                var dx = o1.left - o2.left;
+                var dy = o1.top - o2.top;
+                var distance = Math.sqrt(dx * dx + dy * dy);
+
+                if(distance > 200){
+                    jQuery( ".menu-bg" ).removeClass("hide");
+                    jQuery( ".brand-light" ).removeClass("d-none");
+                    jQuery( ".brand-dark" ).addClass("d-none");
+                }else {
+
+                    jQuery( ".menu-bg" ).addClass("hide");
+                    jQuery( ".brand-light" ).addClass("d-none");
+                    jQuery( ".brand-dark" ).removeClass("d-none");
+                }
+            }
+
+            setNavbarOpacity();
+
+            $(window).scroll(function() {
+                setNavbarOpacity();
+            });
+
+        });
+
     </script>
 </body>
 
