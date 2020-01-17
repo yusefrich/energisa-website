@@ -1,0 +1,18 @@
+/*------------------------
+	icons
+-------------------------*/
+@function unicode($str) {
+  @return unquote("\"\\#{$str}\"");
+}
+
+$icon-prev-icon: unicode(ea02);
+$icon-next-icon: unicode(ea03);
+
+.icon-prev-icon::before {
+  content: $icon-prev-icon;
+}
+
+.icon-next-icon::before {
+  content: $icon-next-icon;
+}
+

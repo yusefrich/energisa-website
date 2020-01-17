@@ -1,5 +1,9 @@
 $font-family-sans-serif:  "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $headings-font-weight:    normal !default;
+$theme-colors: (
+  "primary": #EA6724,
+  
+);
 
 
 @import "../node_modules/bootstrap/scss/bootstrap";
