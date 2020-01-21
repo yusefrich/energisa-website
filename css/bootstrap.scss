@@ -4,6 +4,10 @@ $theme-colors: (
   "primary": #EA6724,
   
 );
+$btn-default-color:              #EA6724 !default;
 
+.btn-light{
+  color: #EA6724 !important;
+}
 
 @import "../node_modules/bootstrap/scss/bootstrap";
