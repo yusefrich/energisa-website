@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i,800,800i&display=swap"
         rel="stylesheet">
-
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Energisa</title>
 </head>
 
@@ -194,7 +194,7 @@
 
             <div class="row mt-5">
                 <div class="col-md-12">
-                    <div  class="card card-bg-wide text-white my-5 zoom-hover">
+                    <div data-aos="fade-up" class="card card-bg-wide text-white my-5 zoom-hover">
                         <!-- <img src="https://via.placeholder.com/1920x600" class="card-img" alt="..."> -->
                         <div class="img-holder" style="
                             background: linear-gradient(0deg, rgba(55, 55, 55, 0.4), rgba(55, 55, 55, 0.4)), url(./img/novidades-card.png);
@@ -208,52 +208,57 @@
                         <button class="btn btn-light btn-round card-btn m-5"><span class="icon pt-2 pb-2 pr-1 icon-next-icon"></span></button>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div data-aos="fade-right" class="col-md-6">
                     <img src="./img/n-small-1.png" class="figure-img img-fluid rounded zoom-hover" alt="...">
                     <p class="img-caption text-white"><strong> Ao contrário do que se acredita, Lorem Ipsum não é simplesmente um texto randômico </strong> </p>
                 </div>
-                <div class="col-md-6">
+                <div data-aos="fade-left" class="col-md-6">
                     <img src="./img/n-small-2.png" class="figure-img img-fluid rounded zoom-hover" alt="...">
                     <p class="img-caption text-white"><strong> Ao contrário do que se acredita, Lorem Ipsum não é simplesmente um texto randômico</strong> </p class="text-white">
                 </div>
-                <div class="col-md-6">
+                <div data-aos="fade-right" class="col-md-6">
                     <img src="./img/n-small-3.png" class="figure-img img-fluid rounded zoom-hover" alt="...">
                     <p class="img-caption text-white"><strong> Ao contrário do que se acredita, Lorem Ipsum não é simplesmente um texto randômico</strong> </p class="text-white">
                 </div>
-                <div class="col-md-6">
+                <div data-aos="fade-left" class="col-md-6">
                     <img src="./img/n-small-4.png" class="figure-img img-fluid rounded zoom-hover" alt="...">
                     <p class="img-caption text-white"><strong> Ao contrário do que se acredita, Lorem Ipsum não é simplesmente um texto randômico</strong> </p class="text-white">
                 </div>
                 <div class="col-12">
-                    <div class="d-flex justify-content-center">
+                    <div data-aos="fade-up" class="d-flex justify-content-center">
                         <button class="btn btn-light px-5">Confira as novidades</button>
                     </div>
                 </div>
             </div>
-            <div class="d-flex justify-content-between">
-                <div>
-                    <img style="margin-top: 96px;" src="./img/bush-sm.png" alt="">
-                </div>
-                <div>
-                    <img src="./img/bush-md.png" alt="">
+            <div id="parallax-bush-1">
+                <div data-depth="0.1" class="d-flex justify-content-between">
+                    <div>
+                        <img style="margin-top: 96px;" src="./img/bush-sm.png" alt="">
+                    </div>
+                    <div>
+                        <img src="./img/bush-md.png" alt="">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     <section id="home-projetos">
-        <div class="container mb-5 pb-5">
-            <div class="d-flex justify-content-between">
-                <div class="trace-detail-left">
-                    <img class="" src="./img/detalhes-traco-laranja.png" alt="">
-                </div>
-                <div class="trace-detail-right">
-                    <img class="" src="./img/detalhes-traco-azul-lg.png" alt="">
+        <div class="container mb-5 pb-5" >
+            <div id="parallax-detalhe-2">
+                <div data-depth="0.2" class="d-flex justify-content-between">
+                    <div class="trace-detail-left">
+                        <img class="" src="./img/detalhes-traco-laranja.png" alt="">
+                    </div>
+                    <div class="trace-detail-right">
+                        <img class="" src="./img/detalhes-traco-azul-lg.png" alt="">
+                    </div>
                 </div>
             </div>
 
+
             <div class="row mt-5">
                 <div class="col-md-12">
-                    <div  class="card card-bg-wide text-white mt-5 mb-4">
+                    <div data-aos="fade-up" class="card card-bg-wide text-white mt-5 mb-4 zoom-hover">
                         <!-- <img src="https://via.placeholder.com/1920x600" class="card-img" alt="..."> -->
                         <div class="img-holder" style="
                             background: linear-gradient(0deg, rgba(55, 55, 55, 0.4), rgba(55, 55, 55, 0.4)), url(./img/projetos-card.png);
@@ -268,7 +273,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div  class="card card-bg-small text-white mb-2">
+                    <div data-aos="flip-left" class="card card-bg-small text-white mb-2 zoom-hover">
                         <!-- <img src="https://via.placeholder.com/1920x600" class="card-img" alt="..."> -->
                         <div class="img-holder-sm" style="
                             background: linear-gradient(0deg, rgba(205,87,27, 0.6), rgba(205,87,27, 0.6)), url(./img/projetos-1.png);
@@ -286,7 +291,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div  class="card card-bg-small text-white mb-2">
+                    <div data-aos="flip-left" class="card card-bg-small text-white mb-2 zoom-hover">
                         <!-- <img src="https://via.placeholder.com/1920x600" class="card-img" alt="..."> -->
                         <div class="img-holder-sm" style="
                             background: linear-gradient(0deg, rgba(141,99,34, 0.6), rgba(141,99,34, 0.6)), url(./img/projetos-2.png);
@@ -304,7 +309,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div  class="card card-bg-small text-white mb-2">
+                    <div data-aos="flip-left" class="card card-bg-small text-white mb-2 zoom-hover">
                         <!-- <img src="https://via.placeholder.com/1920x600" class="card-img" alt="..."> -->
                         <div class="img-holder-sm" style="
                             background: linear-gradient(0deg, rgba(44,85,138, 0.6), rgba(44,85,138, 0.6)), url(./img/projetos-3.png);
@@ -323,13 +328,14 @@
                 </div>
 
             </div>
-
-            <div class="d-flex justify-content-between">
-                <div class="trace-detail-left trace-detail-offset-bottom">
-                    <img style="
-                        z-index: 1;
-                        position: absolute;
-                        " src="./img/detalhes-traco-laranja.png" alt="">
+            <div id="parallax-detalhe-3">
+                <div data-depth="0.3" class="d-flex justify-content-between">
+                    <div class="trace-detail-left trace-detail-offset-bottom">
+                        <img style="
+                            z-index: 1;
+                            position: absolute;
+                            " src="./img/detalhes-traco-laranja.png" alt="">
+                    </div>
                 </div>
             </div>
         </div>
@@ -345,8 +351,8 @@
                     </ol>
                 </div>
 
-                <div class="carousel-inner">
-                    <div class="carousel-item active carousel-long"
+                <div class="carousel-inner ">
+                    <div class="carousel-item active carousel-long zoom-hover"
                         style="
                         background: linear-gradient(0deg, rgba(8, 107, 192, 0.7), rgba(8, 107, 192, 0.7)), url(./img/projeto-autoatendimento.png);
                         background-position: center;
@@ -363,7 +369,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item  carousel-long"
+                    <div class="carousel-item  carousel-long zoom-hover"
                         style="
                         background: linear-gradient(0deg, rgba(8, 107, 192, 0.7), rgba(8, 107, 192, 0.7)), url(./img/projeto-autoatendimento.png);
                         background-position: center;
@@ -380,7 +386,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item  carousel-long"
+                    <div class="carousel-item  carousel-long zoom-hover"
                         style="
                         background: linear-gradient(0deg, rgba(8, 107, 192, 0.7), rgba(8, 107, 192, 0.7)), url(./img/projeto-autoatendimento.png);
                         background-position: center;
@@ -416,15 +422,17 @@
     </section>
     <section class="pb-0" id="home-ideias">
         <div class="container mt-4 mb-0">
-            <div class="d-flex justify-content-between">
-                <div style="z-index: -2;" class="trace-detail-left trace-detail-offset-up">
-                    <img class="" src="./img/detalhes-traco-azul-lg.png" alt="">
+            <div id="parallax-detalhe-4">
+                <div data-depth="0.4" class="d-flex justify-content-between">
+                    <div style="z-index: -2;" class="trace-detail-left trace-detail-offset-up">
+                        <img class="" src="./img/detalhes-traco-azul-lg.png" alt="">
+                    </div>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-md-12">
-                    <div  class="card card-bg-wide text-white mt-5 mb-4">
+                    <div data-aos="fade-up" class="card card-bg-wide text-white mt-5 mb-4 zoom-hover">
                         <!-- <img src="https://via.placeholder.com/1920x600" class="card-img" alt="..."> -->
                         <div class="img-holder" style="
                             background: linear-gradient(0deg, rgba(55, 55, 55, 0.4), rgba(55, 55, 55, 0.4)), url(./img/ideias-card.png);
@@ -437,18 +445,19 @@
                         </div>
                         <button class="btn btn-light btn-round card-btn m-5"><span class="icon pt-2 pb-2 pr-1 icon-next-icon"></span></button>
                     </div>
-                    <div class="d-flex justify-content-between">
-                        <div style="z-index: -2;" class="trace-detail-left trace-detail-offset-up">
-                        </div>
-                        <div style="z-index: -2; margin-right: 100px;" class="trace-detail-right trace-detail-offset-up">
-                            <img class="" src="./img/detalhes-traco-laranja-sm.png" alt="">
+                    <div id="parallax-detalhe-5">
+                        <div data-depth="0.1" class="d-flex justify-content-between">
+                            <div style="z-index: -2;" class="trace-detail-left trace-detail-offset-up">
+                            </div>
+                            <div style="z-index: -2; margin-right: 100px;" class="trace-detail-right trace-detail-offset-up">
+                                <img class="" src="./img/detalhes-traco-laranja-sm.png" alt="">
+                            </div>
                         </div>
                     </div>
         
-        
                 </div>
                 <div class="col-md-4">
-                    <div  class="card card-full-small mb-2">
+                    <div data-aos="zoom-in" class="card card-full-small mb-2 zoom-hover">
                         <div  class=" overlay-white text-start">
                             <div class="d-flex justify-content-start pb-4">
                                 <div class="profile-pic mr-4" 
@@ -484,7 +493,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div  class="card card-full-small mb-2">
+                    <div data-aos="zoom-in" class="card card-full-small mb-2 zoom-hover">
                         <div  class=" overlay-white text-start">
                             <div class="d-flex justify-content-start pb-4">
                                 <div class="profile-pic mr-4" 
@@ -521,7 +530,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div  class="card card-full-small mb-2">
+                    <div data-aos="zoom-in" class="card card-full-small mb-2 zoom-hover">
                         <div  class=" overlay-white text-start">
                             <div class="d-flex justify-content-start pb-4">
                                 <div class="profile-pic mr-4" 
@@ -558,13 +567,15 @@
                     </div>
                 </div>
                 <div class="col-12">
-                    <div class="d-flex justify-content-center my-5 py-5">
+                    <div data-aos="zoom-in" class="d-flex justify-content-center my-5 py-5">
                         <button class="btn btn-primary px-5">Confira as novidades</button>
                     </div>
                 </div>
             </div>
-            <div class="d-flex justify-content-center mb-auto">
-                <img src="./img/hand-all.png" alt="">
+            <div id="parallax-hand-1">
+                <div data-depth="0.5" class="d-flex justify-content-center mb-auto">
+                    <img src="./img/hand-all.png" alt="">
+                </div>
             </div>
         </div>
     </section>
@@ -648,7 +659,10 @@
 
         });
     </script>
-    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <!-- parallax -->
     <script>
         $(document).ready(function(){
@@ -656,6 +670,33 @@
             var parallaxInstance = new Parallax(scene, {
                 relativeInput: true
             });
+            scene = document.getElementById('parallax-detalhe-2');
+            parallaxInstance = new Parallax(scene, {
+                relativeInput: true
+            });
+            scene = document.getElementById('parallax-detalhe-3');
+            parallaxInstance = new Parallax(scene, {
+                relativeInput: true
+            });
+            scene = document.getElementById('parallax-detalhe-4');
+            parallaxInstance = new Parallax(scene, {
+                relativeInput: true
+            });
+            scene = document.getElementById('parallax-detalhe-5');
+            parallaxInstance = new Parallax(scene, {
+                relativeInput: true
+            });
+            scene = document.getElementById('parallax-bush-1');
+            parallaxInstance = new Parallax(scene, {
+                relativeInput: true
+            });
+            parallaxInstance.friction(0.1, 0);
+            scene = document.getElementById('parallax-hand-1');
+            parallaxInstance = new Parallax(scene, {
+                relativeInput: true
+            });
+            parallaxInstance.friction(0.5, 0);
+
         });
     </script>
 </body>
