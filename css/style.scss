@@ -167,6 +167,18 @@ html {
     color: #fff !important;
 
 }
+.zoom-hover{
+    -ms-transition: all .2s ease-out;
+    -webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+
+}
+.zoom-hover:hover{
+    transform: scale(1.03); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+
+}
 //! MENU NAVS
 .transparent {
     border-width: 0px;
@@ -196,10 +208,9 @@ html {
     @include font-size-map($base-font-size);
     line-height: 25px;
 }
-.search-input-light{
+.search-input{
     border: 0;
-    border-bottom: 1px;
-    background-color: transparent !important;
+    border-radius: 50px;
 }
 section {
     margin-bottom: 0;
@@ -251,6 +262,36 @@ section {
 }
 .carousel-long .custom-control-carrousel-left{
     margin-bottom: 40px;
+}
+.carousel-control-holder{
+    position: absolute;
+    right: 26%;
+    bottom: 80px;
+}
+.carousel-control-holder .carousel-indicators{
+    position: initial;
+}
+.carousel-control-holder .custom-control-carrousel{
+    position: initial;
+}
+.carousel-info-container{
+    margin-bottom: 10rem;
+}
+.carousel-side-indicators-holder{
+    position: absolute;
+    z-index: 15;
+    left: 6%;
+    top: 200px;
+    display: flex;
+
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+.carousel-side-indicators-holder .carousel-indicators{
+    position: initial;
 }
 //! cards
 .card-bg-wide{

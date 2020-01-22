@@ -11,3 +11,9 @@ $btn-default-color:              #EA6724 !default;
 }
 
 @import "../node_modules/bootstrap/scss/bootstrap";
+
+.carousel-indicators li{
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}

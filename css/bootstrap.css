@@ -9879,5 +9879,10 @@ h3 {
     border-color: #dee2e6;
   }
 }
+.carousel-indicators li {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
 
 /*# sourceMappingURL=bootstrap.css.map */
