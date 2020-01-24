@@ -352,4 +352,14 @@ section {
   background-color: #1B9FC0;
 }
 
+.product-banner-holder {
+  padding-top: 171px;
+  padding-bottom: 171px;
+}
+
+.product-banner-text {
+  width: 800px;
+  margin: auto;
+}
+
 /*# sourceMappingURL=style.css.map */
