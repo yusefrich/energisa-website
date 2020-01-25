@@ -50,6 +50,7 @@ $p-font-size: (null: em(20));
 $caption-font-size: (null: em(24));
 $h1-font-size: (null: em(72));
 $h2-font-size: (null: em(58));
+$display-h2-font-size: (null: em(48));
 $h3-font-size: (null: em(36));
 .text-fade{
     font-family: Open Sans;
@@ -82,6 +83,14 @@ h2{
     font-style: normal;
     font-weight: 800;
     @include font-size-map($h2-font-size);
+    line-height: 79px;
+
+}
+.display-h2{
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 800;
+    @include font-size-map($display-h2-font-size) ;
     line-height: 79px;
 
 }
@@ -369,4 +378,9 @@ section {
 .product-banner-text{
     width: 800px;
     margin: auto;
+}
+//! pagina: produto-interno
+.product-description-text{
+    max-width: 500px;
+    
 }

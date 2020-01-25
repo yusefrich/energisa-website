@@ -36,6 +36,14 @@ h2 {
   line-height: 79px;
 }
 
+.display-h2 {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 3em;
+  line-height: 79px;
+}
+
 h1 {
   font-style: normal;
   font-weight: 800;
@@ -360,6 +368,10 @@ section {
 .product-banner-text {
   width: 800px;
   margin: auto;
+}
+
+.product-description-text {
+  max-width: 500px;
 }
 
 /*# sourceMappingURL=style.css.map */
