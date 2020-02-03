@@ -11,6 +11,12 @@ $btn-default-color:              #EA6724 !default;
 }
 
 @import "../node_modules/bootstrap/scss/bootstrap";
+.btn-outline-light{
+  border: 1px solid #B3B3B3 !important;
+  border-radius: 6px !important;
+
+  color: #737373 !important;
+}
 
 .carousel-indicators li{
   width: 12px;

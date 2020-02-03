@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i,800,800i&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>Energisa</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top " id="menu">
+        <div class="bg-light menu-bg"></div>
+        <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img class="brand-dark d-none" src="img/logo-dark.png" width="200" alt="">
+                <img class="brand-light d-none" src="img/logo-light.png" width="200" alt="">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link py-4" href="#">Quem somos <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link py-4" href="#">Produtos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link py-4" href="#">Projetos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link py-4" href="#">Novidades</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link py-4" href="#">Ideias</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <div class="collapse" id="collapseExample">
+                        <!-- * input de pesquisa colapsado para pesquisa aleatória na pagina inteira -->
+                        <input style="box-shadow: none;" class="form-control mr-sm-2 search-input" type="search"
+                            placeholder="Search" aria-label="Search">
+                    </div>
+                    <button style="box-shadow: none;" class="btn search-toggle my-2 my-sm-0" type="button"
+                        data-toggle="collapse" data-target="#collapseExample" aria-expanded="false"
+                        aria-controls="collapseExample">
+                        <ion-icon class="ion-2x" name="search"></ion-icon>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <section id="product-banner">
+        <div style="
+            background: linear-gradient(0deg, rgba(8, 155, 192, 0.7), rgba(8, 155, 192, 0.7)), url(./img/product-header.png);
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: multiply, normal;
+            " class="container-fluid   product-banner-holder px-0 ">
+            <!-- text-white -->
+            <div class="product-banner text-center text-white ">
+                <h1>Confira nosso portfólio de produtos</h1>
+                <p class="text-caption">Fique por dentro de todos os produtos feitos pela nossa equipe e sinta-se a vontade para colaborar conosco.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="product-todos">
+        <div class="container">
+            <div class="text-center my-5">
+                <img src="./img/tools.png" alt="">
+                <h1 class="text-orange">Confira todos</h1>
+                <p class="text-gray">Fique por dentro de todos os nossos produtos</p>
+            </div>
+
+            <div id="parallax-detalhe-2">
+                <div data-depth="0.2" class="d-flex justify-content-between">
+                    <div class="trace-detail-left">
+                        <img class="" src="./img/detalhes-traco-laranja.png" alt="">
+                    </div>
+                    <div class="trace-detail-right">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div data-aos="flip-left" class="col-md-4">
+                    <div  class="card card-bg-small text-white mb-2 zoom-hover">
+                        <!-- <img src="https://via.placeholder.com/1920x600" class="card-img" alt="..."> -->
+                        <div class="img-holder-sm" style="
+                            background: linear-gradient(0deg, rgba(205,87,27, 0.6), rgba(205,87,27, 0.6)), url(./img/projetos-1.png);
+                            background-position: center;
+                            background-size: cover;"></div>
+                        <div  class="card-img-overlay overlay-sm text-start">
+                            <h3 class="card-title">Negociação de Dívidas</h3>
+                            <p class="card-text">A vantagem de usar Lorem Ipsum é que ele tem uma distribuição normal de letras, ao contrário de "Conteúdo aqui, conteúdo aqui".</p>
+                            <div class="overlay-status">
+                                <small class="pl-3 ">STATUS</small><br>
+                                <small class="outline-text py-1 px-3">FINALIZADO</small>
+                            </div>
+                        </div>
+                        <button class="btn btn-light btn-round btn-sm card-btn m-3"><span class="icon pt-2 pb-2 pr-2 icon-next-icon"></span></button>
+                    </div>
+                </div>
+                <div data-aos="flip-left" class="col-md-4">
+                    <div  class="card card-bg-small text-white mb-2 zoom-hover">
+                        <!-- <img src="https://via.placeholder.com/1920x600" class="card-img" alt="..."> -->
+                        <div class="img-holder-sm" style="
+                            background: linear-gradient(0deg, rgba(141,99,34, 0.6), rgba(141,99,34, 0.6)), url(./img/projetos-2.png);
+                            background-position: center;
+                            background-size: cover;"></div>
+                        <div  class="card-img-overlay overlay-sm text-start">
+                            <h3 class="card-title">Negociação de Dívidas</h3>
+                            <p class="card-text">A vantagem de usar Lorem Ipsum é que ele tem uma distribuição normal de letras, ao contrário de "Conteúdo aqui, conteúdo aqui".</p>
+                            <div class="overlay-status">
+                                <small class="pl-3 ">STATUS</small><br>
+                                <small class="outline-text py-1 px-3">FINALIZADO</small>
+                            </div>
+                        </div>
+                        <button class="btn btn-light btn-round btn-sm card-btn m-3"><span class="icon pt-2 pb-2 pr-2 icon-next-icon"></span></button>
+                    </div>
+                </div>
+                <div data-aos="flip-left" class="col-md-4">
+                    <div  class="card card-bg-small text-white mb-2 zoom-hover">
+                        <!-- <img src="https://via.placeholder.com/1920x600" class="card-img" alt="..."> -->
+                        <div class="img-holder-sm" style="
+                            background: linear-gradient(0deg, rgba(44,85,138, 0.6), rgba(44,85,138, 0.6)), url(./img/projetos-3.png);
+                            background-position: center;
+                            background-size: cover;"></div>
+                        <div  class="card-img-overlay overlay-sm text-start">
+                            <h3 class="card-title">Negociação de Dívidas</h3>
+                            <p class="card-text">A vantagem de usar Lorem Ipsum é que ele tem uma distribuição normal de letras, ao contrário de "Conteúdo aqui, conteúdo aqui".</p>
+                            <div class="overlay-status">
+                                <small class="pl-3 ">STATUS</small><br>
+                                <small class="outline-text py-1 px-3">FINALIZADO</small>
+                            </div>
+                        </div>
+                        <button class="btn btn-light btn-round btn-sm card-btn m-3"><span class="icon pt-2 pb-2 pr-2 icon-next-icon"></span></button>
+                    </div>
+                </div>
+                <div data-aos="flip-left" class="col-md-4">
+                    <div  class="card card-bg-small text-white mb-2 zoom-hover">
+                        <!-- <img src="https://via.placeholder.com/1920x600" class="card-img" alt="..."> -->
+                        <div class="img-holder-sm" style="
+                            background: linear-gradient(0deg, rgba(205,87,27, 0.6), rgba(205,87,27, 0.6)), url(./img/projetos-1.png);
+                            background-position: center;
+                            background-size: cover;"></div>
+                        <div  class="card-img-overlay overlay-sm text-start">
+                            <h3 class="card-title">Negociação de Dívidas</h3>
+                            <p class="card-text">A vantagem de usar Lorem Ipsum é que ele tem uma distribuição normal de letras, ao contrário de "Conteúdo aqui, conteúdo aqui".</p>
+                            <div class="overlay-status">
+                                <small class="pl-3 ">STATUS</small><br>
+                                <small class="outline-text py-1 px-3">FINALIZADO</small>
+                            </div>
+                        </div>
+                        <button class="btn btn-light btn-round btn-sm card-btn m-3"><span class="icon pt-2 pb-2 pr-2 icon-next-icon"></span></button>
+                    </div>
+                </div>
+                <div data-aos="flip-left" class="col-md-4">
+                    <div  class="card card-bg-small text-white mb-2 zoom-hover">
+                        <!-- <img src="https://via.placeholder.com/1920x600" class="card-img" alt="..."> -->
+                        <div class="img-holder-sm" style="
+                            background: linear-gradient(0deg, rgba(141,99,34, 0.6), rgba(141,99,34, 0.6)), url(./img/projetos-2.png);
+                            background-position: center;
+                            background-size: cover;"></div>
+                        <div  class="card-img-overlay overlay-sm text-start">
+                            <h3 class="card-title">Negociação de Dívidas</h3>
+                            <p class="card-text">A vantagem de usar Lorem Ipsum é que ele tem uma distribuição normal de letras, ao contrário de "Conteúdo aqui, conteúdo aqui".</p>
+                            <div class="overlay-status">
+                                <small class="pl-3 ">STATUS</small><br>
+                                <small class="outline-text py-1 px-3">FINALIZADO</small>
+                            </div>
+                        </div>
+                        <button class="btn btn-light btn-round btn-sm card-btn m-3"><span class="icon pt-2 pb-2 pr-2 icon-next-icon"></span></button>
+                    </div>
+                </div>
+                <div data-aos="flip-left" class="col-md-4">
+                    <div  class="card card-bg-small text-white mb-2 zoom-hover">
+                        <!-- <img src="https://via.placeholder.com/1920x600" class="card-img" alt="..."> -->
+                        <div class="img-holder-sm" style="
+                            background: linear-gradient(0deg, rgba(44,85,138, 0.6), rgba(44,85,138, 0.6)), url(./img/projetos-3.png);
+                            background-position: center;
+                            background-size: cover;"></div>
+                        <div  class="card-img-overlay overlay-sm text-start">
+                            <h3 class="card-title">Negociação de Dívidas</h3>
+                            <p class="card-text">A vantagem de usar Lorem Ipsum é que ele tem uma distribuição normal de letras, ao contrário de "Conteúdo aqui, conteúdo aqui".</p>
+                            <div class="overlay-status">
+                                <small class="pl-3 ">STATUS</small><br>
+                                <small class="outline-text py-1 px-3">FINALIZADO</small>
+                            </div>
+                        </div>
+                        <button class="btn btn-light btn-round btn-sm card-btn m-3"><span class="icon pt-2 pb-2 pr-2 icon-next-icon"></span></button>
+                    </div>
+                </div>
+                <div data-aos="flip-left" class="col-md-12 text-center mt-4">
+                    <button class="btn btn-outline-light px-5"> Mostrar mais</button>
+                </div>
+
+            </div>
+            <div id="parallax-bush-1">
+                <div data-depth="0.1" class="d-flex justify-content-between">
+                    <div>
+                        <img style="transform: scaleX(-1)" src="./img/bush-md.png" alt="">
+                    </div>
+                    <div>
+                        <img style="margin-top: 96px; transform: scaleX(-1)" src="./img/bush-sm.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="pt-3" id="footer">
+        <div class="container py-5">
+            <div class="d-flex justify-content-between">
+                <img class="" src="img/logo-dark.png" width="200" alt="">
+                <div class="d-flex justify-content-center">
+                    <a class="nav-link link-light" href="#">Quem somos</a>
+                    <a class="nav-link link-light" href="#">Produtos</a>
+                    <a class="nav-link link-light" href="#">Projetos</a>
+                    <a class="nav-link link-light" href="#">Novidades</a>
+                    <a class="nav-link link-light" href="#">Ideias</a>
+                </div>
+                <div>
+                    <button class="btn btn-light text-blue btn-round">
+                        <ion-icon style="font-size: 20px;" class="pt-2" name="logo-twitter"></ion-icon>
+                    </button>
+                    <button class="btn btn-light text-blue btn-round">
+                        <ion-icon style="font-size: 20px;" class="pt-2" name="logo-linkedin"></ion-icon>
+                    </button>
+                    <button class="btn btn-light text-blue btn-round">
+                        <ion-icon style="font-size: 20px;" class="pt-2" name="logo-instagram"></ion-icon>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid footer-bottom text-center px-0 py-4">
+            <small class="text-white ">© Copyright 2019 Energisa COCD.</small>
+            <img class="" src="img/feito-com.png" alt="">
+        </div>
+    </section>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+
+    <!-- navbar top opacity -->
+    <script>
+        $(document).ready(function () {
+
+            var setNavbarOpacity = function () {
+                var o1 = $("#menu").offset();
+                var o2 = $("body").offset();
+                var dx = o1.left - o2.left;
+                var dy = o1.top - o2.top;
+                var distance = Math.sqrt(dx * dx + dy * dy);
+
+                if (distance > 200) {
+                    jQuery(".menu-bg").removeClass("hide");
+                    jQuery(".brand-light").removeClass("d-none");
+                    jQuery(".brand-dark").addClass("d-none");
+
+                    jQuery(".navbar").addClass("navbar-light");
+                    jQuery(".navbar").removeClass("navbar-dark");
+
+                    jQuery(".search-toggle").removeClass("text-white");
+                } else {
+                    jQuery(".menu-bg").addClass("hide");
+                    jQuery(".brand-light").addClass("d-none");
+                    jQuery(".brand-dark").removeClass("d-none");
+
+                    jQuery(".navbar").removeClass("navbar-light");
+                    jQuery(".navbar").addClass("navbar-dark");
+
+                    jQuery(".search-toggle").addClass("text-white");
+                }
+            }
+
+            setNavbarOpacity();
+
+            $(window).scroll(function () {
+                setNavbarOpacity();
+            });
+
+        });
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <!-- parallax -->
+    <script>
+        $(document).ready(function () {
+            var scene = document.getElementById('parallax-detalhe-1');
+            var parallaxInstance;
+            if(scene){
+                parallaxInstance = new Parallax(scene, {
+                    relativeInput: true
+                });
+            }
+            scene = document.getElementById('parallax-detalhe-2');
+            if(scene){
+                var parallaxInstance = new Parallax(scene, {
+                    relativeInput: true
+                });
+            }
+            scene = document.getElementById('parallax-detalhe-3');
+            if(scene){
+                var parallaxInstance = new Parallax(scene, {
+                    relativeInput: true
+                });
+            }
+            scene = document.getElementById('parallax-detalhe-4');
+            if(scene){
+                var parallaxInstance = new Parallax(scene, {
+                    relativeInput: true
+                });
+            }
+            scene = document.getElementById('parallax-detalhe-5');
+            if(scene){
+                var parallaxInstance = new Parallax(scene, {
+                    relativeInput: true
+                });
+            }
+            scene = document.getElementById('parallax-bush-1');
+            if(scene){
+                var parallaxInstance = new Parallax(scene, {
+                    relativeInput: true
+                });
+            }
+            parallaxInstance.friction(0.1, 0);
+            scene = document.getElementById('parallax-hand-1');
+            if(scene){
+                var parallaxInstance = new Parallax(scene, {
+                    relativeInput: true
+                });
+            }
+            parallaxInstance.friction(0.5, 0);
+
+        });
+    </script>
+</body>
+
+</html>

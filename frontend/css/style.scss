@@ -121,6 +121,13 @@ html {
 }
 #footer{
     background-color: #089BC0;
+    
+}
+#product-timeline{
+    background-color: #F4F4F4;
+}
+#slider-long{
+    background-color: #089BC0;
 
 }
 .hide{
@@ -160,6 +167,9 @@ html {
 }
 .text-orange{
     color: #EA6724;
+}
+.text-gray{
+    color: #828282;
 }
 .text-blue{
     color: #089BC0 !important;
@@ -230,7 +240,15 @@ section {
     bottom: initial;
     top: 150px;
 }
+.normal-carousel-caption{
+    bottom: initial;
+    top: 150px;
+}
 .custom-carousel-caption .slider-title{
+    margin-top: 150px;
+    margin-bottom: 100px;
+}
+.normal-carousel-caption .slider-title{
     margin-top: 150px;
     margin-bottom: 100px;
 }
@@ -255,6 +273,10 @@ section {
     position: absolute;
     right: 17%;
 }
+.custom-control-carrousel-center{
+    position: absolute;
+    right: 40%;
+}
 .btn-round{
     border-radius: 50% !important;
 }
@@ -270,6 +292,9 @@ section {
     padding-bottom: 85px;
 }
 .carousel-long .custom-control-carrousel-left{
+    margin-bottom: 40px;
+}
+.carousel-long .custom-control-carrousel-center{
     margin-bottom: 40px;
 }
 .carousel-control-holder{
@@ -309,6 +334,7 @@ section {
     border-radius: 6px;
 }
 .card-bg-small{
+    margin: 20px 0px;
     border: 0px;
     border-radius: 6px;
     z-index: 2;
@@ -377,6 +403,10 @@ section {
 }
 .product-banner-text{
     width: 800px;
+    margin: auto;
+}
+.product-banner{
+    width: 900px;
     margin: auto;
 }
 //! pagina: produto-interno
