@@ -1,0 +1,29 @@
+version: "2"
+services:
+# ------------------------------------------------------
+  energisa_db:
+    image: mariadb
+    container_name: energisa_db
+    network_mode: bridge
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_DATABASE: $SITE_DB_NAME
+      MYSQL_ROOT_PASSWORD: $SITE_DB_PASSWORD
+# ------------------------------------------------------
+  energisa_app:
+    image: wordpress
+    container_name: energisa_app
+    volumes:
+      - ./wordpress:/var/www/html
+    network_mode: bridge
+    ports:
+      - 8081:80
+    links:
+      - energisa_db:mysql
+    environment:
+      WORDPRESS_DB_HOST: $SITE_DB_HOST
+      WORDPRESS_DB_NAME: $SITE_DB_NAME
+      WORDPRESS_DB_USER: $SITE_DB_USERNAME
+      WORDPRESS_DB_PASSWORD: $SITE_DB_PASSWORD
+# ------------------------------------------------------
