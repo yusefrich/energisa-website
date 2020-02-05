@@ -83,23 +83,51 @@ if ($slider->have_posts()) :
             </div>
 
             <div class="row mt-5">
-                <div data-aos="fade-up" class="col-md-12">
-                    <div class="card card-bg-wide text-white my-5 zoom-hover">
-                        <!-- <img src="https://via.placeholder.com/1920x600" class="card-img" alt="..."> -->
-                        <div class="img-holder" style="
-                                background: linear-gradient(0deg, rgba(55, 55, 55, 0.4), rgba(55, 55, 55, 0.4)), url(<?php bloginfo('template_url'); ?>/img/novidades-card.png);
-                                background-position: center;
-                                background-size: cover;"></div>
-                        <div class="card-img-overlay overlay-lg text-start">
-                            <h2 class="card-title">Novidades</h2>
-                            <p class="card-text">Essa sessão é destinada ao compartilhamento de informações por parte da
-                                nossa equipe, acompanhe nossas postagens e mantenha-se sempre bem informado</p>
-                            <button class="btn btn-primary px-5">Saiba mais</button>
+                <?php
+                $chamadaNovidades = new WP_Query(array(
+                    'pagename' => 'chamada-novidades',
+                ));
+                while ($chamadaNovidades->have_posts()): $chamadaNovidades->the_post();
+                    $img_background = get_the_post_thumbnail_url(null, 'full');
+                    ?>
+                    <div data-aos="fade-up" class="col-md-12">
+                        <div class="card card-bg-wide text-white my-5 zoom-hover">
+                            <div class="img-holder" style="
+                                    background: linear-gradient(0deg, rgba(55, 55, 55, 0.4), rgba(55, 55, 55, 0.4)), url(<?php echo esc_url($img_background); ?>);
+                                    background-position: center;
+                                    background-size: cover;"></div>
+                            <div class="card-img-overlay overlay-lg text-start">
+                                <h2 class="card-title"><?php the_field('titulo'); ?></h2>
+                                <p class="card-text"><?php the_field('descricao'); ?></p>
+                                <?php
+                                $url = get_field_object('destino_link');
+                                $url_valor = $url['value'];
+                                if ($url_valor == 'externo') { ?>
+                                    <a href="<?php the_field('link_externo'); ?>" class="btn btn-primary px-5" target="_blank" title="Saiba mais">Leia
+                                        mais</a>
+                                <?php }
+                                if ($url_valor == 'interno') { ?>
+                                    <a href="<?php the_field('link_interno'); ?>" class="btn btn-primary px-5" title="Saiba mais">Saiba
+                                        mais</a>
+                                <?php }
+                                ?>
+                            </div>
+                            <?php
+                            $url = get_field_object('destino_link');
+                            $url_valor = $url['value'];
+                            if ($url_valor == 'externo') { ?>
+                                <a href="<?php the_field('link_externo'); ?>" class="btn btn-light btn-round card-btn m-5" target="_blank" title="Saiba mais"><span class="icon pt-2 pb-2 pr-1 icon-next-icon"></span></a>
+                            <?php }
+                            if ($url_valor == 'interno') { ?>
+                                <a href="<?php the_field('link_interno'); ?>" class="btn btn-light btn-round card-btn m-5" title="Saiba mais"><span class="icon pt-2 pb-2 pr-1 icon-next-icon"></span></a>
+                            <?php }
+                            ?>
                         </div>
-                        <button class="btn btn-light btn-round card-btn m-5">
-                            <span class="icon pt-2 pb-2 pr-1 icon-next-icon"></span></button>
                     </div>
-                </div>
+                <?php endwhile;
+                wp_reset_postdata(); ?>
+
+
                 <div data-aos="fade-right" class="col-md-6">
                     <img src="<?php bloginfo('template_url'); ?>/img/n-small-1.png" class="figure-img img-fluid rounded zoom-hover" alt="...">
                     <p class="img-caption text-white"><strong> Ao contrário do que se acredita, Lorem Ipsum não é
@@ -153,23 +181,51 @@ if ($slider->have_posts()) :
 
 
             <div class="row mt-5">
-                <div data-aos="fade-up" class="col-md-12">
-                    <div class="card card-bg-wide text-white mt-5 mb-4 zoom-hover">
-                        <!-- <img src="https://via.placeholder.com/1920x600" class="card-img" alt="..."> -->
-                        <div class="img-holder" style="
-                                background: linear-gradient(0deg, rgba(55, 55, 55, 0.4), rgba(55, 55, 55, 0.4)), url(<?php bloginfo('template_url'); ?>/img/projetos-card.png);
-                                background-position: center;
-                                background-size: cover;"></div>
-                        <div class="card-img-overlay overlay-lg text-start">
-                            <h2 class="card-title">Projetos</h2>
-                            <p class="card-text">A vantagem de usar Lorem Ipsum é que ele tem uma distribuição normal de
-                                letras, ao contrário de "Conteúdo aqui, conteúdo aqui".</p>
-                            <button class="btn btn-primary px-5">Saiba mais</button>
+                <?php
+                $chamadaProjetos = new WP_Query(array(
+                    'pagename' => 'chamada-projetos',
+                ));
+                while ($chamadaProjetos->have_posts()): $chamadaProjetos->the_post();
+                    $img_background = get_the_post_thumbnail_url(null, 'full');
+                    ?>
+                    <div data-aos="fade-up" class="col-md-12">
+                        <div class="card card-bg-wide text-white my-5 zoom-hover">
+                            <div class="img-holder" style="
+                                    background: linear-gradient(0deg, rgba(55, 55, 55, 0.4), rgba(55, 55, 55, 0.4)), url(<?php echo esc_url($img_background); ?>);
+                                    background-position: center;
+                                    background-size: cover;"></div>
+                            <div class="card-img-overlay overlay-lg text-start">
+                                <h2 class="card-title"><?php the_field('titulo'); ?></h2>
+                                <p class="card-text"><?php the_field('descricao'); ?></p>
+                                <?php
+                                $url = get_field_object('destino_link');
+                                $url_valor = $url['value'];
+                                if ($url_valor == 'externo') { ?>
+                                    <a href="<?php the_field('link_externo'); ?>" class="btn btn-primary px-5" target="_blank" title="Saiba mais">Leia
+                                        mais</a>
+                                <?php }
+                                if ($url_valor == 'interno') { ?>
+                                    <a href="<?php the_field('link_interno'); ?>" class="btn btn-primary px-5" title="Saiba mais">Saiba
+                                        mais</a>
+                                <?php }
+                                ?>
+                            </div>
+                            <?php
+                            $url = get_field_object('destino_link');
+                            $url_valor = $url['value'];
+                            if ($url_valor == 'externo') { ?>
+                                <a href="<?php the_field('link_externo'); ?>" class="btn btn-light btn-round card-btn m-5" target="_blank" title="Saiba mais"><span class="icon pt-2 pb-2 pr-1 icon-next-icon"></span></a>
+                            <?php }
+                            if ($url_valor == 'interno') { ?>
+                                <a href="<?php the_field('link_interno'); ?>" class="btn btn-light btn-round card-btn m-5" title="Saiba mais"><span class="icon pt-2 pb-2 pr-1 icon-next-icon"></span></a>
+                            <?php }
+                            ?>
                         </div>
-                        <button class="btn btn-light btn-round card-btn m-5">
-                            <span class="icon pt-2 pb-2 pr-1 icon-next-icon"></span></button>
                     </div>
-                </div>
+                <?php endwhile;
+                wp_reset_postdata(); ?>
+
+
                 <div data-aos="flip-left" class="col-md-4">
                     <div class="card card-bg-small text-white mb-2 zoom-hover">
                         <!-- <img src="https://via.placeholder.com/1920x600" class="card-img" alt="..."> -->
@@ -341,33 +397,50 @@ if ($slider->have_posts()) :
             </div>
 
             <div class="row">
-                <div data-aos="fade-up" class="col-md-12">
-                    <div class="card card-bg-wide text-white mt-5 mb-4 zoom-hover">
-                        <!-- <img src="https://via.placeholder.com/1920x600" class="card-img" alt="..."> -->
-                        <div class="img-holder" style="
-                                background: linear-gradient(0deg, rgba(55, 55, 55, 0.4), rgba(55, 55, 55, 0.4)), url(<?php bloginfo('template_url'); ?>/img/ideias-card.png);
-                                background-position: center;
-                                background-size: cover;"></div>
-                        <div class="card-img-overlay overlay-lg text-start">
-                            <h2 class="card-title">Ideias</h2>
-                            <p class="card-text">Colabore e construa produtos melhores ajudando nossos clientes a ter a
-                                melhor satisfação com os nossos serviços.</p>
-                            <button class="btn btn-primary px-5">Saiba mais</button>
-                        </div>
-                        <button class="btn btn-light btn-round card-btn m-5">
-                            <span class="icon pt-2 pb-2 pr-1 icon-next-icon"></span></button>
-                    </div>
-                    <div id="parallax-detalhe-5">
-                        <div data-depth="0.1" class="d-flex justify-content-between">
-                            <div style="z-index: -2;" class="trace-detail-left trace-detail-offset-up">
+                <?php
+                $chamadaIdeia = new WP_Query(array(
+                    'pagename' => 'chamada-ideias',
+                ));
+                while ($chamadaIdeia->have_posts()): $chamadaIdeia->the_post();
+                    $img_background = get_the_post_thumbnail_url(null, 'full');
+                    ?>
+                    <div data-aos="fade-up" class="col-md-12">
+                        <div class="card card-bg-wide text-white my-5 zoom-hover">
+                            <div class="img-holder" style="
+                                    background: linear-gradient(0deg, rgba(55, 55, 55, 0.4), rgba(55, 55, 55, 0.4)), url(<?php echo esc_url($img_background); ?>);
+                                    background-position: center;
+                                    background-size: cover;"></div>
+                            <div class="card-img-overlay overlay-lg text-start">
+                                <h2 class="card-title"><?php the_field('titulo'); ?></h2>
+                                <p class="card-text"><?php the_field('descricao'); ?></p>
+                                <?php
+                                $url = get_field_object('destino_link');
+                                $url_valor = $url['value'];
+                                if ($url_valor == 'externo') { ?>
+                                    <a href="<?php the_field('link_externo'); ?>" class="btn btn-primary px-5" target="_blank" title="Saiba mais">Leia
+                                        mais</a>
+                                <?php }
+                                if ($url_valor == 'interno') { ?>
+                                    <a href="<?php the_field('link_interno'); ?>" class="btn btn-primary px-5" title="Saiba mais">Saiba
+                                        mais</a>
+                                <?php }
+                                ?>
                             </div>
-                            <div style="z-index: -2; margin-right: 100px;" class="trace-detail-right trace-detail-offset-up">
-                                <img class="" src="<?php bloginfo('template_url'); ?>/img/detalhes-traco-laranja-sm.png" alt="">
-                            </div>
+                            <?php
+                            $url = get_field_object('destino_link');
+                            $url_valor = $url['value'];
+                            if ($url_valor == 'externo') { ?>
+                                <a href="<?php the_field('link_externo'); ?>" class="btn btn-light btn-round card-btn m-5" target="_blank" title="Saiba mais"><span class="icon pt-2 pb-2 pr-1 icon-next-icon"></span></a>
+                            <?php }
+                            if ($url_valor == 'interno') { ?>
+                                <a href="<?php the_field('link_interno'); ?>" class="btn btn-light btn-round card-btn m-5" title="Saiba mais"><span class="icon pt-2 pb-2 pr-1 icon-next-icon"></span></a>
+                            <?php }
+                            ?>
                         </div>
                     </div>
+                <?php endwhile;
+                wp_reset_postdata(); ?>
 
-                </div>
                 <div data-aos="zoom-in" class="col-md-4">
                     <div class="card card-full-small mb-2 zoom-hover">
                         <div class=" overlay-white text-start">

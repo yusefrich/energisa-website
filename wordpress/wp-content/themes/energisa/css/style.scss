@@ -50,6 +50,7 @@ $p-font-size: (null: em(20));
 $caption-font-size: (null: em(24));
 $h1-font-size: (null: em(72));
 $h2-font-size: (null: em(58));
+$display-h2-font-size: (null: em(48));
 $h3-font-size: (null: em(36));
 .text-fade{
     font-family: Open Sans;
@@ -85,6 +86,14 @@ h2{
     line-height: 79px;
 
 }
+.display-h2{
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 800;
+    @include font-size-map($display-h2-font-size) ;
+    line-height: 79px;
+
+}
 h1{
     font-style: normal;
     font-weight: 800;
@@ -111,6 +120,13 @@ html {
     background-color: #099bc0;
 }
 #footer{
+    background-color: #089BC0;
+    
+}
+#product-timeline{
+    background-color: #F4F4F4;
+}
+#slider-long{
     background-color: #089BC0;
 
 }
@@ -151,6 +167,9 @@ html {
 }
 .text-orange{
     color: #EA6724;
+}
+.text-gray{
+    color: #828282;
 }
 .text-blue{
     color: #089BC0 !important;
@@ -221,7 +240,15 @@ section {
     bottom: initial;
     top: 150px;
 }
+.normal-carousel-caption{
+    bottom: initial;
+    top: 150px;
+}
 .custom-carousel-caption .slider-title{
+    margin-top: 150px;
+    margin-bottom: 100px;
+}
+.normal-carousel-caption .slider-title{
     margin-top: 150px;
     margin-bottom: 100px;
 }
@@ -246,6 +273,10 @@ section {
     position: absolute;
     right: 17%;
 }
+.custom-control-carrousel-center{
+    position: absolute;
+    right: 40%;
+}
 .btn-round{
     border-radius: 50% !important;
 }
@@ -261,6 +292,9 @@ section {
     padding-bottom: 85px;
 }
 .carousel-long .custom-control-carrousel-left{
+    margin-bottom: 40px;
+}
+.carousel-long .custom-control-carrousel-center{
     margin-bottom: 40px;
 }
 .carousel-control-holder{
@@ -300,6 +334,7 @@ section {
     border-radius: 6px;
 }
 .card-bg-small{
+    margin: 20px 0px;
     border: 0px;
     border-radius: 6px;
     z-index: 2;
@@ -357,4 +392,25 @@ section {
 //! footer
 .footer-bottom{
     background-color: #1B9FC0 ;
+}
+
+//! detail page banner
+.product-banner-holder{
+    
+    padding-top: 171px;
+    padding-bottom: 171px;
+    
+}
+.product-banner-text{
+    width: 800px;
+    margin: auto;
+}
+.product-banner{
+    width: 900px;
+    margin: auto;
+}
+//! pagina: produto-interno
+.product-description-text{
+    max-width: 500px;
+    
 }
