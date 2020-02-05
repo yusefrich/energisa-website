@@ -38,7 +38,7 @@
                     <a class="nav-link py-4" href="#">Quem somos <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link py-4" href="#">Produtos</a>
+                    <a class="nav-link py-4" href="<?php bloginfo('home'); ?>/produtos">Produtos</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link py-4" href="#">Projetos</a>
