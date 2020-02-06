@@ -314,6 +314,12 @@ section {
   position: initial;
 }
 
+.card-outline {
+  border: 1px solid #E8E8E8;
+  box-sizing: border-box;
+  border-radius: 6px;
+}
+
 .card-bg-wide {
   border: 0px;
   border-left: 15px solid #EA6724;

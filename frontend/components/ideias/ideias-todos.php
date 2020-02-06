@@ -11,10 +11,54 @@
         </div>
 
         <div class="row">
-            <div class="col-3"></div>
+            <div class="col-3">
+                <p class="text-caption font-weight-bold">Filtre por produto</p>
+                <select class="custom-select">
+                    <option selected>Todos</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+                <div class="card-outline mt-4 p-4">
+                    <p class="text-caption font-weight-bold">Status</p>
+                        <a class="text-gray btn p-0 mb-3" href="#">Mais votados (14)</a><br>
+                        <a class="text-gray btn p-0 mb-3" href="#">Em análise (1)</a><br>
+                        <a class="text-gray btn p-0 mb-3" href="#">Em Votação (4)</a><br>
+                        <a class="text-gray btn p-0 mb-3" href="#">Concluído (14)</a><br>
+                        <button class="btn btn-sm px-5 text-gray"><strong> Mostrar mais</strong></button>
+
+                </div>
+                <div class="card-outline mt-4 p-4">
+                    <p class="text-caption font-weight-bold">Tags</p>
+                    <a class="text-gray btn p-0 mb-3" href="#">#conta (14)</a><br>
+                    <a class="text-gray btn p-0 mb-3" href="#">#site (1)</a><br>
+                    <a class="text-gray btn p-0 mb-3" href="#">#função (4)</a><br>
+                    <a class="text-gray btn p-0 mb-3" href="#">#totem (14)</a><br>
+                    <a class="text-gray btn p-0 mb-3" href="#">#app (14)</a><br>
+                    <button class="btn btn-sm px-5 text-gray"><strong> Mostrar mais</strong></button>
+
+                </div>
+                <div class="card-outline mt-4 p-4">
+                    <p class="text-caption font-weight-bold">Quem mais participa</p>
+                    <div class="d-flex justify-content-start py-2">
+                            <div class="profile-pic pr-5 mr-1" style="
+                                    background-image: url(./img/profile-1.jpg);
+                                    background-size: cover;
+                                    background-position: center;
+                                    "></div>
+                            <div>
+                                <p class="card-user-name m-0">Francisco José Vieira Martins</p>
+
+                            </div>
+                        </div>
+                        <hr>
+                        <button class="btn btn-sm px-5 text-gray"><strong> Mostrar mais</strong></button>
+
+                </div>
+            </div>
             <div class="col-9">
-                <div class="  mb-2 ">
-                    <div class=" overlay-white text-start">
+                <div data-aos="flip-left" class="  mb-2 ">
+                    <div class="pb-4 text-start">
                         <div class="d-flex justify-content-start pb-4">
                             <div class="profile-pic mr-4" style="
                                     background-image: url(./img/profile-1.jpg);
@@ -43,8 +87,9 @@
                         <!-- <img class="profile-pic float-left" height="48" src="./img/profile-1.jpg" alt=""> -->
                     </div>
                 </div>
-                <div class="  mb-2 ">
-                    <div class=" overlay-white text-start">
+                <hr>
+                <div data-aos="flip-left" class="  mb-2 ">
+                    <div class="py-4 text-start">
                         <div class="d-flex justify-content-start pb-4">
                             <div class="profile-pic mr-4" style="
                                     background-image: url(./img/profile-1.jpg);
@@ -73,8 +118,9 @@
                         <!-- <img class="profile-pic float-left" height="48" src="./img/profile-1.jpg" alt=""> -->
                     </div>
                 </div>
-                <div class="  mb-2 ">
-                    <div class=" overlay-white text-start">
+                <hr>
+                <div data-aos="flip-left" class="  mb-2 ">
+                    <div class="py-4 text-start">
                         <div class="d-flex justify-content-start pb-4">
                             <div class="profile-pic mr-4" style="
                                     background-image: url(./img/profile-1.jpg);
@@ -103,8 +149,9 @@
                         <!-- <img class="profile-pic float-left" height="48" src="./img/profile-1.jpg" alt=""> -->
                     </div>
                 </div>
-                <div class="  mb-2 ">
-                    <div class=" overlay-white text-start">
+                <hr>
+                <div data-aos="flip-left" class="  mb-2 ">
+                    <div class="py-4 text-start">
                         <div class="d-flex justify-content-start pb-4">
                             <div class="profile-pic mr-4" style="
                                     background-image: url(./img/profile-1.jpg);
@@ -133,6 +180,10 @@
                         <!-- <img class="profile-pic float-left" height="48" src="./img/profile-1.jpg" alt=""> -->
                     </div>
                 </div>
+                <div data-aos="flip-left" class="text-center mt-4 mb-5 pb-5">
+                    <button class="btn btn-outline-light px-5"> Mostrar mais</button>
+                </div>
+
 
             </div>
         </div>
