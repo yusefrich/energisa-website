@@ -42,6 +42,7 @@
     </script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script src="js/progressbar.min.js"></script>
 
     <!-- navbar top opacity -->
     <script>
@@ -126,16 +127,41 @@
                 var parallaxInstance = new Parallax(scene, {
                     relativeInput: true
                 });
+                parallaxInstance.friction(0.1, 0);
             }
-            parallaxInstance.friction(0.1, 0);
             scene = document.getElementById('parallax-hand-1');
             if(scene){
                 var parallaxInstance = new Parallax(scene, {
                     relativeInput: true
                 });
+                parallaxInstance.friction(0.5, 0);
             }
-            parallaxInstance.friction(0.5, 0);
 
         });
     </script>
+    
+    <script>
+        window.onload = function onLoad() {
+            var circle = new ProgressBar.Circle('#progress-funcoes', {
+                color: '#FCB03C',
+                duration: 3000,
+                easing: 'easeInOut'
+            });
 
+            circle.animate(1);
+            var circle = new ProgressBar.Circle('#progress-att', {
+                color: '#FCB03C',
+                duration: 3000,
+                easing: 'easeInOut'
+            });
+
+            circle.animate(1);
+            var circle = new ProgressBar.Circle('#progress-pontos', {
+                color: '#FCB03C',
+                duration: 3000,
+                easing: 'easeInOut'
+            });
+
+            circle.animate(1);
+        };
+    </script>
