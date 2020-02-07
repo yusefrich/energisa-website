@@ -11,7 +11,7 @@
         </div>
 
         <div class="row">
-            <div class="col-3">
+            <div class="col-md-3">
                 <p class="text-caption font-weight-bold">Filtre por produto</p>
                 <select class="custom-select">
                     <option selected>Todos</option>
@@ -38,7 +38,7 @@
                     <button class="btn btn-sm px-5 text-gray"><strong> Mostrar mais</strong></button>
 
                 </div>
-                <div class="card-outline mt-4 p-4">
+                <div class="card-outline mt-4 mb-4 p-4">
                     <p class="text-caption font-weight-bold">Quem mais participa</p>
                     <div class="d-flex justify-content-start py-2">
                             <div class="profile-pic pr-5 mr-1" style="
@@ -56,8 +56,8 @@
 
                 </div>
             </div>
-            <div class="col-9">
-                <div data-aos="flip-left" class="  mb-2 ">
+            <div class="col-md-9">
+                <div data-aos="flip-left" class="  mb-2 p-2">
                     <div class="pb-4 text-start">
                         <div class="d-flex justify-content-start pb-4">
                             <div class="profile-pic mr-4" style="
@@ -88,7 +88,7 @@
                     </div>
                 </div>
                 <hr>
-                <div data-aos="flip-left" class="  mb-2 ">
+                <div data-aos="flip-left" class="  mb-2 p-2">
                     <div class="py-4 text-start">
                         <div class="d-flex justify-content-start pb-4">
                             <div class="profile-pic mr-4" style="
@@ -119,7 +119,7 @@
                     </div>
                 </div>
                 <hr>
-                <div data-aos="flip-left" class="  mb-2 ">
+                <div data-aos="flip-left" class="  mb-2 p-2">
                     <div class="py-4 text-start">
                         <div class="d-flex justify-content-start pb-4">
                             <div class="profile-pic mr-4" style="
@@ -150,7 +150,7 @@
                     </div>
                 </div>
                 <hr>
-                <div data-aos="flip-left" class="  mb-2 ">
+                <div data-aos="flip-left" class="  mb-2 p-2">
                     <div class="py-4 text-start">
                         <div class="d-flex justify-content-start pb-4">
                             <div class="profile-pic mr-4" style="

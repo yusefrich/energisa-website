@@ -41,13 +41,16 @@ $xs: 480px;
         }
     }
 }
-
+section{
+    overflow: hidden;
+}
 // font sizes
 
 $paragraph-font-size: (null: 18px, $lg: 17px, $md: 16px, $sm: 15px, $xs: 14px);
 $base-font-size: (null: em(18));
 $p-font-size: (null: em(20));
 $caption-font-size: (null: em(24));
+$large-caption-font-size: (null: em(28));
 $h1-font-size: (null: em(72));
 $h2-font-size: (null: em(58));
 $display-h2-font-size: (null: em(48));
@@ -61,11 +64,23 @@ $h3-font-size: (null: em(36));
 
     color: #7C7C7C;
 }
+.text-breadcrumb{
+    font-family: Open Sans;
+    font-style: normal;
+    @include font-size-map($base-font-size);
+    line-height: 25px;
+}
 .text-caption{
     font-style: normal;
     line-height: 33px;
     letter-spacing: -0.02em;
     @include font-size-map($caption-font-size);
+}
+.text-caption-lg{
+    font-style: normal;
+    line-height: 33px;
+    letter-spacing: -0.02em;
+    @include font-size-map($large-caption-font-size);
 }
 p{
     @include font-size-map($p-font-size);
@@ -100,9 +115,7 @@ h1{
     @include font-size-map($h1-font-size);
     line-height: 98px;
 }
-html {
-    letter-spacing: 1px;
-}
+
 .highlight {
     background: linear-gradient(180deg, rgba(255,255,255,0) 65%, #089BC0 65%);
     background-position-x: 60px;
@@ -177,6 +190,9 @@ html {
 .round-outline-text{
     border: 1px solid #323232;
     border-radius: 6px;
+}
+.border-gray{
+    border: 1px solid #828282;
 }
 .orange-outline-text{
     border: 1px solid #EA6724;
@@ -281,7 +297,7 @@ section {
     border-radius: 50% !important;
 }
 .carousel-inner .item {
-    width: 100%;
+    max-width: 100%;
     height: 400px;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -389,10 +405,19 @@ section {
     @include font-size-map($base-font-size);
 
 }
+.card-user-name-lg{
+    font-weight: bold;
+    @include font-size-map($large-caption-font-size);
+
+}
 .card-tags{
     display: flex;
     flex-wrap: wrap;
 }
+.role-tag-border{
+    border: 1px solid #CFCFCF;
+    box-sizing: border-box;
+    border-radius: 100px;}
 
 //! footer
 .footer-bottom{
@@ -407,11 +432,11 @@ section {
     
 }
 .product-banner-text{
-    width: 800px;
+    max-width: 800px;
     margin: auto;
 }
 .product-banner{
-    width: 900px;
+    max-width: 900px;
     margin: auto;
 }
 //! pagina: produto-interno
@@ -425,7 +450,7 @@ section {
 .graph-detail-holder{
     position: absolute;
     top: 65px;
-    width: 90%;
+    max-width: 90%;
 }
 
 .ultimas-novidades-title{
