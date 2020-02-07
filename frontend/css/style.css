@@ -452,6 +452,8 @@ section {
 }
 
 .graph-detail-holder {
+  left: 50px;
+  right: 50px;
   position: absolute;
   top: 65px;
   max-width: 90%;
@@ -461,6 +463,10 @@ section {
   width: 830px;
   margin-left: auto;
   margin-right: auto;
+}
+
+#indicadores {
+  background-color: #F1F1F1;
 }
 
 .timeline {

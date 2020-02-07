@@ -86,7 +86,7 @@
             </div>
             <div id="parallax-detalhe-3">
                 <div data-depth="0.3" class="d-flex justify-content-between">
-                    <div class="trace-detail-left trace-detail-offset-bottom">
+                    <div class="trace-detail-left trace-detail-offset-up">
                         <img style="
                             z-index: 1;
                             position: absolute;

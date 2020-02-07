@@ -143,21 +143,36 @@
     <script>
         window.onload = function onLoad() {
             var circle = new ProgressBar.Circle('#progress-funcoes', {
-                color: '#FCB03C',
+                color: '#EA6724',
+                strokeWidth: 5,
+                
+                trailColor: '#cccccc',
+                trailWidth: 1,
+
                 duration: 3000,
                 easing: 'easeInOut'
             });
 
-            circle.animate(1);
+            circle.animate(.5);
             var circle = new ProgressBar.Circle('#progress-att', {
-                color: '#FCB03C',
+                color: '#EA6724',
+                strokeWidth: 5,
+                
+                trailColor: '#cccccc',
+                trailWidth: 1,
+
                 duration: 3000,
                 easing: 'easeInOut'
             });
 
             circle.animate(1);
             var circle = new ProgressBar.Circle('#progress-pontos', {
-                color: '#FCB03C',
+                color: '#EA6724',
+                strokeWidth: 5,
+                
+                trailColor: '#cccccc',
+                trailWidth: 1,
+
                 duration: 3000,
                 easing: 'easeInOut'
             });
