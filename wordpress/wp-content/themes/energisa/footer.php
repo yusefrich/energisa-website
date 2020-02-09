@@ -1,5 +1,4 @@
 <?php wp_footer(); ?>
-
 <section class="pt-3" id="footer">
     <div class="container py-5">
         <div class="d-flex justify-content-between">
@@ -12,17 +11,22 @@
                 <a class="nav-link link-light" href="#">Ideias</a>
             </div>
             <div>
-                <button class="btn btn-light text-blue btn-round"><ion-icon style="font-size: 20px;" class="pt-2" name="logo-twitter"></ion-icon></button>
-                <button class="btn btn-light text-blue btn-round"><ion-icon style="font-size: 20px;" class="pt-2" name="logo-linkedin"></ion-icon></button>
-                <button class="btn btn-light text-blue btn-round"><ion-icon style="font-size: 20px;" class="pt-2" name="logo-instagram"></ion-icon></button>
+                <button class="btn btn-light text-blue btn-round">
+                    <ion-icon style="font-size: 20px;" class="pt-2" name="logo-twitter"></ion-icon>
+                </button>
+                <button class="btn btn-light text-blue btn-round">
+                    <ion-icon style="font-size: 20px;" class="pt-2" name="logo-linkedin"></ion-icon>
+                </button>
+                <button class="btn btn-light text-blue btn-round">
+                    <ion-icon style="font-size: 20px;" class="pt-2" name="logo-instagram"></ion-icon>
+                </button>
 
             </div>
         </div>
     </div>
     <div class="container-fluid footer-bottom text-center px-0 py-4">
         <small class="text-white ">© Copyright 2019 Energisa COCD.</small>
-        <img class="" src="img/feito-com.png" alt="">
-
+        <img class="" src="<?php bloginfo('template_url'); ?>/img/feito-com.png" alt="">
     </div>
 </section>
 
@@ -39,6 +43,7 @@
 </script>
 <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+<script src="<?php bloginfo('template_url'); ?>/js/progressbar.min.js"></script>
 
 <!-- navbar top opacity -->
 <script>
@@ -86,40 +91,93 @@
 </script>
 <!-- parallax -->
 <script>
-    $(document).ready(function(){
+    $(document).ready(function () {
         var scene = document.getElementById('parallax-detalhe-1');
-        var parallaxInstance = new Parallax(scene, {
-            relativeInput: true
-        });
+        var parallaxInstance;
+        if(scene){
+            parallaxInstance = new Parallax(scene, {
+                relativeInput: true
+            });
+        }
         scene = document.getElementById('parallax-detalhe-2');
-        parallaxInstance = new Parallax(scene, {
-            relativeInput: true
-        });
+        if(scene){
+            var parallaxInstance = new Parallax(scene, {
+                relativeInput: true
+            });
+        }
         scene = document.getElementById('parallax-detalhe-3');
-        parallaxInstance = new Parallax(scene, {
-            relativeInput: true
-        });
+        if(scene){
+            var parallaxInstance = new Parallax(scene, {
+                relativeInput: true
+            });
+        }
         scene = document.getElementById('parallax-detalhe-4');
-        parallaxInstance = new Parallax(scene, {
-            relativeInput: true
-        });
+        if(scene){
+            var parallaxInstance = new Parallax(scene, {
+                relativeInput: true
+            });
+        }
         scene = document.getElementById('parallax-detalhe-5');
-        parallaxInstance = new Parallax(scene, {
-            relativeInput: true
-        });
+        if(scene){
+            var parallaxInstance = new Parallax(scene, {
+                relativeInput: true
+            });
+        }
         scene = document.getElementById('parallax-bush-1');
-        parallaxInstance = new Parallax(scene, {
-            relativeInput: true
-        });
-        parallaxInstance.friction(0.1, 0);
+        if(scene){
+            var parallaxInstance = new Parallax(scene, {
+                relativeInput: true
+            });
+            parallaxInstance.friction(0.1, 0);
+        }
         scene = document.getElementById('parallax-hand-1');
-        parallaxInstance = new Parallax(scene, {
-            relativeInput: true
-        });
-        parallaxInstance.friction(0.5, 0);
+        if(scene){
+            var parallaxInstance = new Parallax(scene, {
+                relativeInput: true
+            });
+            parallaxInstance.friction(0.5, 0);
+        }
 
     });
 </script>
-</body>
 
-</html>
+<script>
+    window.onload = function onLoad() {
+        var circle = new ProgressBar.Circle('#progress-funcoes', {
+            color: '#EA6724',
+            strokeWidth: 5,
+
+            trailColor: '#cccccc',
+            trailWidth: 1,
+
+            duration: 3000,
+            easing: 'easeInOut'
+        });
+
+        circle.animate(.5);
+        var circle = new ProgressBar.Circle('#progress-att', {
+            color: '#EA6724',
+            strokeWidth: 5,
+
+            trailColor: '#cccccc',
+            trailWidth: 1,
+
+            duration: 3000,
+            easing: 'easeInOut'
+        });
+
+        circle.animate(1);
+        var circle = new ProgressBar.Circle('#progress-pontos', {
+            color: '#EA6724',
+            strokeWidth: 5,
+
+            trailColor: '#cccccc',
+            trailWidth: 1,
+
+            duration: 3000,
+            easing: 'easeInOut'
+        });
+
+        circle.animate(1);
+    };
+</script>
