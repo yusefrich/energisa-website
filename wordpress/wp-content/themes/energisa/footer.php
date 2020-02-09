@@ -181,3 +181,6 @@
         circle.animate(1);
     };
 </script>
+</body>
+
+</html>
