@@ -358,7 +358,7 @@
 
         <div data-aos="flip-down" class="row">
             <div class="col-md-4">
-                <div id="progress-funcoes"></div>
+                <div style="transform: scaleX(-1); stroke-linecap: round;" id="progress-funcoes"></div>
                 <div class="graph-detail-holder">
 
                     <h3 class="font-weight-bold">78%</h3>
@@ -366,7 +366,7 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div id="progress-att"></div>
+                <div style="transform: scaleX(-1); stroke-linecap: round;" id="progress-att"></div>
                 <div class="graph-detail-holder">
 
                     <h3 class="font-weight-bold">89%</h3>
@@ -374,7 +374,7 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div id="progress-pontos"></div>
+                <div style="transform: scaleX(-1); stroke-linecap: round;" id="progress-pontos"></div>
                 <div class="graph-detail-holder">
 
                     <h3 class="font-weight-bold">89%</h3>
