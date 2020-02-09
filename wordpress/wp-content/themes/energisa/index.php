@@ -127,33 +127,29 @@ if ($slider->have_posts()) :
                 <?php endwhile;
                 wp_reset_postdata(); ?>
 
-
-                <div data-aos="fade-right" class="col-md-6">
-                    <img src="<?php bloginfo('template_url'); ?>/img/n-small-1.png" class="figure-img img-fluid rounded zoom-hover" alt="...">
-                    <p class="img-caption text-white"><strong> Ao contrário do que se acredita, Lorem Ipsum não é
-                            simplesmente um texto randômico </strong></p>
-                </div>
-                <div data-aos="fade-left" class="col-md-6">
-                    <img src="<?php bloginfo('template_url'); ?>/img/n-small-2.png" class="figure-img img-fluid rounded zoom-hover" alt="...">
-                    <p class="img-caption text-white"><strong> Ao contrário do que se acredita, Lorem Ipsum não é
-                            simplesmente um texto randômico</strong></p class="text-white">
-                </div>
-                <div data-aos="fade-right" class="col-md-6">
-                    <img src="<?php bloginfo('template_url'); ?>/img/n-small-3.png" class="figure-img img-fluid rounded zoom-hover" alt="...">
-                    <p class="img-caption text-white"><strong> Ao contrário do que se acredita, Lorem Ipsum não é
-                            simplesmente um texto randômico</strong></p class="text-white">
-                </div>
-                <div data-aos="fade-left" class="col-md-6">
-                    <img src="<?php bloginfo('template_url'); ?>/img/n-small-4.png" class="figure-img img-fluid rounded zoom-hover" alt="...">
-                    <p class="img-caption text-white"><strong> Ao contrário do que se acredita, Lorem Ipsum não é
-                            simplesmente um texto randômico</strong></p class="text-white">
-                </div>
+                <?php
+                $novidades = new WP_Query(
+                    array(
+                        'post_type' => 'post',
+                        'posts_per_page' => '4',
+                    ));
+                while ($novidades->have_posts()): $novidades->the_post();
+                    $capa_novidades = get_the_post_thumbnail_url(null, 'capa_498_356');
+                    ?>
+                    <div data-aos="fade-left" class="col-md-6">
+                        <img src="<?php echo esc_url($capa_novidades); ?>" class="figure-img img-fluid rounded zoom-hover" alt="...">
+                        <p class="img-caption text-white"><strong><?php the_title(); ?></strong></p class="text-white">
+                    </div>
+                <?php endwhile;
+                wp_reset_postdata(); ?>
                 <div class="col-12">
                     <div data-aos="fade-up" class="d-flex justify-content-center">
                         <button class="btn btn-light px-5">Confira as novidades</button>
                     </div>
                 </div>
             </div>
+
+
             <div id="parallax-bush-1">
                 <div data-depth="0.1" class="d-flex justify-content-between">
                     <div>

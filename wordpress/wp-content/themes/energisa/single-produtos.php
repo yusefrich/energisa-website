@@ -459,10 +459,10 @@ if ($ultimas_novidades->have_posts()): ?>
     <div class="row mt-5">
         <?php
         while ($ultimas_novidades->have_posts()): $ultimas_novidades->the_post();
-            $capa_ideias = get_the_post_thumbnail_url(null, 'capa_ideias');
+            $capa_novidades = get_the_post_thumbnail_url(null, 'capa_380_255');
             ?>
             <div data-aos="fade-right" class="col-md-4">
-                <img src="<?php echo esc_url($capa_ideias); ?>" class="figure-img img-fluid rounded zoom-hover" alt="...">
+                <img src="<?php echo esc_url($capa_novidades); ?>" class="figure-img img-fluid rounded zoom-hover" alt="...">
                 <p class="img-caption  text-uppercase">
                     <small>postado em <strong><?php echo get_the_time(__('j \d\e M  Y'), $post->id); ?> </strong></small>
                 </p>
