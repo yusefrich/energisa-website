@@ -143,7 +143,7 @@
 
 <script>
     window.onload = function onLoad() {
-        var circle = new ProgressBar.Circle('#progress-funcoes', {
+        var circle = new ProgressBar.Circle('#progress-1', {
             color: '#EA6724',
             strokeWidth: 5,
 
@@ -155,7 +155,7 @@
         });
 
         circle.animate(.5);
-        var circle = new ProgressBar.Circle('#progress-att', {
+        var circle = new ProgressBar.Circle('#progress-2', {
             color: '#EA6724',
             strokeWidth: 5,
 
@@ -167,7 +167,7 @@
         });
 
         circle.animate(1);
-        var circle = new ProgressBar.Circle('#progress-pontos', {
+        var circle = new ProgressBar.Circle('#progress-3', {
             color: '#EA6724',
             strokeWidth: 5,
 

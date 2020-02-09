@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <?php while (have_posts()) : the_post(); ?>
-<?php $img_background = get_the_post_thumbnail_url(null, 'full'); ?>
+    <?php $img_background = get_the_post_thumbnail_url(null, 'full'); ?>
     <section id="product-banner">
         <div style="
                 background: linear-gradient(0deg, rgba(8, 155, 192, 0.7), rgba(8, 155, 192, 0.7)), url(<?php echo esc_url($img_background); ?>);
@@ -383,38 +383,46 @@
         </div>
     </section>
 
+
     <section id="indicadores">
         <div class="container text-center my-5">
+            <?php if (have_rows('flexible_content')): ?>
+                <?php while (have_rows('flexible_content')): the_row(); ?>
 
-            <h2 data-aos="fade-up" class="display-h2 text-orange">Conheça nossos indicadores</h2>
-            <p data-aos="fade-up">Fique por dentro e acompanhe cada momento da nossa jornada</p>
+                    <!-- Verifica se existe o layout indicadores-->
+                    <?php if (get_row_layout() == 'layout_prod_indicadores'): ?>
 
-            <div data-aos="flip-down" class="row">
-                <div class="col-md-4">
-                    <div id="progress-funcoes"></div>
-                    <div class="graph-detail-holder">
+                        <!-- Verifica se tem algum valor cadastrado no campo repeditor-->
+                        <?php if (have_rows('prod_indicadores')): ?>
+                            <section id="indicadores">
+                                <div class="container text-center my-5">
+                                    <h2 data-aos="fade-up" class="display-h2 text-orange">Conheça nossos
+                                        indicadores</h2>
+                                    <p data-aos="fade-up">Fique por dentro e acompanhe cada momento da nossa jornada</p>
+                                    <div data-aos="flip-down" class="row">
+                                        <?php $linhas = 0; ?>
+                                        <?php while (have_rows('prod_indicadores')): the_row();
+                                            $texto = get_sub_field('prod_indicador_texto');
+                                            $porcentagem = get_sub_field('prod_indicador_valor');
+                                            $linhas ++;
+                                            ?>
+                                            <div class="col-md-4">
+                                                <div id="progress-<?php echo $linhas; ?>"></div>
+                                                <div class="graph-detail-holder">
 
-                        <h3 class="font-weight-bold">78%</h3>
-                        <p class="text-gray">Novas Funçoes</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div id="progress-att"></div>
-                    <div class="graph-detail-holder">
-
-                        <h3 class="font-weight-bold">89%</h3>
-                        <p class="text-gray">Novas Atualizações</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div id="progress-pontos"></div>
-                    <div class="graph-detail-holder">
-
-                        <h3 class="font-weight-bold">89%</h3>
-                        <p class="text-gray">Implementação nos Pontos</p>
-                    </div>
-                </div>
-            </div>
+                                                    <h3 class="font-weight-bold"><?php echo $porcentagem; ?>%</h3>
+                                                    <p class="text-gray"><?php echo $texto; ?></p>
+                                                </div>
+                                            </div>
+                                        <?php endwhile; ?>
+                                    </div>
+                                </div>
+                            </section>
+                        <?php endif; ?>
+                    <?php endif; ?>
+                
+                <?php endwhile; ?>
+            <?php endif; ?>
 
         </div>
     </section>
