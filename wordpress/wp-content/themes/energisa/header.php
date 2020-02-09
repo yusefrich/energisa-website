@@ -9,9 +9,12 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/bootstrap.css">
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/style.css">
+    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/icons/fontawesome/css/all.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i,800,800i&display=swap"
           rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
     <title>Energisa</title>
     <?php wp_head(); ?>
@@ -22,7 +25,7 @@
     <div class="bg-light menu-bg"></div>
     <!-- <a class="navbar-brand" href="#">Navbar</a> -->
     <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="<?php bloginfo('home'); ?>">
             <img class="brand-dark d-none" src="<?php bloginfo('template_url'); ?>/img/logo-dark.png" width="200" alt="">
             <img class="brand-light d-none" src="<?php bloginfo('template_url'); ?>/img/logo-light.png" width="200" alt="">
         </a>
