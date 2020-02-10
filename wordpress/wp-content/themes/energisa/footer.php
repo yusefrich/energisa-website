@@ -45,6 +45,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 <script src="<?php bloginfo('template_url'); ?>/js/progressbar.min.js"></script>
 
+
+
 <!-- navbar top opacity -->
 <script>
     $(document).ready(function () {
@@ -143,44 +145,188 @@
 
 <script>
     window.onload = function onLoad() {
-        var circle = new ProgressBar.Circle('#progress-1', {
-            color: '#EA6724',
-            strokeWidth: 5,
+        if(document.getElementById("progress-1")){
 
-            trailColor: '#cccccc',
-            trailWidth: 1,
+            var circle = new ProgressBar.Circle('#progress-1', {
+                color: '#EA6724',
+                strokeWidth: 7,
 
-            duration: 3000,
-            easing: 'easeInOut'
-        });
+                trailColor: '#cccccc',
+                trailWidth: 1,
 
-        circle.animate(.5);
-        var circle = new ProgressBar.Circle('#progress-2', {
-            color: '#EA6724',
-            strokeWidth: 5,
+                duration: 3000,
+                easing: 'easeInOut'
+            });
+            circle.animate(.5);
+        }
+        if(document.getElementById("progress-2")){
+            var circle = new ProgressBar.Circle('#progress-2', {
+                color: '#EA6724',
+                strokeWidth: 7,
 
-            trailColor: '#cccccc',
-            trailWidth: 1,
+                trailColor: '#cccccc',
+                trailWidth: 1,
 
-            duration: 3000,
-            easing: 'easeInOut'
-        });
+                duration: 3000,
+                easing: 'easeInOut'
+            });
+            circle.animate(.99);
+        }
+        if(document.getElementById("progress-3")){
+            var circle = new ProgressBar.Circle('#progress-3', {
+                color: '#EA6724',
+                strokeWidth: 7,
 
-        circle.animate(1);
-        var circle = new ProgressBar.Circle('#progress-3', {
-            color: '#EA6724',
-            strokeWidth: 5,
+                trailColor: '#cccccc',
+                trailWidth: 1,
 
-            trailColor: '#cccccc',
-            trailWidth: 1,
+                duration: 3000,
+                easing: 'easeInOut'
+            });
+            circle.animate(.01);
+        }
+        /* como estamos graficos */
+        if(document.getElementById("como-estamos-graph-1")){
+            var circle = new ProgressBar.Circle('#como-estamos-graph-1', {
+                color: '#EA6724',
+                strokeWidth: 15,
 
-            duration: 3000,
-            easing: 'easeInOut'
-        });
+                trailColor: '#cccccc',
+                trailWidth: 1,
 
-        circle.animate(1);
+                duration: 3000,
+                easing: 'easeInOut'
+            });
+            circle.animate(.5);
+        }
+        if(document.getElementById("como-estamos-graph-2")){
+            var circle = new ProgressBar.Circle('#como-estamos-graph-2', {
+                color: '#EA6724',
+                strokeWidth: 15,
+
+                trailColor: '#cccccc',
+                trailWidth: 1,
+
+                duration: 3000,
+                easing: 'easeInOut'
+            });
+            circle.animate(.5);
+        }
+        if(document.getElementById("como-estamos-graph-3")){
+            var circle = new ProgressBar.Circle('#como-estamos-graph-3', {
+                color: '#EA6724',
+                strokeWidth: 15,
+
+                trailColor: '#cccccc',
+                trailWidth: 1,
+
+                duration: 3000,
+                easing: 'easeInOut'
+            });
+            circle.animate(.5);
+        }
+        if(document.getElementById("como-estamos-graph-4")){
+            var circle = new ProgressBar.Circle('#como-estamos-graph-4', {
+                color: '#EA6724',
+                strokeWidth: 15,
+
+                trailColor: '#cccccc',
+                trailWidth: 1,
+
+                duration: 3000,
+                easing: 'easeInOut'
+            });
+            circle.animate(.5);
+        }
     };
 </script>
+
+<!-- graficos -->
+<script>
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var chart = new Chart(ctx, {
+        // The type of chart we want to create
+        type: 'pie',
+
+        // The data for our dataset
+        data: {
+            labels: ['Cor Azul Claro', 'Cor Verde', 'Cor Azul Escuro'],
+            datasets: [{
+                label: 'My First dataset',
+                backgroundColor: ['#089BC0', '#70BF54', '#0071A2'],
+                borderWidth: 0,
+                borderAlign: 'center',
+                segmentShowStroke: false,
+                borderColor: ['#089BC0', '#70BF54', '#0071A2'],
+                data: [60, 15, 25],
+                zeroLineBorderDashOffset: true,
+                hoverBorderWidth: 10
+            }]
+        },
+
+        // Configuration options go here
+        options: {
+            responsive: true,
+            legend: {
+                display: false
+            },
+            tooltips: {
+                displayColors: false
+            },
+            elements: {
+                arc: {
+                    borderWidth: 0
+                }
+            }
+        }
+    });
+
+</script>
+<script>
+    var ctx = document.getElementById('chart2').getContext('2d');
+    var chart = new Chart(ctx, {
+        // The type of chart we want to create
+        type: 'pie',
+
+        // The data for our dataset
+        data: {
+            labels: ['Cor Azul Claro', 'Cor Verde', 'Cor Azul Escuro'],
+            datasets: [{
+                label: 'My First dataset',
+                backgroundColor: ['#089BC0', '#FF9900', '#EA6724'],
+                borderWidth: 0,
+                borderAlign: 'center',
+                segmentShowStroke: false,
+                borderColor: ['#089BC0', '#FF9900', '#EA6724'],
+                data: [60, 15, 25],
+                zeroLineBorderDashOffset: true,
+                hoverBorderWidth: 10,
+            }]
+        },
+
+        // Configuration options go here
+        options: {
+            cutoutPercentage: 90,
+            maintainAspectRatio : false,
+            responsive: true,
+            legend: {
+                display: false
+            },
+            tooltips: {
+                displayColors: false
+            },
+            elements: {
+                arc: {
+                    borderWidth: 0
+                }
+            }
+        }
+    });
+
+</script>
+
+
+
 </body>
 
 </html>
