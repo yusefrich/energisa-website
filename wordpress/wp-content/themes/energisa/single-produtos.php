@@ -67,7 +67,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <h1 class="text-orange py-5">Linha do tempo do projeto</h1>
                         <p class="text-gray">Acompanhe através da nossa linha do tempo as principais etapas deste
                             projeto e
@@ -107,7 +106,6 @@
                 </section>
             <?php endif; ?>
 
-
             <!-- Verifica se existe o layout Indicadores-->
             <?php if (get_row_layout() == 'layout_prod_indicadores'): ?>
                 <!-- Verifica se tem algum valor cadastrado no campo repetidor-->
@@ -139,80 +137,82 @@
                 <?php endif; ?>
             <?php endif; ?>
 
+            <!-- Verifica se existe o layout Últimas Novidades-->
+            <?php if (get_row_layout() == 'layout_prod_novidades'):
+
+                $categoriaObj = get_sub_field('prod_novidades_category');
+                $categoria_slug = esc_html($categoriaObj->slug);
+
+                $ultimas_novidades = new WP_Query(array(
+                    'post_type' => 'post',
+                    'posts_per_page' => '3',
+                    'category_name' => $categoria_slug
+                ));
+
+                if ($ultimas_novidades->have_posts()): ?>
+                    <section class="text-center mt-5 pb-0" id="ultimas-noticias">
+                        <div class="container">
+                            <div data-aos="flip-up" class="ultimas-novidades-title">
+                                <img src="<?php bloginfo('template_url'); ?>/img/paper.png" alt="">
+                                <h2 class="display-h2 text-orange">Últimas novidades</h2>
+                                <p>Encontre abaixo nossas últimas postagens e fique por dentro do que anda acontecendo
+                                    no nosso setor,
+                                    fique bem
+                                    informado</p>
+                            </div>
+                            <div id="parallax-detalhe-3">
+                                <div data-depth="0.2" class="d-flex justify-content-between">
+                                    <div class="trace-detail-left trace-detail-offset-up">
+                                        <img class="" src="<?php bloginfo('template_url'); ?>/img/detalhes-pontos-laranja.png" alt="">
+                                    </div>
+                                    <div class="trace-detail-right">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-5">
+                                <?php
+                                while ($ultimas_novidades->have_posts()): $ultimas_novidades->the_post();
+                                    $capa_novidades = get_the_post_thumbnail_url(null, 'capa_380_255');
+                                    ?>
+                                    <div data-aos="fade-right" class="col-md-4">
+                                        <img src="<?php echo esc_url($capa_novidades); ?>" class="figure-img img-fluid rounded zoom-hover" alt="...">
+                                        <p class="img-caption  text-uppercase">
+                                            <small>postado em
+                                                <strong><?php echo get_the_time(__('j \d\e M  Y'), $post->id); ?> </strong>
+                                            </small>
+                                        </p>
+                                        <p class="font-weight-bold"><?php the_title(); ?></p>
+                                        <p class="font-weight-light"><?php echo get_the_excerpt(); ?></p>
+                                    </div>
+                                <?php endwhile;
+                                wp_reset_postdata(); ?>
+                                <div class="col-md-12">
+                                    <div data-aos="zoom-in" class="d-flex justify-content-center py-5">
+                                        <button class="btn btn-primary px-5">Confira as novidades</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div id="parallax-bush-1">
+                                <div data-depth="0.1" class="d-flex justify-content-between">
+                                    <div>
+                                        <img style="transform: scaleX(-1)" src="<?php bloginfo('template_url'); ?>/img/bush-md.png" alt="">
+                                    </div>
+                                    <div>
+                                        <img style="margin-top: 96px; transform: scaleX(-1)" src="<?php bloginfo('template_url'); ?>/img/bush-sm.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                <?php endif; ?>
+            <?php endif; ?>
+
+
         <?php endwhile; ?>
     <?php endif; ?>
 
 
 <?php endwhile; ?>
-
-
-<?php
-$ultimas_novidades = new WP_Query(array(
-    'post_type' => 'post',
-    'posts_per_page' => '3',
-));
-
-if ($ultimas_novidades->have_posts()): ?>
-    <section class="text-center mt-5 pb-0" id="ultimas-noticias">
-    <div class="container">
-    <div data-aos="flip-up" class="ultimas-novidades-title">
-        <img src="<?php bloginfo('template_url'); ?>/img/paper.png" alt="">
-        <h2 class="display-h2 text-orange">Últimas novidades</h2>
-        <p>Encontre abaixo nossas últimas postagens e fique por dentro do que anda acontecendo no nosso setor,
-            fique bem
-            informado</p>
-    </div>
-    <div id="parallax-detalhe-3">
-        <div data-depth="0.2" class="d-flex justify-content-between">
-            <div class="trace-detail-left trace-detail-offset-up">
-                <img class="" src="<?php bloginfo('template_url'); ?>/img/detalhes-pontos-laranja.png" alt="">
-            </div>
-            <div class="trace-detail-right">
-            </div>
-        </div>
-    </div>
-
-    <div class="row mt-5">
-        <?php
-        while ($ultimas_novidades->have_posts()): $ultimas_novidades->the_post();
-            $capa_novidades = get_the_post_thumbnail_url(null, 'capa_380_255');
-            ?>
-            <div data-aos="fade-right" class="col-md-4">
-                <img src="<?php echo esc_url($capa_novidades); ?>" class="figure-img img-fluid rounded zoom-hover" alt="...">
-                <p class="img-caption  text-uppercase">
-                    <small>postado em <strong><?php echo get_the_time(__('j \d\e M  Y'), $post->id); ?> </strong>
-                    </small>
-                </p>
-                <p class="font-weight-bold"><?php the_title(); ?></p>
-                <p class="font-weight-light"><?php echo get_the_excerpt(); ?></p>
-            </div>
-
-        <?php endwhile;
-        wp_reset_postdata(); ?>
-
-        <div class="col-md-12">
-            <div data-aos="zoom-in" class="d-flex justify-content-center py-5">
-                <button class="btn btn-primary px-5">Confira as novidades</button>
-            </div>
-
-        </div>
-    </div>
-<?php endif; ?>
-
-
-    <div id="parallax-bush-1">
-        <div data-depth="0.1" class="d-flex justify-content-between">
-            <div>
-                <img style="transform: scaleX(-1)" src="<?php bloginfo('template_url'); ?>/img/bush-md.png" alt="">
-            </div>
-            <div>
-                <img style="margin-top: 96px; transform: scaleX(-1)" src="<?php bloginfo('template_url'); ?>/img/bush-sm.png" alt="">
-            </div>
-        </div>
-    </div>
-
-    </div>
-
-    </section>
 
 <?php get_footer(); ?>
