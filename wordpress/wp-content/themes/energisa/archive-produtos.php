@@ -58,7 +58,7 @@
                     </div>
                 <?php endwhile; ?>
 
-                
+
                 <div data-aos="flip-left" class="col-md-12 text-center mt-4">
                     <button class="btn btn-outline-light px-5"> Mostrar mais</button>
                 </div>

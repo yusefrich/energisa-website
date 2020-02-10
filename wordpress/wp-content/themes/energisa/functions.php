@@ -11,6 +11,8 @@ add_filter('show_admin_bar', 'my_function_admin_bar');
 
 //adiciona suporte a imagem de desque e tamanhos personalizados
 add_theme_support('post-thumbnails');
+add_image_size('capa_380_255', 380, 255, true);
+add_image_size('capa_498_356', 498, 356, true);
 
 //remover a largura e algura fixa das tag img dentro dos pots
 add_filter('post_thumbnail_html', 'remove_width_attribute', 10);

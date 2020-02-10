@@ -36,7 +36,7 @@ section {
 
 p {
   font-size: 1.25em;
-  font-weight: 300;
+  font-weight: normal;
 }
 
 h3 {
@@ -465,7 +465,37 @@ section {
   margin-right: auto;
 }
 
-#indicadores {
+#projeto-indicadores {
+  background-color: #F1F1F1;
+}
+
+.white-col {
+  background-color: #fff;
+}
+
+.label-dot {
+  font-size: 60px;
+  line-height: 5px;
+  position: relative;
+  top: 15px;
+}
+
+#progresso-geral-projeto {
+  background: #089BC0;
+}
+
+.progresso-atual-projeto {
+  background: #0071A2;
+  height: 100px;
+}
+
+.progresso-texto-projeto {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+#como-estamos-projeto {
   background-color: #F1F1F1;
 }
 
@@ -511,7 +541,7 @@ section {
   background: #EA6724;
 }
 
-.timeline ol li div {
+.timeline ol li > div {
   position: absolute;
   left: calc(100% + 7px);
   width: 280px;
@@ -520,6 +550,13 @@ section {
   white-space: normal;
   color: black;
   background: transparent;
+}
+
+.timeline-progress-circle {
+  transform: scaleX(-1);
+  stroke-linecap: round;
+  width: 50px;
+  height: 50px;
 }
 
 .timeline ol li div::before {
@@ -532,7 +569,7 @@ section {
   border-style: solid;
 }
 
-.timeline ol li:nth-child(odd) div {
+.timeline ol li:nth-child(odd) > div {
   top: -16px;
   transform: translateY(-100%);
 }
