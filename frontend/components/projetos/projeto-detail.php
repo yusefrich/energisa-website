@@ -219,15 +219,15 @@
 
     </div>
     <div id="parallax-bush-1">
-                <div data-depth="0.1" class="d-flex justify-content-between">
-                    <div>
-                        <img style="margin-top: 96px; " src="./img/bush-sm.png" alt="">
-                    </div>
-                    <div>
-                        <img style="" src="./img/bush-md.png" alt="">
-                    </div>
-                </div>
+        <div data-depth="0.1" class="d-flex justify-content-between">
+            <div>
+                <img style="margin-top: 96px; " src="./img/bush-sm.png" alt="">
             </div>
+            <div>
+                <img style="" src="./img/bush-md.png" alt="">
+            </div>
+        </div>
+    </div>
 
     </div>
 

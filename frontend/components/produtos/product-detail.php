@@ -16,17 +16,20 @@
                     <h2 data-aos="fade-up" class="display-h2">
                         Lorem ipsum dolor
                     </h2>
-                    <p data-aos="fade-up">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e
+                    <p data-aos="fade-up">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e
+                        de impressos, e
                         vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou</p>
                     <h2 data-aos="fade-up" class="display-h2">
                         Desafio
                     </h2>
-                    <p data-aos="fade-up">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e
+                    <p data-aos="fade-up">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e
+                        de impressos, e
                         vem sendo utilizado desde o século XVI,</p>
                     <h2 data-aos="fade-up" class="display-h2">
                         Produção
                     </h2>
-                    <p data-aos="fade-up">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e
+                    <p data-aos="fade-up">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e
+                        de impressos, e
                         vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja
                         de tipos e os embaralhou para fazer um livro de modelos de tipos.</p>
                 </div>
@@ -145,7 +148,7 @@
 </section>
 <section id="product-timeline">
     <div data-aos="fade-up" class="container pt-5">
-    <div id="parallax-detalhe-1">
+        <div id="parallax-detalhe-1">
             <div data-depth="0.2" class="d-flex justify-content-between">
                 <div class="trace-detail-left trace-detail-offset-up">
                     <img class="" src="./img/detalhes-traco-azul.png" alt="">
@@ -389,63 +392,70 @@
 <section class="text-center mt-5 pb-0" id="ultimas-noticias">
     <div class="container">
 
-    <div data-aos="flip-up"  class="ultimas-novidades-title">
+        <div data-aos="flip-up" class="ultimas-novidades-title">
 
-        <img src="./img/paper.png" alt="">
+            <img src="./img/paper.png" alt="">
 
-        <h2 class="display-h2 text-orange">Últimas novidades</h2>
-        <p>Encontre abaixo nossas últimas postagens e fique por dentro do que anda acontecendo no nosso setor, fique bem
-            informado</p>
-    </div>
+            <h2 class="display-h2 text-orange">Últimas novidades</h2>
+            <p>Encontre abaixo nossas últimas postagens e fique por dentro do que anda acontecendo no nosso setor, fique
+                bem
+                informado</p>
+        </div>
 
-    <div id="parallax-detalhe-3">
-                <div data-depth="0.2" class="d-flex justify-content-between">
-                    <div class="trace-detail-left trace-detail-offset-up">
-                        <img class="" src="./img/detalhes-pontos-laranja.png" alt="">
-                    </div>
-                    <div class="trace-detail-right">
-                    </div>
+        <div id="parallax-detalhe-3">
+            <div data-depth="0.2" class="d-flex justify-content-between">
+                <div class="trace-detail-left trace-detail-offset-up">
+                    <img class="" src="./img/detalhes-pontos-laranja.png" alt="">
+                </div>
+                <div class="trace-detail-right">
                 </div>
             </div>
+        </div>
 
 
-    <div class="row mt-5">
-        <div data-aos="fade-right" class="col-md-4">
-            <img src="./img/ultimas-not-1.png" class="figure-img img-fluid rounded zoom-hover" alt="...">
-            <p class="img-caption  text-uppercase"><small>postado em <strong> 05 de Jan 2020 </strong></small></p>
-            <p class="font-weight-bold">Ao contrário do que se acredita, Lorem Ipsum não é simplesmente um texto randômico</p>
-            <p class="font-weight-light">Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum</p>
-        </div>
-        <div data-aos="fade-left" class="col-md-4">
-            <img src="./img/ultimas-not-2.png" class="figure-img img-fluid rounded zoom-hover" alt="...">
-            <p class="img-caption  text-uppercase"><small>postado em <strong> 05 de Jan 2020 </strong></small></p>
-            <p class="font-weight-bold">Ao contrário do que se acredita, Lorem Ipsum não é simplesmente um texto randômico</p>
-            <p class="font-weight-light">Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum</p>
-        </div>
-        <div data-aos="fade-right" class="col-md-4">
-            <img src="./img/ultimas-not-3.png" class="figure-img img-fluid rounded zoom-hover" alt="...">
-            <p class="img-caption  text-uppercase"><small>postado em <strong> 05 de Jan 2020 </strong></small></p>
-            <p class="font-weight-bold">Ao contrário do que se acredita, Lorem Ipsum não é simplesmente um texto randômico</p>
-            <p class="font-weight-light">Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum</p>
-        </div>
-        <div class="col-md-12">
-            <div data-aos="zoom-in" class="d-flex justify-content-center py-5">
-                <button class="btn btn-primary px-5">Confira as novidades</button>
+        <div class="row mt-5">
+            <div data-aos="fade-right" class="col-md-4">
+                <img src="./img/ultimas-not-1.png" class="figure-img img-fluid rounded zoom-hover" alt="...">
+                <p class="img-caption  text-uppercase"><small>postado em <strong> 05 de Jan 2020 </strong></small></p>
+                <p class="font-weight-bold">Ao contrário do que se acredita, Lorem Ipsum não é simplesmente um texto
+                    randômico</p>
+                <p class="font-weight-light">Se popularizou na década de 60, quando a Letraset lançou decalques contendo
+                    passagens de Lorem Ipsum</p>
             </div>
+            <div data-aos="fade-left" class="col-md-4">
+                <img src="./img/ultimas-not-2.png" class="figure-img img-fluid rounded zoom-hover" alt="...">
+                <p class="img-caption  text-uppercase"><small>postado em <strong> 05 de Jan 2020 </strong></small></p>
+                <p class="font-weight-bold">Ao contrário do que se acredita, Lorem Ipsum não é simplesmente um texto
+                    randômico</p>
+                <p class="font-weight-light">Se popularizou na década de 60, quando a Letraset lançou decalques contendo
+                    passagens de Lorem Ipsum</p>
+            </div>
+            <div data-aos="fade-right" class="col-md-4">
+                <img src="./img/ultimas-not-3.png" class="figure-img img-fluid rounded zoom-hover" alt="...">
+                <p class="img-caption  text-uppercase"><small>postado em <strong> 05 de Jan 2020 </strong></small></p>
+                <p class="font-weight-bold">Ao contrário do que se acredita, Lorem Ipsum não é simplesmente um texto
+                    randômico</p>
+                <p class="font-weight-light">Se popularizou na década de 60, quando a Letraset lançou decalques contendo
+                    passagens de Lorem Ipsum</p>
+            </div>
+            <div class="col-md-12">
+                <div data-aos="zoom-in" class="d-flex justify-content-center py-5">
+                    <button class="btn btn-primary px-5">Confira as novidades</button>
+                </div>
 
+            </div>
         </div>
-    </div>
 
-    <div id="parallax-bush-1">
-                <div data-depth="0.1" class="d-flex justify-content-between">
-                    <div>
-                        <img style="transform: scaleX(-1)" src="./img/bush-md.png" alt="">
-                    </div>
-                    <div>
-                        <img style="margin-top: 96px; transform: scaleX(-1)" src="./img/bush-sm.png" alt="">
-                    </div>
+        <div id="parallax-bush-1">
+            <div data-depth="0.1" class="d-flex justify-content-between">
+                <div>
+                    <img style="transform: scaleX(-1)" src="./img/bush-md.png" alt="">
+                </div>
+                <div>
+                    <img style="margin-top: 96px; transform: scaleX(-1)" src="./img/bush-sm.png" alt="">
                 </div>
             </div>
+        </div>
 
     </div>
 

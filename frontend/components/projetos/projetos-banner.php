@@ -7,8 +7,8 @@
             " class="container-fluid   product-banner-holder px-0 ">
             <!-- text-white -->
             <div class="product-banner text-center text-white ">
-                <h1>Veja nossos projetos</h1>
-                <p class="text-caption">Acompanhe todos os nossos projetos em andamento e fique por dentro das nossas atividades.</p>
+                <h1 data-aos="fade-right">Veja nossos projetos</h1>
+                <p data-aos="fade-left" class="text-caption">Acompanhe todos os nossos projetos em andamento e fique por dentro das nossas atividades.</p>
             </div>
         </div>
     </section>
