@@ -81,6 +81,9 @@
                                     setlocale(LC_TIME, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
                                     date_default_timezone_set('America/Sao_Paulo');
                                     $date_string = get_sub_field('prod_data_tempo');
+
+                                    $field = get_sub_field('prod_link_tempo');
+                                    $destinoUrl = esc_html($field['value']);
                                     ?>
                                     <li>
                                         <div>
@@ -89,6 +92,18 @@
                                             <p class="text-gray">
                                                 <small><?php echo get_sub_field('prod_desc_tempo'); ?></small>
                                             </p>
+                                            <?php if ($destinoUrl != 'none'): ?>
+                                                <?php if ($destinoUrl == 'interno'): ?>
+                                                    <a href="<?php echo get_sub_field('prod_linkinterno_tempo'); ?>" class="btn btn-outline-light px-5">
+                                                        acesse nosso
+                                                        site</a>
+                                                <?php endif; ?>
+                                                <?php if ($destinoUrl == 'externo'): ?>
+                                                    <a href="<?php echo get_sub_field('prod_linkexterno_tempo'); ?>" target="_blank" class="btn btn-outline-light px-5">
+                                                        acesse nosso
+                                                        site</a>
+                                                <?php endif; ?>
+                                            <?php endif; ?>
                                         </div>
                                     </li>
                                 <?php endwhile; ?>
