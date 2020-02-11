@@ -1,9 +1,10 @@
 <section class="mb-5 pb-5" id="ideias-detail">
     <div class="container">
         <div class="d-flex justify-content-start my-4">
-            <a href="#carrouselProdutos" role="button" data-slide="prev" class="btn  btn-round"><i
-                    class="fas px-1 pt-1 fa-chevron-left"></i></a>
-            <p class="text-breadcrumb font-weight-bold mt-1">Retornar para <span class="text-orange">Ideias</span></p>
+            <a href="#carrouselProdutos" role="button" data-slide="prev" class="btn  btn-round">
+            
+            <p class="text-breadcrumb font-weight-bold mt-1"><i class="fas pr-3 pt-1 fa-chevron-left"></i>Retornar para <span class="text-orange">Ideias</span></p>
+            </a>
         </div>
         <div data-aos="flip-left" class="  mb-2 ">
             <div class="pb-4 text-start">
@@ -112,10 +113,10 @@
         </div>
 
         <div class="d-flex justify-content-start my-4">
-            <a href="#carrouselProdutos" role="button" data-slide="prev" class="btn  btn-round"><i
-                    class="fas px-1 pt-1 fa-chevron-left"></i></a>
-            <p class="text-breadcrumb font-weight-bold mt-1">Retornar para <span class="text-orange">Ideias</span></p>
-        </div>
+        <a href="#carrouselProdutos" role="button" data-slide="prev" class="btn  btn-round">
+            
+            <p class="text-breadcrumb font-weight-bold mt-1"><i class="fas pr-3 pt-1 fa-chevron-left"></i>Retornar para <span class="text-orange">Ideias</span></p>
+            </a>
 
     </div>
 </section>
