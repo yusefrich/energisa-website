@@ -54,7 +54,7 @@
                 </section>
             <?php endif; ?>
 
-            <!-- Verifica se existe o layout Linha do tempo-->
+            <!-- Verifica se existe o layout Linha do Tempo-->
             <?php if (get_row_layout() == 'layout_linha_tempo'): ?>
                 <section id="product-timeline">
                     <div data-aos="fade-up" class="container pt-5">
@@ -95,8 +95,7 @@
                                             <?php if ($destinoUrl != 'none'): ?>
                                                 <?php if ($destinoUrl == 'interno'): ?>
                                                     <a href="<?php echo get_sub_field('prod_linkinterno_tempo'); ?>" class="btn btn-outline-light px-5">
-                                                        acesse nosso
-                                                        site</a>
+                                                        fotos do produto</a>
                                                 <?php endif; ?>
                                                 <?php if ($destinoUrl == 'externo'): ?>
                                                     <a href="<?php echo get_sub_field('prod_linkexterno_tempo'); ?>" target="_blank" class="btn btn-outline-light px-5">
@@ -119,6 +118,76 @@
                         </div>
                     </div>
                 </section>
+            <?php endif; ?>
+
+            <!-- Verifica se existe o layout Carousel-->
+            <?php if (get_row_layout() == 'layout_prod_carousel'): ?>
+                <!-- Verifica se tem algum valor cadastrado no campo repetidor-->
+                <?php if (have_rows('prod_carousel_repeat')): ?>
+                    <section id="slider-long">
+                        <div class="container">
+                            <div id="parallax-detalhe-2">
+                                <div data-depth="0.2" class="d-flex justify-content-between">
+                                    <div class="trace-detail-left ">
+                                    </div>
+                                    <div class="trace-detail-right trace-detail-offset-up">
+                                        <img class="" src="<?php bloginfo('template_url'); ?>/img/detalhes-traco-laranja.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container-fluid p-0">
+                            <div id="carrouselProdutosBlue" class="carousel slide" data-ride="carousel">
+                                <!-- carousel-fade -->
+                                <div class="carousel-inner ">
+                                    <?php $slidersCount = 0; ?>
+                                    <?php while (have_rows('prod_carousel_repeat')): the_row();
+                                        $slidersCount++;
+                                        ?>
+                                        <div class="carousel-item <?php if ($slidersCount == 1) echo "active"; ?> carousel-long zoom-hover">
+                                            <div class="container custom-carousel-caption">
+                                                <div class="slider-title ">
+                                                    <div class="text-center mb-5 mx-5">
+                                                        <h2 class="display-h2 ">Olha o que vem por aí</h2>
+                                                        <p>Estamos cada vez mais empolgados para melhorar nossos
+                                                            serviços,
+                                                            acompanhe em que
+                                                            estamos trabalhando atualmente</p>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div style="
+                                                                    height: 431px;
+                                                                    background-image: url(<?php the_sub_field('prod_carousel_img'); ?>);
+                                                                    background-size: cover;
+                                                                    background-position: center;
+                                                                    " class="product-description-info">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <p class="text-uppercase"><?php the_sub_field('prod_carousel_tagline'); ?></p>
+                                                            <h2 style="width: 300px;" class="display-h2 "><?php the_sub_field('prod_carousel_titulo'); ?></h2>
+                                                            <p class=""><?php the_sub_field('prod_carousel_descricao'); ?></p>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <?php endwhile; ?>
+                                </div>
+                                <div class="container">
+                                    <div class="custom-control-carrousel-center custom-control-bottom">
+                                        <a href="#carrouselProdutosBlue" role="button" data-slide="prev"
+                                           class="btn btn-light btn-round"><span class="icon pt-2 pb-2 pl-1 icon-prev-icon"></span></a>
+                                        <a href="#carrouselProdutosBlue" role="button" data-slide="next"
+                                           class="btn btn-light btn-round"><span class="icon pt-2 pb-2 pr-1 icon-next-icon"></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                <?php endif; ?>
             <?php endif; ?>
 
             <!-- Verifica se existe o layout Indicadores-->
