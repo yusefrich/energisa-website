@@ -46,11 +46,7 @@
                             <div class="card-img-overlay overlay-sm text-start">
                                 <h3 class="card-title"><?php the_field('prod_titulo'); ?></h3>
                                 <p class="card-text"><?php the_field('prod_descricao'); ?></p>
-                                <div class="overlay-status">
-                                    <small class="pl-3 ">STATUS</small>
-                                    <br>
-                                    <small class="outline-text py-1 px-3"><?php the_field('prod_status'); ?></small>
-                                </div>
+
                             </div>
                             <a  href="<?php the_permalink(); ?>" class="btn btn-light btn-round btn-sm card-btn m-3">
                                 <span class="icon pt-2 pb-2 pr-2 icon-next-icon"></span></a>
