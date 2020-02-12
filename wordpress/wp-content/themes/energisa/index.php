@@ -144,7 +144,7 @@ if ($slider->have_posts()) :
                 wp_reset_postdata(); ?>
                 <div class="col-12">
                     <div data-aos="fade-up" class="d-flex justify-content-center">
-                        <button class="btn btn-light px-5">Confira as novidades</button>
+                        <a href="<?php bloginfo('home'); ?>/novidades" class="btn btn-light px-5">Confira as novidades</a>
                     </div>
                 </div>
             </div>

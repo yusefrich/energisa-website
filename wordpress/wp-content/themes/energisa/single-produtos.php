@@ -262,7 +262,7 @@
                                         <img src="<?php echo esc_url($capa_novidades); ?>" class="figure-img img-fluid rounded zoom-hover" alt="...">
                                         <p class="img-caption  text-uppercase">
                                             <small>postado em
-                                                <strong><?php echo get_the_time(__('j \d\e M  Y'), $post->id); ?> </strong>
+                                                <strong><?php echo get_the_time(__('j \d\e M  Y'), $post->id); ?></strong>
                                             </small>
                                         </p>
                                         <p class="font-weight-bold"><?php the_title(); ?></p>
@@ -272,7 +272,7 @@
                                 wp_reset_postdata(); ?>
                                 <div class="col-md-12">
                                     <div data-aos="zoom-in" class="d-flex justify-content-center py-5">
-                                        <button class="btn btn-primary px-5">Confira as novidades</button>
+                                        <a href="<?php bloginfo('home'); ?>/novidades" class="btn btn-primary px-5">Confira as novidades</a>
                                     </div>
 
                                 </div>

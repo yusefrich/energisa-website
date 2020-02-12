@@ -46,7 +46,7 @@
                     <a class="nav-link py-4" href="#">Projetos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link py-4" href="#">Novidades</a>
+                    <a class="nav-link py-4" href="<?php bloginfo('home'); ?>/novidades">Novidades</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link py-4" href="#">Ideias</a>
