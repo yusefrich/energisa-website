@@ -11,7 +11,7 @@
             <!-- text-white -->
             <div class="product-banner text-center text-white ">
                 <h1><?php the_title(); ?></h1>
-                <p class="text-caption"> <?php echo get_the_excerpt(); ?></p>
+                <p class="text-caption"><?php echo get_the_excerpt(); ?></p>
             </div>
         </div>
     </section>
