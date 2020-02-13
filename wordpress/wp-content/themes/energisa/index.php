@@ -144,7 +144,8 @@ if ($slider->have_posts()) :
                 wp_reset_postdata(); ?>
                 <div class="col-12">
                     <div data-aos="fade-up" class="d-flex justify-content-center">
-                        <a href="<?php bloginfo('home'); ?>/novidades" class="btn btn-light px-5">Confira as novidades</a>
+                        <a href="<?php bloginfo('home'); ?>/novidades" class="btn btn-light px-5">Confira as
+                            novidades</a>
                     </div>
                 </div>
             </div>
@@ -222,69 +223,36 @@ if ($slider->have_posts()) :
                 wp_reset_postdata(); ?>
 
 
-                <div data-aos="flip-left" class="col-md-4">
-                    <div class="card card-bg-small text-white mb-2 zoom-hover">
-                        <!-- <img src="https://via.placeholder.com/1920x600" class="card-img" alt="..."> -->
-                        <div class="img-holder-sm" style="
-                                background: linear-gradient(0deg, rgba(205,87,27, 0.6), rgba(205,87,27, 0.6)), url(<?php bloginfo('template_url'); ?>/img/projetos-1.png);
-                                background-position: center;
-                                background-size: cover;"></div>
-                        <div class="card-img-overlay overlay-sm text-start">
-                            <h3 class="card-title">Negociação de Dívidas</h3>
-                            <p class="card-text">A vantagem de usar Lorem Ipsum é que ele tem uma distribuição normal de
-                                letras, ao contrário de "Conteúdo aqui, conteúdo aqui".</p>
-                            <div class="overlay-status">
-                                <small class="pl-3 ">STATUS</small>
-                                <br>
-                                <small class="outline-text py-1 px-3">FINALIZADO</small>
+                <?php
+                $projetos = new WP_Query(
+                    array(
+                        'post_type' => 'projetos',
+                        'posts_per_page' => '3',
+                    ));
+                while ($projetos->have_posts()): $projetos->the_post();
+                    ?>
+                    <div data-aos="flip-left" class="col-md-4">
+                        <div class="card card-bg-small text-white mb-2 zoom-hover">
+                            <div class="img-holder-sm" style="
+                                    background: linear-gradient(0deg, rgba(<?php the_field('projet_cor_background'); ?>), rgba(<?php the_field('projet_cor_background'); ?>)), url(<?php the_field('projet_background'); ?>);
+                                    background-position: center;
+                                    background-size: cover;"></div>
+                            <div class="card-img-overlay overlay-sm text-start">
+                                <h3 class="card-title"><?php the_field('projet_titulo'); ?></h3>
+                                <p class="card-text"><?php the_field('projet_descricao'); ?></p>
+                                <div class="overlay-status">
+                                    <small class="pl-3">STATUS</small>
+                                    <br>
+                                    <small class="outline-text py-1 px-3 text-uppercase"><?php the_field('projet_status'); ?></small>
+                                </div>
                             </div>
+                            <a href="<?php the_permalink(); ?>" class="btn btn-light btn-round btn-sm card-btn m-3">
+                                <span class="icon pt-2 pb-2 pr-2 icon-next-icon"></span></a>
                         </div>
-                        <button class="btn btn-light btn-round btn-sm card-btn m-3">
-                            <span class="icon pt-2 pb-2 pr-2 icon-next-icon"></span></button>
                     </div>
-                </div>
-                <div data-aos="flip-left" class="col-md-4">
-                    <div class="card card-bg-small text-white mb-2 zoom-hover">
-                        <!-- <img src="https://via.placeholder.com/1920x600" class="card-img" alt="..."> -->
-                        <div class="img-holder-sm" style="
-                                background: linear-gradient(0deg, rgba(141,99,34, 0.6), rgba(141,99,34, 0.6)), url(<?php bloginfo('template_url'); ?>/img/projetos-2.png);
-                                background-position: center;
-                                background-size: cover;"></div>
-                        <div class="card-img-overlay overlay-sm text-start">
-                            <h3 class="card-title">Negociação de Dívidas</h3>
-                            <p class="card-text">A vantagem de usar Lorem Ipsum é que ele tem uma distribuição normal de
-                                letras, ao contrário de "Conteúdo aqui, conteúdo aqui".</p>
-                            <div class="overlay-status">
-                                <small class="pl-3 ">STATUS</small>
-                                <br>
-                                <small class="outline-text py-1 px-3">FINALIZADO</small>
-                            </div>
-                        </div>
-                        <button class="btn btn-light btn-round btn-sm card-btn m-3">
-                            <span class="icon pt-2 pb-2 pr-2 icon-next-icon"></span></button>
-                    </div>
-                </div>
-                <div data-aos="flip-left" class="col-md-4">
-                    <div class="card card-bg-small text-white mb-2 zoom-hover">
-                        <!-- <img src="https://via.placeholder.com/1920x600" class="card-img" alt="..."> -->
-                        <div class="img-holder-sm" style="
-                                background: linear-gradient(0deg, rgba(44,85,138, 0.6), rgba(44,85,138, 0.6)), url(<?php bloginfo('template_url'); ?>/img/projetos-3.png);
-                                background-position: center;
-                                background-size: cover;"></div>
-                        <div class="card-img-overlay overlay-sm text-start">
-                            <h3 class="card-title">Negociação de Dívidas</h3>
-                            <p class="card-text">A vantagem de usar Lorem Ipsum é que ele tem uma distribuição normal de
-                                letras, ao contrário de "Conteúdo aqui, conteúdo aqui".</p>
-                            <div class="overlay-status">
-                                <small class="pl-3 ">STATUS</small>
-                                <br>
-                                <small class="outline-text py-1 px-3">FINALIZADO</small>
-                            </div>
-                        </div>
-                        <button class="btn btn-light btn-round btn-sm card-btn m-3">
-                            <span class="icon pt-2 pb-2 pr-2 icon-next-icon"></span></button>
-                    </div>
-                </div>
+                <?php endwhile;
+                wp_reset_postdata(); ?>
+
 
             </div>
             <div id="parallax-detalhe-3">
@@ -329,7 +297,7 @@ if ($produtos->have_posts()) :
                     <?php
                     while ($produtos->have_posts()): $produtos->the_post();
                         $capa_produtos = get_the_post_thumbnail_url(null, 'full');
-                        $contador ++
+                        $contador++
                         ?>
                         <div class="carousel-item <?php if ($contador == 1) echo "active"; ?> carousel-long zoom-hover"
                              style="background: linear-gradient(0deg, rgba(8, 107, 192, 0.7), rgba(8, 107, 192, 0.7)), url(<?php echo esc_url($capa_produtos); ?>);

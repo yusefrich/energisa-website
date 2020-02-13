@@ -6,7 +6,7 @@
             <div class="d-flex justify-content-center">
                 <a class="nav-link link-light" href="#">Quem somos</a>
                 <a class="nav-link link-light" href="<?php bloginfo('home'); ?>/produtos">Produtos</a>
-                <a class="nav-link link-light" href="#">Projetos</a>
+                <a class="nav-link link-light" href="<?php bloginfo('home'); ?>/projetos">Projetos</a>
                 <a class="nav-link link-light" href="<?php bloginfo('home'); ?>/novidades">Novidades</a>
                 <a class="nav-link link-light" href="#">Ideias</a>
             </div>
