@@ -10,59 +10,63 @@ if ($slider->have_posts()) :
     ?>
     <section id="home-carrousel">
         <div class="container-fluid p-0">
-            <div id="carouselExampleCaptions" class="carousel slide " data-ride="carousel"> <!-- carousel-fade -->
-                <div class="carousel-inner">
-                    <?php
-                    while ($slider->have_posts()):
-                        $slider->the_post();
-                        $slider_bg = get_the_post_thumbnail_url(null, 'full');
-                        $contador++;
-                        ?>
-                        <div class="carousel-item <?php if ($contador == 1) echo "active"; ?>" style="background: linear-gradient(0deg, rgba(55, 55, 55, 0.4), rgba(55, 55, 55, 0.4)), url(<?php echo esc_url($slider_bg); ?>); background-position: center; background-size: cover;">
-                            <div class="container custom-carousel-caption">
-                                <div class="slider-title">
-                                    <div class="text-center">
-                                        <h2 class="highlight m-0"><?php the_field('titulo_1'); ?></h2> <br>
-                                        <h2 class="highlight"><?php the_field('titulo_2'); ?></h2>
-                                    </div>
-                                    <p class="text-center"><?php the_field('tagline'); ?></p>
-                                </div>
-                                <div class="d-flex justify-content-between carousel-info-container text-center">
-                                    <div class="carousel-info pt-5 mt-5">
-                                        <h3><?php the_field('subtitulo'); ?></h3>
-                                        <p><?php the_field('descricao_subtitulo'); ?></p>
-                                    </div>
-                                    <div class="carousel-info text-center">
-                                        <img class="py-3" src="<?php bloginfo('template_url'); ?>/img/ideias-icon.png" width="100" alt="">
+            <div style="background: linear-gradient(0deg, rgba(55, 55, 55, 0.4), rgba(55, 55, 55, 0.4)), url(<?php bloginfo('template_url'); ?>/img/slider-1.png);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;"
+                 class="index-banner d-flex">
+                <div class="container custom-carousel-caption">
+                    <!--  d-none d-md-block -->
+                    <div class="slider-title">
+                        <div class="text-center">
+                            <h2 class="highlight m-0">O nosso propósito é inovar</h2> <br>
+                            <h2 class="highlight">para simplificar vidas</h2>
+                        </div>
+                        <p class="text-center">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    </div>
+                    <div class="d-flex justify-content-between  text-center">
+                        <div class="carousel-info pt-5 mt-5">
+                            <h3>O que fazemos aqui</h3>
+                            <p>Conheça um pouco das nossas atividades, navegue pelos botões
+                                ao lado e veja nossas atividades principais</p>
+                        </div>
+                        <div class="carousel-info text-center">
+                                  <div id="carouselExampleCaptions" class="carousel slide " data-ride="carousel">
+                                <div style="max-width: 710px" class="carousel-inner carousel-info-container">
+                                    <?php
+                                    while ($slider->have_posts()):
+                                        $slider->the_post();
+                                        $contador++;
+                                        ?>
 
-                                        <p class=" m-0"><strong>Compartilhamos Ideias</strong></p>
-                                        <p class=""><?php the_field('texto'); ?></p>
+                                        <div class="carousel-item <?php if ($contador == 1) echo "active"; ?>">
+                                            <img class="py-3" src="img/ideias-icon.png" width="100" alt="">
+                                            <p class=" m-0"><strong><?php the_field('titulo_1'); ?></strong></p>
+                                            <p class=""><?php the_field('tagline'); ?></p>
+                                        </div>
+                                    <?php endwhile; ?>
+                                </div>
+                                <div class="d-flex justify-content-center">
+                                    <div class="carousel-control-holder">
+                                        <ol class="carousel-indicators">
+                                            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active">
+                                            <li data-target="#carouselExampleCaptions" data-slide-to="1">
+                                            </li>
+                                        </ol>
+                                        <div class="custom-control-carrousel custom-control-bottom">
+                                            <a href="#carouselExampleCaptions" role="button" data-slide="prev"
+                                               class="btn btn-primary btn-round"><span
+                                                        class="icon pt-2 pb-2 pl-1 icon-prev-icon"></span></a>
+                                            <a href="#carouselExampleCaptions" role="button" data-slide="next"
+                                               class="btn btn-primary btn-round"><span
+                                                        class="icon pt-2 pb-2 pr-1 icon-next-icon"></span></a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    <?php endwhile; ?>
-                </div>
-                <div class="container">
-                    <div class="carousel-control-holder">
-                        <ol class="carousel-indicators">
-                            <?php
-                            for ($i = 0; $i < $contador; $i++) { ?>
-                                <li data-target="#carouselExampleCaptions" data-slide-to="<?php echo $i; ?>" class="<?php if ($i == 0) echo "active"; ?>"></li>
-                            <?php }
-                            ?>
-                        </ol>
-
-                        <div class="custom-control-carrousel custom-control-bottom">
-                            <a href="#carouselExampleCaptions" role="button" data-slide="prev"
-                               class="btn btn-primary btn-round"><span class="icon pt-2 pb-2 pl-1 icon-prev-icon"></span></a>
-                            <a href="#carouselExampleCaptions" role="button" data-slide="next"
-                               class="btn btn-primary btn-round"><span class="icon pt-2 pb-2 pr-1 icon-next-icon"></span></a>
-                        </div>
                     </div>
-
                 </div>
-
             </div>
         </div>
     </section>
@@ -138,7 +142,8 @@ if ($slider->have_posts()) :
                     ?>
                     <div data-aos="fade-left" class="col-md-6">
                         <img src="<?php echo esc_url($capa_novidades); ?>" class="figure-img img-fluid rounded zoom-hover" alt="...">
-                        <p class="img-caption text-white"><strong><?php the_title(); ?></strong></p class="text-white">
+                        <a href="<?php the_permalink(); ?>"><p class="img-caption text-white">
+                                <strong><?php the_title(); ?></strong></p></a>
                     </div>
                 <?php endwhile;
                 wp_reset_postdata(); ?>
@@ -238,7 +243,8 @@ if ($slider->have_posts()) :
                                     background-position: center;
                                     background-size: cover;"></div>
                             <div class="card-img-overlay overlay-sm text-start">
-                                <h3 class="card-title"><?php the_field('projet_titulo'); ?></h3>
+                                <a href="<?php the_title(); ?>">
+                                    <h3 class="card-title"><?php the_field('projet_titulo'); ?></h3></a>
                                 <p class="card-text"><?php the_field('projet_descricao'); ?></p>
                                 <div class="overlay-status">
                                     <small class="pl-3">STATUS</small>

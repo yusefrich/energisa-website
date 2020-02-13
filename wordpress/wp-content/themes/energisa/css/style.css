@@ -13,6 +13,13 @@ section {
   color: #7C7C7C;
 }
 
+.text-modal-title {
+  font-family: Open Sans;
+  font-style: normal;
+  font-size: 4em;
+  line-height: 87px;
+}
+
 .text-breadcrumb {
   font-family: Open Sans;
   font-style: normal;
@@ -154,7 +161,7 @@ h1 {
 }
 
 .text-gray {
-  color: #828282;
+  color: #828282 !important;
 }
 
 .text-blue {
@@ -308,9 +315,13 @@ section {
   margin-bottom: 40px;
 }
 
+.home-carrousel-bottom-offset {
+  margin-bottom: 180px;
+}
+
 .carousel-control-holder {
   position: absolute;
-  right: 26%;
+  /* right: 26%; */
   bottom: 80px;
 }
 
@@ -755,6 +766,42 @@ section {
   .img-post-container {
     padding: 10px 0px;
   }
+}
+.index-banner {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.modal-blue {
+  background-color: #089BC0;
+}
+
+.modal-header {
+  border-bottom: 0px solid #dee2e6;
+}
+
+.modal-footer {
+  border-top: 0px solid #dee2e6;
+}
+
+.modal-content {
+  border: 0px;
+}
+
+.bg-header {
+  height: 370px;
+  background-position: center;
+  /* Center the image */
+  background-repeat: no-repeat;
+  /* Do not repeat the image */
+  background-size: cover;
+}
+
+.modal-tag {
+  background-color: #EA6724;
+  border-radius: 25px;
+  color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */
