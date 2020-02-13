@@ -33,75 +33,29 @@
                     <h2 class="font-weight-extra-bold text-caption display-h2"><?php the_title(); ?></h2>
                     <!-- <img class="profile-pic float-left" height="48" src="./img/profile-1.jpg" alt=""> -->
                 </div>
-                <p class="text-dark font-weight-normal mb-5">Lorem Ipsum é simplesmente uma simulação de texto da
-                    indústria
-                    tipográfica e de impressos, e vem sendo
-                    utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os
-                    embaralhou
-                    para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também
-                    ao
-                    salto
-                    para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de
-                    60,
-                    quando
-                    a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a
-                    ser
-                    integrado a softwares de editoração eletrônica como Aldus PageMaker.</p>
-                <p class="text-dark font-weight-normal mb-5">Lorem Ipsum é simplesmente uma simulação de texto da
-                    indústria
-                    tipográfica e de impressos, e vem sendo
-                    utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os
-                    embaralhou
-                    para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também
-                    ao
-                    salto
-                    para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de
-                    60,
-                    quando
-                    a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a
-                    ser
-                    integrado a softwares de editoração eletrônica como Aldus PageMaker.</p>
-                <p class="text-dark font-weight-normal mb-5">Lorem Ipsum é simplesmente uma simulação de texto da
-                    indústria
-                    tipográfica e de impressos, e vem sendo
-                    utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os
-                    embaralhou
-                    para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também
-                    ao
-                    salto
-                    para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de
-                    60,
-                    quando
-                    a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a
-                    ser
-                    integrado a softwares de editoração eletrônica como Aldus PageMaker.</p>
             </div>
         </div>
-        <div class="container-fluid img-post-container mb-5">
-            <img width="100%" height="auto" src="<?php bloginfo('template_url'); ?>/img/novidades-post-img.png" alt="">
-        </div>
-        <div class="container">
-            <p class="text-dark font-weight-normal mb-5">Lorem Ipsum é simplesmente uma simulação de texto da indústria
-                tipográfica e de impressos, e vem sendo
-                utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os
-                embaralhou
-                para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao
-                salto
-                para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60,
-                quando
-                a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser
-                integrado a softwares de editoração eletrônica como Aldus PageMaker.</p>
-            <p class="text-dark font-weight-normal mb-5">Lorem Ipsum é simplesmente uma simulação de texto da indústria
-                tipográfica e de impressos, e vem sendo
-                utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os
-                embaralhou
-                para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao
-                salto
-                para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60,
-                quando
-                a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser
-                integrado a softwares de editoração eletrônica como Aldus PageMaker.</p>
 
+        <?php if (have_rows('content')): ?>
+        <?php while (have_rows('content')): the_row(); ?>
+
+            <?php if (get_row_layout() == 'layout_post_texto'): ?>
+                <div class="container">
+                    <p class="text-dark font-weight-normal mb-5"><?php the_sub_field('post_texto'); ?></p>
+                </div>
+            <?php endif; ?>
+
+            <?php if (get_row_layout() == 'layout_post_image'): ?>
+                <div class="container-fluid img-post-container mb-5">
+                    <img width="100%" height="auto" src="<?php the_sub_field('post_image_ful'); ?>" alt="">
+                </div>
+            <?php endif; ?>
+
+        <?php endwhile; ?>
+    <?php endif; ?>
+
+
+        <div class="container">
             <div data-aos="flip-left" class="  mb-5 pb-5">
                 <div class="d-flex justify-content-start">
                     <button class="btn btn-outline-dark mr-2">Gostei</button>
@@ -109,15 +63,15 @@
                 </div>
             </div>
 
-
             <div class="d-flex justify-content-start my-4 pt-5">
                 <a href="<?php bloginfo('home'); ?>/novidades" class="btn">
                     <p class="text-breadcrumb font-weight-bold mt-1"><i class="fas pr-3 pt-1 fa-chevron-left"></i>Retornar
                         para <span class="text-orange">Novidades</span></p>
                 </a>
             </div>
-
         </div>
+
+
     <?php endwhile; ?>
 </section>
 
@@ -141,7 +95,8 @@ if ($posts_relacionados->have_posts()): ?>
                     <div data-aos="fade-right" class="col-md-4">
                         <img src="<?php echo esc_url($capa_novidades); ?>" class="figure-img img-fluid rounded zoom-hover" alt="...">
                         <p class="img-caption  text-uppercase">
-                            <small>postado em <strong> <?php echo get_the_time(__('j \d\e M  Y'), $post->id); ?> </strong></small>
+                            <small>postado em
+                                <strong> <?php echo get_the_time(__('j \d\e M  Y'), $post->id); ?> </strong></small>
                         </p>
                         <a href="<?php the_permalink(); ?>"><p class="font-weight-bold"><?php the_title(); ?></p></a>
                         <p class="font-weight-light"><?php echo get_the_excerpt(); ?></p>
