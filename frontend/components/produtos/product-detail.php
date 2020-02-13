@@ -196,7 +196,7 @@
                         <p class="text-caption font-weight-bold text-blue">Atualizãção dos termos de contrato</p>
                         <p class="text-gray"><small>Lorem Ipsum é simplesmente uma simulação de texto da indústria
                                 tipográfica e de impressos, e vem sendo utilizado</small></p>
-                        <button class="btn btn-outline-light px-5"> acesse nosso site</button>
+                        <button class="btn btn-outline-light px-5" type="button" data-toggle="modal" data-target="#designProdutoModal"> Design do produto</button>
                     </div>
                 </li>
                 <li></li>
@@ -460,3 +460,52 @@
     </div>
 
 </section>
+
+<!-- Modal -->
+<div class="modal fade" id="designProdutoModal" tabindex="-1" role="dialog" aria-labelledby="designProdutoModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content modal-blue">
+            <div class="modal-header d-flex justify-content-end pb-0">
+
+                <button type="button" class="btn btn-light btn-round py-1" data-dismiss="modal" aria-label="Close">
+                    <span class="text-gray" aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body pt-0">
+                <div class="text-center my-2">
+                    <img src="./img/jigsaw.png" alt="">
+                    <p class="text-white text-modal-title font-weight-bold">Um pouco sobre o processo</p>
+                    <p class="text-white font-weight-light">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de
+                        impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma
+                        bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos.</p>
+                </div>
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                        <img src="./img/projeto-autoatendimento.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                        <img src="./img/product-info-full.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                        <img src="./img/product-info-full.png" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                    </div>
+            </div>
+            <div class="modal-footer">
+                <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button> -->
+            </div>
+        </div>
+    </div>
+</div>

@@ -53,6 +53,7 @@ $caption-font-size: (null: em(24));
 $large-caption-font-size: (null: em(28));
 $h1-font-size: (null: em(72));
 $h2-font-size: (null: em(58));
+$modal-title-font-size: (null: em(64));
 $display-h2-font-size: (null: em(48));
 $h3-font-size: (null: em(36));
 .text-fade{
@@ -63,6 +64,13 @@ $h3-font-size: (null: em(36));
     /* identical to box height */
 
     color: #7C7C7C;
+}
+.text-modal-title{
+    font-family: Open Sans;
+    font-style: normal;
+    @include font-size-map($modal-title-font-size);
+    line-height: 87px;
+
 }
 .text-breadcrumb{
     font-family: Open Sans;
@@ -193,7 +201,7 @@ h1{
     color: #EA6724;
 }
 .text-gray{
-    color: #828282;
+    color: #828282 !important;
 }
 .text-blue{
     color: #089BC0 !important;
@@ -324,9 +332,13 @@ section {
 .carousel-long .custom-control-carrousel-center{
     margin-bottom: 40px;
 }
+.home-carrousel-bottom-offset{
+    margin-bottom: 180px;
+
+}
 .carousel-control-holder{
     position: absolute;
-    right: 26%;
+    /* right: 26%; */
     bottom: 80px;
 }
 .carousel-control-holder .carousel-indicators{
@@ -745,3 +757,32 @@ section {
     }
         
   }
+
+.index-banner{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.modal-blue{
+    background-color: #089BC0;
+}
+.modal-header{
+    border-bottom: 0px solid #dee2e6;
+}
+.modal-footer{
+    border-top: 0px solid #dee2e6;
+}
+.modal-content{
+    border: 0px;
+}
+.bg-header{
+    height: 370px;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; 
+}
+.modal-tag{
+    background-color: #EA6724;
+    border-radius: 25px;
+    color: #fff;
+}
