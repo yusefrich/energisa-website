@@ -141,7 +141,8 @@ if ($slider->have_posts()) :
                     $capa_novidades = get_the_post_thumbnail_url(null, 'capa_498_356');
                     ?>
                     <div data-aos="fade-left" class="col-md-6">
-                        <img src="<?php echo esc_url($capa_novidades); ?>" class="figure-img img-fluid rounded zoom-hover" alt="...">
+                        <a href="<?php the_permalink(); ?>">
+                        <img src="<?php echo esc_url($capa_novidades); ?>" class="figure-img img-fluid rounded zoom-hover" alt="..."></a>
                         <a href="<?php the_permalink(); ?>"><p class="img-caption text-white">
                                 <strong><?php the_title(); ?></strong></p></a>
                     </div>

@@ -759,6 +759,7 @@ section {
   }
 
 .index-banner{
+    min-height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -785,4 +786,14 @@ section {
     background-color: #EA6724;
     border-radius: 25px;
     color: #fff;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+a:hover{
+    /* color: #EA6724; */
+    color: inherit;
+    text-decoration: none;
+    transform: scale(1.01);
 }
