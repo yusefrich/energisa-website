@@ -36,7 +36,9 @@
                             background-position: center;
                             background-size: cover;"></div>
                         <div  class="card-img-overlay overlay-sm text-start">
+                        <a href="#">
                             <h3 class="card-title">Negociação de Dívidas</h3>
+                        </a>
                             <p class="card-text">A vantagem de usar Lorem Ipsum é que ele tem uma distribuição normal de letras, ao contrário de "Conteúdo aqui, conteúdo aqui".</p>
                             <div class="overlay-status">
                                 <small class="pl-3 ">STATUS</small><br>

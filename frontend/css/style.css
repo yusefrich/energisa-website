@@ -805,4 +805,16 @@ section {
   color: #fff;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  /* color: #EA6724; */
+  color: inherit;
+  text-decoration: none;
+  transform: scale(1.01);
+}
+
 /*# sourceMappingURL=style.css.map */

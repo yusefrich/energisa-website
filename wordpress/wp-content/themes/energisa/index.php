@@ -244,7 +244,8 @@ if ($slider->have_posts()) :
                                     background-size: cover;"></div>
                             <div class="card-img-overlay overlay-sm text-start">
                                 <a href="<?php the_title(); ?>">
-                                    <h3 class="card-title"><?php the_field('projet_titulo'); ?></h3></a>
+                                    <h3 class="card-title"><?php the_field('projet_titulo'); ?></h3>
+                                    </a>
                                 <p class="card-text"><?php the_field('projet_descricao'); ?></p>
                                 <div class="overlay-status">
                                     <small class="pl-3">STATUS</small>
