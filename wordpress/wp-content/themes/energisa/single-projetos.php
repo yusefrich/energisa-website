@@ -178,13 +178,19 @@
                     </div>
                 </div>
             </section>
-            <section id="progresso-geral-projeto">
-                <div data-aos="fade-left" class="d-flex justify-content-center progresso-texto-projeto mt-2">
-                    <p class="text-caption text-white mt-4 mr-3">Status do projeto</p>
-                    <h2 class="display-h2 font-weight-bold text-white">78%</h2>
-                </div>
-                <div data-aos="fade-right" style="width: 78%;" class="progresso-atual-projeto"></div>
-            </section>
+
+
+
+            <!-- Verifica se existe o layout Status do Projeto-->
+            <?php if (get_row_layout() == 'projet_layout_status'): ?>
+                <section id="progresso-geral-projeto">
+                    <div data-aos="fade-left" class="d-flex justify-content-center progresso-texto-projeto mt-2">
+                        <p class="text-caption text-white mt-4 mr-3">Status do projeto</p>
+                        <h2 class="display-h2 font-weight-bold text-white"><?php the_sub_field('projet_status'); ?>%</h2>
+                    </div>
+                    <div data-aos="fade-right" style="width: <?php the_sub_field('projet_status'); ?>%;" class="progresso-atual-projeto"></div>
+                </section>
+            <?php endif; ?>
 
             <!-- Verifica se existe o layout Linha do tempo de Projetos-->
             <?php if (get_row_layout() == 'projet_layout_linha_tempo'): ?>
@@ -217,9 +223,9 @@
                                             </p>
                                             <span class="orange-outline-text py-1 px-2 mr-2 ">Aprovação</span>
 
-                                            <p class="text-caption font-weight-bold"><?php echo get_sub_field('projet_titulo_tempo'); ?></p>
+                                            <p class="text-caption font-weight-bold"><?php the_sub_field('projet_titulo_tempo'); ?></p>
                                             <p class="text-gray">
-                                                <small><?php echo get_sub_field('projet_desc_tempo'); ?></small>
+                                                <small><?php the_sub_field('projet_desc_tempo'); ?></small>
                                             </p>
                                             <div class="d-flex justify-content-start">
                                                 <p class="pt-1 pr-3">
@@ -227,7 +233,7 @@
                                                 </p>
                                                 <div class="p-0 timeline-progress-circle" id="como-estamos-graph-<?php echo $count; ?>"></div>
                                                 <p style="left: -40px; top: 8px; position: relative;">
-                                                    <small class="font-weight-bold"><?php echo get_sub_field('projet_desc_andamento'); ?>%</small>
+                                                    <small class="font-weight-bold"><?php the_sub_field('projet_desc_andamento'); ?>%</small>
                                                 </p>
                                             </div>
                                         </div>
