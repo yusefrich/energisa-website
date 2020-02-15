@@ -40,7 +40,7 @@ if ($slider->have_posts()) :
                                         ?>
 
                                         <div class="carousel-item <?php if ($contador == 1) echo "active"; ?>">
-                                            <img class="py-3" src="<?php bloginfo('template_url'); ?>/img/ideias-icon.png" width="100" alt="">
+                                            <img class="py-3" src="<?php the_field('carousel_iconeimg'); ?>" width="100" alt="">
                                             <p class=" m-0"><strong><?php the_field('titulo_1'); ?></strong></p>
                                             <p class=""><?php the_field('tagline'); ?></p>
                                         </div>

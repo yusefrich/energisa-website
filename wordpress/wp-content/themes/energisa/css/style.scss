@@ -604,26 +604,26 @@ section {
 }
 
 .timeline ol li:nth-child(odd) div::before {
-  top: 100%;
-  border-width: 8px 8px 0 0;
-  border-color: transparent transparent transparent transparent;
+    top: 100%;
+    border-width: 8px 8px 0 0;
+    border-color: transparent transparent transparent transparent;
 }
 
 .timeline ol li:nth-child(even) div {
-  top: calc(100% + 16px);
+    top: calc(100% + 16px);
 }
 
 .timeline ol li:nth-child(even) div::before {
-  top: -8px;
-  border-width: 8px 0 0 8px;
-  border-color: transparent transparent transparent transparent;
+    top: -8px;
+    border-width: 8px 0 0 8px;
+    border-color: transparent transparent transparent transparent;
 }
 
 .timeline time {
-  display: block;
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 8px;
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 8px;
 }
 
 
@@ -631,82 +631,82 @@ section {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .timeline .arrows {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
 .timeline .arrows .arrow__prev {
-  margin-right: 20px;
+    margin-right: 20px;
 }
 
 .timeline .disabled {
-  opacity: .5;
+    opacity: .5;
 }
 
 .timeline .arrows img {
-  width: 45px;
-  height: 45px;
+    width: 45px;
+    height: 45px;
 }
 
 
 /* GENERAL MEDIA QUERIES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 @media screen and (max-width: 599px) {
-  .timeline ol,
-  .timeline ol li {
+.timeline ol,
+.timeline ol li {
     width: auto; 
-  }
-  
-  .timeline ol {
+}
+
+.timeline ol {
     padding: 0;
     transform: none !important;
-  }
-  
-  .timeline ol li {
+}
+
+.timeline ol li {
     display: block;
     height: auto;
     background: transparent;
-  }
-  
-  .timeline ol li:first-child {
+}
+
+.timeline ol li:first-child {
     margin-top: 25px;
-  }
-  
-  .timeline ol li:not(:first-child) {
+}
+
+.timeline ol li:not(:first-child) {
     margin-left: auto;
-  }
-  
-  .timeline ol li div {
+}
+
+.timeline ol li div {
     width: 94%;
     height: auto !important;
     margin: 0 auto 25px;
-  }
-  
-  .timeline ol li div {
+}
+
+.timeline ol li div {
     position: static;
-  }
-  
-  .timeline ol li:nth-child(odd) div {
+}
+
+.timeline ol li:nth-child(odd) div {
     transform: none;
-  }
-  
-  .timeline ol li:nth-child(odd) div::before,
-  .timeline ol li:nth-child(even) div::before {
+}
+
+.timeline ol li:nth-child(odd) div::before,
+.timeline ol li:nth-child(even) div::before {
     left: 50%;
     top: 100%;
     transform: translateX(-50%);
     border: none;
     border-left: 1px solid transparent;
     height: 25px;
-  }
-  
-  .timeline ol li:last-child,
-  .timeline ol li:nth-last-child(2) div::before,
-  .timeline ol li:not(:last-child)::after,
-  .timeline .arrows {
+    }
+    
+    .timeline ol li:last-child,
+    .timeline ol li:nth-last-child(2) div::before,
+    .timeline ol li:not(:last-child)::after,
+    .timeline .arrows {
     display: none;
-  }
+    }
 }
 
 #nossa-equipe{
@@ -746,17 +746,15 @@ section {
     padding: 10px 100px;
 }
 /* 
-  ##Device = Most of the Smartphones Mobiles (Portrait)
-  ##Screen = B/w 320px to 479px
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
 */
 
 @media (min-width: 320px) and (max-width: 480px) {
-  
     .img-post-container{
         padding: 10px 0px;
     }
-        
-  }
+}
 
 .index-banner{
     min-height: 100vh;
@@ -796,4 +794,26 @@ a:hover{
     color: inherit;
     text-decoration: none;
     transform: scale(1.01);
+}
+
+.navbar-light .navbar-nav .show > a, .navbar-light .navbar-nav .current-menu-item > a, .navbar-light .navbar-nav a.show, .navbar-light .navbar-nav a.current-menu-item {
+    color: rgba(0, 0, 0, 0.9);
+}
+.navbar-dark .navbar-nav .show > a, .navbar-dark .navbar-nav .current-menu-item > a, .navbar-dark .navbar-nav a.show, .navbar-dark .navbar-nav a.current-menu-item {
+    color: #fff;
+}
+.navbar-light .navbar-nav  a{
+    color: rgba(0, 0, 0, 0.5);
+}
+.navbar-dark .navbar-nav  a{
+    color: rgba(255, 255, 255, 0.5);
+}
+.menu-item > a{
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+    font-size: 1.125em;
+    line-height: 25px;
+    display: block;
 }

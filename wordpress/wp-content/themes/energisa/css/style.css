@@ -759,8 +759,8 @@ section {
 }
 
 /* 
-  ##Device = Most of the Smartphones Mobiles (Portrait)
-  ##Screen = B/w 320px to 479px
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
 */
 @media (min-width: 320px) and (max-width: 480px) {
   .img-post-container {
@@ -815,6 +815,32 @@ a:hover {
   color: inherit;
   text-decoration: none;
   transform: scale(1.01);
+}
+
+.navbar-light .navbar-nav .show > a, .navbar-light .navbar-nav .current-menu-item > a, .navbar-light .navbar-nav a.show, .navbar-light .navbar-nav a.current-menu-item {
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.navbar-dark .navbar-nav .show > a, .navbar-dark .navbar-nav .current-menu-item > a, .navbar-dark .navbar-nav a.show, .navbar-dark .navbar-nav a.current-menu-item {
+  color: #fff;
+}
+
+.navbar-light .navbar-nav a {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.navbar-dark .navbar-nav a {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.menu-item > a {
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
+  font-size: 1.125em;
+  line-height: 25px;
+  display: block;
 }
 
 /*# sourceMappingURL=style.css.map */
