@@ -26,8 +26,8 @@
             <div data-aos="flip-left" class="  mb-2 ">
                 <div class="pb-4 text-start">
                     <p class="img-caption  text-uppercase">
-                        <small class="text-gray">por
-                            <strong class="text-dark"> <?php the_author_firstname(); ?><?php the_author_lastname(); ?> </strong><?php the_date('j \d\e M  Y'); ?>
+                        <small class="text-gray">
+                            <?php the_date('j \d\e M  Y'); ?>
                         </small>
                     </p>
                     <h2 class="font-weight-extra-bold text-caption display-h2"><?php the_title(); ?></h2>
