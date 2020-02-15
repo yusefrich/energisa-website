@@ -15,20 +15,20 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link py-4" href="http://127.0.0.1:8080/energisa/frontend/quem-somos.php">Quem somos <span class="sr-only">(current)</span></a>
+                    <li class=" menu-item current-menu-item">
+                        <a href="http://127.0.0.1:8080/energisa/frontend/quem-somos.php">Quem somos <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link py-4" href="http://127.0.0.1:8080/energisa/frontend/produtos.php">Produtos</a>
+                    <li class="menu-item">
+                        <a href="http://127.0.0.1:8080/energisa/frontend/produtos.php">Produtos</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link py-4" href="http://127.0.0.1:8080/energisa/frontend/projetos.php">Projetos</a>
+                    <li class="menu-item">
+                        <a href="http://127.0.0.1:8080/energisa/frontend/projetos.php">Projetos</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link py-4" href="http://127.0.0.1:8080/energisa/frontend/novidades.php">Novidades</a>
+                    <li class="menu-item">
+                        <a href="http://127.0.0.1:8080/energisa/frontend/novidades.php">Novidades</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link py-4" href="http://127.0.0.1:8080/energisa/frontend/ideias.php">Ideias</a>
+                    <li class="menu-item">
+                        <a href="http://127.0.0.1:8080/energisa/frontend/ideias.php">Ideias</a>
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
