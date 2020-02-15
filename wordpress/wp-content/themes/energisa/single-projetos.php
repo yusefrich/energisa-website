@@ -18,107 +18,6 @@
     </section>
 
 
-    <section class="p-0 d-none" id="projeto-indicadores">
-        <div class="container">
-            <div data-aos="fade-up" class="text-center mt-5 py-5">
-                <p class="text-gray">última atualização <strong><?php the_modified_time('j \d\e F \d\e  Y'); ?></strong>
-                </p>
-                <h2 class="text-orange font-weight-bold">Confira abaixo os indicadores</h2>
-                <p>Veja em detalhes cada passo dado até o presente momento</p>
-            </div>
-
-            <div data-aos="fade-left" class="row mb-5 mt-2">
-                <div class="col-md-6 text-center mb-3">
-                    <div class="white-col p-3">
-                        <p class="text-caption font-weight-bold">Lorem ipsum dolor sit amet</p>
-                        <p class="text-gray">
-                            <small>Lorem ipsum dolor sit amet, consectetur adipiscing</small>
-                        </p>
-                        <div class="d-flex justify-content-start p-3">
-                            <div>
-                                <canvas width="270" height="270" id="chart2"></canvas>
-                            </div>
-                            <div class="labels text-left">
-                                <p class="text-gray font-weight-light">
-                                    <small>Legendas</small>
-                                </p>
-                                <p><span class="label-dot" style="color: #0071A2">&#149;</span>
-                                    <small> Cor Azul
-                                        Escuro
-                                    </small>
-                                </p>
-                                <p><span class="label-dot" style="color: #70BF54">&#149;</span>
-                                    <small> Cor Verde</small>
-                                </p>
-                                <p><span class="label-dot" style="color: #089BC0">&#149;</span>
-                                    <small> Cor Azul
-                                        Claro
-                                    </small>
-                                </p>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 text-center mb-3">
-                    <div class="white-col p-3">
-                        <p class="text-caption font-weight-bold">Lorem ipsum dolor sit amet</p>
-                        <p class="text-gray">
-                            <small>Lorem ipsum dolor sit amet, consectetur adipiscing</small>
-                        </p>
-                        <div class="d-flex justify-content-start p-3">
-                            <div>
-                                <canvas width="270" height="270" id="myChart"></canvas>
-                            </div>
-                            <div class="labels text-left">
-                                <p class="text-gray font-weight-light">
-                                    <small>Legendas</small>
-                                </p>
-                                <p><span class="label-dot" style="color: #0071A2">&#149;</span>
-                                    <small> Cor Azul
-                                        Escuro
-                                    </small>
-                                </p>
-                                <p><span class="label-dot" style="color: #70BF54">&#149;</span>
-                                    <small> Cor Verde</small>
-                                </p>
-                                <p><span class="label-dot" style="color: #089BC0">&#149;</span>
-                                    <small> Cor Azul
-                                        Claro
-                                    </small>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3 mb-3">
-                    <div class="white-col p-3">
-                        <p class=" font-weight-bold"> Lorem ipsum dolor sit amet</p>
-                        <h3 class="text-orange font-weight-bold">1 233</h3>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3 mb-3">
-                    <div class="white-col p-3">
-                        <p class=" font-weight-bold">Lorem ipsum dolor sit amet</p>
-                        <h3 class="text-orange font-weight-bold">78%</h3>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3 mb-3">
-                    <div class="white-col p-3">
-                        <p class=" font-weight-bold">Lorem ipsum dolor sit amet</p>
-                        <h3 class="text-orange font-weight-bold">56</h3>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3 mb-3">
-                    <div class="white-col p-3">
-                        <p class=" font-weight-bold">Lorem ipsum dolor sit amet</p>
-                        <h3 class="text-orange font-weight-bold">36%</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <?php if (have_rows('projet_flexible_content')): ?>
         <?php while (have_rows('projet_flexible_content')): the_row(); ?>
 
@@ -172,6 +71,57 @@
             <?php endif; ?>
 
 
+            <!-- Verifica se existe o layout de gráficos e indicadores-->
+            <?php if (get_row_layout() == 'projet_layout_graph'): ?>
+                <section class="p-0" id="projeto-indicadores">
+                    <div class="container">
+                        <div data-aos="fade-up" class="text-center mt-5 py-5">
+                            <p class="text-gray">última atualização
+                                <strong><?php the_modified_time('j \d\e F \d\e  Y'); ?></strong>
+                            </p>
+                            <h2 class="text-orange font-weight-bold">Confira abaixo os indicadores</h2>
+                            <p>Veja em detalhes cada passo dado até o presente momento</p>
+                        </div>
+                        <div data-ao
+                             s="fade-left" class="row mb-5 mt-2">
+                            <?php if (have_rows('projet_graficos_repeat')): while (have_rows('projet_graficos_repeat')):
+                                the_row();
+                                ?>
+
+                                <div class="col-md-6 text-center mb-3">
+                                    <div class="white-col p-3">
+                                        <p class="text-caption font-weight-bold"><?php the_sub_field('projet_grafico_titulo') ?></p>
+                                        <p class="text-gray">
+                                            <small><?php the_sub_field('projet_grafico_descricao') ?></small>
+                                        </p>
+
+                                        <div class="d-flex justify-content-center">
+                                            <?php echo do_shortcode("[visualizer id=\"173\"] "); ?>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            <?php endwhile; ?>
+                            <?php endif; ?>
+
+
+                            <?php if (have_rows('projet_indicadores_repeat')): while (have_rows('projet_indicadores_repeat')): the_row();
+                                ?>
+                                <div class="col-6 col-md-3 mb-3">
+                                    <div class="white-col p-3">
+                                        <p class=" font-weight-bold"><?php the_sub_field('projet_indicadores_titulo') ?></p>
+                                        <h3 class="text-orange font-weight-bold"><?php the_sub_field('projet_indicadores_percent') ?></h3>
+                                    </div>
+                                </div>
+                            <?php endwhile; ?>
+                            <?php endif; ?>
+
+                        </div>
+                    </div>
+                </section>
+            <?php endif; ?>
+
+
             <!-- Verifica se existe o layout Status do Projeto-->
             <?php if (get_row_layout() == 'projet_layout_status'): ?>
                 <section id="progresso-geral-projeto">
@@ -183,6 +133,7 @@
                     <div data-aos="fade-right" style="width: <?php the_sub_field('projet_status'); ?>%;" class="progresso-atual-projeto"></div>
                 </section>
             <?php endif; ?>
+
 
             <!-- Verifica se existe o layout Linha do tempo de Projetos-->
             <?php if (get_row_layout() == 'projet_layout_linha_tempo'): ?>
