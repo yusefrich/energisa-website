@@ -319,6 +319,10 @@ section {
   margin-bottom: 180px;
 }
 
+#home-carrousel {
+  overflow-x: hidden;
+}
+
 .carousel-control-holder {
   position: absolute;
   /* right: 26%; */
@@ -399,12 +403,12 @@ section {
 }
 
 .img-holder {
-  height: 400px;
+  /* height: 400px; */
   border-radius: 0px 6px 6px 0px;
 }
 
 .img-holder-sm {
-  height: 550px;
+  /* height: 550px; */
   border-radius: 6px;
 }
 
@@ -448,6 +452,10 @@ section {
   border: 1px solid #CFCFCF;
   box-sizing: border-box;
   border-radius: 100px;
+}
+
+.card-img-overlay {
+  position: initial !important;
 }
 
 .footer-bottom {
@@ -767,8 +775,15 @@ section {
     padding: 10px 0px;
   }
 }
+.bottom-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
 .index-banner {
-  min-height: 100vh;
+  height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -841,6 +856,29 @@ a:hover {
   font-size: 1.125em;
   line-height: 25px;
   display: block;
+}
+
+@media (max-width: 1200px) {
+  .carousel-info {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
+@media (min-width: 480px) and (max-width: 1024px) {
+  .bottom-text {
+    position: relative;
+    bottom: 0;
+  }
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .index-banner {
+    height: initial;
+  }
+
+  .bottom-text {
+    position: relative;
+    bottom: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

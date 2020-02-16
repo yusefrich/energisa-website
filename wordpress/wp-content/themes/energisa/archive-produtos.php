@@ -42,14 +42,19 @@
                             <div class="img-holder-sm" style="
                                     background: linear-gradient(0deg, rgba(<?php the_field('prod_cor_background'); ?>), rgba(<?php the_field('prod_cor_background'); ?>)), url(<?php the_field('img_background'); ?>);
                                     background-position: center;
-                                    background-size: cover;"></div>
-                            <div class="card-img-overlay overlay-sm text-start">
-                                <h3 class="card-title"><?php the_field('prod_titulo'); ?></h3>
-                                <p class="card-text"><?php the_field('prod_descricao'); ?></p>
+                                    background-size: cover;">
+                                <a  href="<?php the_permalink(); ?>" class="btn btn-light btn-round btn-sm card-btn m-3">
+                                    <span class="icon pt-2 pb-2 pr-2 icon-next-icon"></span></a>
+                                <div class="card-img-overlay overlay-sm text-start">
+                                    <a href="<?php the_title(); ?>">
+                                        <h3 class="card-title"><?php the_field('prod_titulo'); ?></h3>
+                                    </a>
+                                    <a href="<?php the_title(); ?>">
+                                        <p class="card-text"><?php the_field('prod_descricao'); ?></p>
+                                    </a>
+                                </div>
 
                             </div>
-                            <a  href="<?php the_permalink(); ?>" class="btn btn-light btn-round btn-sm card-btn m-3">
-                                <span class="icon pt-2 pb-2 pr-2 icon-next-icon"></span></a>
                         </div>
                     </div>
                 <?php endwhile; ?>
