@@ -46,7 +46,7 @@
             <form class="form-inline my-2 my-lg-0" action="<?php bloginfo('url'); ?>">
                 <div class="collapse" id="collapseExample">
                     <!-- * input de pesquisa colapsado para pesquisa aleatória na pagina inteira -->
-                    <input style="box-shadow: none;" class="form-control mr-sm-2 search-input" type="search" placeholder="Search" aria-label="Search" value="" name="s" >
+                    <input style="box-shadow: none;" class="form-control mr-sm-2 search-input" type="search" placeholder="Buscar" aria-label="Buscar" value="" name="s" >
                 </div>
                 <button style="box-shadow: none;" class="btn search-toggle my-2 my-sm-0" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                     <ion-icon class="ion-2x" name="search"></ion-icon>
