@@ -1,4 +1,4 @@
-<section class="pb-0" id="home-ideias">
+ <section class="pb-0" id="home-ideias">
         <div class="container mt-4 mb-0">
             <div id="parallax-detalhe-4">
                 <div data-depth="0.4" class="d-flex justify-content-between">
@@ -15,13 +15,15 @@
                         <div class="img-holder" style="
                             background: linear-gradient(0deg, rgba(55, 55, 55, 0.4), rgba(55, 55, 55, 0.4)), url(./img/ideias-card.png);
                             background-position: center;
-                            background-size: cover;"></div>
-                        <div  class="card-img-overlay overlay-lg text-start">
-                            <h2 class="card-title">Ideias</h2>
-                            <p class="card-text">Colabore e construa produtos melhores ajudando nossos clientes a ter a melhor satisfação com os nossos serviços.</p>
-                            <button class="btn btn-primary px-5">Saiba mais</button>
+                            background-size: cover;">
+                            <button class="btn btn-light btn-round card-btn m-5"><span class="icon pt-2 pb-2 pr-1 icon-next-icon"></span></button>
+                            <div  class="card-img-overlay overlay-lg text-start">
+                                <h2 class="card-title">Ideias</h2>
+                                <p class="card-text">Colabore e construa produtos melhores ajudando nossos clientes a ter a melhor satisfação com os nossos serviços.</p>
+                                <button class="btn btn-primary px-5">Saiba mais</button>
+                            </div>
+
                         </div>
-                        <button class="btn btn-light btn-round card-btn m-5"><span class="icon pt-2 pb-2 pr-1 icon-next-icon"></span></button>
                     </div>
                     <div id="parallax-detalhe-5">
                         <div data-depth="0.1" class="d-flex justify-content-between">

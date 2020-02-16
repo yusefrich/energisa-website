@@ -19,12 +19,12 @@
                             background: linear-gradient(0deg, rgba(55, 55, 55, 0.4), rgba(55, 55, 55, 0.4)), url(./img/novidades-card.png);
                             background-position: center;
                             background-size: cover;">
-                                                    <div  class="card-img-overlay overlay-lg text-start">
+                        <button class="btn btn-light btn-round card-btn m-5"><span class="icon pt-2 pb-2 pr-1 icon-next-icon"></span></button>
+                        <div  class="card-img-overlay overlay-lg text-start">
                             <h2 class="card-title">Novidades</h2>
                             <p class="card-text">Essa sessão é destinada ao compartilhamento de informações por parte da nossa equipe, acompanhe nossas postagens e mantenha-se sempre bem informado</p>
                             <button class="btn btn-primary px-5">Saiba mais</button>
                         </div>
-                        <button class="btn btn-light btn-round card-btn m-5"><span class="icon pt-2 pb-2 pr-1 icon-next-icon"></span></button>
 
                         </div>
                     </div>
