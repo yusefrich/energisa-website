@@ -38,13 +38,19 @@
             if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post();
                 $capa_novidades = get_the_post_thumbnail_url(null, 'capa_380_255');
                 ?>
-                <div data-aos="fade-right" class="col-md-4 text-center">
-                    <img src="<?php echo esc_url($capa_novidades); ?>" class="figure-img img-fluid rounded zoom-hover" alt="...">
-                    <p class="img-caption  text-uppercase">
-                        <small>postado em <strong><?php echo get_the_time(__('j \d\e M  Y'), $post->id); ?></strong></small>
-                    </p>
+                <div data-aos="fade-right" class="col-md-4 text-center my-4">
+                    <a href="<?php the_permalink(); ?>">
+                        <img src="<?php echo esc_url($capa_novidades); ?>" class="figure-img img-fluid rounded zoom-hover" alt="...">
+                    </a>
+                    <a href="<?php the_permalink(); ?>">
+                        <p class="img-caption  text-uppercase">
+                            <small>postado em <strong><?php echo get_the_time(__('j \d\e M  Y'), $post->id); ?></strong></small>
+                        </p>
+                    </a>
                     <a href="<?php the_permalink(); ?>"><p class="font-weight-bold"><?php the_title(); ?></p></a>
-                    <p class="font-weight-light"><?php echo get_the_excerpt(); ?></p>
+                    <a href="<?php the_permalink(); ?>">
+                        <p class="font-weight-light"><?php echo get_the_excerpt(); ?></p>
+                    </a>
                 </div>
             <?php
             endwhile; endif;

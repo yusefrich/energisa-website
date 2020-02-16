@@ -76,6 +76,7 @@
                     <div class="container-fluid p-0">
                         <div class="timeline">
                             <ol>
+                                <li></li>
                                 <!-- Verifica se tem algum valor cadastrado no campo repetidor-->
                                 <?php if (have_rows('prod_linha_temporal')): while (have_rows('prod_linha_temporal')): the_row();
                                     setlocale(LC_TIME, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
@@ -280,7 +281,7 @@
                             <div id="parallax-bush-1">
                                 <div data-depth="0.1" class="d-flex justify-content-between">
                                     <div>
-                                        <img style="transform: scaleX(-1)" src="<?php bloginfo('template_url'); ?>/img/bush-md.png" alt="">
+                                        <img style="transform: scaleX(-1); " src="<?php bloginfo('template_url'); ?>/img/bush-md.png" alt="">
                                     </div>
                                     <div>
                                         <img style="margin-top: 96px; transform: scaleX(-1)" src="<?php bloginfo('template_url'); ?>/img/bush-sm.png" alt="">
