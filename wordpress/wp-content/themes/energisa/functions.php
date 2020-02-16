@@ -2,17 +2,28 @@
 
 //Remover a barra de administração do topo
 remove_action('init', 'wp_admin_bar_init');
-function my_function_admin_bar(){
+function my_function_admin_bar()
+{
     return false;
 }
-add_filter('show_admin_bar', 'my_function_admin_bar');
 
+add_filter('show_admin_bar', 'my_function_admin_bar');
 
 
 //adiciona suporte a imagem de desque e tamanhos personalizados
 add_theme_support('post-thumbnails');
 add_image_size('capa_380_255', 380, 255, true);
 add_image_size('capa_498_356', 498, 356, true);
+
+function custom_navigation_menus()
+{
+    $locations = array(
+        'menu-topo' => 'Menu Topo',
+    );
+    register_nav_menus($locations);
+}
+
+add_action('init', 'custom_navigation_menus');
 
 //remover a largura e algura fixa das tag img dentro dos pots
 add_filter('post_thumbnail_html', 'remove_width_attribute', 10);
@@ -49,7 +60,6 @@ function tcb_display_post_thumbnail_column($col, $id)
 }
 
 
-
 //carregar css personalziado para a página de login
 function estilo_tela_login()
 {
@@ -73,3 +83,11 @@ function nome_titulo_login()
 }
 
 add_filter('login_headertitle', 'nome_titulo_login');
+
+
+// Remove páginas do resultado de busca
+function remove_pages_from_search() {
+    global $wp_post_types;
+    $wp_post_types['page']->exclude_from_search = true;
+}
+add_action('init', 'remove_pages_from_search');
