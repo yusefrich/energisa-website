@@ -257,10 +257,10 @@ if ($slider->have_posts()) :
                                 <a href="<?php the_permalink(); ?>" class="btn btn-light btn-round btn-sm card-btn m-3">
                                     <span class="icon pt-2 pb-2 pr-2 icon-next-icon"></span></a>
                                 <div class="card-img-overlay overlay-sm text-start">
-                                    <a href="<?php the_title(); ?>">
+                                    <a href="<?php the_permalink(); ?>">
                                         <h3 class="card-title"><?php the_field('projet_titulo'); ?></h3>
                                     </a>
-                                    <a href="<?php the_title(); ?>">
+                                    <a href="<?php the_permalink(); ?>">
                                         <p class="card-text"><?php the_field('projet_descricao'); ?></p>
                                     </a>
                                     <div class="overlay-status">

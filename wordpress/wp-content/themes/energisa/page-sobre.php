@@ -82,6 +82,13 @@
                             <div class="carousel-item active">
                                 <div class="row">
 
+                                    <?php
+                                    //$rows = get_field('sobre_equipe_repeat');
+                                    //$specific_row = $rows[2]['sobre_equipe_bio'];
+                                    //$specific_row_value = $specific_row['sobre_equipe_bio'];
+                                    //print_r($specific_row);
+                                    ?>
+
                                     <!-- Verifica se tem algum valor cadastrado no campo repetidor-->
                                     <?php $count = 0; ?>
                                     <?php while (have_rows('sobre_equipe_repeat')): the_row();
@@ -96,7 +103,7 @@
                                         </div>
                                         <?php $count++; ?>
                                     <?php endwhile; ?>
-                                    
+
                                 </div>
                                 <!--.row-->
                             </div>
