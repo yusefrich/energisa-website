@@ -908,5 +908,16 @@ a:hover {
     bottom: 0;
   }
 }
+.bg-gray {
+  background-color: #F4F4F4;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.bg-blue {
+  background-color: #089BC0;
+}
 
 /*# sourceMappingURL=style.css.map */
