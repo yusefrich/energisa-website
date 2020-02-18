@@ -91,3 +91,37 @@ function remove_pages_from_search() {
     $wp_post_types['page']->exclude_from_search = true;
 }
 add_action('init', 'remove_pages_from_search');
+
+
+/*********************************************
+ * INCLUDES
+ **********************************************/
+
+include ('_ajax/listar-post.php');
+include ('_ajax/detalhes-posts.php');
+
+function app_scripts() {
+
+    // assets folder
+
+    $js_folder	=  get_template_directory_uri() . '/js';
+
+    // versão
+    $versao 	= rand(0,999);
+
+
+    // jQuery
+    wp_enqueue_script('jquery');
+
+    wp_enqueue_script( 'app', $js_folder . '/app.js', null, $versao, true );
+
+    $wpVars = [
+        'ajaxurl' => admin_url('admin-ajax.php')
+    ];
+
+    wp_localize_script('app', 'wp', $wpVars);
+
+
+}
+
+add_action("wp_enqueue_scripts", "app_scripts");

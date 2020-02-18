@@ -157,9 +157,7 @@
                                     setlocale(LC_TIME, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
                                     date_default_timezone_set('America/Sao_Paulo');
                                     $date_string = get_sub_field('projet_data_tempo');
-
                                     $field = get_sub_field('projet_desc_status');
-
                                     $count++;
                                     ?>
                                     <li>
