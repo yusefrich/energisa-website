@@ -65,7 +65,7 @@ h2 {
   font-family: Open Sans;
   font-style: normal;
   font-weight: 800;
-  font-size: 3.125em;
+  font-size: 3.625em;
   line-height: 79px;
 }
 @media (max-width: 1170px) {
@@ -287,6 +287,7 @@ section {
 
 .slider-title-sm {
   width: 660px;
+  padding-left: 50px;
 }
 
 .carousel-info {
@@ -371,7 +372,7 @@ section {
 .carousel-side-indicators-holder {
   position: absolute;
   z-index: 15;
-  left: 6%;
+  /* left: 6%; */
   top: 200px;
   display: flex;
   -webkit-transform: rotate(90deg);

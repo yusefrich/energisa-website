@@ -329,8 +329,12 @@ if ($produtos->have_posts()) :
                             <div class="container custom-carousel-caption">
                                 <div class="slider-title slider-title-sm">
                                     <p class="text-uppercase">Alguns produtos</p>
-                                    <h1><?php the_title(); ?></h1>
-                                    <p class=""><?php echo get_the_excerpt(); ?></p>
+                                    <a href="<?php the_permalink(); ?>">
+                                        <h1><?php the_title(); ?></h1>
+                                    </a>
+                                    <a href="<?php the_permalink(); ?>">
+                                        <p class=""><?php echo get_the_excerpt(); ?></p>
+                                    </a>
                                     <a href="<?php the_permalink(); ?>" class="btn btn-primary px-5">Saiba mais</a>
                                 </div>
                             </div>
@@ -470,8 +474,7 @@ if ($produtos->have_posts()) :
 
                 <div class="col-12">
                     <div data-aos="zoom-in" class="d-flex justify-content-center my-5 py-5">
-                        <a href="<?php bloginfo('home'); ?>/ideias" class="btn btn-primary px-5">Confira as
-                            ideias</a>
+                        <a href="<?php bloginfo('home'); ?>/ideias" class="btn btn-primary px-5">Quero colaborar</a>
                     </div>
                 </div>
             </div>

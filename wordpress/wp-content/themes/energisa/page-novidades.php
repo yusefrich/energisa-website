@@ -38,7 +38,7 @@
             if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post();
                 $capa_novidades = get_the_post_thumbnail_url(null, 'capa_380_255');
                 ?>
-                <div data-aos="fade-right" class="col-md-4 text-center my-4">
+                <div data-aos="fade-right" class="col-md-4 text-center my-3 px-2">
                     <a href="<?php the_permalink(); ?>">
                         <img src="<?php echo esc_url($capa_novidades); ?>" class="figure-img img-fluid rounded zoom-hover" alt="...">
                     </a>

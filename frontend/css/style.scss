@@ -52,7 +52,7 @@ $p-font-size: (null: em(20));
 $caption-font-size: (null: em(24));
 $large-caption-font-size: (null: em(28));
 $h1-font-size: (null: em(72));
-$h2-font-size: (null: em(50), $lg: em(50), $md: em(45), $sm: em(40), $xs: em(40));/* 58 */
+$h2-font-size: (null: em(58), $lg: em(50), $md: em(45), $sm: em(40), $xs: em(40));/* 58 */
 $modal-title-font-size: (null: em(64));
 $display-h2-font-size: (null: em(48));
 $h3-font-size: (null: em(32), $md: em(30));/* 36 */
@@ -289,6 +289,7 @@ section {
 }
 .slider-title-sm{
     width: 660px;
+    padding-left: 50px;
 }
 .carousel-info{
     margin-left: 100px;
@@ -356,7 +357,7 @@ section {
 .carousel-side-indicators-holder{
     position: absolute;
     z-index: 15;
-    left: 6%;
+    /* left: 6%; */
     top: 200px;
     display: flex;
 
