@@ -4,6 +4,8 @@ section {
   overflow: hidden;
 }
 
+/* 58 */
+/* 36 */
 .text-fade {
   font-family: Open Sans;
   font-style: normal;
@@ -49,17 +51,42 @@ p {
 h3 {
   font-style: normal;
   font-weight: 800;
-  font-size: 2.25em;
+  font-size: 2em;
   line-height: 49px;
   letter-spacing: -0.02em;
+}
+@media (max-width: 1024px) {
+  h3 {
+    font-size: 1.875em;
+  }
 }
 
 h2 {
   font-family: Open Sans;
   font-style: normal;
   font-weight: 800;
-  font-size: 3.625em;
+  font-size: 3.125em;
   line-height: 79px;
+}
+@media (max-width: 1170px) {
+  h2 {
+    font-size: 3.125em;
+  }
+}
+@media (max-width: 1024px) {
+  h2 {
+    font-size: 2.8125em;
+  }
+}
+@media (max-width: 640px) {
+  h2 {
+    font-size: 2.5em;
+  }
+}
+@media (max-width: 480px) {
+  h2 {
+    font-size: 2.5em;
+  }
 }
 
 .display-h2 {
@@ -777,7 +804,7 @@ section {
 }
 .bottom-text {
   position: absolute;
-  bottom: 0;
+  bottom: -40px;
   left: 0;
   right: 0;
 }

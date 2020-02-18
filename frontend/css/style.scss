@@ -52,10 +52,10 @@ $p-font-size: (null: em(20));
 $caption-font-size: (null: em(24));
 $large-caption-font-size: (null: em(28));
 $h1-font-size: (null: em(72));
-$h2-font-size: (null: em(58));
+$h2-font-size: (null: em(50), $lg: em(50), $md: em(45), $sm: em(40), $xs: em(40));/* 58 */
 $modal-title-font-size: (null: em(64));
 $display-h2-font-size: (null: em(48));
-$h3-font-size: (null: em(36));
+$h3-font-size: (null: em(32), $md: em(30));/* 36 */
 .text-fade{
     font-family: Open Sans;
     font-style: normal;
@@ -763,7 +763,7 @@ section {
 }
 .bottom-text{
     position: absolute;
-    bottom: 0;
+    bottom: -40px;
     left: 0;
     right: 0;
 }
