@@ -34,7 +34,7 @@ if ($slider->have_posts()) :
                         </div>
                         <div class="col-md-6">
                             <div class="carousel-info text-center">
-                                    <div id="carouselExampleCaptions" class="carousel slide " data-ride="carousel">
+                                <div id="carouselExampleCaptions" class="carousel slide " data-ride="carousel">
                                     <div style="max-width: 710px" class="carousel-inner carousel-info-container">
                                         <?php
                                         while ($slider->have_posts()):
@@ -58,10 +58,10 @@ if ($slider->have_posts()) :
                                             </ol>
                                             <div class="custom-control-carrousel custom-control-bottom">
                                                 <a href="#carouselExampleCaptions" role="button" data-slide="prev"
-                                                class="btn btn-primary btn-round"><span
+                                                   class="btn btn-primary btn-round"><span
                                                             class="icon pt-2 pb-2 pl-1 icon-prev-icon"></span></a>
                                                 <a href="#carouselExampleCaptions" role="button" data-slide="next"
-                                                class="btn btn-primary btn-round"><span
+                                                   class="btn btn-primary btn-round"><span
                                                             class="icon pt-2 pb-2 pr-1 icon-next-icon"></span></a>
                                             </div>
                                         </div>
@@ -149,7 +149,7 @@ if ($slider->have_posts()) :
                     ?>
                     <div data-aos="fade-left" class="col-md-6">
                         <a href="<?php the_permalink(); ?>">
-                        <img src="<?php echo esc_url($capa_novidades); ?>" class="figure-img img-fluid rounded zoom-hover" alt="..."></a>
+                            <img src="<?php echo esc_url($capa_novidades); ?>" class="figure-img img-fluid rounded zoom-hover" alt="..."></a>
                         <a href="<?php the_permalink(); ?>"><p class="img-caption text-white">
                                 <strong><?php the_title(); ?></strong></p></a>
                     </div>
@@ -248,7 +248,7 @@ if ($slider->have_posts()) :
                 while ($projetos->have_posts()): $projetos->the_post();
                     ?>
                     <div data-aos="flip-left" class="col-md-4">
-                    
+
                         <div class="card card-bg-small text-white mb-2 zoom-hover">
                             <div class="img-holder-sm" style="
                                     background: linear-gradient(0deg, rgba(<?php the_field('projet_cor_background'); ?>), rgba(<?php the_field('projet_cor_background'); ?>)), url(<?php the_field('projet_background'); ?>);
@@ -408,126 +408,70 @@ if ($produtos->have_posts()) :
                 <?php endwhile;
                 wp_reset_postdata(); ?>
 
-                <div data-aos="zoom-in" class="col-md-4">
-                    <div class="card card-full-small mb-2 zoom-hover">
-                        <div class=" overlay-white text-start">
-                            <div class="d-flex justify-content-start pb-4">
-                                <div class="profile-pic mr-4"
-                                     style="
-                                             background-image: url(<?php bloginfo('template_url'); ?>/img/profile-1.jpg);
-                                             background-size: cover;
-                                             background-position: center;
-                                             "></div>
-                                <div>
-                                    <p class="card-user-name m-0">Francisco José Vieira Martins</p>
-                                    <span class="text-fade"><small>Postado 10/12/2019</small></span>
 
+                <?php
+                $ideias = new WP_Query(array(
+                    'post_type' => 'ideias',
+                    'posts_per_page' => '3',
+                ));
+                while ($ideias->have_posts()): $ideias->the_post();
+                    $foto = get_field('autor_foto', 'user_' . get_the_author_id());
+                    $thumbnail = $foto['sizes']['thumbnail'];
+                    $statusFiled = get_field('ideia_status');
+                    ?>
+                    <div data-aos="zoom-in" class="col-md-4">
+                        <div class="card card-full-small mb-2 zoom-hover">
+                            <div class=" overlay-white text-start">
+                                <div class="d-flex justify-content-start pb-4">
+                                    <div class="profile-pic mr-4"
+                                         style="
+                                                 background-image: url(<?php echo $thumbnail; ?>);
+                                                 background-size: cover;
+                                                 background-position: center;
+                                                 "></div>
+                                    <div>
+                                        <p class="card-user-name m-0"><?php the_author_firstname(); ?>
+                                            &nbsp;<?php the_author_lastname(); ?></p>
+                                        <span class="text-fade"><small>Postado <?php the_date('d/m/Y'); ?></small></span>
+
+                                    </div>
                                 </div>
+                                <p class="text-uppercase">
+                                    <small class="text-orange"><?php echo esc_html($statusFiled['label']); ?></small>
+                                </p>
+                                <a href="<?php the_permalink(); ?>">
+                                    <p class="font-weight-extra-bold text-caption"><?php the_title(); ?></p>
+                                </a>
+                                <p>
+                                    <small>
+                                        <span class="round-outline-text py-1 px-2 mx-1"><?php the_field('ideia_votos'); ?> Votos</span>
+                                        <span class="round-outline-text py-1 px-2 mx-1">3 Respostas</span>
+                                    </small>
+                                </p>
+                                <div class="card-tags">
+                                    <?php
+                                    $post_tags = get_the_tags($post->id);
+                                    if ($post_tags) {
+                                        foreach ($post_tags as $tag) {
+                                            echo "<small class=\"orange-outline-text py-1 px-2 mr-2 my-1\">#$tag->name </small>";
+                                        }
+                                    }
+                                    ?>
+                                </div>
+                                <!-- <img class="profile-pic float-left" height="48" src="./img/profile-1.jpg" alt=""> -->
                             </div>
-                            <p class="text-uppercase">
-                                <small class="text-orange">em votação</small>
-                            </p>
-                            <p class="font-weight-extra-bold text-caption">Nova função para verificar histórico</p>
-                            <p>
-                                <small>
-                                    <span class="round-outline-text py-1 px-2 mx-1">14 Votos</span>
-                                    <span class="round-outline-text py-1 px-2 mx-1">3 Respostas</span>
-                                </small>
-                            </p>
-                            <div class="card-tags">
-                                <small class="orange-outline-text py-1 px-2 mr-2 my-1">#conta</small>
-                                <small class="orange-outline-text py-1 px-2 mr-2 my-1">#app</small>
-                                <small class="orange-outline-text py-1 px-2 mr-2 my-1">#funcao</small>
+                            <div class="overlay-white mt-auto">
+                                <a href="<?php the_permalink(); ?>" class="btn btn-primary btn-block">Conferir ideia</a>
                             </div>
-                            <!-- <img class="profile-pic float-left" height="48" src="./img/profile-1.jpg" alt=""> -->
-                        </div>
-                        <div class="overlay-white mt-auto">
-                            <button class="btn btn-primary btn-block">Conferir ideia</button>
                         </div>
                     </div>
-                </div>
-                <div data-aos="zoom-in" class="col-md-4">
-                    <div class="card card-full-small mb-2 zoom-hover">
-                        <div class=" overlay-white text-start">
-                            <div class="d-flex justify-content-start pb-4">
-                                <div class="profile-pic mr-4"
-                                     style="
-                                             background-image: url(<?php bloginfo('template_url'); ?>/img/profile-1.jpg);
-                                             background-size: cover;
-                                             background-position: center;
-                                             "></div>
-                                <div>
-                                    <p class="card-user-name m-0">Patrícia Fuentes</p>
-                                    <span class="text-fade"><small>Postado 10/12/2019</small></span>
+                <?php endwhile;
+                wp_reset_postdata(); ?>
 
-                                </div>
-                            </div>
-                            <p class="text-uppercase">
-                                <small class="text-orange">em votação</small>
-                            </p>
-                            <p class="font-weight-extra-bold text-caption">Como lidar com times remotos</p>
-                            <p>
-                                <small>
-                                    <span class="round-outline-text py-1 px-2 mx-1">112 Votos</span>
-                                    <span class="round-outline-text py-1 px-2 mx-1">43 Respostas</span>
-                                </small>
-                            </p>
-                            <div class="card-tags">
-                                <small class="orange-outline-text py-1 px-2 mr-2 my-1">#conta</small>
-                                <small class="orange-outline-text py-1 px-2 mr-2 my-1">#app</small>
-                                <small class="orange-outline-text py-1 px-2 mr-2 my-1">#funcao</small>
-                            </div>
-                            <!-- <img class="profile-pic float-left" height="48" src="./img/profile-1.jpg" alt=""> -->
-                        </div>
-                        <div class="overlay-white mt-auto">
-                            <button class="btn btn-primary btn-block">Conferir ideia</button>
-                        </div>
-
-                    </div>
-                </div>
-                <div data-aos="zoom-in" class="col-md-4">
-                    <div class="card card-full-small mb-2 zoom-hover">
-                        <div class=" overlay-white text-start">
-                            <div class="d-flex justify-content-start pb-4">
-                                <div class="profile-pic mr-4"
-                                     style="
-                                             background-image: url(<?php bloginfo('template_url'); ?>/img/profile-1.jpg);
-                                             background-size: cover;
-                                             background-position: center;
-                                             "></div>
-                                <div>
-                                    <p class="card-user-name m-0">Gleyse Souza e Silva</p>
-                                    <span class="text-fade"><small>Postado 10/12/2019</small></span>
-
-                                </div>
-                            </div>
-                            <p class="text-uppercase">
-                                <small class="text-orange">em votação</small>
-                            </p>
-                            <p class="font-weight-extra-bold text-caption">Novos cabos em fibra podem alterar
-                                velocidade</p>
-                            <p>
-                                <small>
-                                    <span class="round-outline-text py-1 px-2 mx-1">18 Votos</span>
-                                    <span class="round-outline-text py-1 px-2 mx-1">8 Respostas</span>
-                                </small>
-                            </p>
-                            <div class="card-tags">
-                                <small class="orange-outline-text py-1 px-2 mr-2 my-1">#conta</small>
-                                <small class="orange-outline-text py-1 px-2 mr-2 my-1">#app</small>
-                                <small class="orange-outline-text py-1 px-2 mr-2 my-1">#funcao</small>
-                            </div>
-                            <!-- <img class="profile-pic float-left" height="48" src="./img/profile-1.jpg" alt=""> -->
-                        </div>
-                        <div class="overlay-white mt-auto">
-                            <button class="btn btn-primary btn-block">Conferir ideia</button>
-                        </div>
-
-                    </div>
-                </div>
                 <div class="col-12">
                     <div data-aos="zoom-in" class="d-flex justify-content-center my-5 py-5">
-                        <button class="btn btn-primary px-5">Confira as novidades</button>
+                        <a href="<?php bloginfo('home'); ?>/ideias" class="btn btn-primary px-5">Confira as
+                            ideias</a>
                     </div>
                 </div>
             </div>
