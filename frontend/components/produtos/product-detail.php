@@ -354,13 +354,13 @@
 </section>
 
 <section id="indicadores">
-    <div class="container text-center my-5">
+    <div class="container-fluid text-center my-5">
 
         <h2 data-aos="fade-up" class="display-h2 text-orange">Conheça nossos indicadores</h2>
         <p data-aos="fade-up">Fique por dentro e acompanhe cada momento da nossa jornada</p>
 
-        <div data-aos="flip-down" class="row">
-            <div class="col-md-4">
+        <div data-aos="flip-down" class="d-flex justify-content-center">
+            <div style="max-width: 250px;" class="position-relative">
                 <div style="transform: scaleX(-1); stroke-linecap: round;" id="progress-funcoes"></div>
                 <div class="graph-detail-holder">
 
@@ -368,7 +368,7 @@
                     <p class="text-gray">Novas Funçoes</p>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div style="max-width: 250px;" class="position-relative">
                 <div style="transform: scaleX(-1); stroke-linecap: round;" id="progress-att"></div>
                 <div class="graph-detail-holder">
 
@@ -376,19 +376,82 @@
                     <p class="text-gray">Novas Atualizações</p>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div style="max-width: 250px;" class="position-relative">
                 <div style="transform: scaleX(-1); stroke-linecap: round;" id="progress-pontos"></div>
                 <div class="graph-detail-holder">
 
                     <h3 class="font-weight-bold">89%</h3>
-                    <p class="text-gray">Implementação nos Pontos</p>
+                    <p class="text-gray">Novas Atualizações</p>
+                </div>
+            </div>
+            <div style="max-width: 250px;" class="position-relative">
+                <div style="transform: scaleX(-1); stroke-linecap: round;" id="progress-pontos-2"></div>
+                <div class="graph-detail-holder">
+
+                    <h3 class="font-weight-bold">89%</h3>
+                    <p class="text-gray">Novas Atualizações</p>
                 </div>
             </div>
         </div>
 
     </div>
 </section>
+<script>
+                if(document.getElementById("progress-funcoes")){
 
+var circle = new ProgressBar.Circle('#progress-funcoes', {
+    color: '#EA6724',
+    strokeWidth: 7,
+    
+    trailColor: '#cccccc',
+    trailWidth: 1,
+
+    duration: 3000,
+    easing: 'easeInOut'
+});
+circle.animate(.5);
+}
+if(document.getElementById("progress-att")){
+var circle = new ProgressBar.Circle('#progress-att', {
+    color: '#EA6724',
+    strokeWidth: 7,
+    
+    trailColor: '#cccccc',
+    trailWidth: 1,
+
+    duration: 3000,
+    easing: 'easeInOut'
+});
+circle.animate(.99);
+}
+if(document.getElementById("progress-pontos")){
+var circle = new ProgressBar.Circle('#progress-pontos', {
+    color: '#EA6724',
+    strokeWidth: 7,
+    
+    trailColor: '#cccccc',
+    trailWidth: 1,
+
+    duration: 3000,
+    easing: 'easeInOut'
+});
+circle.animate(.01);
+}
+if(document.getElementById("progress-pontos-2")){
+var circle = new ProgressBar.Circle('#progress-pontos-2', {
+    color: '#EA6724',
+    strokeWidth: 7,
+    
+    trailColor: '#cccccc',
+    trailWidth: 1,
+
+    duration: 3000,
+    easing: 'easeInOut'
+});
+circle.animate(.01);
+}
+
+</script>
 <section class="text-center mt-5 pb-0" id="ultimas-noticias">
     <div class="container">
 
