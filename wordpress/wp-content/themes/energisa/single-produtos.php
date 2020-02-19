@@ -74,9 +74,14 @@
                             seu desenvolvimento</p>
                     </div>
                     <div class="container-fluid p-0">
-                        <div class="timeline">
+                        <div class="timeline" id="timeline-scroll">
                             <ol>
-                                <li></li>
+                                <li class="timeline-spacing">
+                                    <div>
+
+                                        <h3 class="text-gray font-weight-bold">Principais marcos do projeto</h3>
+                                    </div>
+                                </li>
                                 <!-- Verifica se tem algum valor cadastrado no campo repetidor-->
                                 <?php if (have_rows('prod_linha_temporal')): while (have_rows('prod_linha_temporal')): the_row();
                                     setlocale(LC_TIME, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
@@ -110,12 +115,12 @@
                                 <?php endif; ?>
                                 <li></li>
                             </ol>
-                            <div class="arrows">
-                                <p class="mt-3">Navegue horizontalmente</p>
-                                <button class="btn arrow arrow__prev disabled"><i class="fas fa-chevron-left"></i>
-                                </button>
-                                <button class="btn arrow arrow__next"><i class="fas fa-chevron-right"></i></button>
-                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <p class="mt-3">Navegue horizontalmente</p>
+                            <button class="btn arrow arrow__prev disabled"><i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="btn arrow arrow__next"><i class="fas fa-chevron-right"></i></button>
                         </div>
                     </div>
                 </section>

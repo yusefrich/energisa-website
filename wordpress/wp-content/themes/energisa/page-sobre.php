@@ -98,8 +98,12 @@
                                                 <div style=" background-image: url(<?php the_sub_field('sobre_equipe_foto'); ?>); max-width:100%;" class="team-img-holder m-auto">
                                                 </div>
                                             </a>
-                                            <p class="font-weight-bold text-blue m-0"><?php the_sub_field('sobre_equipe_nome'); ?></p>
-                                            <p><?php the_sub_field('sobre_equipe_cargo'); ?></p>
+                                            <a href="#" data-toggle="modal" data-target="#equipeModal-<?php echo $count; ?>">
+                                                <p class="font-weight-bold text-blue m-0"><?php the_sub_field('sobre_equipe_nome'); ?></p>
+                                            </a>
+                                            <a href="#" data-toggle="modal" data-target="#equipeModal-<?php echo $count; ?>">
+                                                <p><?php the_sub_field('sobre_equipe_cargo'); ?></p>
+                                            </a>
                                         </div>
                                         <?php $count++; ?>
                                     <?php endwhile; ?>
@@ -167,30 +171,35 @@
 
         </div>
         <div data-aos="fade-up" class="container-fluid p-0">
-            <div class="card-slider">
+            <div class="card-slider" id="sobre-scroll-left">
                 <div class="card card-sm card-bg-small text-white mb-2 ">
                     <!-- <img src="https://via.placeholder.com/1920x600" class="card-img" alt="..."> -->
                     <div class="img-holder-sm" style="
+                            height: 100%;
                             background: linear-gradient(0deg, rgba(67, 67, 67, 0.6), rgba(67, 67, 67, 0.6)), url(<?php bloginfo('template_url'); ?>/img/projeto-autoatendimento.png);
                             background-blend-mode: multiply, normal;
                             background-position: center;
-                            background-size: cover;"></div>
-                    <div class="card-img-overlay overlay-xs text-start">
-                        <p class="text-caption-lg font-weight-bold card-title-sm">Totem de autoatendimento</p>
-                        <div class="overlay-status card-sub-sm">
-                            <small class="outline-text text-uppercase py-1 px-3">Protudo</small>
+                            background-size: cover;">
+                        <button class="btn btn-light btn-round btn-sm card-btn m-3" data-toggle="modal" data-target="#OQueFazemosModal">
+                            <span class="icon pr-1 pt-1 icon-next-icon"></span></button>
+
+                        <div class="card-img-overlay overlay-xs text-start">
+                            <p class="text-caption-lg font-weight-bold card-title-sm">Totem de autoatendimento</p>
+                            <div class="overlay-status card-sub-sm">
+                                <small class="outline-text text-uppercase py-1 px-3">Protudo</small>
+                            </div>
                         </div>
                     </div>
-                    <button class="btn btn-light btn-round btn-sm card-btn m-3" data-toggle="modal" data-target="#OQueFazemosModal">
-                        <span class="icon pr-1 pt-1 icon-next-icon"></span></button>
                 </div>
 
 
             </div>
             <div class="d-flex justify-content-center">
                 <p class="mt-3">Navegue horizontalmente</p>
-                <button class="btn arrow arrow__prev disabled"><i class="fas fa-chevron-left"></i></button>
-                <button class="btn arrow arrow__next"><i class="fas fa-chevron-right"></i></button>
+                <!-- <button class="btn arrow arrow__prev disabled"><i class="fas fa-chevron-left"></i></button> -->
+                <div class="arrow arrow__prev disabled p-3"><i class="fas fa-chevron-left"></i></div>
+                <!-- <button class="btn arrow arrow__next"><i class="fas fa-chevron-right"></i></button> -->
+                <div class=" arrow arrow__next p-3"><i class="fas fa-chevron-right"></i></div>
             </div>
 
         </div>

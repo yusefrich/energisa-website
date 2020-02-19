@@ -149,8 +149,15 @@
                         </div>
                     </div>
                     <div class="container-fluid p-0">
-                        <div data-aos="fade-left" class="timeline">
+                        <div data-aos="fade-left" class="timeline" id="timeline-scroll">
                             <ol>
+                                <li class="timeline-spacing">
+                                    <div>
+
+                                        <h3 class="text-gray font-weight-bold">Principais marcos do projeto</h3>
+                                    </div>
+                                </li>
+
                                 <!-- Verifica se tem algum valor cadastrado no campo repetidor-->
                                 <?php $count = 0; ?>
                                 <?php if (have_rows('projet_linha_temporal')): while (have_rows('projet_linha_temporal')): the_row();
@@ -189,13 +196,13 @@
                                 <li></li>
                             </ol>
 
-                            <div class="arrows">
-                                <p class="mt-3">Navegue horizontalmente</p>
-                                <button class="btn arrow arrow__prev disabled"><i class="fas fa-chevron-left"></i>
-                                </button>
-                                <button class="btn arrow arrow__next"><i class="fas fa-chevron-right"></i></button>
-                            </div>
                         </div>
+                                <div class="d-flex justify-content-center">
+                                    <p class="mt-3">Navegue horizontalmente</p>
+                                    <button class="btn arrow arrow__prev disabled"><i class="fas fa-chevron-left"></i>
+                                    </button>
+                                    <button class="btn arrow arrow__next"><i class="fas fa-chevron-right"></i></button>
+                                </div>
 
                     </div>
                     <div id="parallax-bush-1">

@@ -148,6 +148,21 @@
 
     });
 </script>
+<script src="<?php bloginfo('template_url'); ?>/js/jquery.mousewheel.min.js"></script>
+<script>
+    $("#sobre-scroll-left").mousewheel(function(evt, chg) {
+        this.scrollLeft -= (chg * 30); //need a value to speed up the change
+        evt.preventDefault();
+    });
+    $("#timeline-scroll").mousewheel(function(evt, chg) {
+        this.scrollLeft -= (chg * 30); //need a value to speed up the change
+        evt.preventDefault();
+    });
+    /* $('#timeline-scroll').on('mousewheel', function(event) {
+        console.log(event);
+    }); */
+
+</script>
 
 <script>
     window.onload = function onLoad() {

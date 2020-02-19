@@ -7,21 +7,91 @@
 
     </div>
     <div data-aos="fade-up" class="container-fluid p-0">
-        <div class="card-slider">
+        <div class="card-slider scrollbar-custom">
             <div  class="card card-sm card-bg-small text-white mb-2 ">
                 <!-- <img src="https://via.placeholder.com/1920x600" class="card-img" alt="..."> -->
                 <div class="img-holder-sm" style="
+                    height: 100%;
                     background: linear-gradient(0deg, rgba(67, 67, 67, 0.6), rgba(67, 67, 67, 0.6)), url(./img/projeto-autoatendimento.png);
                     background-blend-mode: multiply, normal;
                     background-position: center;
-                    background-size: cover;"></div>
-                <div  class="card-img-overlay overlay-xs text-start">
-                    <p class="text-caption-lg font-weight-bold card-title-sm">Totem de autoatendimento</p>
-                    <div class="overlay-status card-sub-sm">
-                        <small class="outline-text text-uppercase py-1 px-3">Protudo</small>
+                    background-size: cover;">
+                    <button class="btn btn-light btn-round btn-sm card-btn m-3" data-toggle="modal" data-target="#OQueFazemosModal"><span class="icon pr-1 pt-1 icon-next-icon"></span></button>
+                    <div  class="card-img-overlay overlay-xs text-start">
+                        <p class="text-caption-lg font-weight-bold card-title-sm">Totem de autoatendimento</p>
+                        <div class="overlay-status card-sub-sm">
+                            <small class="outline-text text-uppercase py-1 px-3">Protudo</small>
+                        </div>
                     </div>
                 </div>
-                <button class="btn btn-light btn-round btn-sm card-btn m-3" data-toggle="modal" data-target="#OQueFazemosModal"><span class="icon pr-1 pt-1 icon-next-icon"></span></button>
+            </div>
+            <div  class="card card-sm card-bg-small text-white mb-2 ">
+                <!-- <img src="https://via.placeholder.com/1920x600" class="card-img" alt="..."> -->
+                <div class="img-holder-sm" style="
+                    height: 100%;
+                    background: linear-gradient(0deg, rgba(67, 67, 67, 0.6), rgba(67, 67, 67, 0.6)), url(./img/projeto-autoatendimento.png);
+                    background-blend-mode: multiply, normal;
+                    background-position: center;
+                    background-size: cover;">
+                    <button class="btn btn-light btn-round btn-sm card-btn m-3" data-toggle="modal" data-target="#OQueFazemosModal"><span class="icon pr-1 pt-1 icon-next-icon"></span></button>
+                    <div  class="card-img-overlay overlay-xs text-start">
+                        <p class="text-caption-lg font-weight-bold card-title-sm">Totem de autoatendimento</p>
+                        <div class="overlay-status card-sub-sm">
+                            <small class="outline-text text-uppercase py-1 px-3">Protudo</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div  class="card card-sm card-bg-small text-white mb-2 ">
+                <!-- <img src="https://via.placeholder.com/1920x600" class="card-img" alt="..."> -->
+                <div class="img-holder-sm" style="
+                    height: 100%;
+                    background: linear-gradient(0deg, rgba(67, 67, 67, 0.6), rgba(67, 67, 67, 0.6)), url(./img/projeto-autoatendimento.png);
+                    background-blend-mode: multiply, normal;
+                    background-position: center;
+                    background-size: cover;">
+                    <button class="btn btn-light btn-round btn-sm card-btn m-3" data-toggle="modal" data-target="#OQueFazemosModal"><span class="icon pr-1 pt-1 icon-next-icon"></span></button>
+                    <div  class="card-img-overlay overlay-xs text-start">
+                        <p class="text-caption-lg font-weight-bold card-title-sm">Totem de autoatendimento</p>
+                        <div class="overlay-status card-sub-sm">
+                            <small class="outline-text text-uppercase py-1 px-3">Protudo</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div  class="card card-sm card-bg-small text-white mb-2 ">
+                <!-- <img src="https://via.placeholder.com/1920x600" class="card-img" alt="..."> -->
+                <div class="img-holder-sm" style="
+                    height: 100%;
+                    background: linear-gradient(0deg, rgba(67, 67, 67, 0.6), rgba(67, 67, 67, 0.6)), url(./img/projeto-autoatendimento.png);
+                    background-blend-mode: multiply, normal;
+                    background-position: center;
+                    background-size: cover;">
+                    <button class="btn btn-light btn-round btn-sm card-btn m-3" data-toggle="modal" data-target="#OQueFazemosModal"><span class="icon pr-1 pt-1 icon-next-icon"></span></button>
+                    <div  class="card-img-overlay overlay-xs text-start">
+                        <p class="text-caption-lg font-weight-bold card-title-sm">Totem de autoatendimento</p>
+                        <div class="overlay-status card-sub-sm">
+                            <small class="outline-text text-uppercase py-1 px-3">Protudo</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div  class="card card-sm card-bg-small text-white mb-2 ">
+                <!-- <img src="https://via.placeholder.com/1920x600" class="card-img" alt="..."> -->
+                <div class="img-holder-sm" style="
+                    height: 100%;
+                    background: linear-gradient(0deg, rgba(67, 67, 67, 0.6), rgba(67, 67, 67, 0.6)), url(./img/projeto-autoatendimento.png);
+                    background-blend-mode: multiply, normal;
+                    background-position: center;
+                    background-size: cover;">
+                    <button class="btn btn-light btn-round btn-sm card-btn m-3" data-toggle="modal" data-target="#OQueFazemosModal"><span class="icon pr-1 pt-1 icon-next-icon"></span></button>
+                    <div  class="card-img-overlay overlay-xs text-start">
+                        <p class="text-caption-lg font-weight-bold card-title-sm">Totem de autoatendimento</p>
+                        <div class="overlay-status card-sub-sm">
+                            <small class="outline-text text-uppercase py-1 px-3">Protudo</small>
+                        </div>
+                    </div>
+                </div>
             </div>
 
 
