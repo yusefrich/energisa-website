@@ -1,50 +1,33 @@
 jQuery(function ($) {
 
-    /*****************************
-     * Listar posts
-     *
-     * (x) Função PHP
-     * () admin-ajax.php
-     * () Função JS
-     *
-     ****************************/
-    function listarPostsAjax () {
+    var page = 1;
+
+    function listarNovidadesAjax(page) {
         $.ajax({
             url: wp.ajaxurl,
             type: 'GET',
             data: {
-                action: 'listarPosts'
+                action: 'listarNovidades',
+                page: page
             },
             beforeSend: function () {
-                console.log("carregando posts...")
+
             },
             success: function (resposta) {
-                console.log(resposta)
+                $("#listNews").html(resposta)
             },
-            error: function (erro) { // if error occured
+            error: function (erro) {
                 console.log("Ocorreu um erro")
             },
         })
-
     }
 
-    listarPostsAjax()
+    listarNovidadesAjax(page)
 
-    // Ação do botão da categoria
+    $("body").on('click', '#btnLoadNews', function () {
+        page = $(this).data("pagina");
+        listarNovidadesAjax(page +1)
+    })
 
-
-    /*****************************
-     * Detalhes do posts
-     ****************************/
-    var detalhesPostsAjax = function () {
-
-    }
-
-    /*****************************
-     * Curtir e descurtir post
-     ****************************/
-    var curtirPostToggleAjax = function () {
-
-    }
 
 })
