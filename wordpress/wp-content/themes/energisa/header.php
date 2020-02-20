@@ -7,13 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- favicon -->
-    <link rel="shortcut icon" type="image/png" href="<?php bloginfo('template_url'); ?>/css/bootstrap.css"/>
+    <link rel="shortcut icon" type="image/png" href="<?php bloginfo('template_url'); ?>/img/favicon.png"/>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/bootstrap.css">
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/style.css">
-    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/img/favicon.png">
-    
+   
+
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i,800,800i&display=swap"
           rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>

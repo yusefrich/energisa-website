@@ -3,12 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0de7631c-04d5-43ce-8736-4b956fb59ba0" name="Default Changelist" comment="Integrado a linha do tempo da página interna de projetos">
       <change beforePath="$PROJECT_DIR$/../../../../frontend/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_ajax/detalhes-posts.php" beforeDir="false" afterPath="$PROJECT_DIR$/_ajax/detalhes-equipe.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page-sobre.php" beforeDir="false" afterPath="$PROJECT_DIR$/page-sobre.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/single-projetos.php" beforeDir="false" afterPath="$PROJECT_DIR$/single-projetos.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,13 +51,25 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="178" column="22" lean-forward="true" selection-start-line="178" selection-start-column="22" selection-end-line="178" selection-end-column="22" />
+            <state relative-caret-position="-90">
+              <caret line="84" selection-start-line="84" selection-end-line="110" selection-end-column="8" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/header.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/single-projetos.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="383">
@@ -124,7 +131,6 @@
         <option value="$PROJECT_DIR$/assets/admin/css/style-login.css" />
         <option value="$PROJECT_DIR$/footer.php" />
         <option value="$PROJECT_DIR$/single-produtos.php" />
-        <option value="$PROJECT_DIR$/header.php" />
         <option value="$PROJECT_DIR$/search.php" />
         <option value="$PROJECT_DIR$/single.php" />
         <option value="$PROJECT_DIR$/archive-ideias.php" />
@@ -143,10 +149,11 @@
         <option value="$PROJECT_DIR$/page-sobre.php" />
         <option value="$PROJECT_DIR$/js/app.js" />
         <option value="$PROJECT_DIR$/single-projetos.php" />
+        <option value="$PROJECT_DIR$/header.php" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="810" />
     <option name="y" value="78" />
     <option name="width" value="1618" />
@@ -169,6 +176,11 @@
               <item name="energisa" type="b2602c69:ProjectViewProjectNode" />
               <item name="energisa" type="462c0819:PsiDirectoryNode" />
               <item name="_ajax" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="energisa" type="b2602c69:ProjectViewProjectNode" />
+              <item name="energisa" type="462c0819:PsiDirectoryNode" />
+              <item name="icons" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -238,7 +250,7 @@
       <workItem from="1582125642559" duration="5461000" />
       <workItem from="1582140838993" duration="428000" />
       <workItem from="1582151259357" duration="14668000" />
-      <workItem from="1582195619555" duration="1562000" />
+      <workItem from="1582195619555" duration="2712000" />
     </task>
     <task id="LOCAL-00001" summary="Concluído o carregamento dinâmico para as páginas de novidades, produtos e projetos">
       <created>1582165204409</created>
@@ -251,7 +263,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="139325000" />
+    <option name="totallyTimeSpent" value="140475000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -342,17 +354,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="60" selection-start-line="4" selection-start-column="60" selection-end-line="4" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="637">
-          <caret line="48" column="168" selection-start-line="48" selection-start-column="168" selection-end-line="48" selection-end-column="168" />
-          <folding>
-            <element signature="n#style#0;n#input#0;n#div#0;n#form#0;n#div#0;n#div#1;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#form#0;n#div#0;n#div#1;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -457,13 +458,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="178" column="22" lean-forward="true" selection-start-line="178" selection-start-column="22" selection-end-line="178" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_parts/detalhes-equipe.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -495,6 +489,23 @@
           <folding>
             <element signature="n#style#0;n#div#1;n#section#3;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-90">
+          <caret line="84" selection-start-line="84" selection-end-line="110" selection-end-column="8" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
         </state>
       </provider>
     </entry>
