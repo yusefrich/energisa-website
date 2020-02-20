@@ -125,33 +125,72 @@
 
     <section id="o-que-fazemos">
         <div data-aos="fade-up" class="container py-5 my-5">
-            <h1 class="font-weight-bold text-orange">Um pouco <br> do que fizemos</h1>
-            <p style="max-width: 560px;">Acompanhe um pouco do que aconteceu recentemente por aqui, veja produtos,
-                eventos, treinamentos e afins</p>
+            <h1 class="font-weight-bold text-orange"><?php the_field('sobre_fazemos_titulo'); ?></h1>
+            <p style="max-width: 560px;"><?php the_field('sobre_fazemos_desc'); ?></p>
 
 
         </div>
         <div data-aos="fade-up" class="container-fluid p-0">
             <div class="card-slider" id="sobre-scroll-left">
-                <div class="card card-sm card-bg-small text-white mb-2 card-link-div" onclick="window.location='#';">
-                    <!-- <img src="https://via.placeholder.com/1920x600" class="card-img" alt="..."> -->
-                    <div class="img-holder-sm" style="
-                            height: 100%;
-                            background: linear-gradient(0deg, rgba(67, 67, 67, 0.6), rgba(67, 67, 67, 0.6)), url(<?php bloginfo('template_url'); ?>/img/projeto-autoatendimento.png);
-                            background-blend-mode: multiply, normal;
-                            background-position: center;
-                            background-size: cover;">
-                        <button class="btn btn-light btn-round btn-sm card-btn m-3" data-toggle="modal" data-target="#OQueFazemosModal">
-                            <span class="icon pr-1 pt-1 icon-next-icon"></span></button>
 
-                        <div class="card-img-overlay overlay-xs text-start">
-                            <p class="text-caption-lg font-weight-bold card-title-sm">Totem de autoatendimento</p>
-                            <div class="overlay-status card-sub-sm">
-                                <small class="outline-text text-uppercase py-1 px-3">Protudo</small>
+                <?php
+                $fazemos = new WP_Query(array(
+                    'post_type' => array(
+                        'projetos',
+                        'produtos',
+                        'treinamentos'
+                    ),
+                    'posts_per_page' => '-1',
+                ));
+
+                echo '<pre>';
+                //print_r($fazemos);
+                echo '</pre>';
+                while ($fazemos->have_posts()): $fazemos->the_post();
+                    $tipo_post = get_post_type();
+                    $capa = "";
+                    $color_bg = "";
+                    $permalink = get_the_permalink();
+                    $url =  "onclick=\"window.location='$permalink'\"";
+                    $openInfo = "";
+
+                    if ($tipo_post == "produtos") {
+                        $capa = get_field('img_background');
+                        $color_bg = get_field('prod_cor_background');
+                    }
+                    if ($tipo_post == "projetos") {
+                        $capa = get_field('projet_background');
+                        $color_bg = get_field('projet_cor_background');
+                    }
+                    if ($tipo_post == "treinamentos") {
+                        $capa = esc_url(get_the_post_thumbnail_url(null, 'full'));
+                        $color_bg = get_field('treina_cor_fundo');
+                        $url = "";
+                        $openInfo = "openTreinamento";
+                    }
+                    ?>
+
+                    <div data-post="<?php the_ID();?>" class="card card-sm card-bg-small text-white mb-2 card-link-div <?php echo $openInfo;?>" <?php echo $url; ?>>
+                        <div class="img-holder-sm" style="
+                                height: 100%;
+                                background: linear-gradient(0deg, rgba(<?php echo $color_bg; ?>), rgba(<?php echo $color_bg; ?>)), url(<?php echo $capa; ?>);
+                                background-blend-mode: multiply, normal;
+                                background-position: center;
+                                background-size: cover;">
+                            <button class="btn btn-light btn-round btn-sm card-btn m-3">
+                                <span class="icon pr-1 pt-1 icon-next-icon"></span></button>
+
+                            <div class="card-img-overlay overlay-xs text-start">
+                                <p class="text-caption-lg font-weight-bold card-title-sm"><?php the_title(); ?></p>
+                                <div class="overlay-status card-sub-sm">
+                                    <small class="outline-text py-1 text-uppercase px-3"><?php echo $tipo_post; ?></small>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+
+                <?php endwhile;
+                wp_reset_postdata(); ?>
 
 
             </div>
@@ -181,55 +220,10 @@
         </div>
     </section>
 
-    <!-- Modal -->
+    <!-- Modal detalhes do treinamento -->
     <div class="modal fade" id="OQueFazemosModal" tabindex="-1" role="dialog" aria-labelledby="OQueFazemosModalLabel"
          aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div style="background-image: linear-gradient(0deg, rgba(67, 67, 67, 0.6), rgba(67, 67, 67, 0.6)), url(<?php bloginfo('template_url'); ?>/img/modal-quem-somos.png);" class=" p-4  bg-header">
-                    <button type="button" class="btn btn-light btn-round py-1 float-right" data-dismiss="modal" aria-label="Close">
-                        <span class="text-gray" aria-hidden="true">&times;</span>
-                    </button>
-                    <h2 style="max-width: 590px;" class="text-white font-weight-bold mx-5 mt-5">Meetup Usabilidade
-                        Móvel</h2>
-                    <p class="text-uppercase ml-5">
-                        <small class="font-weight-bold modal-tag py-1 px-3">treinamento</small>
-                    </p>
 
-                </div>
-                <div class="modal-body p-5 m-4">
-                    <div class="text-start my-2">
-                        <h3 class=" font-weight-bold mb-5">Confira como foi</h3>
-                        <p class=" font-weight-light text-caption">Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Sagittis, sit
-                            facilisi consequat tortor ullamcorper lacus, ullamcorper nisi ut. Eros, massa viverra ornare
-                            mi,
-                            donec. Senectus mauris hendrerit quam urna enim odio porttitor dui. Sit felis cras
-                            adipiscing
-                            aliquet. Feugiat ornare fames lacus purus. Viverra sit gravida malesuada lectus fermentum
-                            placerat. Eu faucibus in amet, nec, gravida luctus neque proin aliquam. Neque id est at
-                            consequat nunc, sed. Lorem non bibendum iaculis felis, suspendisse. Tempus odio purus, amet
-                            sit.
-                            Phasellus sed ornare nisl vivamus ultricies in eu, convallis integer.</p>
-                        <p class=" font-weight-light text-caption">Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Sagittis, sit
-                            facilisi consequat tortor ullamcorper lacus, ullamcorper nisi ut. Eros, massa viverra ornare
-                            mi,
-                            donec. Senectus mauris hendrerit quam urna enim odio porttitor dui. Sit felis cras
-                            adipiscing
-                            aliquet. Feugiat ornare fames lacus purus. Viverra sit gravida malesuada lectus fermentum
-                            placerat. Eu faucibus in amet, nec, gravida luctus neque proin aliquam. Neque id est at
-                            consequat nunc, sed. Lorem non bibendum iaculis felis, suspendisse. Tempus odio purus, amet
-                            sit.
-                            Phasellus sed ornare nisl vivamus ultricies in eu, convallis integer.</p>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button> -->
-                </div>
-            </div>
-        </div>
     </div>
 
 <?php endwhile; ?>
