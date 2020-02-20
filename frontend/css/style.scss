@@ -593,7 +593,7 @@ section {
 .timeline-progress-circle{
     transform: scaleX(-1); 
     stroke-linecap: round; 
-    width: 50px; 
+    width: 60px; 
     height: 50px;
 }
 
@@ -951,3 +951,6 @@ a:hover{
     cursor: -webkit-grabbing;
     transform: scale(1.05);
   }
+.timeline-andamento{
+    font-size: 17px !important;
+}
