@@ -3,11 +3,13 @@
 
 function listarIdeias()
 {
+    $tag = $_GET['tipo'];
     $page = $_GET['page'];
 
     $args = [
         'post_type' => 'ideias',
         'posts_per_page' => 3,
+        'tag' => $tag,
         'paged' => $page,
     ];
 
