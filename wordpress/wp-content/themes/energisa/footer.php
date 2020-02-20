@@ -48,7 +48,6 @@
 
 <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
-<script src="<?php bloginfo('template_url'); ?>/js/progressbar.min.js"></script>
 
 
 
@@ -163,7 +162,7 @@
 
 </script> -->
 
-<script>
+<!-- <script>
     window.onload = function onLoad() {
         if(document.getElementById("progress-1")){
 

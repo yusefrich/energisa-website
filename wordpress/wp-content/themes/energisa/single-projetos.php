@@ -183,13 +183,29 @@
                                                     <small><?php echo esc_html($field['label']); ?></small>
                                                 </p>
                                                 <div class="p-0 timeline-progress-circle" id="como-estamos-graph-<?php echo $count; ?>"></div>
-                                                <p style="left: -40px; top: 8px; position: relative;">
-                                                    <small class="font-weight-bold"><?php the_sub_field('projet_desc_andamento'); ?>
-                                                        %
+                                                <p class="timeline-andamento mt-1" style="left: -48px; top: 12px; position: relative;">
+                                                    <small class="font-weight-bold "><?php the_sub_field('projet_desc_andamento'); ?>%
                                                     </small>
                                                 </p>
                                             </div>
                                         </div>
+                                        <script>
+                                        if(document.getElementById("como-estamos-graph-<?php echo $count; ?>")){
+                                            var circle = new ProgressBar.Circle('#como-estamos-graph-<?php echo $count; ?>', {
+                                                color: '#EA6724',
+                                                strokeWidth: 15,
+
+                                                trailColor: '#cccccc',
+                                                trailWidth: 1,
+
+                                                duration: 3000,
+                                                easing: 'easeInOut'
+                                            });
+                                            circle.animate(.99);
+                                        }
+
+                                    </script>
+
                                     </li>
                                 <?php endwhile; ?>
                                 <?php endif; ?>
@@ -223,8 +239,6 @@
 
                 </section>
             <?php endif; ?>
-
-
         <?php endwhile; ?>
     <?php endif; ?>
 
