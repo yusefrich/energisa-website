@@ -124,7 +124,7 @@
     </div>
 
     <section id="o-que-fazemos">
-        <div data-aos="fade-up" class="container py-5 my-5">
+        <div data-aos="fade-up" class="container py-5 mt-5 mb-2">
             <h1 class="font-weight-bold text-orange"><?php the_field('sobre_fazemos_titulo'); ?></h1>
             <p style="max-width: 560px;"><?php the_field('sobre_fazemos_desc'); ?></p>
 
