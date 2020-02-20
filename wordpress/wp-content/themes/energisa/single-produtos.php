@@ -74,7 +74,7 @@
             seu desenvolvimento</p>
     </div>
     <div class="container-fluid p-0">
-        <div class="timeline" id="timeline-scroll">
+        <div class="timeline style-6" id="timeline-scroll">
             <ol>
                 <li class="timeline-spacing">
                     <div style="width: 350px !important">
