@@ -94,14 +94,14 @@
                                     <?php while (have_rows('sobre_equipe_repeat')): the_row();
                                         ?>
                                         <div class="col-md-3 text-center">
-                                            <a href="#" data-toggle="modal" data-target="#equipeModal-<?php echo $count; ?>">
+                                            <a href="#" data-toggle="modal" class="mdEquipe" data-indice="<?php echo $count; ?>" data-target="#equipeModal">
                                                 <div style=" background-image: url(<?php the_sub_field('sobre_equipe_foto'); ?>); max-width:100%;" class="team-img-holder m-auto">
                                                 </div>
                                             </a>
-                                            <a href="#" data-toggle="modal" data-target="#equipeModal-<?php echo $count; ?>">
+                                            <a href="#" data-toggle="modal" class="mdEquipe" data-indice="<?php echo $count; ?>" data-target="#equipeModal">
                                                 <p class="font-weight-bold text-blue m-0"><?php the_sub_field('sobre_equipe_nome'); ?></p>
                                             </a>
-                                            <a href="#" data-toggle="modal" data-target="#equipeModal-<?php echo $count; ?>">
+                                            <a href="#" data-toggle="modal" class="mdEquipe" data-indice="<?php echo $count; ?>" data-target="#equipeModal">
                                                 <p><?php the_sub_field('sobre_equipe_cargo'); ?></p>
                                             </a>
                                         </div>
@@ -128,38 +128,9 @@
     </section>
 
     <!-- Modal -->
-    <div class="modal fade" id="equipeModal-0" tabindex="-1" role="dialog" aria-labelledby="equipeModalLabel"
+    <div class="modal fade" id="equipeModal" tabindex="-1" role="dialog" aria-labelledby="equipeModalLabel"
          aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div style="background-image: linear-gradient(0deg, rgba(67, 67, 67, 0.6), rgba(67, 67, 67, 0.6)), url(<?php bloginfo('template_url'); ?>/img/member-pic.png);" class="modal-header d-flex justify-content-end bg-header">
-
-                    <button type="button" class="btn btn-light btn-round py-1" data-dismiss="modal" aria-label="Close">
-                        <span class="text-gray" aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body p-5 m-4">
-                    <div class="text-start my-2">
-                        <h3 class=" font-weight-bold">Bio</h3>
-                        <p class=" font-weight-light text-caption">Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Sagittis, sit
-                            facilisi consequat tortor ullamcorper lacus, ullamcorper nisi ut. Eros, massa viverra ornare
-                            mi,
-                            donec. Senectus mauris hendrerit quam urna enim odio porttitor dui. Sit felis cras
-                            adipiscing
-                            aliquet. Feugiat ornare fames lacus purus. Viverra sit gravida malesuada lectus fermentum
-                            placerat. Eu faucibus in amet, nec, gravida luctus neque proin aliquam. Neque id est at
-                            consequat nunc, sed. Lorem non bibendum iaculis felis, suspendisse. Tempus odio purus, amet
-                            sit.
-                            Phasellus sed ornare nisl vivamus ultricies in eu, convallis integer.</p>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button> -->
-                </div>
-            </div>
-        </div>
+<?php get_template_part('_parts/detalhes-equipe'); ?>
     </div>
 
     <section id="o-que-fazemos">

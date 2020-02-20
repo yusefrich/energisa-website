@@ -199,5 +199,12 @@ jQuery(function ($) {
         $(this).data('pagina', paggina + 1);
     })
 
+    // ########################################################## CARREGAR DETALHES DA EQUIPE NO MODAL ##########################################
+    $(".mdEquipe").on('click', function () {
+        var indice = $(this).data("indice");
+        //listarProdutosAjax(paggina + 1)
+        alert(indice)
+    })
+
 
 })

@@ -94,9 +94,9 @@
                                         <p class="text-gray">
                                             <small><?php the_sub_field('projet_grafico_descricao') ?></small>
                                         </p>
-
+                                        <?php $grafico =  get_sub_field('projet_grafico_chart')?>
                                         <div class="d-flex justify-content-center">
-                                            <?php echo do_shortcode("[visualizer id=\"173\"] "); ?>
+                                            <?php echo do_shortcode($grafico); ?>
                                         </div>
                                     </div>
                                 </div>
@@ -197,12 +197,12 @@
                             </ol>
 
                         </div>
-                                <div class="d-flex justify-content-center">
-                                    <p class="mt-3">Navegue horizontalmente</p>
-                                    <button class="btn arrow arrow__prev disabled"><i class="fas fa-chevron-left"></i>
-                                    </button>
-                                    <button class="btn arrow arrow__next"><i class="fas fa-chevron-right"></i></button>
-                                </div>
+                        <div class="d-flex justify-content-center">
+                            <p class="mt-3">Navegue horizontalmente</p>
+                            <button class="btn arrow arrow__prev disabled"><i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="btn arrow arrow__next"><i class="fas fa-chevron-right"></i></button>
+                        </div>
 
                     </div>
                     <div id="parallax-bush-1">
