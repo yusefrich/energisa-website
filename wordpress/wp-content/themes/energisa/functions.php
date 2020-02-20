@@ -102,6 +102,7 @@ include ('_ajax/listar-novidades.php');
 include('_ajax/listar-projetos.php');
 include('_ajax/listar-produtos.php');
 include('_ajax/detalhes-equipe.php');
+include('_ajax/detalhes-treinamento.php');
 
 function app_scripts() {
 

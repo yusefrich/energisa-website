@@ -253,4 +253,67 @@ jQuery(function ($) {
     })
 
 
+    // ########################################### CARREGAR DETALHES DO TREINAMENTO NO MODAL ###############
+
+
+    function treinamentoDetalhesAjax(id_post) {
+        $.ajax({
+            url: wp.ajaxurl,
+            type: 'GET',
+            data: {
+                action: 'treinamentoDetalhes',
+                indice: id_post
+            },
+            beforeSend: function () {
+
+            },
+            success: function (dados) {
+                let success = dados.success;
+                let detalhes = dados.data;
+
+                if (success) {
+                    $("#OQueFazemosModal").html(`
+ <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+        <div style="background-image: linear-gradient(0deg, rgba(67, 67, 67, 0.6), rgba(67, 67, 67, 0.6)), url( ${detalhes.capa});" class=" p-4  bg-header">
+            <button type="button" class="btn btn-light btn-round py-1 float-right" data-dismiss="modal" aria-label="Close">
+                <span class="text-gray" aria-hidden="true">&times;</span>
+            </button>
+            <h2 style="max-width: 590px;" class="text-white font-weight-bold mx-5 mt-5">${detalhes.titulo}</h2>
+            <p class="text-uppercase ml-5">
+                <small class="font-weight-bold modal-tag py-1 px-3">treinamento</small>
+            </p>
+
+        </div>
+        <div class="modal-body p-5 m-4">
+            <div class="text-start my-2">
+                <h3 class=" font-weight-bold mb-5">Confira como foi</h3>
+            ${detalhes.conteudo}
+            </div>
+        </div>
+        <div class="modal-footer">
+           
+        </div>
+    </div>
+</div>
+                    `);
+                    $("#OQueFazemosModal").modal('show');
+                }
+            },
+            error: function (erro) {
+                console.log("ooopss... algo deu errado na requisição")
+            },
+        })
+    }
+
+
+    $(".openTreinamento").on('click', function (event) {
+        event.preventDefault();
+        var id_post = $(this).data("post");
+        treinamentoDetalhesAjax(id_post);
+
+        //$("#OQueFazemosModal").modal('show');
+    })
+
+
 })
