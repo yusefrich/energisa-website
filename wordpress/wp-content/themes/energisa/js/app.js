@@ -311,9 +311,87 @@ jQuery(function ($) {
         event.preventDefault();
         var id_post = $(this).data("post");
         treinamentoDetalhesAjax(id_post);
-
-        //$("#OQueFazemosModal").modal('show');
     })
 
+
+    // ########################################### CARREGAR IDEIAS ###############
+
+    function listarIdeiasAjax(page) {
+        $.ajax({
+            url: wp.ajaxurl,
+            type: 'GET',
+            data: {
+                action: 'listarIdeias',
+                page: page
+            },
+            beforeSend: function () {
+
+            },
+            success: function (dados) {
+                let success = dados.success;
+                let posts = dados.data.posts;
+                let hasNext = dados.data.hasNext;
+
+                if (success) {
+                    $.each(posts, function (i, post) {
+                        var tags = post.tags;
+                        var card = "";
+
+                        card += "<div data-aos='flip-left' class='mb-2 p-2'>";
+                        card += "<div class='pb-4 text-start'>";
+                        card += "<div class='d-flex justify-content-start pb-4'>";
+                        card += "<div class='profile-pic mr-4' style='background-image: url(" + post.foto + ");background-size: cover;background-position: center;'></div>";
+                        card += "<div>";
+                        card += "<span class='text-fade'><small>Postado " + post.data + "</small></span>";
+                        card += "<p class='card-user-name m-0'>" + post.user + "</p>";
+                        card += "</div>";
+                        card += "</div>";
+                        card += "<p class='text-uppercase'>";
+                        card += "<small class='text-orange'>" + post.status + "</small>";
+                        card += "</p>";
+                        card += "<a href='" + post.url + "'>";
+                        card += "<p class='font-weight-extra-bold text-caption'>" + post.titulo + "</p>";
+                        card += "</a>";
+                        card += "<p>";
+                        card += "<small>";
+                        if (post.votos != "") {
+                            card += "<span class='round-outline-text py-1 px-2 mx-1'>" + post.votos + " Votos</span>";
+                        }
+                        card += "<span class='round-outline-text py-1 px-2 mx-1'>3 Respostas</span>";
+                        card += "</small>";
+                        card += "</p>";
+                        card += "<div class='card-tags'>";
+                        for (var i = 0; i < tags.length; i++) {
+                            card += "<small class='orange-outline-text py-1 px-2 mr-2 my-1'>#" + tags[i] + "</small>";
+                        }
+                        card += "</div>";
+                        card += "</div>";
+                        card += "</div>";
+                        card += "<hr>";
+
+
+                        $("#loadIdeias").append(card)
+                    })
+
+                    if (hasNext === false) {
+                        $("#btnLoadIdeias").remove();
+                    }
+                } else {
+                    $("#loadIdeias").append(`<div class="alert alert-danger text-center">${dados.data.msg}</div>`);
+                }
+            },
+            error: function (erro) {
+                console.log("ooopss... algo deu errado na requisição")
+            },
+        })
+    }
+
+    listarIdeiasAjax(page);
+
+    $("#btnLoadIdeias").on('click', function (event) {
+        paggina = $(this).data("pagina");
+        listarIdeiasAjax(paggina + 1)
+        $(this).data('pagina', paggina + 1);
+    })
 
 })

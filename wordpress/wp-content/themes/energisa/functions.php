@@ -103,6 +103,7 @@ include('_ajax/listar-projetos.php');
 include('_ajax/listar-produtos.php');
 include('_ajax/detalhes-equipe.php');
 include('_ajax/detalhes-treinamento.php');
+include('_ajax/listar-ideias.php');
 
 function app_scripts() {
 

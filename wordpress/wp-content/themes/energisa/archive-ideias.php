@@ -76,60 +76,12 @@
 
 
             <div class="col-md-9">
-                <?php while (have_posts()) : the_post(); ?>
-                    <?php $statusFiled = get_field('ideia_status');
-                    $foto = get_field('autor_foto', 'user_' . get_the_author_id());
-                    $thumbnail = $foto['sizes']['thumbnail'];
-                    ?>
+                <div id="loadIdeias"></div>
 
-                    <div data-aos="flip-left" class="  mb-2 p-2">
-                        <div class="pb-4 text-start">
-                            <div class="d-flex justify-content-start pb-4">
-                                <div class="profile-pic mr-4" style="
-                                        background-image: url(<?php echo $thumbnail; ?>);
-                                        background-size: cover;
-                                        background-position: center;
-                                        "></div>
-                                <div>
-                                    <span class="text-fade"><small>Postado <?php the_date('d/m/Y'); ?></small></span>
-                                    <p class="card-user-name m-0"><?php the_author_firstname(); ?>
-                                        &nbsp;<?php the_author_lastname(); ?></p>
 
-                                </div>
-                            </div>
-                            <p class="text-uppercase">
-                                <small class="text-orange"><?php echo esc_html($statusFiled['label']); ?></small>
-                            </p>
-                            <a href="<?php the_permalink(); ?>">
-                                <p class="font-weight-extra-bold text-caption"><?php the_title(); ?></p>
-                            </a>
-                            <p>
-                                <small>
-                                    <?php if (get_field('ideia_votos')): ?>
-                                        <span class="round-outline-text py-1 px-2 mx-1"><?php the_field('ideia_votos'); ?> Votos</span>
-                                    <?php endif; ?>
-                                    <span class="round-outline-text py-1 px-2 mx-1">3 Respostas</span>
-                                </small>
-                            </p>
-                            <div class="card-tags">
-                                <?php
-                                $post_tags = get_the_tags($post->id);
-
-                                if ($post_tags) {
-                                    foreach ($post_tags as $tag) {
-                                        echo "<small class=\"orange-outline-text py-1 px-2 mr-2 my-1\">#$tag->name </small>";
-                                    }
-                                }
-                                ?>
-                            </div>
-                            <!-- <img class="profile-pic float-left" height="48" src="./img/profile-1.jpg" alt=""> -->
-                        </div>
-                    </div>
-                    <hr>
-                <?php endwhile; ?>
 
                 <div data-aos="flip-left" class="text-center mt-4 mb-5 pb-5">
-                    <button class="btn btn-outline-light px-5"> Mostrar mais</button>
+                    <button class="btn btn-outline-light px-5" data-pagina="1" id="btnLoadIdeias"> Mostrar mais</button>
                 </div>
             </div>
         </div>
