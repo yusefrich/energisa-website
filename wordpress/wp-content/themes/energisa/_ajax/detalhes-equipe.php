@@ -21,6 +21,7 @@ function equipeDetalhes()
         // Cria o loop
         while ($posts->have_posts()) {
             $posts->the_post();
+
             $rows = get_field('sobre_equipe_repeat');
 
             $itens = [
