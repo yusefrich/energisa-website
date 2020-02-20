@@ -77,7 +77,7 @@
         <div class="timeline" id="timeline-scroll">
             <ol>
                 <li class="timeline-spacing">
-                    <div>
+                    <div style="width: 350px !important">
 
                         <h3 class="text-gray font-weight-bold">Principais marcos do projeto</h3>
                     </div>
@@ -308,11 +308,14 @@ slider.addEventListener('mousemove', (e) => {
                     <img src="<?php echo esc_url($capa_novidades); ?>" class="figure-img img-fluid rounded zoom-hover"
                     alt="...">
                 </a>
-                <p class="img-caption  text-uppercase">
-                    <small>postado em
-                        <strong><?php echo get_the_time(__('j \d\e M  Y'), $post->id); ?></strong>
-                    </small>
-                </p>
+                <a href="#">
+
+                    <p class="img-caption  text-uppercase">
+                        <small>postado em
+                            <strong><?php echo get_the_time(__('j \d\e M  Y'), $post->id); ?></strong>
+                        </small>
+                    </p>
+                </a>
                 <a href="#">
                     <p class="font-weight-bold"><?php the_title(); ?></p>
                 </a>

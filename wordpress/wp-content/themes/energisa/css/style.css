@@ -35,6 +35,11 @@ section {
   letter-spacing: -0.02em;
   font-size: 1.5em;
 }
+@media (max-width: 1300px) {
+  .text-caption {
+    font-size: 1.25em;
+  }
+}
 
 .text-caption-lg {
   font-style: normal;
@@ -453,6 +458,11 @@ section {
 
 .img-caption {
   font-size: 1.5em;
+}
+@media (max-width: 1300px) {
+  .img-caption {
+    font-size: 1.25em;
+  }
 }
 
 .card-btn {
@@ -986,6 +996,11 @@ a:hover {
   .custom-carousel-caption .slider-title {
     margin-top: 150px;
     margin-bottom: 100px;
+  }
+}
+@media (max-width: 1300px) {
+  .timeline ol li > div {
+    width: 290px !important;
   }
 }
 .container-small, .container-large {
