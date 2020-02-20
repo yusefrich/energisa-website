@@ -154,14 +154,14 @@ if ($slider->have_posts()) :
                     <div data-aos="fade-left" class="col-md-6">
                         <a href="<?php the_permalink(); ?>">
                             <img src="<?php echo esc_url($capa_novidades); ?>" class="figure-img img-fluid rounded zoom-hover" alt="..."></a>
-                        <a href="<?php the_permalink(); ?>"><p class="img-caption text-white">
+                        <a href="<?php the_permalink(); ?>"><p class="img-caption text-white mb-5">
                                 <strong><?php the_title(); ?></strong></p></a>
                     </div>
                 <?php endwhile;
                 wp_reset_postdata(); ?>
                 <div class="col-12">
                     <div data-aos="fade-up" class="d-flex justify-content-center">
-                        <a href="<?php bloginfo('home'); ?>/novidades" class="btn btn-light px-5">Confira as
+                        <a href="<?php bloginfo('home'); ?>/novidades" class="btn btn-light px-5 btn-confira-offset">Confira as
                             novidades</a>
                     </div>
                 </div>
