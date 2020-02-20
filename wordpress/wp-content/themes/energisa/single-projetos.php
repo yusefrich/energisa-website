@@ -201,7 +201,7 @@
                                                 duration: 3000,
                                                 easing: 'easeInOut'
                                             });
-                                            circle.animate(.99);
+                                            circle.animate(+<?php the_sub_field('projet_desc_andamento'); ?>/100);
                                         }
 
                                     </script>

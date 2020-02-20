@@ -252,12 +252,29 @@ slider.addEventListener('mousemove', (e) => {
                                     $linhas++;
                                     ?>
             <div class="col-md-4">
-                <div id="progress-<?php echo $linhas; ?>"></div>
+                <div style="transform: scaleX(-1); stroke-linecap: round;" id="progress-<?php echo $linhas; ?>"></div>
                 <div class="graph-detail-holder">
 
                     <h3 class="font-weight-bold"><?php echo $porcentagem; ?>%</h3>
                     <p class="text-gray"><?php echo $texto; ?></p>
                 </div>
+                <script>
+                    if(document.getElementById("progress-<?php echo $linhas; ?>")){
+                        var circle = new ProgressBar.Circle('#progress-<?php echo $linhas; ?>', {
+                            color: '#EA6724',
+                            strokeWidth: 7,
+
+                            trailColor: '#cccccc',
+                            trailWidth: 1,
+
+                            duration: 3000,
+                            easing: 'easeInOut'
+                        });
+                        circle.animate(+<?php echo $porcentagem; ?>/100);
+                    }
+
+                </script>
+
             </div>
             <?php endwhile; ?>
         </div>
