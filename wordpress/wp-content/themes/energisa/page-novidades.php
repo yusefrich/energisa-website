@@ -25,9 +25,16 @@
                 dentro do que anda acontecendo no nosso setor, fique bem informado</p>
         </div>
 
-        <div class="row mt-5" id="listNews">
+        <div class="row mt-5" id="loadNews"></div>
 
-
+        <div class="row">
+            <div class="col-md-12">
+                <div data-aos="flip-left" class="col-md-12 text-center mt-4">
+                    <button class="btn btn-outline-light px-5" data-pagina="1" id="btnLoadNews">
+                        Mostrar mais
+                    </button>
+                </div>
+            </div>
         </div>
 
 

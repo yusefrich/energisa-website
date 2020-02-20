@@ -97,8 +97,10 @@ add_action('init', 'remove_pages_from_search');
  * INCLUDES
  **********************************************/
 
-include ('_ajax/listar-post.php');
-include ('_ajax/detalhes-posts.php');
+
+include ('_ajax/listar-novidades.php');
+include('_ajax/listar-projetos.php');
+include('_ajax/listar-produtos.php');
 
 function app_scripts() {
 
