@@ -16,7 +16,7 @@
                     <div class="container custom-carousel-caption">
                         <div class="slider-title ">
                             <div class="text-center mb-5 mx-5">
-                                <h2 class="display-h2 ">Olha o que vem por aí</h2>
+                                <h2 class="display-h2">Olha o que vem por aí</h2>
                                 <p>Estamos cada vez mais empolgados para melhorar nossos serviços, acompanhe em que
                                     estamos trabalhando atualmente</p>
                             </div>
@@ -71,7 +71,7 @@
                     <div class="container normal-carousel-caption">
                         <div class="slider-title ">
                             <div class="text-center mb-5 mx-5">
-                                <h2 class="display-h2 text-orange">Olha o que vem por aí</h2>
+                                <h2 class="display-h2">Olha o que vem por aí</h2>
                                 <p>Estamos cada vez mais empolgados para melhorar nossos serviços, acompanhe em que
                                     estamos trabalhando atualmente</p>
                             </div>
@@ -87,7 +87,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <p class="text-uppercase">Alguns produtos</p>
-                                    <h2 style="width: 300px;" class="display-h2 text-orange">Pague suas contas</h2>
+                                    <h2 style="width: 300px;" class="display-h2 ">Pague suas contas</h2>
                                     <p class="">Lorem Ipsum é simplesmente uma simulação de texto da indústria
                                         tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando
                                         um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para
@@ -126,7 +126,7 @@
                     <div class="container normal-carousel-caption">
                         <div class="slider-title ">
                             <div class="text-center mb-5 mx-5">
-                                <h2 class="display-h2 text-orange">Olha o que vem por aí</h2>
+                                <h2 class="display-h2 ">Olha o que vem por aí</h2>
                                 <p>Estamos cada vez mais empolgados para melhorar nossos serviços, acompanhe em que
                                     estamos trabalhando atualmente</p>
                             </div>
@@ -142,7 +142,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <p class="text-uppercase">Alguns produtos</p>
-                                    <h2 style="width: 300px;" class="display-h2 text-orange">Pague suas contas</h2>
+                                    <h2 style="width: 300px;" class="display-h2 ">Pague suas contas</h2>
                                     <p class="">Lorem Ipsum é simplesmente uma simulação de texto da indústria
                                         tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando
                                         um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para
@@ -181,8 +181,8 @@
                         " class="product-description-info">
                 </div>
             </div>
-            <div class="col-md-6 text-white">
-                <div class="product-description-text pl-3">
+            <div class="col-md-6 ">
+                <div class="product-description-text pl-3 custom-detail-bg">
                     <h2 data-aos="fade-up" class="display-h2">
                         Lorem ipsum dolor
                     </h2>
@@ -222,7 +222,7 @@
                 </div>
             </div>
             <div class="col-md-6 ">
-                <div class="product-description-text pl-3">
+                <div class="product-description-text pl-3 normal-detail-bg">
                     <h2 data-aos="fade-up" class="display-h2">
                         Lorem ipsum dolor
                     </h2>
@@ -262,7 +262,7 @@
                 </div>
             </div>
             <div class="col-md-6 ">
-                <div class="product-description-text pl-3">
+                <div class="product-description-text pl-3 normal-detail-bg">
                     <h2 data-aos="fade-up" class="display-h2">
                         Lorem ipsum dolor
                     </h2>

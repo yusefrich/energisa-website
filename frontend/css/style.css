@@ -47,6 +47,11 @@ p {
   font-size: 1.25em;
   font-weight: normal;
 }
+@media (max-width: 1300px) {
+  p {
+    font-size: 1.125em;
+  }
+}
 
 h3 {
   font-style: normal;
@@ -65,12 +70,17 @@ h2 {
   font-family: Open Sans;
   font-style: normal;
   font-weight: 800;
-  font-size: 3.625em;
+  font-size: 3.375em;
   line-height: 79px;
+}
+@media (max-width: 1300px) {
+  h2 {
+    font-size: 3.125em;
+  }
 }
 @media (max-width: 1170px) {
   h2 {
-    font-size: 3.125em;
+    font-size: 3.0625em;
   }
 }
 @media (max-width: 1024px) {
@@ -276,7 +286,7 @@ section {
 }
 
 .custom-carousel-caption .slider-title {
-  margin-top: 150px;
+  margin-top: 100px;
   margin-bottom: 100px;
 }
 
@@ -943,6 +953,58 @@ a:hover {
 
 .timeline > ol > li:nth-child(2) {
   background: transparent;
+}
+
+@media (min-width: 768px) {
+  .container-small {
+    width: 600px;
+  }
+
+  .container-large {
+    width: 970px;
+  }
+}
+@media (min-width: 992px) {
+  .container-small {
+    width: 800px;
+  }
+
+  .container-large {
+    width: 1170px;
+  }
+}
+@media (min-width: 1200px) {
+  .container-small {
+    width: 900px;
+  }
+
+  .container-large {
+    width: 1500px;
+  }
+
+  .custom-carousel-caption .slider-title {
+    margin-top: 150px;
+    margin-bottom: 100px;
+  }
+}
+.container-small, .container-large {
+  max-width: 100%;
+}
+
+.card-link-div {
+  cursor: pointer;
+}
+
+.normal-detail-bg h2 {
+  color: #EA6724;
+}
+
+.custom-detail-bg {
+  color: white;
+}
+
+.normal-carousel-caption h2 {
+  color: #EA6724;
 }
 
 /*# sourceMappingURL=style.css.map */

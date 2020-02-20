@@ -51,7 +51,6 @@
     </script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
-    <script src="js/progressbar.min.js"></script>
 
     <!-- navbar top opacity -->
     <script>
@@ -151,46 +150,6 @@
     
     <script>
         window.onload = function onLoad() {
-            if(document.getElementById("progress-funcoes")){
-
-                var circle = new ProgressBar.Circle('#progress-funcoes', {
-                    color: '#EA6724',
-                    strokeWidth: 7,
-                    
-                    trailColor: '#cccccc',
-                    trailWidth: 1,
-
-                    duration: 3000,
-                    easing: 'easeInOut'
-                });
-                circle.animate(.5);
-            }
-            if(document.getElementById("progress-att")){
-                var circle = new ProgressBar.Circle('#progress-att', {
-                    color: '#EA6724',
-                    strokeWidth: 7,
-                    
-                    trailColor: '#cccccc',
-                    trailWidth: 1,
-
-                    duration: 3000,
-                    easing: 'easeInOut'
-                });
-                circle.animate(.99);
-            }
-            if(document.getElementById("progress-pontos")){
-                var circle = new ProgressBar.Circle('#progress-pontos', {
-                    color: '#EA6724',
-                    strokeWidth: 7,
-                    
-                    trailColor: '#cccccc',
-                    trailWidth: 1,
-
-                    duration: 3000,
-                    easing: 'easeInOut'
-                });
-                circle.animate(.01);
-            }
             /* como estamos graficos */
             if(document.getElementById("como-estamos-graph-1")){
                 var circle = new ProgressBar.Circle('#como-estamos-graph-1', {

@@ -2,15 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0de7631c-04d5-43ce-8736-4b956fb59ba0" name="Default Changelist" comment="Integrado a linha do tempo da página interna de projetos">
-      <change afterPath="$PROJECT_DIR$/_ajax/listar-novidades.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../frontend/bg-tipos.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../frontend/bg-tipos.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../frontend/components/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../frontend/components/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../frontend/components/head.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../frontend/components/head.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../frontend/components/produtos/product-detail.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../frontend/components/produtos/product-detail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../frontend/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../frontend/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../frontend/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../frontend/css/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../frontend/css/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../frontend/css/style.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../frontend/index.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_ajax/listar-post.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/archive-produtos.php" beforeDir="false" afterPath="$PROJECT_DIR$/archive-produtos.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/archive-projetos.php" beforeDir="false" afterPath="$PROJECT_DIR$/archive-projetos.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page-novidades.php" beforeDir="false" afterPath="$PROJECT_DIR$/page-novidades.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/bootstrap.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/bootstrap.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/single.php" beforeDir="false" afterPath="$PROJECT_DIR$/single.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,11 +32,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/archive-produtos.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="36" selection-start-line="36" selection-end-line="36" />
+            <state relative-caret-position="475">
+              <caret line="45" column="22" lean-forward="true" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/archive-projetos.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="747">
+              <caret line="67" column="22" lean-forward="true" selection-start-line="67" selection-start-column="22" selection-end-line="67" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -118,11 +134,11 @@
         <option value="$PROJECT_DIR$/page-novidades.php" />
         <option value="$PROJECT_DIR$/_ajax/listar-novidades.php" />
         <option value="$PROJECT_DIR$/_ajax/listar-projetos.php" />
-        <option value="$PROJECT_DIR$/archive-projetos.php" />
         <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/_ajax/listar-produtos.php" />
         <option value="$PROJECT_DIR$/archive-produtos.php" />
         <option value="$PROJECT_DIR$/js/app.js" />
+        <option value="$PROJECT_DIR$/archive-projetos.php" />
       </list>
     </option>
   </component>
@@ -158,6 +174,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="TODO_SCOPE" value="Project Files" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../jp" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -215,29 +232,49 @@
       <workItem from="1582113808061" duration="177000" />
       <workItem from="1582125642559" duration="5461000" />
       <workItem from="1582140838993" duration="428000" />
-      <workItem from="1582151259357" duration="10186000" />
+      <workItem from="1582151259357" duration="10912000" />
     </task>
+    <task id="LOCAL-00001" summary="Concluído o carregamento dinâmico para as páginas de novidades, produtos e projetos">
+      <created>1582165204409</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1582165204409</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="133281000" />
+    <option name="totallyTimeSpent" value="134007000" />
+  </component>
+  <component name="TodoView" selected-index="1">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+      <is-preview-enabled value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="1913" y="0" width="1294" height="1047" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19529983" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19529983" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32932165" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32932165" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -272,7 +309,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Integrado a linha do tempo da página interna de projetos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Integrado a linha do tempo da página interna de projetos" />
+    <MESSAGE value="Concluído o carregamento dinâmico para as páginas de novidades, produtos e projetos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Concluído o carregamento dinâmico para as páginas de novidades, produtos e projetos" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/index.html" />
@@ -402,13 +440,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/archive-projetos.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="41" selection-start-line="41" selection-end-line="49" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="662">
@@ -429,8 +460,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/archive-produtos.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        <state relative-caret-position="475">
+          <caret line="45" column="22" lean-forward="true" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/archive-projetos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="747">
+          <caret line="67" column="22" lean-forward="true" selection-start-line="67" selection-start-column="22" selection-end-line="67" selection-end-column="22" />
         </state>
       </provider>
     </entry>

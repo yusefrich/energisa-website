@@ -98,8 +98,10 @@ if ($slider->have_posts()) :
                 while ($chamadaNovidades->have_posts()): $chamadaNovidades->the_post();
                     $img_background = get_the_post_thumbnail_url(null, 'full');
                     ?>
+                        
                     <div data-aos="fade-up" class="col-md-12">
-                        <div class="card card-bg-wide text-white my-5 zoom-hover">
+                        <div class="card card-bg-wide text-white my-5 zoom-hover card-link-div" onclick="window.location='<?php the_field('link_interno'); ?>';">
+                        <a style="display:block" href="<?php the_field('link_interno'); ?>">
                             <div class="img-holder" style="
                                     background: linear-gradient(0deg, rgba(55, 55, 55, 0.4), rgba(55, 55, 55, 0.4)), url(<?php echo esc_url($img_background); ?>);
                                     background-position: center;
@@ -114,7 +116,7 @@ if ($slider->have_posts()) :
                                     <a href="<?php the_field('link_interno'); ?>" class="btn btn-light btn-round card-btn m-5" title="Saiba mais"><span class="icon pt-2 pb-2 pr-1 icon-next-icon"></span></a>
                                 <?php }
                                 ?>
-
+                                
                                 <div class="card-img-overlay overlay-lg text-start">
                                     <h2 class="card-title"><?php the_field('titulo'); ?></h2>
                                     <p class="card-text"><?php the_field('descricao'); ?></p>
@@ -131,10 +133,12 @@ if ($slider->have_posts()) :
                                     <?php }
                                     ?>
                                 </div>
+                                
                             </div>
-
+                            </a>
                         </div>
                     </div>
+                
                 <?php endwhile;
                 wp_reset_postdata(); ?>
 
@@ -199,7 +203,7 @@ if ($slider->have_posts()) :
                     $img_background = get_the_post_thumbnail_url(null, 'full');
                     ?>
                     <div data-aos="fade-up" class="col-md-12">
-                        <div class="card card-bg-wide text-white my-5 zoom-hover">
+                        <div class="card card-bg-wide text-white my-5 zoom-hover card-link-div" onclick="window.location='<?php the_field('link_interno'); ?>';">
                             <div class="img-holder" style="
                                     background: linear-gradient(0deg, rgba(55, 55, 55, 0.4), rgba(55, 55, 55, 0.4)), url(<?php echo esc_url($img_background); ?>);
                                     background-position: center;
@@ -249,7 +253,7 @@ if ($slider->have_posts()) :
                     ?>
                     <div data-aos="flip-left" class="col-md-4">
 
-                        <div class="card card-bg-small text-white mb-2 zoom-hover">
+                        <div class="card card-bg-small text-white mb-2 zoom-hover card-link-div" onclick="window.location='<?php the_field('link_interno'); ?>';">
                             <div class="img-holder-sm" style="
                                     background: linear-gradient(0deg, rgba(<?php the_field('projet_cor_background'); ?>), rgba(<?php the_field('projet_cor_background'); ?>)), url(<?php the_field('projet_background'); ?>);
                                     background-position: center;
@@ -375,7 +379,7 @@ if ($produtos->have_posts()) :
                     $img_background = get_the_post_thumbnail_url(null, 'full');
                     ?>
                     <div data-aos="fade-up" class="col-md-12">
-                        <div class="card card-bg-wide text-white my-5 zoom-hover">
+                        <div class="card card-bg-wide text-white my-5 zoom-hover card-link-div" onclick="window.location='<?php the_field('link_interno'); ?>';">
                             <div class="img-holder" style="
                                     background: linear-gradient(0deg, rgba(55, 55, 55, 0.4), rgba(55, 55, 55, 0.4)), url(<?php echo esc_url($img_background); ?>);
                                     background-position: center;
@@ -424,7 +428,7 @@ if ($produtos->have_posts()) :
                     $statusFiled = get_field('ideia_status');
                     ?>
                     <div data-aos="zoom-in" class="col-md-4">
-                        <div class="card card-full-small mb-2 zoom-hover">
+                        <div class="card card-full-small mb-2 zoom-hover" >
                             <div class=" overlay-white text-start">
                                 <div class="d-flex justify-content-start pb-4">
                                     <div class="profile-pic mr-4"
