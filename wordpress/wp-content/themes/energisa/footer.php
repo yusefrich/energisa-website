@@ -32,7 +32,9 @@
     </div>
     <div class="container-fluid footer-bottom text-center px-0 py-4">
         <small class="text-white ">© Copyright 2019 Energisa COCD.</small>
-        <img class="" src="<?php bloginfo('template_url'); ?>/img/feito-com.png" alt="">
+        <a href="https://start.qualitare.com">
+            <img class="" src="<?php bloginfo('template_url'); ?>/img/feito-com.png" alt="">
+        </a>
     </div>
 </section>
 

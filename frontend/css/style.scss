@@ -24,6 +24,7 @@ $browser-context: 16;
 };
 
 // breakpoint variables
+$xl: 1300px;
 $lg: 1170px;
 $md: 1024px;
 $sm: 640px;
@@ -48,11 +49,11 @@ section{
 
 $paragraph-font-size: (null: 18px, $lg: 17px, $md: 16px, $sm: 15px, $xs: 14px);
 $base-font-size: (null: em(18));
-$p-font-size: (null: em(20));
+$p-font-size: (null: em(20),  $xl: em(18));
 $caption-font-size: (null: em(24));
 $large-caption-font-size: (null: em(28));
 $h1-font-size: (null: em(72));
-$h2-font-size: (null: em(58), $lg: em(50), $md: em(45), $sm: em(40), $xs: em(40));/* 58 */
+$h2-font-size: (null: em(54),  $xl: em(50), $lg: em(49), $md: em(45), $sm: em(40), $xs: em(40));/* 58 */
 $modal-title-font-size: (null: em(64));
 $display-h2-font-size: (null: em(48));
 $h3-font-size: (null: em(32), $md: em(30));/* 36 */
@@ -280,7 +281,7 @@ section {
     top: 150px;
 }
 .custom-carousel-caption .slider-title{
-    margin-top: 150px;
+    margin-top: 100px;
     margin-bottom: 100px;
 }
 .normal-carousel-caption .slider-title{
@@ -884,4 +885,44 @@ a:hover{
 }
 .timeline > ol > li:nth-child(2){
     background: transparent;
+}
+
+@media (min-width: 768px) {
+    .container-small {
+        width: 600px;
+    }
+    .container-large {
+        width: 970px;
+    } 
+} 
+@media (min-width: 992px) {
+    .container-small {
+        width: 800px;
+    }
+    .container-large {
+        width: 1170px;
+    } 
+} 
+@media (min-width: 1200px) {
+    .container-small {
+        width: 900px;
+    }
+    .container-large {
+        width: 1500px;
+    } 
+    .custom-carousel-caption .slider-title{
+        margin-top: 150px;
+        margin-bottom: 100px;
+    }
+
+}
+@media (max-width: 1300){
+
+}
+
+.container-small, .container-large {
+    max-width: 100%;
+}
+.card-link-div{
+    cursor: pointer;
 }

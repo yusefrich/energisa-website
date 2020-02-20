@@ -55,7 +55,7 @@ $h1-font-size: (null: em(72));
 $h2-font-size: (null: em(58), $lg: em(50), $md: em(45), $sm: em(40), $xs: em(40));/* 58 */
 $modal-title-font-size: (null: em(64));
 $display-h2-font-size: (null: em(48));
-$h3-font-size: (null: em(32), $md: em(30));/* 36 */
+$h3-font-size: (null: em(36), $md: em(30));/* 36 */
 .text-fade{
     font-family: Open Sans;
     font-style: normal;
@@ -884,4 +884,33 @@ a:hover{
 }
 .timeline > ol > li:nth-child(2){
     background: transparent;
+}
+
+@media (min-width: 768px) {
+    .container-small {
+        width: 600px;
+    }
+    .container-large {
+        width: 970px;
+    } 
+} 
+@media (min-width: 992px) {
+    .container-small {
+        width: 800px;
+    }
+    .container-large {
+        width: 1170px;
+    } 
+} 
+@media (min-width: 1200px) {
+    .container-small {
+        width: 900px;
+    }
+    .container-large {
+        width: 1500px;
+    } 
+}
+
+.container-small, .container-large {
+    max-width: 100%;
 }

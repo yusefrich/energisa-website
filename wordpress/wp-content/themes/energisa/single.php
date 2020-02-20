@@ -15,7 +15,7 @@
 <section class="mb-5 pb-5" id="ideias-detail">
     <?php while (have_posts()) :
         the_post(); ?>
-        <div class="container">
+        <div class="container-small mx-auto">
             <div class="d-flex justify-content-start my-4">
                 <a href="<?php bloginfo('home'); ?>/novidades" class="btn">
 
@@ -40,8 +40,8 @@
         <?php while (have_rows('content')): the_row(); ?>
 
             <?php if (get_row_layout() == 'layout_post_texto'): ?>
-                <div class="container">
-                    <p class="text-dark font-weight-normal mb-5"><?php the_sub_field('post_texto'); ?></p>
+                <div class="container-small mx-auto">
+                    <p style="line-height: 42px;" class="text-dark font-weight-normal mb-5"><?php the_sub_field('post_texto'); ?></p>
                 </div>
             <?php endif; ?>
 
@@ -55,7 +55,7 @@
     <?php endif; ?>
 
 
-        <div class="container">
+        <div class="container-small mx-auto">
             <div data-aos="flip-left" class="  mb-5 pb-5">
                 <div class="d-flex justify-content-start">
                     <button class="btn btn-outline-dark mr-2">Gostei</button>
@@ -83,7 +83,7 @@ $posts_relacionados = new WP_Query(array(
 
 if ($posts_relacionados->have_posts()): ?>
     <section class="text-center mt-5 pb-0" id="novidades-artigos-relacionados">
-        <div class="container">
+        <div class="container-fluid px-5">
             <div data-aos="flip-up" class="ultimas-novidades-title">
                 <h2 class="display-h2 text-orange">Artigos relacionados</h2>
             </div>
@@ -93,13 +93,17 @@ if ($posts_relacionados->have_posts()): ?>
                     $capa_novidades = get_the_post_thumbnail_url(null, 'capa_380_255');
                     ?>
                     <div data-aos="fade-right" class="col-md-4">
-                        <img src="<?php echo esc_url($capa_novidades); ?>" class="figure-img img-fluid rounded zoom-hover" alt="...">
+                        <a href="<?php the_permalink(); ?>">
+                            <img style="width: 100%;" src="<?php echo esc_url($capa_novidades); ?>" class="figure-img img-fluid rounded zoom-hover" alt="...">
+                        </a>
                         <p class="img-caption  text-uppercase">
                             <small>postado em
                                 <strong> <?php echo get_the_time(__('d \d\e M  Y'), $post->id); ?> </strong></small>
                         </p>
                         <a href="<?php the_permalink(); ?>"><p class="font-weight-bold"><?php the_title(); ?></p></a>
-                        <p class="font-weight-light"><?php echo get_the_excerpt(); ?></p>
+                        <a href="<?php the_permalink(); ?>">
+                            <p class="font-weight-light"><?php echo get_the_excerpt(); ?></p>
+                        </a>
                     </div>
                 <?php endwhile;
                 wp_reset_postdata(); ?>
