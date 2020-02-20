@@ -430,7 +430,7 @@ if ($produtos->have_posts()) :
                     <div data-aos="zoom-in" class="col-md-4">
                         <div class="card card-full-small mb-2 zoom-hover" >
                             <div class=" overlay-white text-start">
-                                <div class="d-flex justify-content-start pb-4">
+                                <div class="d-flex justify-content-start pb-5 mb-3">
                                     <div class="profile-pic mr-4"
                                          style="
                                                  background-image: url(<?php echo $thumbnail; ?>);
@@ -444,7 +444,7 @@ if ($produtos->have_posts()) :
 
                                     </div>
                                 </div>
-                                <p class="text-uppercase">
+                                <p class="text-uppercase mb-0">
                                     <small class="text-orange"><?php echo esc_html($statusFiled['label']); ?></small>
                                 </p>
                                 <a href="<?php the_permalink(); ?>">

@@ -23,7 +23,7 @@ function listarNovidades()
         while ($posts->have_posts()): $posts->the_post();
             $capa_novidades = get_the_post_thumbnail_url(null, 'capa_380_255');
             ?>
-            <div data-aos="fade-right" class="col-md-4 text-center my-3 px-2">
+            <div data-aos="fade-right" class="col-md-4 text-center my-5 px-2">
                 <a href="<?php the_permalink(); ?>">
                     <img src="<?php echo esc_url($capa_novidades); ?>" class="figure-img img-fluid rounded zoom-hover" alt="img">
                 </a>
@@ -42,7 +42,7 @@ function listarNovidades()
 
         <?php if ($totalPages > 1): ?>
         <div class="col-md-12">
-            <div data-aos="flip-left" class="col-md-12 text-center mt-4">
+            <div data-aos="flip-left" class="col-md-12 text-center mt-5 pt-3">
                 <button class="btn btn-outline-light px-5" data-pagina="<?php echo $pagina; ?>" id="btnLoadNews"> Mostrar mais</button>
             </div>
         </div>

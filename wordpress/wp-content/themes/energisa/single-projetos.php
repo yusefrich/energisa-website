@@ -198,10 +198,13 @@
 
                         </div>
                                 <div class="d-flex justify-content-center">
-                                    <p class="mt-3">Navegue horizontalmente</p>
-                                    <button class="btn arrow arrow__prev disabled"><i class="fas fa-chevron-left"></i>
-                                    </button>
-                                    <button class="btn arrow arrow__next"><i class="fas fa-chevron-right"></i></button>
+                                    <p class="mt-3 text-gray">Navegue horizontalmente</p>
+                                    <!-- <button class="btn arrow arrow__prev disabled"><i class="fas fa-chevron-left"></i></button> -->
+                                    <!-- <div class="arrow arrow__prev disabled p-3"><i class="fas fa-chevron-left"></i></div> -->
+                                    <!-- <button class="btn arrow arrow__next"><i class="fas fa-chevron-right"></i></button> -->
+                                    <!-- <div class=" arrow arrow__next p-3"><i class="fas fa-chevron-right"></i></div> -->
+                                    <span class="icon pt-4 pb-2 pl-3 icon-prev-icon"></span>
+                                    <span class="icon pt-4 pb-2 pl-1 icon-next-icon"></span>
                                 </div>
 
                     </div>

@@ -32,7 +32,7 @@
     </div>
     <div class="container-fluid footer-bottom text-center px-0 py-4">
         <small class="text-white ">© Copyright 2019 Energisa COCD.</small>
-        <a href="https://start.qualitare.com">
+        <a href="https://www.qualitare.com/home/" target="blank">
             <img class="" src="<?php bloginfo('template_url'); ?>/img/feito-com.png" alt="">
         </a>
     </div>
@@ -151,7 +151,7 @@
     });
 </script>
 <script src="<?php bloginfo('template_url'); ?>/js/jquery.mousewheel.min.js"></script>
-<script>
+<!-- <script>
     $("#sobre-scroll-left").mousewheel(function(evt, chg) {
         this.scrollLeft -= (chg * 30); //need a value to speed up the change
         evt.preventDefault();
@@ -164,7 +164,7 @@
         console.log(event);
     }); */
 
-</script>
+</script> -->
 
 <script>
     window.onload = function onLoad() {
