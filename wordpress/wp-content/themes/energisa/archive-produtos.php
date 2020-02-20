@@ -37,7 +37,7 @@
             <div class="row mt-5">
                 <?php while (have_posts()) : the_post(); ?>
                     <div data-aos="flip-left" class="col-md-4">
-                        <div class="card card-bg-small text-white mb-2 zoom-hover">
+                        <div class="card card-bg-small text-white mb-2 zoom-hover card-link-div" onclick="window.location='<?php the_permalink(); ?>';">
                             <!-- <img src="https://via.placeholder.com/1920x600" class="card-img" alt="..."> -->
                             <div class="img-holder-sm" style="
                                     background: linear-gradient(0deg, rgba(<?php the_field('prod_cor_background'); ?>), rgba(<?php the_field('prod_cor_background'); ?>)), url(<?php the_field('img_background'); ?>);

@@ -409,6 +409,7 @@ section {
 }
 
 .card-bg-small {
+  height: 95%;
   margin: 20px 0px;
   border: 0px;
   border-radius: 6px;
@@ -429,7 +430,7 @@ section {
 }
 
 .overlay-sm {
-  padding: 80px 54px;
+  padding: 70px 43px;
 }
 
 .overlay-xs {
@@ -446,7 +447,7 @@ section {
 }
 
 .img-holder-sm {
-  /* height: 550px; */
+  height: 100%;
   border-radius: 6px;
 }
 
