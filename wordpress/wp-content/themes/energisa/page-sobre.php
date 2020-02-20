@@ -79,17 +79,10 @@
 
                         <!-- Carousel items -->
                         <div class="carousel-inner">
+
+
                             <div class="carousel-item active">
                                 <div class="row">
-
-                                    <?php
-                                    //$rows = get_field('sobre_equipe_repeat');
-                                    //$specific_row = $rows[2]['sobre_equipe_bio'];
-                                    //$specific_row_value = $specific_row['sobre_equipe_bio'];
-                                    //print_r($specific_row);
-                                    ?>
-
-                                    <!-- Verifica se tem algum valor cadastrado no campo repetidor-->
                                     <?php $count = 0; ?>
                                     <?php while (have_rows('sobre_equipe_repeat')): the_row();
                                         ?>
@@ -98,7 +91,7 @@
                                                 <div style=" background-image: url(<?php the_sub_field('sobre_equipe_foto'); ?>); max-width:100%;" class="team-img-holder m-auto">
                                                 </div>
                                             </a>
-                                            <a href="#" data-toggle="modal" class="mdEquipe" data-indice="<?php echo $count; ?>">
+                                            <a href="#" class="mdEquipe" data-indice="<?php echo $count; ?>">
                                                 <p class="font-weight-bold text-blue m-0"><?php the_sub_field('sobre_equipe_nome'); ?></p>
                                             </a>
                                             <a href="#" class="mdEquipe" data-indice="<?php echo $count; ?>">
@@ -107,10 +100,9 @@
                                         </div>
                                         <?php $count++; ?>
                                     <?php endwhile; ?>
-
                                 </div>
-                                <!--.row-->
                             </div>
+
 
                         </div>
                         <!--.carousel-inner-->
@@ -128,9 +120,7 @@
     </section>
 
     <!-- Modal -->
-    <div class="modal fade" id="equipeModal" tabindex="-1" role="dialog" aria-labelledby="equipeModalLabel"
-         aria-hidden="true">
-       <?php get_template_part('_parts/detalhes-equipe'); ?>
+    <div class="modal fade" id="equipeModal" tabindex="-1" role="dialog" aria-labelledby="equipeModalLabel" aria-hidden="true">
     </div>
 
     <section id="o-que-fazemos">

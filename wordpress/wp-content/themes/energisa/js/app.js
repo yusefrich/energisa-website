@@ -218,9 +218,25 @@ jQuery(function ($) {
                 let detalhes = dados.data;
 
                 if (success) {
-                    //$("#equipeModal").html()
-                    ("#equipeModal").html()
-
+                    $("#equipeModal").html(`
+<div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+        <div style="background-image: linear-gradient(0deg, rgba(67, 67, 67, 0.6), rgba(67, 67, 67, 0.6)), url(${detalhes.foto})" class="modal-header d-flex justify-content-end bg-header">
+            <button type="button" class="btn btn-light btn-round py-1" data-dismiss="modal" aria-label="Close">
+                <span class="text-gray" aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body p-5 m-4">
+            <div class="text-start my-2">
+                <h3 class=" font-weight-bold">Bio</h3>
+                <p class=" font-weight-light text-caption">${detalhes.biografica}</p>
+            </div>
+        </div>
+        <div class="modal-footer">
+        </div>
+    </div>
+</div>`);
+                    $("#equipeModal").modal('show');
                 }
             },
             error: function (erro) {
@@ -230,11 +246,10 @@ jQuery(function ($) {
     }
 
 
-    $(".mdEquipe").on('click', function () {
-
+    $(".mdEquipe").on('click', function (event) {
+        event.preventDefault();
         var indice = $(this).data("indice");
-        equipeDetalhesAjax(indice)
-        return false;
+        equipeDetalhesAjax(indice);
     })
 
 

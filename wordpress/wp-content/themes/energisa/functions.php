@@ -114,7 +114,11 @@ function app_scripts() {
 
 
     // jQuery
-    wp_enqueue_script('jquery');
+    //wp_enqueue_script('jquery');
+
+    // bootstrap
+    wp_enqueue_script( 'popper', $js_folder . '/popper.min.js', null, 1, true );
+    wp_enqueue_script( 'bootstrap', $js_folder . '/bootstrap.min.js', null, 1, true );
 
     wp_enqueue_script( 'app', $js_folder . '/app.js', null, $versao, true );
 

@@ -1,4 +1,4 @@
-<?php wp_footer(); ?>
+
 <section class="pt-3" id="footer">
     <div class="container py-5">
         <div class="row">
@@ -40,15 +40,12 @@
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-</script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-</script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-</script>
+<script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+<?php wp_footer(); ?>
+
 <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 
@@ -262,91 +259,6 @@
         }
     };
 </script>
- -->
-<!-- graficos -->
-<script>
-    var ctx = document.getElementById('myChart').getContext('2d');
-    var chart = new Chart(ctx, {
-        // The type of chart we want to create
-        type: 'pie',
-
-        // The data for our dataset
-        data: {
-            labels: ['Cor Azul Claro', 'Cor Verde', 'Cor Azul Escuro'],
-            datasets: [{
-                label: 'My First dataset',
-                backgroundColor: ['#089BC0', '#70BF54', '#0071A2'],
-                borderWidth: 0,
-                borderAlign: 'center',
-                segmentShowStroke: false,
-                borderColor: ['#089BC0', '#70BF54', '#0071A2'],
-                data: [60, 15, 25],
-                zeroLineBorderDashOffset: true,
-                hoverBorderWidth: 10
-            }]
-        },
-
-        // Configuration options go here
-        options: {
-            responsive: true,
-            legend: {
-                display: false
-            },
-            tooltips: {
-                displayColors: false
-            },
-            elements: {
-                arc: {
-                    borderWidth: 0
-                }
-            }
-        }
-    });
-
-</script>
-<script>
-    var ctx = document.getElementById('chart2').getContext('2d');
-    var chart = new Chart(ctx, {
-        // The type of chart we want to create
-        type: 'pie',
-
-        // The data for our dataset
-        data: {
-            labels: ['Cor Azul Claro', 'Cor Verde', 'Cor Azul Escuro'],
-            datasets: [{
-                label: 'My First dataset',
-                backgroundColor: ['#089BC0', '#FF9900', '#EA6724'],
-                borderWidth: 0,
-                borderAlign: 'center',
-                segmentShowStroke: false,
-                borderColor: ['#089BC0', '#FF9900', '#EA6724'],
-                data: [60, 15, 25],
-                zeroLineBorderDashOffset: true,
-                hoverBorderWidth: 10,
-            }]
-        },
-
-        // Configuration options go here
-        options: {
-            cutoutPercentage: 90,
-            maintainAspectRatio : false,
-            responsive: true,
-            legend: {
-                display: false
-            },
-            tooltips: {
-                displayColors: false
-            },
-            elements: {
-                arc: {
-                    borderWidth: 0
-                }
-            }
-        }
-    });
-
-</script>
-
 
 
 </body>
