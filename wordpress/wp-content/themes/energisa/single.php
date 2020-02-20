@@ -16,8 +16,8 @@
     <?php while (have_posts()) :
         the_post(); ?>
         <div class="container-small mx-auto">
-            <div class="d-flex justify-content-start my-4">
-                <a href="<?php bloginfo('home'); ?>/novidades" class="btn">
+            <div class="d-flex justify-content-start my-4 pt-4">
+                <a href="<?php bloginfo('home'); ?>/novidades" class="btn p-0">
 
                     <p class="text-breadcrumb font-weight-bold mt-1"><i class="fas pr-3 pt-1 fa-chevron-left"></i>Retornar
                         para <span class="text-orange">Novidades</span></p>
@@ -25,7 +25,7 @@
             </div>
             <div data-aos="flip-left" class="  mb-2 ">
                 <div class="pb-4 text-start">
-                    <p class="img-caption  text-uppercase">
+                    <p class="img-caption  text-uppercase mb-0">
                         <small class="text-gray">
                             <?php the_date('j \d\e M  Y'); ?>
                         </small>

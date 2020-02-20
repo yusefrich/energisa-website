@@ -84,7 +84,7 @@ jQuery(function ($) {
                     $.each(posts, function (i, post) {
                         $("#loadProjects").append(`
 <div data-aos="flip-left" class="col-md-4">
-    <div class="card card-bg-small text-white mb-2 zoom-hover">
+    <div class="card card-bg-small text-white mb-2 zoom-hover card-link-div" onclick="window.location='${post.url}';">
         <div class="img-holder-sm" style="
                                 background: linear-gradient(0deg, rgba(${post.bg_color}), rgba(${post.bg_color})), url(${post.capa});
                                 background-position: center;
@@ -156,7 +156,7 @@ jQuery(function ($) {
                     $.each(posts, function (i, post) {
                         $("#loadProducts").append(`
 <div data-aos="flip-left" class="col-md-4">
-    <div class="card card-bg-small text-white mb-2 zoom-hover">
+    <div class="card card-bg-small text-white mb-2 zoom-hover card-link-div" onclick="window.location='${post.url}';">
         <div class="img-holder-sm" style="
                                 background: linear-gradient(0deg, rgba(${post.bg_color}), rgba(${post.bg_color})), url(${post.capa});
                                 background-position: center;
