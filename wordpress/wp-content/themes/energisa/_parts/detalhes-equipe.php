@@ -9,10 +9,7 @@
             </button>
         </div>
         <div class="modal-body p-5 m-4">
-            <pre>
-            <?php print_r($detalhes); ?>
-                </pre>
-            <div class="text-start my-2">
+                <div class="text-start my-2">
                 <h3 class=" font-weight-bold">Bio</h3>
                 <p class=" font-weight-light text-caption">Lorem ipsum dolor sit amet, consectetur adipiscing
                     elit. Sagittis, sit

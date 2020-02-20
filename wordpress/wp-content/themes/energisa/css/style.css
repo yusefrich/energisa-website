@@ -297,7 +297,7 @@ section {
 
 .slider-title-sm {
   width: 660px;
-  padding-left: 100px;
+  padding-left: 50px;
 }
 
 .carousel-info {
@@ -409,7 +409,6 @@ section {
 }
 
 .card-bg-small {
-  height: 95%;
   margin: 20px 0px;
   border: 0px;
   border-radius: 6px;
@@ -430,7 +429,7 @@ section {
 }
 
 .overlay-sm {
-  padding: 70px 43px;
+  padding: 80px 54px;
 }
 
 .overlay-xs {
@@ -447,7 +446,7 @@ section {
 }
 
 .img-holder-sm {
-  height: 100%;
+  /* height: 550px; */
   border-radius: 6px;
 }
 
@@ -802,7 +801,7 @@ section {
 }
 
 .img-post-container {
-  padding: 10px 70px;
+  padding: 10px 100px;
 }
 
 /* 
@@ -1006,18 +1005,6 @@ a:hover {
 
 .normal-carousel-caption h2 {
   color: #EA6724;
-}
-
-.timeline {
-  transition: all 0.2s;
-  cursor: pointer;
-}
-
-.timeline.active {
-  background: rgba(255, 255, 255, 0.3);
-  cursor: grabbing;
-  cursor: -webkit-grabbing;
-  transform: scale(1.05);
 }
 
 /*# sourceMappingURL=style.css.map */

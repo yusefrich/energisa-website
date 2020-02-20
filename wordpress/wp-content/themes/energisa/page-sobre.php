@@ -94,14 +94,14 @@
                                     <?php while (have_rows('sobre_equipe_repeat')): the_row();
                                         ?>
                                         <div class="col-md-3 text-center">
-                                            <a href="#" data-toggle="modal" class="mdEquipe" data-indice="<?php echo $count; ?>" data-target="#equipeModal">
+                                            <a href="#" class="mdEquipe" data-indice="<?php echo $count; ?>">
                                                 <div style=" background-image: url(<?php the_sub_field('sobre_equipe_foto'); ?>); max-width:100%;" class="team-img-holder m-auto">
                                                 </div>
                                             </a>
-                                            <a href="#" data-toggle="modal" class="mdEquipe" data-indice="<?php echo $count; ?>" data-target="#equipeModal">
+                                            <a href="#" data-toggle="modal" class="mdEquipe" data-indice="<?php echo $count; ?>">
                                                 <p class="font-weight-bold text-blue m-0"><?php the_sub_field('sobre_equipe_nome'); ?></p>
                                             </a>
-                                            <a href="#" data-toggle="modal" class="mdEquipe" data-indice="<?php echo $count; ?>" data-target="#equipeModal">
+                                            <a href="#" class="mdEquipe" data-indice="<?php echo $count; ?>">
                                                 <p><?php the_sub_field('sobre_equipe_cargo'); ?></p>
                                             </a>
                                         </div>
@@ -130,7 +130,7 @@
     <!-- Modal -->
     <div class="modal fade" id="equipeModal" tabindex="-1" role="dialog" aria-labelledby="equipeModalLabel"
          aria-hidden="true">
-<?php get_template_part('_parts/detalhes-equipe'); ?>
+       <?php get_template_part('_parts/detalhes-equipe'); ?>
     </div>
 
     <section id="o-que-fazemos">

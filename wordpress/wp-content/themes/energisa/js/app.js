@@ -200,10 +200,41 @@ jQuery(function ($) {
     })
 
     // ########################################################## CARREGAR DETALHES DA EQUIPE NO MODAL ##########################################
+
+
+    function equipeDetalhesAjax(indice) {
+        $.ajax({
+            url: wp.ajaxurl,
+            type: 'GET',
+            data: {
+                action: 'equipeDetalhes',
+                indice: indice
+            },
+            beforeSend: function () {
+
+            },
+            success: function (dados) {
+                let success = dados.success;
+                let detalhes = dados.data;
+
+                if (success) {
+                    //$("#equipeModal").html()
+                    ("#equipeModal").html()
+
+                }
+            },
+            error: function (erro) {
+                console.log("ooopss... algo deu errado na requisição")
+            },
+        })
+    }
+
+
     $(".mdEquipe").on('click', function () {
+
         var indice = $(this).data("indice");
-        //listarProdutosAjax(paggina + 1)
-        alert(indice)
+        equipeDetalhesAjax(indice)
+        return false;
     })
 
 
