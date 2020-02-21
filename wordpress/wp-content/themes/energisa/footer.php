@@ -207,6 +207,29 @@ $('a.thumb').click(function(event){
 
 });
 </script>
+<script>
+    $("#left-arrow").click(function () {
+    var leftPos = $('#timeline-scroll').scrollLeft();
+    $("#timeline-scroll").animate({scrollLeft: leftPos - 200}, 800);
+    });
+
+    $("#right-arrow").click(function () {
+    var leftPos = $('#timeline-scroll').scrollLeft();
+    $("#timeline-scroll").animate({scrollLeft: leftPos + 200}, 800);
+    });
+
+    $("#left-arrow").click(function () {
+    var leftPos = $('#sobre-scroll-left').scrollLeft();
+    $("#sobre-scroll-left").animate({scrollLeft: leftPos - 200}, 800);
+    });
+
+    $("#right-arrow").click(function () {
+    var leftPos = $('#sobre-scroll-left').scrollLeft();
+    $("#sobre-scroll-left").animate({scrollLeft: leftPos + 200}, 800);
+    });
+
+</script>
+
 </body>
 
 </html>

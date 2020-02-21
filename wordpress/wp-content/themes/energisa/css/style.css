@@ -1136,29 +1136,62 @@ a:hover {
 /*
  *  STYLE 6
  */
-.style-6::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: #F5F5F5;
-}
-
+/* .style-6::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #E4E4E4;
+} */
 .style-6::-webkit-scrollbar {
   width: 10px !important;
   height: 10px !important;
-  background-color: #F5F5F5;
+  background-color: transparent;
 }
 
 .style-6::-webkit-scrollbar-thumb {
-  background-color: #F90;
+  background-color: #EA6724;
+  /* z-index: 1; */
 }
 
 .style-6::-webkit-scrollbar-track-piece:end {
-  margin-bottom: 100px;
-  margin-left: 100px;
+  background: transparent;
+  /* margin-bottom: 100px;  */
+  margin-right: 47vw;
 }
 
 .style-6::-webkit-scrollbar-track-piece:start {
-  margin-top: 100px;
-  margin-right: 100px;
+  background: transparent;
+  /* margin-top: 100px; */
+  margin-left: 47vw;
+}
+
+.style-6::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#product-timeline {
+  position: relative;
+  z-index: 0;
+}
+
+#como-estamos-projeto {
+  position: relative;
+  z-index: 0;
+}
+
+.timeline::after {
+  margin-left: auto;
+  margin-right: auto;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  /* bottom: -1px; */
+  height: 10px;
+  width: 20vw;
+  left: 0;
+  right: 0;
+  /* margin-left: auto;
+  margin-right: auto; */
+  background: #E4E4E4;
 }
 
 /*

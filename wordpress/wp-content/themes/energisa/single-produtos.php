@@ -126,8 +126,12 @@
             <!-- <div class="arrow arrow__prev disabled p-3"><i class="fas fa-chevron-left"></i></div> -->
             <!-- <button class="btn arrow arrow__next"><i class="fas fa-chevron-right"></i></button> -->
             <!-- <div class=" arrow arrow__next p-3"><i class="fas fa-chevron-right"></i></div> -->
-            <span class="icon pt-4 pb-2 pl-3 icon-prev-icon"></span>
-            <span class="icon pt-4 pb-2 pl-1 icon-next-icon"></span>
+            <button class="btn"  id="left-arrow">
+                <span class="icon  icon-prev-icon"></span>
+            </button>
+            <button class="btn"  id="right-arrow">
+                <span class="icon  icon-next-icon"></span>
+            </button>
         </div>
     </div>
 </section>
@@ -161,7 +165,6 @@ slider.addEventListener('mousemove', (e) => {
     console.log(walk);
 });
 </script>
-
 <?php endif; ?>
 
 <!-- Verifica se existe o layout Carousel-->
