@@ -47,6 +47,7 @@
     </div>
     <div class="card-outline mt-4 p-4">
         <p class="text-caption font-weight-bold">Tags</p>
+        <div id="loadTags"></div>
         <?php
         $tags = get_tags([
             'hide_empty' => true,
@@ -56,11 +57,11 @@
         ]);
 
         foreach ($tags as $tag) {
-            echo "<a class=\"text-gray btn p-0 mb-3 loadTags\" href=\"#\" data-tag='$tag->slug'>#$tag->name  ($tag->count)</a><br>";
+            //echo "<a class=\"text-gray btn p-0 mb-3 loadTags\" href=\"#\" data-tag='$tag->slug'>#$tag->name  ($tag->count)</a><br>";
         }
 
         ?>
-        <!--  <button class="btn btn-sm px-5 text-gray"><strong> Mostrar mais</strong></button>-->
+          <button class="btn btn-sm px-5 text-gray" id="btnLoadTags" data-pagina="1"><strong> Mostrar mais</strong></button>
 
     </div>
     <div class="card-outline mt-4 mb-4 p-4">

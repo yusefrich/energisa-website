@@ -104,6 +104,7 @@ include('_ajax/listar-produtos.php');
 include('_ajax/detalhes-equipe.php');
 include('_ajax/detalhes-treinamento.php');
 include('_ajax/listar-ideias.php');
+include('_ajax/lista-tags.php');
 
 function app_scripts() {
 

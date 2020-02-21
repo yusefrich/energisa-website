@@ -406,7 +406,7 @@ jQuery(function ($) {
     })
 
     // Carrega posr tags
-    $(".loadTags").on('click', function (event) {
+    $("body").on('click', '.loadTags', function (event) {
         event.preventDefault();
         var tag = $(this).data("tag");
         $("#loadIdeias").html('');
@@ -431,6 +431,51 @@ jQuery(function ($) {
         $("#btnLoadIdeias").data('tipo', status)
         $("#btnLoadIdeias").data('pagina', 1)
 
+    })
+
+    // ########################################### CARREGAR TAGS ###############################################
+
+    function listarTagsAjax(page) {
+        $.ajax({
+            url: wp.ajaxurl,
+            type: 'GET',
+            data: {
+                action: 'listarTags',
+                page: page,
+                pagesize: 4,
+            },
+            beforeSend: function () {
+
+            },
+            success: function (dados) {
+                let success = dados.success;
+                let tags = dados.data.tags;
+                let hasNext = dados.data.hasNext;
+
+                if (success) {
+                    $.each(tags, function (i, tag) {
+                        $("#loadTags").append(`<a class="text-gray btn p-0 mb-3 loadTags" href="#" data-tag="${tag.slug}">#${tag.name} (${tag.count})</a><br>`);
+                    })
+
+                    if (hasNext === false) {
+                        $("#btnLoadTags").hide();
+                    }
+                }
+            },
+            error: function (erro) {
+                console.log("ooopss... algo deu errado na requisição")
+            },
+        })
+    }
+
+    listarTagsAjax(page)
+
+    // Carrega mais Tags
+    $("#btnLoadTags").on('click', function (event) {
+        event.preventDefault();
+        paggina = $(this).data("pagina");
+        listarTagsAjax(paggina + 1)
+        $(this).data('pagina', paggina + 1);
     })
 
 })
