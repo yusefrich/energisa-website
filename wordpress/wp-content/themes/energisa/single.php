@@ -96,10 +96,12 @@ if ($posts_relacionados->have_posts()): ?>
                         <a href="<?php the_permalink(); ?>">
                             <img style="width: 100%;" src="<?php echo esc_url($capa_novidades); ?>" class="figure-img img-fluid rounded zoom-hover" alt="...">
                         </a>
-                        <p class="img-caption  text-uppercase">
-                            <small>postado em
-                                <strong> <?php echo get_the_time(__('d \d\e M  Y'), $post->id); ?> </strong></small>
-                        </p>
+                        <a href="<?php the_permalink(); ?>">
+                            <p class="img-caption  text-uppercase">
+                                <small>postado em
+                                    <strong> <?php echo get_the_time(__('d \d\e M  Y'), $post->id); ?> </strong></small>
+                            </p>
+                        </a>
                         <a href="<?php the_permalink(); ?>"><p class="font-weight-bold"><?php the_title(); ?></p></a>
                         <a href="<?php the_permalink(); ?>">
                             <p class="font-weight-light"><?php echo get_the_excerpt(); ?></p>

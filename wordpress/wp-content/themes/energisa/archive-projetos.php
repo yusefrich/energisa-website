@@ -41,8 +41,8 @@
 
         <div class="row">
             <div class="col-md-12">
-                <div data-aos="flip-left" class="col-md-12 text-center mt-4">
-                    <button class="btn btn-outline-light px-5" data-pagina="1" id="btnLoadProjects">
+                <div data-aos="flip-left" class="col-md-12 text-center mt-5">
+                    <button class="btn btn-outline-light px-5  mt-4" data-pagina="1" id="btnLoadProjects">
                         Mostrar mais
                     </button>
                 </div>
