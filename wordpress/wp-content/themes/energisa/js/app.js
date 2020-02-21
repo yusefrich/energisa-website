@@ -316,14 +316,15 @@ jQuery(function ($) {
 
     // ########################################### CARREGAR IDEIAS ###############################################
 
-    function listarIdeiasAjax(page, tipo) {
+    function listarIdeiasAjax(page, tipo, status) {
         $.ajax({
             url: wp.ajaxurl,
             type: 'GET',
             data: {
                 action: 'listarIdeias',
                 page: page,
-                tipo: tipo
+                tipo: tipo,
+                status: status
             },
             beforeSend: function () {
 
@@ -389,15 +390,22 @@ jQuery(function ($) {
 
     listarIdeiasAjax(page);
 
+    // Botão de carregar mais
     $("#btnLoadIdeias").on('click', function (event) {
         paggina = $(this).data("pagina") + 1;
         var tipo = $(this).data("tipo");
 
-        listarIdeiasAjax(paggina, tipo)
+        if (tipo == "votacao" || tipo == "analise" || tipo == "concluido") {
+            listarIdeiasAjax(paggina, '', tipo)
+        } else {
+            listarIdeiasAjax(paggina, tipo)
+        }
+
         $(this).data('pagina', paggina);
 
     })
 
+    // Carrega posr tags
     $(".loadTags").on('click', function (event) {
         event.preventDefault();
         var tag = $(this).data("tag");
@@ -407,6 +415,20 @@ jQuery(function ($) {
 
         $("#btnLoadIdeias").show();
         $("#btnLoadIdeias").data('tipo', tag)
+        $("#btnLoadIdeias").data('pagina', 1)
+
+    })
+
+    // Carrega por status
+    $(".loadStatus").on('click', function (event) {
+        event.preventDefault();
+        var status = $(this).data("status");
+        $("#loadIdeias").html('');
+
+        listarIdeiasAjax(1, '', status)
+
+        $("#btnLoadIdeias").show();
+        $("#btnLoadIdeias").data('tipo', status)
         $("#btnLoadIdeias").data('pagina', 1)
 
     })

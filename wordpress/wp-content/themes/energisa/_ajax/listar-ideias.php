@@ -5,11 +5,14 @@ function listarIdeias()
 {
     $tag = $_GET['tipo'];
     $page = $_GET['page'];
+    $status = $_GET['status'];
 
     $args = [
         'post_type' => 'ideias',
         'posts_per_page' => 3,
         'tag' => $tag,
+        'meta_key' => 'ideia_status',
+        'meta_value' => $status,
         'paged' => $page,
     ];
 
