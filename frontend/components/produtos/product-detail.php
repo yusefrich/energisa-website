@@ -196,7 +196,8 @@
                         <p class="text-caption font-weight-bold text-blue">Atualizãção dos termos de contrato</p>
                         <p class="text-gray"><small>Lorem Ipsum é simplesmente uma simulação de texto da indústria
                                 tipográfica e de impressos, e vem sendo utilizado</small></p>
-                        <button class="btn btn-outline-light px-5" type="button" data-toggle="modal" data-target="#designProdutoModal"> Design do produto</button>
+                        <button class="btn btn-outline-light px-5" type="button" data-toggle="modal"
+                            data-target="#designProdutoModal"> Design do produto</button>
                     </div>
                 </li>
                 <li></li>
@@ -397,60 +398,59 @@
     </div>
 </section>
 <script>
-                if(document.getElementById("progress-funcoes")){
+if (document.getElementById("progress-funcoes")) {
 
-var circle = new ProgressBar.Circle('#progress-funcoes', {
-    color: '#EA6724',
-    strokeWidth: 7,
-    
-    trailColor: '#cccccc',
-    trailWidth: 1,
+    var circle = new ProgressBar.Circle('#progress-funcoes', {
+        color: '#EA6724',
+        strokeWidth: 7,
 
-    duration: 3000,
-    easing: 'easeInOut'
-});
-circle.animate(.5);
+        trailColor: '#cccccc',
+        trailWidth: 1,
+
+        duration: 3000,
+        easing: 'easeInOut'
+    });
+    circle.animate(.5);
 }
-if(document.getElementById("progress-att")){
-var circle = new ProgressBar.Circle('#progress-att', {
-    color: '#EA6724',
-    strokeWidth: 7,
-    
-    trailColor: '#cccccc',
-    trailWidth: 1,
+if (document.getElementById("progress-att")) {
+    var circle = new ProgressBar.Circle('#progress-att', {
+        color: '#EA6724',
+        strokeWidth: 7,
 
-    duration: 3000,
-    easing: 'easeInOut'
-});
-circle.animate(.99);
+        trailColor: '#cccccc',
+        trailWidth: 1,
+
+        duration: 3000,
+        easing: 'easeInOut'
+    });
+    circle.animate(.99);
 }
-if(document.getElementById("progress-pontos")){
-var circle = new ProgressBar.Circle('#progress-pontos', {
-    color: '#EA6724',
-    strokeWidth: 7,
-    
-    trailColor: '#cccccc',
-    trailWidth: 1,
+if (document.getElementById("progress-pontos")) {
+    var circle = new ProgressBar.Circle('#progress-pontos', {
+        color: '#EA6724',
+        strokeWidth: 7,
 
-    duration: 3000,
-    easing: 'easeInOut'
-});
-circle.animate(.01);
+        trailColor: '#cccccc',
+        trailWidth: 1,
+
+        duration: 3000,
+        easing: 'easeInOut'
+    });
+    circle.animate(.01);
 }
-if(document.getElementById("progress-pontos-2")){
-var circle = new ProgressBar.Circle('#progress-pontos-2', {
-    color: '#EA6724',
-    strokeWidth: 7,
-    
-    trailColor: '#cccccc',
-    trailWidth: 1,
+if (document.getElementById("progress-pontos-2")) {
+    var circle = new ProgressBar.Circle('#progress-pontos-2', {
+        color: '#EA6724',
+        strokeWidth: 7,
 
-    duration: 3000,
-    easing: 'easeInOut'
-});
-circle.animate(.01);
+        trailColor: '#cccccc',
+        trailWidth: 1,
+
+        duration: 3000,
+        easing: 'easeInOut'
+    });
+    circle.animate(.01);
 }
-
 </script>
 <section class="text-center mt-5 pb-0" id="ultimas-noticias">
     <div class="container">
@@ -536,34 +536,112 @@ circle.animate(.01);
                 </button>
             </div>
             <div class="modal-body pt-0">
-                <div class="text-center my-2">
+                <div class="text-center my-2 mx-5 px-5">
                     <img src="./img/jigsaw.png" alt="">
                     <p class="text-white text-modal-title font-weight-bold">Um pouco sobre o processo</p>
-                    <p class="text-white font-weight-light">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de
+                    <p class="text-white font-weight-light">Lorem Ipsum é simplesmente uma simulação de texto da
+                        indústria tipográfica e de
                         impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma
                         bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos.</p>
+                    <div class="d-flex justify-content-end my-4 mr-5">
+                        <a href="#design-produto-slider" role="button" data-slide="prev"
+                            class="btn btn-light btn-round"><span class="icon pt-2 pb-2 pl-1 icon-prev-icon"></span></a>
+                        <a href="#design-produto-slider" role="button" data-slide="next"
+                            class="btn btn-light btn-round"><span class="icon pt-2 pb-2 pr-1 icon-next-icon"></span></a>
+
+                    </div>
+
+
+
                 </div>
-                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                        <img src="./img/projeto-autoatendimento.png" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                        <img src="./img/product-info-full.png" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                        <img src="./img/product-info-full.png" class="d-block w-100" alt="...">
+                <div class="container-fluid">
+                    <div id="design-produto-slider" class="carouselPrograms carousel slide" data-ride="carousel"
+                        data-interval="false">
+                        <div class="carousel-inner row w-100 mx-auto" role="listbox">
+                            <div class="carousel-item col-md-4  active">
+                                <div class="panel panel-default">
+                                    <div class="panel-thumbnail">
+                                        <a href="#" title="image 1" class="thumb">
+                                            <img class="img-fluid mx-auto d-block"
+                                                src="//via.placeholder.com/600x400?text=1" alt="slide 1">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item col-md-4 ">
+                                <div class="panel panel-default">
+                                    <div class="panel-thumbnail">
+                                        <a href="#" title="image 3" class="thumb">
+                                            <img class="img-fluid mx-auto d-block"
+                                                src="//via.placeholder.com/600x400?text=2" alt="slide 2">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item col-md-4 ">
+                                <div class="panel panel-default">
+                                    <div class="panel-thumbnail">
+                                        <a href="#" title="image 4" class="thumb">
+                                            <img class="img-fluid mx-auto d-block"
+                                                src="//via.placeholder.com/600x400?text=3" alt="slide 3">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item col-md-4 ">
+                                <div class="panel panel-default">
+                                    <div class="panel-thumbnail">
+                                        <a href="#" title="image 5" class="thumb">
+                                            <img class="img-fluid mx-auto d-block"
+                                                src="//via.placeholder.com/600x400?text=4" alt="slide 4">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item col-md-4 ">
+                                <div class="panel panel-default">
+                                    <div class="panel-thumbnail">
+                                        <a href="#" title="image 6" class="thumb">
+                                            <img class="img-fluid mx-auto d-block"
+                                                src="//via.placeholder.com/600x400?text=5" alt="slide 5">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item col-md-4 ">
+                                <div class="panel panel-default">
+                                    <div class="panel-thumbnail">
+                                        <a href="#" title="image 7" class="thumb">
+                                            <img class="img-fluid mx-auto d-block"
+                                                src="//via.placeholder.com/600x400?text=6" alt="slide 6">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item col-md-4 ">
+                                <div class="panel panel-default">
+                                    <div class="panel-thumbnail">
+                                        <a href="#" title="image 8" class="thumb">
+                                            <img class="img-fluid mx-auto d-block"
+                                                src="//via.placeholder.com/600x400?text=7" alt="slide 7">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item col-md-4  ">
+                                <div class="panel panel-default">
+                                    <div class="panel-thumbnail">
+                                        <a href="#" title="image 2" class="thumb">
+                                            <img class="img-fluid mx-auto d-block"
+                                                src="//via.placeholder.com/600x400?text=8" alt="slide 8">
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                    </div>
+                </div>
             </div>
             <div class="modal-footer">
                 <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
