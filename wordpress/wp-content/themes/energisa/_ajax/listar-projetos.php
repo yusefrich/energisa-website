@@ -7,7 +7,7 @@ function listarProjetos()
 
     $args = [
         'post_type' => 'projetos',
-        'posts_per_page' => 3,
+        'posts_per_page' => 6,
         'paged' => $page,
     ];
 
