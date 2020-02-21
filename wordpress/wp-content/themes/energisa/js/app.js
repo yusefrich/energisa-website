@@ -390,6 +390,7 @@ jQuery(function ($) {
 
     listarIdeiasAjax(page);
 
+    // Botão de carregar mais
     $("#btnLoadIdeias").on('click', function (event) {
         paggina = $(this).data("pagina") + 1;
         var tipo = $(this).data("tipo");
@@ -400,11 +401,11 @@ jQuery(function ($) {
             listarIdeiasAjax(paggina, tipo)
         }
 
-
         $(this).data('pagina', paggina);
 
     })
 
+    // Carrega posr tags
     $(".loadTags").on('click', function (event) {
         event.preventDefault();
         var tag = $(this).data("tag");
@@ -418,6 +419,7 @@ jQuery(function ($) {
 
     })
 
+    // Carrega por status
     $(".loadStatus").on('click', function (event) {
         event.preventDefault();
         var status = $(this).data("status");

@@ -65,7 +65,6 @@
                     $count_votacao = get_post_count_by_meta('ideia_status', 'votacao', 'ideias');
                     $count_concluido = get_post_count_by_meta('ideia_status', 'concluido', 'ideias');
 
-
                     echo "<a class=\"text-gray btn p-0 mb-3 loadStatus\" href=\"#\" data-status=\"analise\">Em análise (" . $count_analise . ")</a><br>";
                     echo "<a class=\"text-gray btn p-0 mb-3 loadStatus\" href=\"#\" data-status=\"votacao\">Em Votação (" . $count_votacao . ")</a><br>";
                     echo "<a class=\"text-gray btn p-0 mb-3 loadStatus\" href=\"#\" data-status=\"concluido\">Concluído (" . $count_concluido . ")</a><br>";
