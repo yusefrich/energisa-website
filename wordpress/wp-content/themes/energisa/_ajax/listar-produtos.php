@@ -7,7 +7,7 @@ function listarProdutos()
 
     $args = [
         'post_type' => 'produtos',
-        'posts_per_page' => 3,
+        'posts_per_page' => 6,
         'paged' => $page,
     ];
 

@@ -20,7 +20,7 @@
             <h2 class="text-orange display-h2">Colabore você também</h2>
             <p>Aqui você encontrará uma serie de ideias sugeridas pelos nossos colaboradores, fique a vontade para
                 participar.</p>
-            <button class="btn btn-primary px-5">Quero colaborar</button>
+            <a href="<?php bloginfo('home'); ?>/login" class="btn btn-primary px-5">Quero colaborar</a>
 
         </div>
 

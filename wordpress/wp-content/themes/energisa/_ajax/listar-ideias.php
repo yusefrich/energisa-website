@@ -9,7 +9,7 @@ function listarIdeias()
 
     $args = [
         'post_type' => 'ideias',
-        'posts_per_page' => 3,
+        'posts_per_page' => 6,
         'tag' => $tag,
         'meta_key' => 'ideia_status',
         'meta_value' => $status,
