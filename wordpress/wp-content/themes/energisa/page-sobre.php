@@ -170,7 +170,7 @@
                     }
                     ?>
 
-                    <div data-post="<?php the_ID();?>" class="card card-sm card-bg-small text-white mb-2 card-link-div <?php echo $openInfo;?>" <?php echo $url; ?>>
+                    <div data-post="<?php the_ID();?>" class="card card-sm card-bg-small text-white mb-2 mr-4 card-link-div <?php echo $openInfo;?>" <?php echo $url; ?>>
                         <div class="img-holder-sm" style="
                                 height: 100%;
                                 background: linear-gradient(0deg, rgba(<?php echo $color_bg; ?>), rgba(<?php echo $color_bg; ?>)), url(<?php echo $capa; ?>);
@@ -191,9 +191,37 @@
 
                 <?php endwhile;
                 wp_reset_postdata(); ?>
-
-
             </div>
+            <script>
+const slider = document.querySelector('.card-slider');
+let isDown = false;
+let startX;
+let scrollLeft;
+
+slider.addEventListener('mousedown', (e) => {
+    isDown = true;
+    slider.classList.add('active');
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+});
+slider.addEventListener('mouseleave', () => {
+    isDown = false;
+    slider.classList.remove('active');
+});
+slider.addEventListener('mouseup', () => {
+    isDown = false;
+    slider.classList.remove('active');
+});
+slider.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - slider.offsetLeft;
+    const walk = (x - startX) * 3; //scroll-fast
+    slider.scrollLeft = scrollLeft - walk;
+    console.log(walk);
+});
+</script>
+
             <div class="d-flex justify-content-center">
                 <p class="mt-3 text-gray">Navegue horizontalmente</p>
                 <!-- <button class="btn arrow arrow__prev disabled"><i class="fas fa-chevron-left"></i></button> -->
