@@ -39,14 +39,14 @@
                                 <h2 class="text-orange font-weight-bold mt-5"><?php the_sub_field('projet_info_tituloOne'); ?></h2>
                             </div>
                             <div class="col-md-7">
-                                <p style="line-height: 37px;" class="text-caption text-dark"><?php the_sub_field('projet_info_descOne'); ?></p>
+                                <p style="line-height: 31px;" class="text-caption text-dark"><?php the_sub_field('projet_info_descOne'); ?></p>
                             </div>
                         </div>
                         <div data-aos="fade-up" class="row my-5 py-5">
                             <div class="col-md-6">
                                 <div style="max-width: 400px">
                                     <h2 class="text-orange font-weight-bold mb-3"><?php the_sub_field('projet_info_tituloTwo'); ?></h2>
-                                    <p style="line-height: 37px;" class="font-weight-normal"><?php the_sub_field('projet_info_descTwo'); ?></p>
+                                    <p style="line-height: 31px;" class="font-weight-normal"><?php the_sub_field('projet_info_descTwo'); ?></p>
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -58,7 +58,7 @@
                                         $itens = preg_split('/<br[^>]*>/i', $linhas);
                                         foreach ($itens as $value) {
                                             $valor = ltrim($value);// remove os espaços antes da string
-                                            echo "<li><p style='line-height: 37px;' class='m-0'>$valor</p></li>";
+                                            echo "<li><p style='line-height: 31px;' class='m-0'>$valor</p></li>";
                                         }
                                         ?>
                                     </ul>

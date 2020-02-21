@@ -57,7 +57,8 @@
 <!-- Verifica se existe o layout Linha do Tempo-->
 <?php if (get_row_layout() == 'layout_linha_tempo'): ?>
 <section id="product-timeline">
-    <div data-aos="fade-up" class="container pt-5">
+    <div style="bottom: -43px;
+                position: relative;" data-aos="fade-up" class="container">
         <div id="parallax-detalhe-1">
             <div data-depth="0.2" class="d-flex justify-content-between">
                 <div class="trace-detail-left trace-detail-offset-up">
