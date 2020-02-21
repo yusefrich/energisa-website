@@ -316,14 +316,15 @@ jQuery(function ($) {
 
     // ########################################### CARREGAR IDEIAS ###############################################
 
-    function listarIdeiasAjax(page, tipo) {
+    function listarIdeiasAjax(page, tipo, status) {
         $.ajax({
             url: wp.ajaxurl,
             type: 'GET',
             data: {
                 action: 'listarIdeias',
                 page: page,
-                tipo: tipo
+                tipo: tipo,
+                status: status
             },
             beforeSend: function () {
 
@@ -393,7 +394,13 @@ jQuery(function ($) {
         paggina = $(this).data("pagina") + 1;
         var tipo = $(this).data("tipo");
 
-        listarIdeiasAjax(paggina, tipo)
+        if (tipo == "votacao" || tipo == "analise" || tipo == "concluido") {
+            listarIdeiasAjax(paggina, '', tipo)
+        } else {
+            listarIdeiasAjax(paggina, tipo)
+        }
+
+
         $(this).data('pagina', paggina);
 
     })
@@ -407,6 +414,19 @@ jQuery(function ($) {
 
         $("#btnLoadIdeias").show();
         $("#btnLoadIdeias").data('tipo', tag)
+        $("#btnLoadIdeias").data('pagina', 1)
+
+    })
+
+    $(".loadStatus").on('click', function (event) {
+        event.preventDefault();
+        var status = $(this).data("status");
+        $("#loadIdeias").html('');
+
+        listarIdeiasAjax(1, '', status)
+
+        $("#btnLoadIdeias").show();
+        $("#btnLoadIdeias").data('tipo', status)
         $("#btnLoadIdeias").data('pagina', 1)
 
     })
