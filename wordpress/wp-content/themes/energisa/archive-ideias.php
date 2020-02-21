@@ -48,7 +48,7 @@
                     ));
 
                     foreach ($tags as $tag) {
-                        echo "<a class=\"text-gray btn p-0 mb-3\" href=\"#\">#$tag->name  ($tag->count)</a><br>";
+                        echo "<a class=\"text-gray btn p-0 mb-3 loadTags\" href=\"#\" data-tag='$tag->slug'>#$tag->name  ($tag->count)</a><br>";
                     }
 
                     ?>
@@ -81,7 +81,7 @@
 
 
                 <div data-aos="flip-left" class="text-center mt-4 mb-5 pb-5">
-                    <button class="btn btn-outline-light px-5" data-pagina="1" id="btnLoadIdeias"> Mostrar mais</button>
+                    <button class="btn btn-outline-light px-5" data-pagina="1" data-tipo="" id="btnLoadIdeias"> Mostrar mais</button>
                 </div>
             </div>
         </div>

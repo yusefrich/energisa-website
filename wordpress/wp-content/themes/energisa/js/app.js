@@ -314,15 +314,16 @@ jQuery(function ($) {
     })
 
 
-    // ########################################### CARREGAR IDEIAS ###############
+    // ########################################### CARREGAR IDEIAS ###############################################
 
-    function listarIdeiasAjax(page) {
+    function listarIdeiasAjax(page, tipo) {
         $.ajax({
             url: wp.ajaxurl,
             type: 'GET',
             data: {
                 action: 'listarIdeias',
-                page: page
+                page: page,
+                tipo: tipo
             },
             beforeSend: function () {
 
@@ -370,11 +371,11 @@ jQuery(function ($) {
                         card += "<hr>";
 
 
-                        $("#loadIdeias").append(card)
+                        $("#loadIdeias").append(card);
                     })
 
                     if (hasNext === false) {
-                        $("#btnLoadIdeias").remove();
+                        $("#btnLoadIdeias").hide();
                     }
                 } else {
                     $("#loadIdeias").append(`<div class="alert alert-danger text-center">${dados.data.msg}</div>`);
@@ -389,9 +390,25 @@ jQuery(function ($) {
     listarIdeiasAjax(page);
 
     $("#btnLoadIdeias").on('click', function (event) {
-        paggina = $(this).data("pagina");
-        listarIdeiasAjax(paggina + 1)
-        $(this).data('pagina', paggina + 1);
+        paggina = $(this).data("pagina") + 1;
+        var tipo = $(this).data("tipo");
+
+        listarIdeiasAjax(paggina, tipo)
+        $(this).data('pagina', paggina);
+
+    })
+
+    $(".loadTags").on('click', function (event) {
+        event.preventDefault();
+        var tag = $(this).data("tag");
+        $("#loadIdeias").html('');
+
+        listarIdeiasAjax(1, tag)
+
+        $("#btnLoadIdeias").show();
+        $("#btnLoadIdeias").data('tipo', tag)
+        $("#btnLoadIdeias").data('pagina', 1)
+
     })
 
 })
