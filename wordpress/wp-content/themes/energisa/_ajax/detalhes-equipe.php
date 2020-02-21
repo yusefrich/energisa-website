@@ -21,18 +21,14 @@ function equipeDetalhes()
         // Cria o loop
         while ($posts->have_posts()) {
             $posts->the_post();
-
             $rows = get_field('sobre_equipe_repeat');
-
             $itens = [
                 'nome' => $rows[$indice]['sobre_equipe_nome'],
                 'cargo' => $rows[$indice]['sobre_equipe_cargo'],
                 'foto' => $rows[$indice]['sobre_equipe_foto'],
                 'biografica' => $rows[$indice]['sobre_equipe_bio'],
             ];
-
         }
-
         wp_send_json_success($itens);
 
     } else {
