@@ -105,7 +105,7 @@
                         <?php if ($destinoUrl == 'interno'): ?>
                         <a href="<?php echo get_sub_field('prod_linkinterno_tempo'); ?>"
                             class="btn btn-outline-light px-5">
-                            fotos do produto</a>
+                            Design do produto</a>
                         <?php endif; ?>
                         <?php if ($destinoUrl == 'externo'): ?>
                         <a href="<?php echo get_sub_field('prod_linkexterno_tempo'); ?>" target="_blank"

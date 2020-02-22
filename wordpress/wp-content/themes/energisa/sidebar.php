@@ -48,30 +48,18 @@
     <div class="card-outline mt-4 p-4">
         <p class="text-caption font-weight-bold">Tags</p>
         <div id="loadTags"></div>
-        <?php
-        $tags = get_tags([
-            'hide_empty' => true,
-            'orderby' => 'count',
-            'order' => 'DESC',
-            'number' => 0,
-        ]);
-
-        foreach ($tags as $tag) {
-            //echo "<a class=\"text-gray btn p-0 mb-3 loadTags\" href=\"#\" data-tag='$tag->slug'>#$tag->name  ($tag->count)</a><br>";
-        }
-
-        ?>
-          <button class="btn btn-sm px-5 text-gray" id="btnLoadTags" data-pagina="1"><strong> Mostrar mais</strong></button>
+        <button class="btn btn-sm px-5 text-gray" id="btnLoadTags" data-pagina="1"><strong> Mostrar mais</strong>
+        </button>
 
     </div>
     <div class="card-outline mt-4 mb-4 p-4">
         <p class="text-caption font-weight-bold">Quem mais participa</p>
         <div class="d-flex justify-content-start py-2">
             <div class="profile-pic pr-5 mr-1" style="
-                background-image: url(<?php bloginfo('template_url'); ?>/img/profile-1.jpg);
-                background-size: cover;
-                background-position: center;
-                "></div>
+                    background-image: url(<?php bloginfo('template_url'); ?>/img/profile-1.jpg);
+                    background-size: cover;
+                    background-position: center;
+                    "></div>
             <div>
                 <p class="card-user-name m-0">Francisco José Vieira Martins</p>
 

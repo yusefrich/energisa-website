@@ -43,18 +43,52 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- <//?php
+             wp_nav_menu(array(
+                 'theme_location' => 'menu-topo',
+                 'container' => false,
+                 'menu_class' => 'menudfdfdfdf',
+                 'items_wrap' => '<ul class="navbar-nav ml-auto">%3$s</ul>',
+             ));
+             ?>-->
             <?php
-            wp_nav_menu(array(
-                'theme_location' => 'menu-topo',
-                'container' => false,
-                'menu_class' => 'menudfdfdfdf',
-                'items_wrap' => '<ul class="navbar-nav ml-auto">%3$s</ul>',
-            ));
+            $postname = $wp_query->query['post_type'];
+            $pagename = get_query_var('pagename');
+            $pagina = "";
+
+            if ($postname) {
+                $pagina = $postname;
+            }
+            if ($pagename) {
+                $pagina = $pagename;
+            }
+            if (is_single() && 'post' == get_post_type()) {
+                $pagina = 'novidades';
+            }
             ?>
+
+            <ul class="navbar-nav ml-auto">
+                <li class=" menu-item <?php echo $pagina == 'quem-somos' ? 'current-menu-item' : ''; ?>">
+                    <a href="<?php bloginfo('url'); ?>/quem-somos">Quem somos <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="menu-item <?php echo $pagina == 'produtos' ? 'current-menu-item' : ''; ?>">
+                    <a href="<?php bloginfo('url'); ?>/produtos">Produtos</a>
+                </li>
+                <li class="menu-item <?php echo $pagina == 'projetos' ? 'current-menu-item' : ''; ?>">
+                    <a href="<?php bloginfo('url'); ?>/projetos">Projetos</a>
+                </li>
+                <li class="menu-item <?php echo $pagina == 'novidades' ? 'current-menu-item' : ''; ?>">
+                    <a href="<?php bloginfo('url'); ?>/novidades">Novidades</a>
+                </li>
+                <li class="menu-item <?php echo $pagina == 'ideias' ? 'current-menu-item' : ''; ?>">
+                    <a href="<?php bloginfo('url'); ?>/ideias">Ideias</a>
+                </li>
+            </ul>
+
             <form class="form-inline my-2 my-lg-0" action="<?php bloginfo('url'); ?>">
                 <div class="collapse" id="collapseExample">
                     <!-- * input de pesquisa colapsado para pesquisa aleatória na pagina inteira -->
-                    <input style="box-shadow: none;" class="form-control mr-sm-2 search-input" type="search" placeholder="Buscar" aria-label="Buscar" value="" name="s" >
+                    <input style="box-shadow: none;" class="form-control mr-sm-2 search-input" type="search" placeholder="Buscar" aria-label="Buscar" value="" name="s">
                 </div>
                 <button style="box-shadow: none;" class="btn search-toggle my-2 my-sm-0" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                     <ion-icon class="ion-2x" name="search"></ion-icon>
