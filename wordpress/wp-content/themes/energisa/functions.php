@@ -86,10 +86,12 @@ add_filter('login_headertitle', 'nome_titulo_login');
 
 
 // Remove páginas do resultado de busca
-function remove_pages_from_search() {
+function remove_pages_from_search()
+{
     global $wp_post_types;
     $wp_post_types['page']->exclude_from_search = true;
 }
+
 add_action('init', 'remove_pages_from_search');
 
 
@@ -98,7 +100,7 @@ add_action('init', 'remove_pages_from_search');
  **********************************************/
 
 
-include ('_ajax/listar-novidades.php');
+include('_ajax/listar-novidades.php');
 include('_ajax/listar-projetos.php');
 include('_ajax/listar-produtos.php');
 include('_ajax/detalhes-equipe.php');
@@ -106,24 +108,25 @@ include('_ajax/detalhes-treinamento.php');
 include('_ajax/listar-ideias.php');
 include('_ajax/lista-tags.php');
 
-function app_scripts() {
+function app_scripts()
+{
 
     // assets folder
 
-    $js_folder	=  get_template_directory_uri() . '/js';
+    $js_folder = get_template_directory_uri() . '/js';
 
     // versão
-    $versao 	= rand(0,999);
+    $versao = rand(0, 999);
 
 
     // jQuery
     //wp_enqueue_script('jquery');
 
     // bootstrap
-    wp_enqueue_script( 'popper', $js_folder . '/popper.min.js', null, 1, true );
-    wp_enqueue_script( 'bootstrap', $js_folder . '/bootstrap.min.js', null, 1, true );
+    wp_enqueue_script('popper', $js_folder . '/popper.min.js', null, 1, true);
+    wp_enqueue_script('bootstrap', $js_folder . '/bootstrap.min.js', null, 1, true);
 
-    wp_enqueue_script( 'app', $js_folder . '/app.js', null, $versao, true );
+    wp_enqueue_script('app', $js_folder . '/app.js', null, $versao, true);
 
     $wpVars = [
         'ajaxurl' => admin_url('admin-ajax.php')
@@ -135,3 +138,5 @@ function app_scripts() {
 }
 
 add_action("wp_enqueue_scripts", "app_scripts");
+
+
