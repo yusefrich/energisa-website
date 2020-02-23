@@ -10,7 +10,7 @@
     <link rel="shortcut icon" type="image/png" href="<?php bloginfo('template_url'); ?>/img/favicon.png"/>
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/bootstrap.css">
+    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/build/bootstrap.css">
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/style.css">
 
 

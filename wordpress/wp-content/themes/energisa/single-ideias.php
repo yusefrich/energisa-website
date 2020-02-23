@@ -28,7 +28,7 @@
                             para <span class="text-orange">Ideias</span></p>
                     </a>
                 </div>
-                <div data-aos="flip-left" class="  mb-2 ">
+                <div data-aos="flip-left" class="text-ideias-format  mb-2 ">
                     <div class="pb-4 text-start">
                         <div class="d-flex justify-content-start pb-4">
                             <div class="profile-pic mr-4 mt-2" style="
@@ -46,7 +46,7 @@
                             <small class="text-orange"><?php echo esc_html($statusFiled['label']); ?></small>
                         </p>
                         <h2 class="font-weight-extra-bold text-caption display-h2"><?php the_title(); ?></h2>
-                        <p>
+                        <p class="m-0">
                             <small>
                                 <span class="round-outline-text border-gray text-gray py-1 px-2 mx-1"><?php the_field('ideia_votos'); ?> Votos</span>
                                 <span class="round-outline-text border-gray text-gray py-1 px-2 mx-1">3 Respostas</span>
@@ -54,7 +54,7 @@
                         </p>
                         <!-- <img class="profile-pic float-left" height="48" src="./img/profile-1.jpg" alt=""> -->
                     </div>
-                    <p class="text-dark font-weight-normal mb-5"><?php the_content(); ?></p>
+                    <p class="m-0"><?php the_content(); ?></p> <!-- text-dark font-weight-normal mb-5 -->
 
                     <div class="d-flex justify-content-start">
                         <button class="btn btn-outline-dark mr-2">Votar</button>
