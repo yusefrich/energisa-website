@@ -98,47 +98,47 @@ if ($slider->have_posts()) :
                 while ($chamadaNovidades->have_posts()): $chamadaNovidades->the_post();
                     $img_background = get_the_post_thumbnail_url(null, 'full');
                     ?>
-                        
+
                     <div data-aos="fade-up" class="col-md-12">
                         <div class="card card-bg-wide text-white my-5 zoom-hover card-link-div" onclick="window.location='<?php the_field('link_interno'); ?>';">
-                        <a style="display:block" href="<?php the_field('link_interno'); ?>">
-                            <div class="img-holder" style="
-                                    background: linear-gradient(0deg, rgba(55, 55, 55, 0.4), rgba(55, 55, 55, 0.4)), url(<?php echo esc_url($img_background); ?>);
-                                    background-position: center;
-                                    background-size: cover;">
-                                <?php
-                                $url = get_field_object('destino_link');
-                                $url_valor = $url['value'];
-                                if ($url_valor == 'externo') { ?>
-                                    <a href="<?php the_field('link_externo'); ?>" class="btn btn-light btn-round card-btn m-5" target="_blank" title="Saiba mais"><span class="icon pt-2 pb-2 pr-1 icon-next-icon"></span></a>
-                                <?php }
-                                if ($url_valor == 'interno') { ?>
-                                    <a href="<?php the_field('link_interno'); ?>" class="btn btn-light btn-round card-btn m-5" title="Saiba mais"><span class="icon pt-2 pb-2 pr-1 icon-next-icon"></span></a>
-                                <?php }
-                                ?>
-                                
-                                <div class="card-img-overlay overlay-lg text-start">
-                                    <h2 class="card-title"><?php the_field('titulo'); ?></h2>
-                                    <p class="card-text"><?php the_field('descricao'); ?></p>
+                            <a style="display:block" href="<?php the_field('link_interno'); ?>">
+                                <div class="img-holder" style="
+                                        background: linear-gradient(0deg, rgba(55, 55, 55, 0.4), rgba(55, 55, 55, 0.4)), url(<?php echo esc_url($img_background); ?>);
+                                        background-position: center;
+                                        background-size: cover;">
                                     <?php
                                     $url = get_field_object('destino_link');
                                     $url_valor = $url['value'];
                                     if ($url_valor == 'externo') { ?>
-                                        <a href="<?php the_field('link_externo'); ?>" class="btn btn-primary px-5" target="_blank" title="Saiba mais">Leia
-                                            mais</a>
+                                        <a href="<?php the_field('link_externo'); ?>" class="btn btn-light btn-round card-btn m-5" target="_blank" title="Saiba mais"><span class="icon pt-2 pb-2 pr-1 icon-next-icon"></span></a>
                                     <?php }
                                     if ($url_valor == 'interno') { ?>
-                                        <a href="<?php the_field('link_interno'); ?>" class="btn btn-primary px-5" title="Saiba mais">Saiba
-                                            mais</a>
+                                        <a href="<?php the_field('link_interno'); ?>" class="btn btn-light btn-round card-btn m-5" title="Saiba mais"><span class="icon pt-2 pb-2 pr-1 icon-next-icon"></span></a>
                                     <?php }
                                     ?>
+
+                                    <div class="card-img-overlay overlay-lg text-start">
+                                        <h2 class="card-title"><?php the_field('titulo'); ?></h2>
+                                        <p class="card-text"><?php the_field('descricao'); ?></p>
+                                        <?php
+                                        $url = get_field_object('destino_link');
+                                        $url_valor = $url['value'];
+                                        if ($url_valor == 'externo') { ?>
+                                            <a href="<?php the_field('link_externo'); ?>" class="btn btn-primary px-5" target="_blank" title="Saiba mais">Leia
+                                                mais</a>
+                                        <?php }
+                                        if ($url_valor == 'interno') { ?>
+                                            <a href="<?php the_field('link_interno'); ?>" class="btn btn-primary px-5" title="Saiba mais">Saiba
+                                                mais</a>
+                                        <?php }
+                                        ?>
+                                    </div>
+
                                 </div>
-                                
-                            </div>
                             </a>
                         </div>
                     </div>
-                
+
                 <?php endwhile;
                 wp_reset_postdata(); ?>
 
@@ -161,7 +161,8 @@ if ($slider->have_posts()) :
                 wp_reset_postdata(); ?>
                 <div class="col-12">
                     <div data-aos="fade-up" class="d-flex justify-content-center">
-                        <a href="<?php bloginfo('home'); ?>/novidades" class="btn btn-light px-5 btn-confira-offset">Confira as
+                        <a href="<?php bloginfo('home'); ?>/novidades" class="btn btn-light px-5 btn-confira-offset">Confira
+                            as
                             novidades</a>
                     </div>
                 </div>
@@ -426,9 +427,11 @@ if ($produtos->have_posts()) :
                     $foto = get_field('autor_foto', 'user_' . get_the_author_id());
                     $thumbnail = $foto['sizes']['thumbnail'];
                     $statusFiled = get_field('ideia_status');
+                    $votos = get_field('ideia_votos');
+                    $respostas = get_comments_number(get_the_ID());
                     ?>
                     <div data-aos="zoom-in" class="col-md-4">
-                        <div class="card card-full-small mb-2 zoom-hover" >
+                        <div class="card card-full-small mb-2 zoom-hover">
                             <div class=" overlay-white text-start">
                                 <div class="d-flex justify-content-start pb-5 mb-3">
                                     <div class="profile-pic mr-4"
@@ -452,8 +455,8 @@ if ($produtos->have_posts()) :
                                 </a>
                                 <p>
                                     <small>
-                                        <span class="round-outline-text py-1 px-2 mx-1"><?php the_field('ideia_votos'); ?> Votos</span>
-                                        <span class="round-outline-text py-1 px-2 mx-1">3 Respostas</span>
+                                        <span class="round-outline-text py-1 px-2 mx-1"><?php echo $votos > 1 ? $votos . ' Votos' : $votos . ' Voto'; ?></span>
+                                        <span class="round-outline-text py-1 px-2 mx-1"><?php echo $respostas > 1 ? $respostas . ' Respostas' : $respostas . ' Resposta'; ?></span>
                                     </small>
                                 </p>
                                 <div class="card-tags">

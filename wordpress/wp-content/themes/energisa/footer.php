@@ -12,7 +12,7 @@
                     <a class="nav-link link-light" href="<?php bloginfo('home'); ?>/produtos">Produtos</a>
                     <a class="nav-link link-light" href="<?php bloginfo('home'); ?>/projetos">Projetos</a>
                     <a class="nav-link link-light" href="<?php bloginfo('home'); ?>/novidades">Novidades</a>
-                    <a class="nav-link link-light" href="#">Ideias</a>
+                    <a class="nav-link link-light" href="<?php bloginfo('home'); ?>/ideias">Ideias</a>
                 </div>
             </div>
             <div class="col-6 col-md-2">

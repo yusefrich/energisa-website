@@ -337,6 +337,8 @@ jQuery(function ($) {
                 if (success) {
                     $.each(posts, function (i, post) {
                         var tags = post.tags;
+                        let votos = post.votos;
+                        let respostas = post.respostas;
                         var card = "";
 
                         card += "<div data-aos='flip-left' class='mb-2 p-2'>";
@@ -356,10 +358,8 @@ jQuery(function ($) {
                         card += "</a>";
                         card += "<p>";
                         card += "<small>";
-                        if (post.votos != "") {
-                            card += "<span class='round-outline-text py-1 px-2 mx-1'>" + post.votos + " Votos</span>";
-                        }
-                        card += "<span class='round-outline-text py-1 px-2 mx-1'>3 Respostas</span>";
+                        card += "<span class='round-outline-text py-1 px-2 mx-1'>" + votos + " Votos</span>";
+                        card += "<span class='round-outline-text py-1 px-2 mx-1'>" + respostas + " Respostas</span>";
                         card += "</small>";
                         card += "</p>";
                         card += "<div class='card-tags'>";
