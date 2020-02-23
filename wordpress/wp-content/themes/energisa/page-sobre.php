@@ -135,7 +135,7 @@
 
     </div>
     <div data-aos="fade-up" class="container-fluid p-0">
-        <div class="card-slider" id="sobre-scroll-left">
+        <div class="card-slider style-6" id="sobre-scroll-left">
 
             <?php
                 $fazemos = new WP_Query(array(
@@ -175,7 +175,7 @@
                     ?>
 
             <div data-post="<?php the_ID();?>"
-                class="card card-sm card-bg-small text-white mb-2 mr-4 card-link-div <?php echo $openInfo;?>"
+                class="card card-sm card-bg-small text-white mb-4 mr-4 card-link-div zoom-hover <?php echo $openInfo;?>"
                 <?php echo $url; ?>>
                 <div class="img-holder-sm" style="
                                 height: 100%;
@@ -206,10 +206,10 @@
             <!-- <div class="arrow arrow__prev disabled p-3"><i class="fas fa-chevron-left"></i></div> -->
             <!-- <button class="btn arrow arrow__next"><i class="fas fa-chevron-right"></i></button> -->
             <!-- <div class=" arrow arrow__next p-3"><i class="fas fa-chevron-right"></i></div> -->
-            <button class="btn" id="left-arrow">
+            <button style="box-shadow: none;" class="btn" id="left-arrow">
                 <span class="icon  icon-prev-icon"></span>
             </button>
-            <button class="btn" id="right-arrow">
+            <button style="box-shadow: none;" class="btn" id="right-arrow">
                 <span class="icon  icon-next-icon"></span>
             </button>
         </div>

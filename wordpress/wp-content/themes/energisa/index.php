@@ -153,7 +153,7 @@ if ($slider->have_posts()) :
                     ?>
                     <div data-aos="fade-left" class="col-md-6">
                         <a href="<?php the_permalink(); ?>">
-                            <img src="<?php echo esc_url($capa_novidades); ?>" class="figure-img img-fluid rounded zoom-hover" alt="..."></a>
+                            <img src="<?php echo esc_url($capa_novidades); ?>" class="figure-img img-fluid rounded zoom-hover img-fit" alt="..."></a>
                         <a href="<?php the_permalink(); ?>"><p class="img-caption text-white mb-5">
                                 <strong><?php the_title(); ?></strong></p></a>
                     </div>
@@ -440,7 +440,7 @@ if ($produtos->have_posts()) :
                                     <div>
                                         <p class="card-user-name m-0"><?php the_author_firstname(); ?>
                                             &nbsp;<?php the_author_lastname(); ?></p>
-                                        <span class="text-fade"><small>Postado <?php the_date('d/m/Y'); ?></small></span>
+                                        <span class="text-fade"><small>Postado em <?php the_date('d/m/Y'); ?></small></span>
 
                                     </div>
                                 </div>

@@ -17,7 +17,7 @@
             </div>
             <div class="col-6 col-md-2">
                 <div class="d-flex justify-content-between">
-                    <button class="btn btn-light text-blue btn-round">
+                    <!-- <button class="btn btn-light text-blue btn-round">
                         <ion-icon style="font-size: 20px;" class="pt-2" name="logo-twitter"></ion-icon>
                     </button>
                     <button class="btn btn-light text-blue btn-round">
@@ -25,13 +25,13 @@
                     </button>
                     <button class="btn btn-light text-blue btn-round">
                         <ion-icon style="font-size: 20px;" class="pt-2" name="logo-instagram"></ion-icon>
-                    </button>
+                    </button> -->
                 </div>
             </div>
         </div>
     </div>
     <div class="container-fluid footer-bottom text-center px-0 py-4">
-        <small class="text-white ">© Copyright 2019 Energisa COCD.</small>
+        <small class="text-white ">© Copyright 2020 Energisa COCD.</small>
         <a href="https://www.qualitare.com/home/" target="blank">
             <img class="" src="<?php bloginfo('template_url'); ?>/img/feito-com.png" alt="">
         </a>

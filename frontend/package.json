@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/yusefrich/energisa-website#readme",
   "dependencies": {
-    "bootstrap": "^4.4.1"
+    "autoprefixer": "^9.7.4",
+    "bootstrap": "^4.4.1",
+    "postcss-cli": "^7.1.0"
   }
 }

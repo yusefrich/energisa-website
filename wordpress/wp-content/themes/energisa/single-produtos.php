@@ -57,7 +57,7 @@
 <!-- Verifica se existe o layout Linha do Tempo-->
 <?php if (get_row_layout() == 'layout_linha_tempo'): ?>
 <section id="product-timeline">
-    <div style="bottom: -43px;
+    <div style="bottom: -57px;
                 position: relative;" data-aos="fade-up" class="container">
         <div id="parallax-detalhe-1">
             <div data-depth="0.2" class="d-flex justify-content-between">
@@ -68,7 +68,7 @@
                 </div>
             </div>
         </div>
-        <h1 class="text-orange py-5">Linha do tempo do projeto</h1>
+        <h1 class="text-orange pb-5 pt-3">Linha do tempo do projeto</h1>
         <p class="text-gray">Acompanhe através da nossa linha do tempo as principais etapas deste
             projeto e
             veja o
@@ -76,7 +76,7 @@
     </div>
     <div class="container-fluid p-0">
         <div class="timeline style-6" id="timeline-scroll">
-            <ol>
+            <ol class="m-0">
                 <li class="timeline-spacing">
                     <div style="width: 350px !important">
 
@@ -127,10 +127,10 @@
             <!-- <div class="arrow arrow__prev disabled p-3"><i class="fas fa-chevron-left"></i></div> -->
             <!-- <button class="btn arrow arrow__next"><i class="fas fa-chevron-right"></i></button> -->
             <!-- <div class=" arrow arrow__next p-3"><i class="fas fa-chevron-right"></i></div> -->
-            <button class="btn"  id="left-arrow">
+            <button style="box-shadow: none;" class="btn"  id="left-arrow">
                 <span class="icon  icon-prev-icon"></span>
             </button>
-            <button class="btn"  id="right-arrow">
+            <button style="box-shadow: none;" class="btn"  id="right-arrow">
                 <span class="icon  icon-next-icon"></span>
             </button>
         </div>

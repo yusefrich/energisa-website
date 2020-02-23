@@ -30,7 +30,7 @@
                             <?php the_date('j \d\e M  Y'); ?>
                         </small>
                     </p>
-                    <h2 class="font-weight-extra-bold text-caption display-h2"><?php the_title(); ?></h2>
+                    <h2 style="line-height: 60px;" class="font-weight-extra-bold text-caption display-h2"><?php the_title(); ?></h2>
                     <!-- <img class="profile-pic float-left" height="48" src="./img/profile-1.jpg" alt=""> -->
                 </div>
             </div>

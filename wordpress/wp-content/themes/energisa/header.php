@@ -32,9 +32,9 @@
     <div class="bg-light menu-bg"></div>
     <!-- <a class="navbar-brand" href="#">Navbar</a> -->
     <div class="container">
-        <a class="navbar-brand" href="<?php bloginfo('home'); ?>">
-            <img class="brand-dark d-none" src="<?php bloginfo('template_url'); ?>/img/logo-dark.png" width="200" alt="">
-            <img class="brand-light d-none" src="<?php bloginfo('template_url'); ?>/img/logo-light.png" width="200" alt="">
+        <a class="navbar-brand p-0" href="<?php bloginfo('home'); ?>">
+            <img class="brand-dark d-none" src="<?php bloginfo('template_url'); ?>/img/logo-dark.png" width="170" alt="">
+            <img class="brand-light d-none" src="<?php bloginfo('template_url'); ?>/img/logo-light.png" width="170" alt="">
         </a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"

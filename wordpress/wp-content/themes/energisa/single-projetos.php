@@ -36,7 +36,7 @@
                         </div>
                         <div data-aos="fade-up" class="row my-5 py-5 ">
                             <div class="col-md-5">
-                                <h2 class="text-orange font-weight-bold mt-5"><?php the_sub_field('projet_info_tituloOne'); ?></h2>
+                                <h2 style="line-height: 65px;" class="text-orange font-weight-bold mt-5"><?php the_sub_field('projet_info_tituloOne'); ?></h2>
                             </div>
                             <div class="col-md-7">
                                 <p style="line-height: 31px;" class="text-caption text-dark"><?php the_sub_field('projet_info_descOne'); ?></p>
@@ -45,13 +45,13 @@
                         <div data-aos="fade-up" class="row my-5 py-5">
                             <div class="col-md-6">
                                 <div style="max-width: 400px">
-                                    <h2 class="text-orange font-weight-bold mb-3"><?php the_sub_field('projet_info_tituloTwo'); ?></h2>
+                                    <h2 style="line-height: 65px;" class="text-orange font-weight-bold mb-3"><?php the_sub_field('projet_info_tituloTwo'); ?></h2>
                                     <p style="line-height: 31px;" class="font-weight-normal"><?php the_sub_field('projet_info_descTwo'); ?></p>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div style="max-width: 400px">
-                                    <h2 class="text-orange font-weight-bold mb-3"><?php the_sub_field('projet_info_tituloThree'); ?></h2>
+                                    <h2 style="line-height: 65px;" class="text-orange font-weight-bold mb-3"><?php the_sub_field('projet_info_tituloThree'); ?></h2>
                                     <ul>
                                         <?php
                                         $linhas = get_sub_field('projet_info_descThree');
@@ -219,10 +219,10 @@
                                     <!-- <div class="arrow arrow__prev disabled p-3"><i class="fas fa-chevron-left"></i></div> -->
                                     <!-- <button class="btn arrow arrow__next"><i class="fas fa-chevron-right"></i></button> -->
                                     <!-- <div class=" arrow arrow__next p-3"><i class="fas fa-chevron-right"></i></div> -->
-                                    <button class="btn"  id="left-arrow">
+                                    <button style="box-shadow: none;" class="btn"  id="left-arrow">
                                         <span class="icon  icon-prev-icon"></span>
                                     </button>
-                                    <button class="btn"  id="right-arrow">
+                                    <button style="box-shadow: none;" class="btn"  id="right-arrow">
                                         <span class="icon  icon-next-icon"></span>
                                     </button>
                                 </div>
