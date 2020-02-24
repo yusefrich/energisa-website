@@ -28,9 +28,18 @@
             </div>
 
             <?php while (have_posts()) : the_post(); ?>
+            <?php
+                $tipoPost = "";
+               if(get_post_type( get_the_ID() )  == 'post'){
+                   $tipoPost = "Ideias";
+               } else{
+                   $tipoPost = get_post_type( get_the_ID() );
+               }
+                ?>
                 <div class="col-md-4 mb-3">
                     <a class="card p-3" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
                         <h5 class="font-weight-bold mb-3"><?php the_title(); ?></h5>
+                        <p class="text-capitalize"><?php echo $tipoPost; ?></p>
                     </a>
                 </div>
 
