@@ -2,7 +2,7 @@
 <section>
     <section id="product-banner">
         <div style="
-                background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(<?php bloginfo('template_url'); ?>/img/novidades-header.png);
+                background: linear-gradient(0deg, rgba(92, 40, 14, 0.8), rgba(92, 40, 14, 0.8)), url(<?php bloginfo('template_url'); ?>/img/ideias-header.png);
                 background-size: cover;
                 background-position: center;
                 background-blend-mode: multiply, normal;
