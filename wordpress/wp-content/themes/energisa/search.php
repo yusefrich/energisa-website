@@ -29,9 +29,8 @@
 
             <?php while (have_posts()) : the_post(); ?>
                 <div class="col-md-4 mb-3">
-                    <a class="card p-3" href="<?php the_permalink(); ?>">
-                        <h5 class="font-weight-bold mb-3">Titulo do resultado</h5>
-                        <?php the_title(); ?>
+                    <a class="card p-3" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+                        <h5 class="font-weight-bold mb-3"><?php the_title(); ?></h5>
                     </a>
                 </div>
 

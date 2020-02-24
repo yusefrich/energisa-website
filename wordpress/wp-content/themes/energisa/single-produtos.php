@@ -75,6 +75,7 @@
 
             <!-- Verifica se existe o layout Linha do Tempo-->
             <?php if (get_row_layout() == 'layout_linha_tempo'): ?>
+
                 <section id="product-timeline">
                     <div style="bottom: -57px;
                 position: relative;" data-aos="fade-up" class="container">
@@ -103,6 +104,7 @@
                                     </div>
                                 </li>
                                 <!-- Verifica se tem algum valor cadastrado no campo repetidor-->
+                                <?php $count = 0; ?>
                                 <?php if (have_rows('prod_linha_temporal')): while (have_rows('prod_linha_temporal')): the_row();
                                     setlocale(LC_TIME, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
                                     date_default_timezone_set('America/Sao_Paulo');
@@ -124,7 +126,8 @@
                                                 <?php if ($destinoUrl == 'interno'): ?>
                                                     <a href="<?php echo get_sub_field('prod_linkinterno_tempo'); ?>"
                                                        class="btn btn-outline-light px-5">
-                                                        Design do produto</a>
+                                                        acesse nosso
+                                                        site</a>
                                                 <?php endif; ?>
                                                 <?php if ($destinoUrl == 'externo'): ?>
                                                     <a href="<?php echo get_sub_field('prod_linkexterno_tempo'); ?>" target="_blank"
@@ -132,9 +135,14 @@
                                                         acesse nosso
                                                         site</a>
                                                 <?php endif; ?>
+                                                <?php if ($destinoUrl == 'designer'): ?>
+                                                    <a href="#" class="btn btn-outline-light px-5 openDesignerProduto" data-post="<?php the_ID(); ?>" data-indice="<?php echo $count; ?>">Designer
+                                                        do produto</a>
+                                                <?php endif; ?>
                                             <?php endif; ?>
                                         </div>
                                     </li>
+                                    <?php $count++; ?>
                                 <?php endwhile; ?>
                                 <?php endif; ?>
                                 <li></li>
@@ -413,7 +421,10 @@
                 <?php endif; ?>
             <?php endif; ?>
 
-
+            <!-- Modal Designer do Produto -->
+            <div class="modal fade" id="designProdutoModal" tabindex="-1" role="dialog" aria-labelledby="designProdutoModalLabel"
+                 aria-hidden="true">
+            </div>
         <?php endwhile; ?>
     <?php endif; ?>
 

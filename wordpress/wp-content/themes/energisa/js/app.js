@@ -337,8 +337,14 @@ jQuery(function ($) {
                 if (success) {
                     $.each(posts, function (i, post) {
                         var tags = post.tags;
-                        let votos = post.votos;
-                        let respostas = post.respostas;
+                        let votos = parseInt(post.votos);
+                        if (isNaN(votos)) {
+                            votos = 0;
+                        }
+                        let respostas = parseInt(post.respostas);
+                        if (isNaN(respostas)) {
+                            respostas = 0;
+                        }
                         var card = "";
 
                         card += "<div data-aos='flip-left' class='mb-2 p-2'>";
@@ -346,7 +352,7 @@ jQuery(function ($) {
                         card += "<div class='d-flex justify-content-start pb-4'>";
                         card += "<div class='profile-pic mr-4' style='background-image: url(" + post.foto + ");background-size: cover;background-position: center;'></div>";
                         card += "<div>";
-                        card += "<span class='text-fade'><small>Postado " + post.data + "</small></span>";
+                        card += "<span class='text-fade'><small>Postado em " + post.data + "</small></span>";
                         card += "<p class='card-user-name m-0'>" + post.user + "</p>";
                         card += "</div>";
                         card += "</div>";
@@ -358,8 +364,16 @@ jQuery(function ($) {
                         card += "</a>";
                         card += "<p>";
                         card += "<small>";
-                        card += "<span class='round-outline-text py-1 px-2 mx-1'>" + votos + " Votos</span>";
-                        card += "<span class='round-outline-text py-1 px-2 mx-1'>" + respostas + " Respostas</span>";
+                        if (votos > 1) {
+                            card += "<span class='round-outline-text py-1 px-2 mx-1'>" + votos + " Votos</span>";
+                        } else {
+                            card += "<span class='round-outline-text py-1 px-2 mx-1'>" + votos + " Voto</span>";
+                        }
+                        if (respostas > 1) {
+                            card += "<span class='round-outline-text py-1 px-2 mx-1'>" + respostas + " Respostas</span>";
+                        } else {
+                            card += "<span class='round-outline-text py-1 px-2 mx-1'>" + respostas + " Resposta</span>";
+                        }
                         card += "</small>";
                         card += "</p>";
                         card += "<div class='card-tags'>";
@@ -477,5 +491,98 @@ jQuery(function ($) {
         listarTagsAjax(paggina + 1)
         $(this).data('pagina', paggina + 1);
     })
+
+
+    // ########################################### CARREGAR DESIGNER DO PRODUTO EM MODAL ###############################################
+
+    function designerProdutoAjax(id_post, indice) {
+        $.ajax({
+            url: wp.ajaxurl,
+            type: 'GET',
+            data: {
+                action: 'designerProduto',
+                id_post: id_post
+            },
+            beforeSend: function () {
+
+            },
+            success: function (dados) {
+                let success = dados.success;
+                let detalhes = dados.data;
+                let images = detalhes[indice].images
+                var str = "";
+
+
+                if (success) {
+
+                    str += '<div class="modal-dialog modal-lg" role="document">';
+                    str += '<div class="modal-content modal-blue">';
+                    str += '<div class="modal-header d-flex justify-content-end pb-0">';
+                    str += '<button type="button" class="btn btn-light btn-round py-1" data-dismiss="modal" aria-label="Close">';
+                    str += '<span class="text-gray" aria-hidden="true">&times;</span>';
+                    str += '</button>';
+                    str += '</div>';
+                    str += '<div class="modal-body pt-0">';
+                    str += '<div class="text-center my-2 mx-5 px-5">';
+                    str += '<img src="./img/jigsaw.png" alt="">';
+                    str += '<p class="text-white text-modal-title font-weight-bold">Um pouco sobre o processo</p>';
+                    str += '<p class="text-white font-weight-light">' + detalhes[indice].processo + '</p>';
+                    str += '<div class="d-flex justify-content-end my-4 mr-5">';
+                    str += '<a href="#design-produto-slider" role="button" data-slide="prev" class="btn btn-light btn-round">';
+                    str += '<span class="icon pt-2 pb-2 pl-1 icon-prev-icon"></span>';
+                    str += '</a>';
+                    str += '<a href="#design-produto-slider" role="button" data-slide="next" class="btn btn-light btn-round">';
+                    str += '<span class="icon pt-2 pb-2 pr-1 icon-next-icon"></span>';
+                    str += '</a>';
+                    str += '</div>';
+                    str += '</div>';
+                    str += '<div class="container-fluid">';
+                    str += '<div id="design-produto-slider" class="carouselPrograms carousel slide" data-ride="carousel" data-interval="false">';
+                    str += '<div class="carousel-inner row w-100 mx-auto" role="listbox">';
+
+                    for (var i = 0; i < images.length; i++) {
+                        if (i == 0) {
+                            str += '<div class="carousel-item col-md-4  active">';
+                        } else {
+                            str += '<div class="carousel-item col-md-4">';
+                        }
+                        str += '<div class="panel panel-default">';
+                        str += '<div class="panel-thumbnail">';
+                        str += '<a href="#" title="image ' + i + '" class="thumb">';
+                        str += '<img class="img-fluid mx-auto d-block" src="' + images[i] + '" alt="slide ' + i + '">';
+                        str += '</a>';
+                        str += '</div>';
+                        str += '</div>';
+                        str += '</div>';
+                    }
+
+                    str += '</div>';
+                    str += '</div>';
+                    str += '</div>';
+                    str += '</div>';
+                    str += '<div class="modal-footer"></div>';
+                    str += '</div>';
+                    str += '</div>';
+
+
+                    $("#designProdutoModal").html(str);
+
+                    $("#designProdutoModal").modal('show');
+                }
+            },
+            error: function (erro) {
+                console.log("ooopss... algo deu errado na requisição")
+            },
+        })
+    }
+
+
+    $(".openDesignerProduto").on('click', function (event) {
+        event.preventDefault();
+        var id_post = $(this).data("post");
+        var indice = $(this).data("indice");
+        designerProdutoAjax(id_post, indice);
+    })
+
 
 })
