@@ -166,7 +166,6 @@ function wppb_front_end_register( $atts ){
 
 // function to choose whether to display the registration page or the validation message
 function wppb_front_end_register_handler( $atts ){
-    wp_enqueue_script( 'wppb_front_end_script', WPPB_PLUGIN_URL.'assets/js/script-front-end.js', array('jquery'), PROFILE_BUILDER_VERSION, true );
 	return ( isset( $_GET['activation_key'] ) ? wppb_activate_signup ( sanitize_text_field( $_GET['activation_key'] ) ) : wppb_front_end_register( $atts ) );
 }
 

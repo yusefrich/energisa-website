@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php get_header(); /* Template Name: Login */ ?>
 <section id="product-banner">
     <div style="
             background: linear-gradient(0deg, rgba(8, 155, 192, 0.7), rgba(8, 155, 192, 0.7)), url(<?php bloginfo('template_url'); ?>/img/novidades-header.png);
@@ -20,16 +20,9 @@
         <div class="row mt-5">
             <?php while (have_posts()) : the_post(); ?>
                 <?php
-                $current_user = wp_get_current_user();
 
                 if (is_user_logged_in()):?>
-                    <div class="col-md-12 d-flex justify-content-center align-items-center mb-5">
-                        <?php echo esc_html($current_user->display_name); ?>
-                        <a href="<?php the_permalink()?>/submeter" class="btn btn-success ml-3">Enviar ideia</a>
-                        <a href="<?php the_permalink()?>/perfil" class="btn btn-info ml-3">Editar meu perfil</a>
-                        <a href="<?php echo wp_logout_url(home_url()); ?>" class="btn btn-danger ml-3">Sair</a>
-                    </div>
-
+                    <?php wp_redirect( home_url().'/painel' ); exit; ?>
                 <?php else: ?>
                     <div class="col-md-12 d-flex justify-content-center mb-3">
                         <div class="card col-md-6 p-5">

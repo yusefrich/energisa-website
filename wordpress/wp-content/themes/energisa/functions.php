@@ -130,7 +130,8 @@ function app_scripts()
     wp_enqueue_script('app', $js_folder . '/app.js', null, $versao, true);
 
     $wpVars = [
-        'ajaxurl' => admin_url('admin-ajax.php')
+        'ajaxurl' => admin_url('admin-ajax.php'),
+        'template_url' => get_template_directory_uri()
     ];
 
     wp_localize_script('app', 'wp', $wpVars);
@@ -141,3 +142,7 @@ function app_scripts()
 add_action("wp_enqueue_scripts", "app_scripts");
 
 
+/**
+ * Load Custom Comments Layout file.
+ */
+require get_template_directory() . '/inc/comments-helper.php';

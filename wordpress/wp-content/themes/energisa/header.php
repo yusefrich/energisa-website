@@ -83,6 +83,12 @@
                 <li class="menu-item <?php echo $pagina == 'ideias' ? 'current-menu-item' : ''; ?>">
                     <a href="<?php bloginfo('url'); ?>/ideias">Ideias</a>
                 </li>
+                <?php
+                if (is_user_logged_in()):?>
+                    <li class="menu-item">
+                        <a href="<?php bloginfo('url'); ?>/painel">Meu painel</a>
+                    </li>
+                <?php endif; ?>
             </ul>
 
             <form class="form-inline my-2 my-lg-0" action="<?php bloginfo('url'); ?>">

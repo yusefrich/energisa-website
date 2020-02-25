@@ -3,7 +3,7 @@
 Plugin Name: Profile Builder
 Plugin URI: https://www.cozmoslabs.com/wordpress-profile-builder/
 Description: Login, registration and edit profile shortcodes for the front-end. Also you can choose what fields should be displayed or add new (custom) ones both in the front-end and in the dashboard.
-Version: 3.1.1
+Version: 3.1.2
 Author: Cozmoslabs
 Author URI: https://www.cozmoslabs.com/
 Text Domain: profile-builder
@@ -63,7 +63,7 @@ function wppb_free_plugin_init() {
          *
          *
          */
-        define('PROFILE_BUILDER_VERSION', '3.1.1' );
+        define('PROFILE_BUILDER_VERSION', '3.1.2' );
         define('WPPB_PLUGIN_DIR', plugin_dir_path(__FILE__));
         define('WPPB_PLUGIN_URL', plugin_dir_url(__FILE__));
         define('WPPB_PLUGIN_BASENAME', plugin_basename(__FILE__));
@@ -122,7 +122,7 @@ function wppb_free_plugin_init() {
             include_once(WPPB_PLUGIN_DIR . '/features/admin-approval/admin-approval.php');
             include_once(WPPB_PLUGIN_DIR . '/features/admin-approval/class-admin-approval.php');
         }
-        if (file_exists(WPPB_PLUGIN_DIR . '/features/conditional-fields/conditional-fields.php')) {
+        if ( wppb_conditional_fields_exists() ) {
             include_once(WPPB_PLUGIN_DIR . '/features/conditional-fields/conditional-fields.php');
         }
         include_once(WPPB_PLUGIN_DIR . '/features/login-widget/login-widget.php');

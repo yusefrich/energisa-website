@@ -52,6 +52,9 @@ class Profile_Builder_Form_Creator{
 
         if( ( !is_multisite() && current_user_can( 'edit_users' ) ) || ( is_multisite() && current_user_can( 'manage_network' ) ) )
             add_action( 'wppb_before_edit_profile_fields', array( 'Profile_Builder_Form_Creator', 'wppb_edit_profile_select_user_to_edit' ) );
+
+        //enqueue frontend scripts for forms
+        add_action( 'wp_footer', array( $this, 'wppb_frontend_scripts' ), 9999 );
 	}
 
     /**
@@ -406,7 +409,7 @@ class Profile_Builder_Form_Creator{
         $wppb_form_class .= $wppb_user_role_class;
 
         ?>
-        <form enctype="multipart/form-data" method="post" id="<?php echo apply_filters( 'wppb_form_id', $wppb_form_id, $this ); ?>" class="<?php echo apply_filters( 'wppb_form_class', $wppb_form_class, $this ); ?>" action="<?php echo esc_url( apply_filters( 'wppb_form_action', wppb_curpageurl()."#wppb_form_general_message" ) ); ?>">
+        <form enctype="multipart/form-data" method="post" id="<?php echo apply_filters( 'wppb_form_id', $wppb_form_id, $this ); ?>" class="<?php echo apply_filters( 'wppb_form_class', $wppb_form_class, $this ); ?>" action="<?php echo esc_url( apply_filters( 'wppb_form_action', wppb_curpageurl() ) ); ?>">
 			<?php
             do_action( 'wppb_form_args_before_output', $this->args );
 
@@ -433,6 +436,7 @@ class Profile_Builder_Form_Creator{
                 <?php do_action( 'wppb_form_after_submit_button', $this->args ); ?>
 				<input name="action" type="hidden" id="action" value="<?php echo $this->args['form_type']; ?>" />
 				<input name="form_name" type="hidden" id="form_name" value="<?php echo $this->args['form_name']; ?>" />
+				<input name="form_id" type="hidden" id="form_id" value="<?php echo $this->args['ID']; ?>" />
 				<?php
 				$wppb_module_settings = get_option( 'wppb_module_settings' );
 
@@ -460,6 +464,7 @@ class Profile_Builder_Form_Creator{
 	}
 
 	function wppb_output_form_fields( $global_request, $field_check_errors, $form_fields, $called_from = NULL ){
+		$wppb_generalSettings = get_option( 'wppb_general_settings' );
 		$output_fields = '';
 
 		if( !empty( $form_fields ) ){
@@ -475,8 +480,19 @@ class Profile_Builder_Form_Creator{
 
                 $css_class = apply_filters( 'wppb_field_css_class', 'wppb-form-field wppb-'. Wordpress_Creation_Kit_PB::wck_generate_slug( $field['field'] ) .$error_var, $field, $error_var );
 				$output_fields .= apply_filters( 'wppb_output_before_form_field', '<li class="'. $css_class .'" id="wppb-form-element-'. $field['id'] .'">', $field, $error_var, $this->args['role'] );
-				$output_fields .= apply_filters( 'wppb_output_form_field_'.Wordpress_Creation_Kit_PB::wck_generate_slug( $field['field'] ), '', $this->args['form_type'], $field, $this->wppb_get_desired_user_id(), $field_check_errors, $global_request, $this->args['role'], $this );
-				$output_fields .= apply_filters( 'wppb_output_specific_error_message', $specific_message );
+
+				$render_field = true;
+				if( wppb_conditional_fields_exists() && isset( $wppb_generalSettings['conditional_fields_ajax'] ) ){
+                    if($wppb_generalSettings['conditional_fields_ajax'] === 'yes' && isset($field['conditional-logic-enabled']) && $field['conditional-logic-enabled'] === 'yes') {
+                        $render_field = false;
+                    }
+                }
+
+				if( $render_field ){
+                    $output_fields .= apply_filters('wppb_output_form_field_' . Wordpress_Creation_Kit_PB::wck_generate_slug($field['field']), '', $this->args['form_type'], $field, $this->wppb_get_desired_user_id(), $field_check_errors, $global_request, $this->args['role'], $this);
+                    $output_fields .= apply_filters('wppb_output_specific_error_message', $specific_message);
+                }
+
 				$output_fields .= apply_filters( 'wppb_output_after_form_field', '</li>', $field, $this->args['ID'], $this->args['form_type'], $called_from );
 			}
 
@@ -502,7 +518,7 @@ class Profile_Builder_Form_Creator{
 
 	function wppb_test_required_form_values( $global_request ){
 		$output_field_errors = array();
-        $form_fields = apply_filters( 'wppb_form_fields', $this->args['form_fields'], array( 'global_request' => $global_request, 'context' => 'validate_frontend', 'global_request' => $global_request, 'form_type' => $this->args['form_type'], 'role' => $this->args['role'], 'user_id' => $this->wppb_get_desired_user_id()  ) );
+        $form_fields = apply_filters( 'wppb_form_fields', $this->args['form_fields'], array( 'global_request' => $global_request, 'context' => 'validate_frontend', 'form_type' => $this->args['form_type'], 'role' => $this->args['role'], 'user_id' => $this->wppb_get_desired_user_id()  ) );
 		if( !empty( $form_fields ) ){
 			foreach( $form_fields as $field ){
 				$error_for_field = apply_filters( 'wppb_check_form_field_'.Wordpress_Creation_Kit_PB::wck_generate_slug( $field['field'] ), '', $field, $global_request, $this->args['form_type'], $this->args['role'], $this->wppb_get_desired_user_id() );
@@ -708,6 +724,11 @@ class Profile_Builder_Form_Creator{
         else{
             echo '<p id="wppb-no-other-users-to-edit">'. apply_filters( 'wppb_no_users_to_edit_message', __( 'There are no other users to edit', 'profile-builder' ) ) .'</p>';
         }
+    }
+
+    function wppb_frontend_scripts(){
+        wp_enqueue_script( 'wppb_front_end_script', WPPB_PLUGIN_URL.'assets/js/script-front-end.js', array('jquery'), PROFILE_BUILDER_VERSION, true );
+        wp_print_scripts( 'wppb_front_end_script' );
     }
 
     /**

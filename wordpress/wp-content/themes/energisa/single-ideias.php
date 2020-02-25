@@ -21,7 +21,7 @@
                 $thumbnail = $foto['sizes']['thumbnail'];
                 $statusFiled = get_field('ideia_status');
                 $votos = get_field('ideia_votos');
-                $respostas =  get_comments_number();
+                $respostas = get_comments_number();
                 ?>
                 <div class="d-flex justify-content-start my-4">
                     <a href="<?php bloginfo('home'); ?>/ideias" class="btn  btn-round">
@@ -52,7 +52,7 @@
                         <p class="m-0">
                             <small>
                                 <span class="round-outline-text border-gray text-gray py-1 px-2 mx-1"><?php echo $votos > 1 ? $votos . ' Votos' : $votos . ' Voto'; ?></span>
-                                <span class="round-outline-text border-gray text-gray py-1 px-2 mx-1"><?php echo $respostas > 1 ? $respostas . ' Respostas' : $respostas .' Resposta';?></span>
+                                <span class="round-outline-text border-gray text-gray py-1 px-2 mx-1"><?php echo $respostas > 1 ? $respostas . ' Respostas' : $respostas . ' Resposta'; ?></span>
                             </small>
                         </p>
                         <!-- <img class="profile-pic float-left" height="48" src="./img/profile-1.jpg" alt=""> -->
@@ -60,7 +60,7 @@
                     <p class="m-0"><?php the_content(); ?></p> <!-- text-dark font-weight-normal mb-5 -->
 
                     <div class="d-flex justify-content-start">
-                        <a href="<?php bloginfo('home'); ?>/ideias" class="btn btn-outline-dark mr-2">Votar</a>
+                        <a href="#" class="btn btn-outline-dark mr-2">Votar</a>
                         <button class="btn btn-outline-dark mr-2">Comentar</button>
                     </div>
                 </div>

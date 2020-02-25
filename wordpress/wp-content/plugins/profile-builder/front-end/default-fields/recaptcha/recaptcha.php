@@ -399,6 +399,10 @@ add_filter('wppb_recover_password_sent_message1', 'wppb_recaptcha_recover_passwo
 
 /* Display reCAPTCHA html on PB Login form */
 function wppb_display_recaptcha_login_form($form_part, $args) {
+
+    if( !isset( $args['form_id'] ) || $args['form_id'] != 'wppb-loginform' )
+        return $form_part;
+        
     $field = wppb_get_recaptcha_field();
 
     if ( !empty($field) ) {
@@ -454,7 +458,7 @@ add_action( 'login_form', 'wppb_display_recaptcha_wp_login_form' );
 //Show reCAPTCHA error on Login form (both default and PB one)
 function wppb_recaptcha_login_wp_error_message($user){
     //make sure you're on a Login form (WP or PB)
-    if ( (isset($_POST['wp-submit'])) && (!is_wp_error($user)) ) {
+    if ( isset( $_POST['wp-submit'] ) && !is_wp_error($user) && !isset( $_POST['pms_login'] ) ) {
 
         $field = wppb_get_recaptcha_field();
         if ( !empty($field) ){

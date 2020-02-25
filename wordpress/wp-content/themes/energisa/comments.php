@@ -16,18 +16,16 @@ if ( post_password_required() ) { ?>
 
     <?php if ( have_comments() ) : ?>
 
-        <ol class="commentlist">
-            <?php wp_list_comments('avatar_size=64&type=comment'); ?>
-        </ol>
+        <ul class="comment-list comments">
+            <?php
+            wp_list_comments( array(
+                'style'      => 'ul',
+                'short_ping' => true,
+                'callback' => 'better_comments'
+            ) );
+            ?>
+        </ul>
 
-        <?php if ($wp_query->max_num_pages > 1) : ?>
-            <div class="pagination">
-                <ul>
-                    <li class="older"><?php previous_comments_link('Anteriores'); ?></li>
-                    <li class="newer"><?php next_comments_link('Novos'); ?></li>
-                </ul>
-            </div>
-        <?php endif; ?>
 
     <?php endif; ?>
 

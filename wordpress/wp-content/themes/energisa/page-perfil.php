@@ -1,11 +1,11 @@
-<?php get_header(); ?>
+<?php get_header(); /* Template Name: Perfil */ ?>
 <section id="product-banner">
     <div style="
-        background: linear-gradient(0deg, rgba(8, 155, 192, 0.7), rgba(8, 155, 192, 0.7)), url(<?php bloginfo('template_url'); ?>/img/novidades-header.png);
-        background-size: cover;
-        background-position: center;
-        background-blend-mode: multiply, normal;
-        " class="container-fluid   product-banner-holder px-0 ">
+            background: linear-gradient(0deg, rgba(8, 155, 192, 0.7), rgba(8, 155, 192, 0.7)), url(<?php bloginfo('template_url'); ?>/img/novidades-header.png);
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: multiply, normal;
+            " class="container-fluid   product-banner-holder px-0 ">
         <!-- text-white -->
         <div class="product-banner text-center text-white ">
             <h2 data-aos="fade-right">Editar Perfil</h2>
@@ -17,12 +17,19 @@
     <div class="container">
         <div class="row mt-5">
             <?php while (have_posts()) : the_post(); ?>
-                <div class="col-md-12 d-flex justify-content-center mb-3">
-                    <div class="card col-md-6 p-5">
-                        <?php the_content(); ?>
+                <?php
+                if (is_user_logged_in()):?>
+                    <?php include(TEMPLATEPATH . '/inc/painel.php'); ?>
+                    <div class="col-md-12 d-flex justify-content-center mb-3">
+                        <div class="card col-md-6 p-5">
+                            <?php the_content(); ?>
+                        </div>
                     </div>
-                </div>
-
+                <?php else: ?>
+                    <?php wp_redirect(home_url());
+                    exit; ?>
+                <?php endif;
+                ?>
             <?php endwhile; ?>
         </div>
 

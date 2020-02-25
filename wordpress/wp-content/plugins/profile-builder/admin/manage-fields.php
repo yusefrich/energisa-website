@@ -1164,7 +1164,7 @@ function wppb_check_field_on_edit_add( $message, $fields, $required_fields, $met
             $skip_check_for_fields = apply_filters ( 'wppb_skip_check_for_fields', $skip_check_for_fields );
 
 			if ( !in_array( trim( $posted_values['field'] ), $skip_check_for_fields ) ){
-				$unique_meta_name_list = array( 'first_name', 'last_name', 'nickname', 'description' );
+				$reserved_meta_name_list = wppb_get_reserved_meta_name_list( $all_fields, $posted_values );
 
                 //check to see if meta-name is empty
                 $skip_empty_check_for_fields = array( 'Heading', 'Select (User Role)', 'reCAPTCHA', 'HTML', 'GDPR Delete Button' );
@@ -1173,16 +1173,10 @@ function wppb_check_field_on_edit_add( $message, $fields, $required_fields, $met
                     $message .= __( "The meta-name cannot be empty\n", 'profile-builder' );
                 }
 
-				// Default contact methods were removed in WP 3.6. A filter dictates contact methods.
-				if ( apply_filters( 'wppb_remove_default_contact_methods', get_site_option( 'initial_db_version' ) < 23588 ) ){
-					$unique_meta_name_list[] = 'aim';
-					$unique_meta_name_list[] = 'yim';
-					$unique_meta_name_list[] = 'jabber';
-				}
 
 				// if the desired meta-name is one of the following, automatically give an error
-				if ( in_array( trim( $posted_values['meta-name'] ), apply_filters ( 'wppb_unique_meta_name_list', $unique_meta_name_list ) ) )
-					$message .= __( "That meta-name is already in use\n", 'profile-builder' );
+				if ( in_array( trim( $posted_values['meta-name'] ), $reserved_meta_name_list ) )
+					$message .= __( "That meta-name can't be used, please choose another\n", 'profile-builder' );
 
 				else{
 					$found_in_custom_fields = false;

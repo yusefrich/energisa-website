@@ -101,7 +101,7 @@ function wppb_login_form( $args = array() ) {
 		'echo' => true,
 		// Default 'redirect' value takes the user back to the request URI.
 		'redirect' => ( is_ssl() ? 'https://' : 'http://' ) . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'],
-		'form_id' => 'loginform',
+		'form_id' => 'wppb-loginform',
 		'label_username' => __( 'Username or Email Address' ),
 		'label_password' => __( 'Password' ),
 		'label_remember' => __( 'Remember Me' ),
@@ -437,13 +437,13 @@ function wppb_front_end_login( $atts ){
 	}else{
 		$user_ID = get_current_user_id();
 		$wppb_user = get_userdata( $user_ID );
-		
+
 		if( isset( $wppb_generalSettings['loginWith'] ) && ( $wppb_generalSettings['loginWith'] == 'email' ) )
 			$display_name = $wppb_user->user_email;
-		
+
 		elseif($wppb_user->display_name !== '')
 			$display_name = $wppb_user->user_login;
-		
+
 		else
 			$display_name = $wppb_user->display_name;
 
@@ -467,7 +467,7 @@ function wppb_front_end_login( $atts ){
 		$logged_in_message .= sprintf(__( 'You are currently logged in as %1$s. %2$s', 'profile-builder' ), $display_name, $logout_url );
 
         $logged_in_message .= '</p><!-- .wppb-alert-->';
-		
+
 		return apply_filters( 'wppb_login_message', $logged_in_message, $wppb_user->ID, $display_name );
 	}
 }

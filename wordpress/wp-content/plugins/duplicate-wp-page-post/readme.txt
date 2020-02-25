@@ -4,8 +4,8 @@ Tags: duplicate post, duplicate page, clone page, clone post, duplicate custom p
 Requires at least: 3.5
 Tested up to: 5.3.2
 Requires PHP: 5.2.4
-Stable tag: 2.5.6
-Version: 2.5.6
+Stable tag: 2.5.7
+Version: 2.5.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 

@@ -566,6 +566,8 @@
 <?php __("Enter the minimum characters the password should have. Leave empty for no minimum limit", "profile-builder"); ?>
 <?php __("Minimum Password Strength:", "profile-builder"); ?>
 <?php __("Disabled", "profile-builder"); ?>
+<?php __("Use ajax on conditional fields:", "profile-builder"); ?>
+<?php __("For large conditional forms select \"Yes\" for an improved page performance", "profile-builder"); ?>
 <?php __("Form Fields", "profile-builder"); ?>
 <?php __("Manage Form Fields", "profile-builder"); ?>
 <?php __("Choose one of the supported field types", "profile-builder"); ?>
@@ -1065,6 +1067,7 @@
 <?php __("The entered value for the Datepicker is not a valid date-format\n", "profile-builder"); ?>
 <?php __("You must enter a value for the date-format\n", "profile-builder"); ?>
 <?php __("The meta-name cannot be empty\n", "profile-builder"); ?>
+<?php __("That meta-name can't be used, please choose another\n", "profile-builder"); ?>
 <?php __("That meta-name is already in use\n", "profile-builder"); ?>
 <?php __("The meta-name can only contain lowercase letters, numbers, _ , - and no spaces.\n", "profile-builder"); ?>
 <?php __("The following option(s) did not coincide with the ones in the options list: %s\n", "profile-builder"); ?>

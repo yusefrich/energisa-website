@@ -110,6 +110,13 @@ if ( is_admin() ){
 		add_action( 'edit_user_profile_update', 'save_profile_extra_fields_in_admin', 10 );
 	}
 
+	/* we need to include the fields here for conditional fields when they run through ajax, the extra-fields were already included above for backend forms */
+    $wppb_generalSettings = get_option( 'wppb_general_settings' );
+	if( wp_doing_ajax() && wppb_conditional_fields_exists() && isset( $wppb_generalSettings['conditional_fields_ajax'] ) && $wppb_generalSettings['conditional_fields_ajax'] === 'yes' ) {
+        if (file_exists(WPPB_PLUGIN_DIR . '/front-end/default-fields/default-fields.php'))
+            require_once(WPPB_PLUGIN_DIR . '/front-end/default-fields/default-fields.php');
+    }
+
 }else if ( !is_admin() ){
 	// include the stylesheet
 	add_action( 'wp_print_styles', 'wppb_add_plugin_stylesheet' );		
@@ -892,7 +899,7 @@ function wppb_add_gmt_offset( $timestamp ) {
  * @param array $field Field description.
  * @return string $extra_attributes
  */
-function wppb_add_html_tag_required_to_fields( $extra_attributes, $field, $form_location ) {
+function wppb_add_html_tag_required_to_fields( $extra_attributes, $field, $form_location = '' ) {
 	if ( $field['field'] != "Checkbox" && isset( $field['required'] ) && $field['required'] == 'Yes' ){
 		if( !( ( $field['field'] == "Default - Password" || $field['field'] == "Default - Repeat Password" ) && $form_location == 'edit_profile' ) )
 			$extra_attributes .= ' required ';
@@ -1394,4 +1401,15 @@ function wppb_get_admin_approval_option_value(){
         return 'yes';
     else
         return 'no';
+}
+
+/**
+ * Function that checks if conditional fields feature exists
+ * @return bool
+ */
+function wppb_conditional_fields_exists(){
+    if (file_exists(WPPB_PLUGIN_DIR . '/features/conditional-fields/conditional-fields.php'))
+        return true;
+    else
+        return false;
 }

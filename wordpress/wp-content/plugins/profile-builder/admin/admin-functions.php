@@ -314,3 +314,49 @@ function wppb_create_form_pages(){
 function wppb_prepare_wck_labels( $label ){
     return trim( str_replace( '%', '&#37;', $label ) );
 }
+
+/**
+ * Function that returns the reserved meta name list
+ */
+function wppb_get_reserved_meta_name_list( $all_fields, $posted_values ){
+
+    $unique_meta_name_list = array( 'first_name', 'last_name', 'nickname', 'description' );
+
+    // Default contact methods were removed in WP 3.6. A filter dictates contact methods.
+    if ( apply_filters( 'wppb_remove_default_contact_methods', get_site_option( 'initial_db_version' ) < 23588 ) ){
+        $unique_meta_name_list[] = 'aim';
+        $unique_meta_name_list[] = 'yim';
+        $unique_meta_name_list[] = 'jabber';
+    }
+
+    $add_reserved = true;
+
+    $reserved_meta_names = array( 'attachment', 'attachment_id', 'author', 'author_name', 'calendar', 'cat', 'category', 'category__and', 'category__in', 'category__not_in', 'category_name', 'comments_per_page',
+        'comments_popup', 'custom', 'customize_messenger_channel', 'customized', 'cpage', 'day', 'debug', 'embed', 'error', 'exact', 'feed', 'hour', 'link_category', 'm', 'minute', 'monthnum', 'more',
+        'name', 'nav_menu', 'nonce', 'nopaging', 'offset', 'order', 'orderby', 'p', 'page', 'page_id', 'paged', 'pagename', 'pb', 'perm', 'post', 'post__in', 'post__not_in', 'post_format', 'post_mime_type',
+        'post_status', 'post_tag', 'post_type', 'posts', 'posts_per_archive_page', 'posts_per_page', 'preview', 'robots', 's', 'search', 'second', 'sentence', 'showposts', 'static', 'status', 'subpost',
+        'subpost_id', 'tag', 'tag__and', 'tag__in', 'tag__not_in', 'tag_id', 'tag_slug__and', 'tag_slug__in', 'taxonomy', 'tb', 'term', 'terms', 'theme', 'title', 'type', 'w', 'withcomments', 'withoutcomments', 'year' );
+
+    $args = array(
+        'public'   => true,
+        '_builtin' => true
+    );
+    $post_types = get_post_types( $args, 'names', 'or' );
+    $taxonomies = get_taxonomies( $args, 'names', 'or' );
+
+
+    /*reserved meta names were added in PB 3.1.2 so to avoid the situation where someone updates an already existing field
+     with a reserved name and gets an error check if it is an update or new field */
+    if( !empty( $all_fields ) && !empty($posted_values['id'] ) && !empty($posted_values['meta-name']) ){
+        foreach( $all_fields as $field ){
+            if( $field['id'] === $posted_values['id'] && $field['meta-name'] === $posted_values['meta-name'] ){//it is an update
+                $add_reserved = false;
+            }
+        }
+    }
+
+    if( $add_reserved )
+        $unique_meta_name_list = array_merge( $unique_meta_name_list, $reserved_meta_names, $post_types, $taxonomies );
+
+    return apply_filters ( 'wppb_unique_meta_name_list', $unique_meta_name_list );
+}

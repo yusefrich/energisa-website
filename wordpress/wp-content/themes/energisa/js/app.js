@@ -524,7 +524,7 @@ jQuery(function ($) {
                     str += '</div>';
                     str += '<div class="modal-body pt-0">';
                     str += '<div class="text-center my-2 mx-5 px-5">';
-                    str += '<img src="./img/jigsaw.png" alt="">';
+                    str += '<img src="' + wp.template_url + '/img/jigsaw.png" alt="">';
                     str += '<p class="text-white text-modal-title font-weight-bold">Um pouco sobre o processo</p>';
                     str += '<p class="text-white font-weight-light">' + detalhes[indice].processo + '</p>';
                     str += '<div class="d-flex justify-content-end my-4 mr-5">';
