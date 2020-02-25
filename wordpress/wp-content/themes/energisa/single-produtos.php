@@ -299,14 +299,14 @@
                             <h2 data-aos="fade-up" class="display-h2 text-orange">Conheça nossos
                                 indicadores</h2>
                             <p data-aos="fade-up">Fique por dentro e acompanhe cada momento da nossa jornada</p>
-                            <div data-aos="flip-down" class="row">
+                            <div data-aos="flip-down" class="d-md-flex justify-content-center ml-5 ml-md-0 pl-3 pl-md-0"> <!-- row -->
                                 <?php $linhas = 0; ?>
                                 <?php while (have_rows('prod_indicadores')): the_row();
                                     $texto = get_sub_field('prod_indicador_texto');
                                     $porcentagem = get_sub_field('prod_indicador_valor');
                                     $linhas++;
                                     ?>
-                                    <div class="col-md-4">
+                                    <div style="max-width: 250px;" class="position-relative">
                                         <div style="transform: scaleX(-1); stroke-linecap: round;" id="progress-<?php echo $linhas; ?>"></div>
                                         <div class="graph-detail-holder">
 

@@ -125,12 +125,15 @@
             <!-- Verifica se existe o layout Status do Projeto-->
             <?php if (get_row_layout() == 'projet_layout_status'): ?>
                 <section id="progresso-geral-projeto">
-                    <div data-aos="fade-left" class="d-flex justify-content-center progresso-texto-projeto mt-2">
-                        <p class="text-caption text-white mt-4 mr-3">Status do projeto</p>
-                        <h2 class="display-h2 font-weight-bold text-white"><?php the_sub_field('projet_status'); ?>
+                    <div data-aos="fade-left">
+
+                        <div  class="d-flex justify-content-center progresso-texto-projeto mt-2">
+                            <p class="text-caption text-white mt-4 mr-3">Status do projeto</p>
+                            <h2 class="display-h2 font-weight-bold text-white"><?php the_sub_field('projet_status'); ?>
                             %</h2>
+                        </div>
+                        <div  style="width: <?php the_sub_field('projet_status'); ?>%;" class="progresso-atual-projeto"></div>
                     </div>
-                    <div data-aos="fade-right" style="width: <?php the_sub_field('projet_status'); ?>%;" class="progresso-atual-projeto"></div>
                 </section>
             <?php endif; ?>
 
@@ -150,8 +153,10 @@
                     </div>
                     <div class="container-fluid p-0">
                         <div data-aos="fade-left" class="timeline style-6" id="timeline-scroll">
+                        <h3 style="white-space: normal;" class="d-md-none mx-3 my-5 text-gray font-weight-bold">Principais marcos do projeto</h3>
+
                             <ol>
-                                <li class="timeline-spacing">
+                            <li class="d-none d-md-block timeline-spacing">
                                     <div>
 
                                         <h3 class="text-gray font-weight-bold">Principais marcos do projeto</h3>

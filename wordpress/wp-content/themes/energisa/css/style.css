@@ -390,7 +390,7 @@ section {
     overflow-x: hidden;
 } */
 .container {
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 .carousel-control-holder {
@@ -596,6 +596,7 @@ section {
 }
 
 #progresso-geral-projeto {
+  overflow: hidden !important;
   background: #089BC0;
 }
 

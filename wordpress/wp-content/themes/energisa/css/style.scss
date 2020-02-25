@@ -345,7 +345,7 @@ section {
     overflow-x: hidden;
 } */
 .container{
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 .carousel-control-holder{
     position: absolute;
@@ -519,6 +519,7 @@ section {
     top: 15px;
 }
 #progresso-geral-projeto{
+    overflow: hidden !important;
     background: #089BC0;
 }
 .progresso-atual-projeto{
