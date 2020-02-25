@@ -585,4 +585,55 @@ jQuery(function ($) {
     })
 
 
+    // ########################################### CARREGAR USUÁRIOS QUE MAIS COMETARAM ###############################################
+
+    function listUserComments(indice) {
+        $.ajax({
+            url: wp.ajaxurl,
+            type: 'GET',
+            data: {
+                action: 'listUserComments',
+            },
+            beforeSend: function () {
+
+            },
+            success: function (dados) {
+                let success = dados.success;
+                let total = dados.data.total
+                let item = dados.data.itens
+                var str = '';
+
+                console.log(item[indice]);
+                if (success) {
+                    str += '<div class="d-flex justify-content-start py-2">';
+                    str += '<div class="profile-pic pr-5 mr-1" style="background-image: url(' + item[indice].foto + ');background-size: cover;background-position: center;"></div>';
+                    str += '<div><p class="card-user-name m-0">' + item[indice].nome + '</p></div>';
+                    str += '</div>';
+                    str += '<hr>';
+
+                    $("#loadUserComments").append(str);
+
+
+                    if (total == (indice +1)) {
+                        $("#BtnLoadUserComments").hide();
+                    }
+                }
+            },
+            error: function (erro) {
+                console.log("ooopss... algo deu errado na requisição")
+            },
+        })
+    }
+
+    listUserComments(0)
+
+    // Carrega mais Tags
+    $("#BtnLoadUserComments").on('click', function (event) {
+        event.preventDefault();
+        indice = $(this).data("indice");
+        listUserComments(indice + 1)
+        $(this).data('indice', indice + 1);
+    })
+
+
 })

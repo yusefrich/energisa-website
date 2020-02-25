@@ -122,7 +122,7 @@
                                     </div>
                                     <?php
                                 }
-                                $contador += 1;
+                                $contador ++;
                                 ?>
 
                                 <?php $count++; ?>
@@ -142,6 +142,7 @@
 
         </div>
     </section>
+
 
     <!-- Modal -->
     <div class="modal fade" id="equipeModal" tabindex="-1" role="dialog" aria-labelledby="equipeModalLabel"

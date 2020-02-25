@@ -52,21 +52,11 @@
         </button>
 
     </div>
+
     <div class="card-outline mt-4 mb-4 p-4">
         <p class="text-caption font-weight-bold">Quem mais participa</p>
-        <div class="d-flex justify-content-start py-2">
-            <div class="profile-pic pr-5 mr-1" style="
-                    background-image: url(<?php bloginfo('template_url'); ?>/img/profile-1.jpg);
-                    background-size: cover;
-                    background-position: center;
-                    "></div>
-            <div>
-                <p class="card-user-name m-0">Francisco José Vieira Martins</p>
-
-            </div>
-        </div>
-        <hr>
-        <button class="btn btn-sm px-5 text-gray"><strong> Mostrar mais</strong></button>
-
+        <div id="loadUserComments"></div>
+        <button class="btn btn-sm px-5 text-gray" data-indice="0" id="BtnLoadUserComments"><strong> Mostrar mais</strong></button>
     </div>
+
 </div>

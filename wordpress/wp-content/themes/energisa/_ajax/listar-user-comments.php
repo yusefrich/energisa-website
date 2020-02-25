@@ -4,6 +4,7 @@ function listUserComments()
     $args = array(
         'status' => 'approve',
         'orderby' => 'comment_author',
+        'number' => 10
 
     );
     $comments = get_comments($args);
@@ -17,7 +18,7 @@ function listUserComments()
             'usuario_email' => $comment->comment_author_email,
             'nome' => $user->user_firstname . " " . $user->user_lastname,
             'foto' => $foto,
-            'count' => array_count_values(array_column($comments, 'user_id'))[$comment->user_id]
+            'total_comentarios' => array_count_values(array_column($comments, 'user_id'))[$comment->user_id]
         ];
 
         array_push($itens, $item);
@@ -42,7 +43,7 @@ function listUserComments()
 // Função para ordenar pela quantidade de comentários
     function cmp($a, $b)
     {
-        return $a['count'] < $b['count'];
+        return $a['total_comentarios'] < $b['total_comentarios'];
     }
 
     $details = unique_multidim_array($itens, 'usuario_email');
