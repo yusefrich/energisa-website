@@ -52,7 +52,7 @@ $base-font-size: (null: em(18));
 $p-font-size: (null: em(20),  $xl: em(18));
 $caption-font-size: (null: em(24), $xl: em(20));
 $large-caption-font-size: (null: em(28));
-$h1-font-size: (null: em(72));
+$h1-font-size: (null: em(72), $xl: em(70), $lg: em(60), $md: em(50), $sm: em(40));
 $h2-font-size: (null: em(54),  $xl: em(50), $lg: em(49), $md: em(45), $sm: em(40), $xs: em(40));/* 58 */
 $modal-title-font-size: (null: em(64));
 $display-h2-font-size: (null: em(48));
@@ -289,7 +289,7 @@ section {
     margin-bottom: 100px;
 }
 .slider-title-sm{
-    width: 660px;
+    max-width: 660px;
     padding-left: 100px;
 }
 .carousel-info{
@@ -339,6 +339,12 @@ section {
 
 }
 #home-carrousel{
+    overflow-x: hidden;
+}
+/* html{
+    overflow-x: hidden;
+} */
+.container{
     overflow-x: hidden;
 }
 .carousel-control-holder{
@@ -495,7 +501,7 @@ section {
 }
 
 .ultimas-novidades-title{
-    width: 830px;
+    max-width: 830px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -1545,5 +1551,12 @@ a:hover{
     margin-right: auto;
     /* padding-right: 15px;
     padding-left: 15px; */
-
+}
+@media (max-width: 768px) {
+    .slider-title-sm{
+        padding-left: 0;
+    }
+    .card-slider > div:first-of-type{
+        margin-left: 15px;
+    }
 }

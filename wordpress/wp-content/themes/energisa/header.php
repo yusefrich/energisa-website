@@ -37,7 +37,7 @@
             <img class="brand-light d-none" src="<?php bloginfo('template_url'); ?>/img/logo-light.png" width="170" alt="">
         </a>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        <button style="border: none; box-shadow: none;" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>

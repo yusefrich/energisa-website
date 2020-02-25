@@ -57,9 +57,7 @@
 
         <div class="d-flex justify-content-end py-5">
             <div class="horizontal-orange-line"></div>
-            <img src="<?php bloginfo('template_url'); ?>/img/nossa-equipe.png" alt="">
-
-
+            <img class="img-fluid" src="<?php bloginfo('template_url'); ?>/img/nossa-equipe.png" alt="">
         </div>
         <div class="d-flex justify-content-end">
 

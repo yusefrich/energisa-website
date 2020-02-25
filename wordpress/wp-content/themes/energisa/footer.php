@@ -54,40 +54,52 @@
 <!-- navbar top opacity -->
 <script>
     $(document).ready(function () {
+        if ($(window).width() >= 1000){
+            var setNavbarOpacity = function () {
+                var o1 = $("#menu").offset();
+                var o2 = $("body").offset();
+                var dx = o1.left - o2.left;
+                var dy = o1.top - o2.top;
+                var distance = Math.sqrt(dx * dx + dy * dy);
 
-        var setNavbarOpacity = function () {
-            var o1 = $("#menu").offset();
-            var o2 = $("body").offset();
-            var dx = o1.left - o2.left;
-            var dy = o1.top - o2.top;
-            var distance = Math.sqrt(dx * dx + dy * dy);
+                if (distance > 200) {
+                    jQuery(".menu-bg").removeClass("hide");
+                    jQuery(".brand-light").removeClass("d-none");
+                    jQuery(".brand-dark").addClass("d-none");
 
-            if (distance > 200) {
-                jQuery(".menu-bg").removeClass("hide");
-                jQuery(".brand-light").removeClass("d-none");
-                jQuery(".brand-dark").addClass("d-none");
+                    jQuery(".navbar").addClass("navbar-light");
+                    jQuery(".navbar").removeClass("navbar-dark");
 
-                jQuery(".navbar").addClass("navbar-light");
-                jQuery(".navbar").removeClass("navbar-dark");
+                    jQuery(".search-toggle").removeClass("text-white");
+                } else {
+                    jQuery(".menu-bg").addClass("hide");
+                    jQuery(".brand-light").addClass("d-none");
+                    jQuery(".brand-dark").removeClass("d-none");
 
-                jQuery(".search-toggle").removeClass("text-white");
-            } else {
-                jQuery(".menu-bg").addClass("hide");
-                jQuery(".brand-light").addClass("d-none");
-                jQuery(".brand-dark").removeClass("d-none");
+                    jQuery(".navbar").removeClass("navbar-light");
+                    jQuery(".navbar").addClass("navbar-dark");
 
-                jQuery(".navbar").removeClass("navbar-light");
-                jQuery(".navbar").addClass("navbar-dark");
-
-                jQuery(".search-toggle").addClass("text-white");
+                    jQuery(".search-toggle").addClass("text-white");
+                }
             }
+
+            setNavbarOpacity();
+
+            $(window).scroll(function () {
+                setNavbarOpacity();
+            });
+        }else {
+            jQuery(".menu-bg").removeClass("hide");
+            jQuery(".brand-light").removeClass("d-none");
+            jQuery(".brand-dark").addClass("d-none");
+
+            jQuery(".navbar").addClass("navbar-light");
+            jQuery(".navbar").removeClass("navbar-dark");
+
+            jQuery(".search-toggle").removeClass("text-white");
+
         }
 
-        setNavbarOpacity();
-
-        $(window).scroll(function () {
-            setNavbarOpacity();
-        });
 
     });
 </script>
@@ -98,6 +110,9 @@
 <!-- parallax -->
 <script>
     $(document).ready(function () {
+        /* if ($(window).width() < 1000){
+            return;
+        }  */
         var scene = document.getElementById('parallax-detalhe-1');
         var parallaxInstance;
         if(scene){

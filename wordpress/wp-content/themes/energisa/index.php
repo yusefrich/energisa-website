@@ -311,16 +311,18 @@ if ($produtos->have_posts()) :
     <section id="home-produtos">
         <div class="container-fluid p-0">
             <div id="carrouselProdutos" class="carousel slide" data-ride="carousel"> <!-- carousel-fade -->
-
-                <div class="carousel-side-indicators-holder">
-                    <ol class="carousel-indicators">
-                        <?php
-                        for ($i = 0; $i < $count; $i++) { ?>
-                            <li class="<?php if ($i == 0) echo "active"; ?> mx-3" data-target="#carrouselProdutos" data-slide-to="<?php echo $i; ?>"></li>
-                        <?php }
-                        ?>
-                    </ol>
+                <div class="d-none d-md-block">
+                    <div class=" carousel-side-indicators-holder ">
+                        <ol class="carousel-indicators"><!-- d-none d-md-block -->
+                            <?php
+                            for ($i = 0; $i < $count; $i++) { ?>
+                                <li class="<?php if ($i == 0) echo "active"; ?> mx-3" data-target="#carrouselProdutos" data-slide-to="<?php echo $i; ?>"></li>
+                            <?php }
+                            ?>
+                        </ol>
+                    </div>
                 </div>
+
                 <div class="carousel-inner ">
                     <?php
                     while ($produtos->have_posts()): $produtos->the_post();
