@@ -38,7 +38,8 @@ function listarIdeias()
         while ($posts->have_posts()) {
             $posts->the_post();
 
-            $foto = get_field('autor_foto', 'user_' . get_the_author_id());
+            //$foto = get_field('autor_foto', 'user_' . get_the_author_id());
+            $foto = get_avatar_url(get_the_author_id(), array("size" => 150));
             $user = get_the_author_firstname() . " " . get_the_author_lastname();
 
             $post_tags = get_the_tags(get_the_ID());
@@ -57,7 +58,8 @@ function listarIdeias()
                 'ID' => get_the_ID(),
                 'titulo' => get_the_title(),
                 'status' => esc_html($statusFiled['label']),
-                'foto' => $foto['sizes']['thumbnail'],
+                //'foto' => $foto['sizes']['thumbnail'],
+                'foto' => $foto,
                 'votos' => get_field('ideia_votos') == '' ? '0' : get_field('ideia_votos'),
                 'respostas' => get_comments_number(get_the_ID()),
                 'user' => $user,

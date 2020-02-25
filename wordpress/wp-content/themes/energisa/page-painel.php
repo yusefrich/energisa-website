@@ -29,7 +29,7 @@
                             'publish',
                             'draft'
                         ),
-                        'author' => get_the_author_id(),
+                        'author' => get_current_user_id()
                     );
 
                     $myIdeias = new WP_Query($args);
@@ -53,7 +53,7 @@
                                 $myIdeias->the_post();
                                 $status_field = get_field('ideia_status');
                                 $votos = get_field('ideia_votos');
-                                if($votos == ""){
+                                if ($votos == "") {
                                     $votos = 0;
                                 }
                                 $classbadges = "";

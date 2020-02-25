@@ -17,8 +17,9 @@
         <div class="container">
             <?php while (have_posts()) :
                 the_post();
-                $foto = get_field('autor_foto', 'user_' . get_the_author_id());
-                $thumbnail = $foto['sizes']['thumbnail'];
+                //$foto = get_field('autor_foto', 'user_' . get_the_author_id());
+                $foto = get_avatar_url(get_the_author_id(), array("size" => 150));
+               // $thumbnail = $foto['sizes']['thumbnail'];
                 $statusFiled = get_field('ideia_status');
                 $votos = get_field('ideia_votos');
                 $respostas = get_comments_number();
@@ -34,7 +35,7 @@
                     <div class="pb-4 text-start">
                         <div class="d-flex justify-content-start pb-4">
                             <div class="profile-pic mr-4 mt-2" style="
-                                    background-image: url(<?php echo $thumbnail; ?>);
+                                    background-image: url(<?php echo $foto; ?>);
                                     background-size: cover;
                                     background-position: center;
                                     "></div>
