@@ -1552,5 +1552,38 @@ a:hover {
     margin-left: 15px;
   }
 }
+#respond form fieldset label {
+  width: 100%;
+}
+
+#respond form fieldset input {
+  width: 100%;
+  border: 1px solid #9e9e9f;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: none;
+}
+
+#respond form fieldset .commentsubmit {
+  background: #EA6724;
+  border: 1px solid #EA6724;
+  color: #fff;
+  border-radius: 6px;
+}
+
+.likebtn_container span .likebtn-button .lb-a .likebtn-label {
+  border: 1px solid #343a40;
+  padding: 0.575rem 0.95rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  margin-right: 5px;
+  font-weight: 400;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.likebtn_container span .likebtn-button .lb-a .likebtn-icon {
+  display: none;
+}
 
 /*# sourceMappingURL=style.css.map */
