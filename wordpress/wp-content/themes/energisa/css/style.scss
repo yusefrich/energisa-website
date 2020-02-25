@@ -42,6 +42,17 @@ $xs: 480px;
         }
     }
 }
+@mixin line-height-map($line-height-map) {
+    @each $breakpoint, $line-height in $line-height-map {
+        @if $breakpoint == null {
+            line-height: $line-height;
+        } @else {
+            @include breakpoint($breakpoint) {
+                line-height: $line-height;
+            }
+        }
+    }
+}
 section{
     overflow: hidden;
 }
@@ -54,6 +65,8 @@ $caption-font-size: (null: em(24), $xl: em(20));
 $large-caption-font-size: (null: em(28));
 $h1-font-size: (null: em(72), $xl: em(70), $lg: em(60), $md: em(50), $sm: em(40));
 $h2-font-size: (null: em(54),  $xl: em(50), $lg: em(49), $md: em(45), $sm: em(40), $xs: em(40));/* 58 */
+$h2-line-height: (null: 79px,  $xl: 75px, $lg: 73px, $md: 65px, $sm: 60px, $xs: 60px);/* 58 */
+
 $modal-title-font-size: (null: em(64));
 $display-h2-font-size: (null: em(48));
 $h3-font-size: (null: em(32), $md: em(30));/* 36 */
@@ -107,7 +120,8 @@ h2{
     font-style: normal;
     font-weight: 800;
     @include font-size-map($h2-font-size);
-    line-height: 79px;
+    @include line-height-map($h2-line-height);
+    /* line-height: 79px; */
 
 }
 .display-h2{
@@ -1603,4 +1617,36 @@ a:hover{
 }
 .likebtn_container span .likebtn-button .lb-a .likebtn-icon{
     display: none;
+}
+#wppb-loginform .login-submit input{
+    background: #EA6724;
+    border: 1px solid #EA6724;
+
+    color: #fff;
+    border-radius: 6px;
+    padding: 5px 15px;
+    
+}
+.wpuf-label{
+    width: 100% !important;
+}
+.wpuf-fields{
+    width: 100% !important;
+    
+}
+.wpuf-fields input{
+    width: 100% !important;
+    border: 1px solid #9e9e9f;
+    padding: 5px;
+    border-radius: 5px;
+
+}
+.wpuf-submit-button{
+    background: #EA6724;
+    border: 1px solid #EA6724;
+
+    color: #fff;
+    border-radius: 6px;
+    padding: 5px 15px;
+
 }

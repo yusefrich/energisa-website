@@ -5,6 +5,7 @@ section {
 }
 
 /* 58 */
+/* 58 */
 /* 36 */
 .text-fade {
   font-family: Open Sans;
@@ -77,6 +78,7 @@ h2 {
   font-weight: 800;
   font-size: 3.375em;
   line-height: 79px;
+  /* line-height: 79px; */
 }
 @media (max-width: 1300px) {
   h2 {
@@ -101,6 +103,31 @@ h2 {
 @media (max-width: 480px) {
   h2 {
     font-size: 2.5em;
+  }
+}
+@media (max-width: 1300px) {
+  h2 {
+    line-height: 75px;
+  }
+}
+@media (max-width: 1170px) {
+  h2 {
+    line-height: 73px;
+  }
+}
+@media (max-width: 1024px) {
+  h2 {
+    line-height: 65px;
+  }
+}
+@media (max-width: 640px) {
+  h2 {
+    line-height: 60px;
+  }
+}
+@media (max-width: 480px) {
+  h2 {
+    line-height: 60px;
   }
 }
 
@@ -1597,6 +1624,37 @@ a:hover {
 
 .likebtn_container span .likebtn-button .lb-a .likebtn-icon {
   display: none;
+}
+
+#wppb-loginform .login-submit input {
+  background: #EA6724;
+  border: 1px solid #EA6724;
+  color: #fff;
+  border-radius: 6px;
+  padding: 5px 15px;
+}
+
+.wpuf-label {
+  width: 100% !important;
+}
+
+.wpuf-fields {
+  width: 100% !important;
+}
+
+.wpuf-fields input {
+  width: 100% !important;
+  border: 1px solid #9e9e9f;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.wpuf-submit-button {
+  background: #EA6724;
+  border: 1px solid #EA6724;
+  color: #fff;
+  border-radius: 6px;
+  padding: 5px 15px;
 }
 
 /*# sourceMappingURL=style.css.map */
