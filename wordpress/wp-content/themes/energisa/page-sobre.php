@@ -82,6 +82,7 @@
                             $contador = 0;
                             $abreTag = TRUE;
                             $count = 0;
+                            $numrows = count(get_field('sobre_equipe_repeat'));
                             ?>
                             <?php while (have_rows('sobre_equipe_repeat')): the_row();
                                 ?>
@@ -122,7 +123,7 @@
                                     </div>
                                     <?php
                                 }
-                                $contador ++;
+                                $contador++;
                                 ?>
 
                                 <?php $count++; ?>

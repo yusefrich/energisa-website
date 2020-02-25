@@ -599,11 +599,10 @@ jQuery(function ($) {
             },
             success: function (dados) {
                 let success = dados.success;
-                let total = dados.data.total
-                let item = dados.data.itens
+                let total = dados.data.total;
+                let item = dados.data.itens;
                 var str = '';
 
-                console.log(item[indice]);
                 if (success) {
                     str += '<div class="d-flex justify-content-start py-2">';
                     str += '<div class="profile-pic pr-5 mr-1" style="background-image: url(' + item[indice].foto + ');background-size: cover;background-position: center;"></div>';
