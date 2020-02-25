@@ -27,6 +27,9 @@
                     <div class="col-md-12 d-flex justify-content-center mb-3">
                         <div class="card col-md-6 p-5">
                             <?php the_content(); ?>
+                            <p class="text-center">Ainda não tem uma conta? <br>
+                                <a href="<?php the_permalink() ?>/register" title="Criar conta" class="btn btn-link">Criar Conta</a>
+                            </p>
                         </div>
                     </div>
                 <?php endif;

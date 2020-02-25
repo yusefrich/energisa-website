@@ -19,10 +19,24 @@
             <?php while (have_posts()) : the_post(); ?>
                 <?php
                 if (is_user_logged_in()):?>
+                
+                <?php $foto = get_avatar_url(get_current_user_id(), array("size" => 150));?>
+
                     <?php include(TEMPLATEPATH . '/inc/painel.php'); ?>
-                    <div class="col-md-12 d-flex justify-content-center mb-3">
-                        <div class="card col-md-6 p-5">
+                    <div class="col-md-8 d-flex justify-content-center mb-3">
+                        <div class="card col-md-12 p-5">
                             <?php the_content(); ?>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex justify-content-center mb-3">
+                        <div class="card col-md-12">
+                            <div class="pt-5 pl-5 pr-5 pb-0 text-center">
+                                <img src="<?php echo $foto; ?>" class="card-img-top rounded-circle" style="max-width: 150px;" alt="...">
+                            </div>
+
+                            <div class="card-body">
+                                <p class="card-text text-center" style="font-size: 16px;">Para alterar sua imagem de perfil, criei uma conta no site <a href="https://pt.gravatar.com/" title="https://pt.gravatar.com/" target="_blank" class="btn btn-link">pt.gravatar.com</a> usando o mesmo email e cadastre sua melhor foto</p>
+                            </div>
                         </div>
                     </div>
                 <?php else: ?>
