@@ -6,6 +6,7 @@
                 background-size: cover;
                 background-position: center;
                 background-blend-mode: multiply, normal;
+                padding-bottom: 70px;
                 " class="container-fluid   product-banner-holder px-0 ">
             <!-- text-white -->
             <div class="product-banner text-center text-white ">
@@ -13,12 +14,22 @@
             </div>
         </div>
     </section id="404-section">
-    <div class=" not-found-text">
-        <div class="text-center">
-            <a href="<?php bloginfo('url'); ?>" class="btn btn-primary mb-5" title="Voltar pra home">Voltar pra home</a>
+    <div class="container">
+        <div class=" not-found-text">
 
-            <h1 style="font-size: 150px" class="text-gray font-weight-light pb-5">404</h1>
-            <h3>Pagina não encontrada.</h3>
+            <div class="text-center">
+
+                <h1 style="font-size: 180px" class="text-orange font-weight-light pb-5">404</h1>
+                <h3>Pagina não encontrada.</h3>
+                <div class="d-flex justify-content-center my-2 pt-2">
+                    <a href="<?php bloginfo('url'); ?>" class="btn p-0">
+                        <p class="text-breadcrumb font-weight-bold mt-1"><i
+                                class="fas pr-3 pt-1 fa-chevron-left"></i>Retornar
+                            para <span class="text-orange">home</span></p>
+                    </a>
+                </div>
+
+            </div>
         </div>
     </div>
     <div class="pt-5" id="parallax-hand-1">
