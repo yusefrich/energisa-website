@@ -1572,6 +1572,13 @@ a:hover{
     border-radius: 5px;
     box-shadow: none;
 }
+#respond form fieldset textarea{
+    width: 100%;
+    border: 1px solid #9e9e9f;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: none;
+}
 #respond form fieldset .commentsubmit{
     background: #EA6724;
     border: 1px solid #EA6724;
