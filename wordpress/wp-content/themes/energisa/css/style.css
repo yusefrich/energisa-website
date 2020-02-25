@@ -1553,6 +1553,10 @@ a:hover {
     margin-left: 15px;
   }
 }
+#comments ul {
+  padding: 0 !important;
+}
+
 #respond form fieldset label {
   width: 100%;
 }
