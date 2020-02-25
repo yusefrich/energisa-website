@@ -113,9 +113,9 @@
                                     </a>
                                 </div>
 
-
+                                <?php $count++; ?>
                                 <?php
-                                if ($contador % 4 == 0 && !$abreTag) {
+                                if (($contador % 4 == 0 && !$abreTag) || ($numrows == $count)) {
                                     $abreTag = TRUE;
                                     $contador = -1;
                                     ?>
@@ -126,7 +126,7 @@
                                 $contador++;
                                 ?>
 
-                                <?php $count++; ?>
+                                
                             <?php endwhile; ?>
 
                         </div>
