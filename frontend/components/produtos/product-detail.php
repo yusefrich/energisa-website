@@ -557,22 +557,26 @@ if (document.getElementById("progress-pontos-2")) {
                 <div class="container-fluid">
                     <div id="design-produto-slider" class="carouselPrograms carousel slide" data-ride="carousel"
                         data-interval="false">
-                        <div class="carousel-inner row w-100 mx-auto" role="listbox">
-                            <div class="carousel-item col-md-4  active">
+                        <div class="carousel-inner design-produto-iner row w-100 mx-auto" role="listbox">
+                            <div style="
+                                
+                            " class="carousel-item  col-md-4 active"> <!-- col-md-3 -->
                                 <div class="panel panel-default">
                                     <div class="panel-thumbnail">
                                         <a href="#" title="image 1" class="thumb">
-                                            <img class="img-fluid mx-auto d-block"
+                                            <img class=" mx-auto d-block img-fit rounded"
                                                 src="//via.placeholder.com/600x400?text=1" alt="slide 1">
                                         </a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="carousel-item col-md-4 ">
+                            <div style="
+                                
+                            " class="carousel-item col-md-4 ">
                                 <div class="panel panel-default">
                                     <div class="panel-thumbnail">
                                         <a href="#" title="image 3" class="thumb">
-                                            <img class="img-fluid mx-auto d-block"
+                                            <img class=" mx-auto d-block img-fit rounded"
                                                 src="//via.placeholder.com/600x400?text=2" alt="slide 2">
                                         </a>
                                     </div>
@@ -582,7 +586,7 @@ if (document.getElementById("progress-pontos-2")) {
                                 <div class="panel panel-default">
                                     <div class="panel-thumbnail">
                                         <a href="#" title="image 4" class="thumb">
-                                            <img class="img-fluid mx-auto d-block"
+                                            <img class=" mx-auto d-block img-fit rounded"
                                                 src="//via.placeholder.com/600x400?text=3" alt="slide 3">
                                         </a>
                                     </div>
@@ -592,7 +596,7 @@ if (document.getElementById("progress-pontos-2")) {
                                 <div class="panel panel-default">
                                     <div class="panel-thumbnail">
                                         <a href="#" title="image 5" class="thumb">
-                                            <img class="img-fluid mx-auto d-block"
+                                            <img class=" mx-auto d-block img-fit rounded"
                                                 src="//via.placeholder.com/600x400?text=4" alt="slide 4">
                                         </a>
                                     </div>
@@ -602,7 +606,7 @@ if (document.getElementById("progress-pontos-2")) {
                                 <div class="panel panel-default">
                                     <div class="panel-thumbnail">
                                         <a href="#" title="image 6" class="thumb">
-                                            <img class="img-fluid mx-auto d-block"
+                                            <img class=" mx-auto d-block img-fit rounded"
                                                 src="//via.placeholder.com/600x400?text=5" alt="slide 5">
                                         </a>
                                     </div>
@@ -612,7 +616,7 @@ if (document.getElementById("progress-pontos-2")) {
                                 <div class="panel panel-default">
                                     <div class="panel-thumbnail">
                                         <a href="#" title="image 7" class="thumb">
-                                            <img class="img-fluid mx-auto d-block"
+                                            <img class=" mx-auto d-block img-fit rounded"
                                                 src="//via.placeholder.com/600x400?text=6" alt="slide 6">
                                         </a>
                                     </div>
@@ -622,17 +626,17 @@ if (document.getElementById("progress-pontos-2")) {
                                 <div class="panel panel-default">
                                     <div class="panel-thumbnail">
                                         <a href="#" title="image 8" class="thumb">
-                                            <img class="img-fluid mx-auto d-block"
+                                            <img class=" mx-auto d-block img-fit rounded"
                                                 src="//via.placeholder.com/600x400?text=7" alt="slide 7">
                                         </a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="carousel-item col-md-4  ">
+                            <div class="carousel-item  col-md-4 ">
                                 <div class="panel panel-default">
                                     <div class="panel-thumbnail">
                                         <a href="#" title="image 2" class="thumb">
-                                            <img class="img-fluid mx-auto d-block"
+                                            <img class=" mx-auto d-block img-fit rounded"
                                                 src="//via.placeholder.com/600x400?text=8" alt="slide 8">
                                         </a>
                                     </div>

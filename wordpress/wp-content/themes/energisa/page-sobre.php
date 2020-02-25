@@ -175,7 +175,7 @@
                     ?>
 
             <div data-post="<?php the_ID();?>"
-                class="card card-sm card-bg-small text-white mb-4 mr-4 card-link-div zoom-hover <?php echo $openInfo;?>"
+                class="card shadow-none card-sm card-bg-small text-white mb-4 mr-4 card-link-div zoom-hover <?php echo $openInfo;?>"
                 <?php echo $url; ?>>
                 <div class="img-holder-sm" style="
                                 height: 100%;

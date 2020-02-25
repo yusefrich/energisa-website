@@ -4,8 +4,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../wordpress/wp-content/themes/energisa/css/bootstrap.css">
+    <link rel="stylesheet" href="../wordpress/wp-content/themes/energisa/css/style.css">
     <link rel="stylesheet" href="icons/fontawesome/css/all.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i,800,800i&display=swap"
         rel="stylesheet">
