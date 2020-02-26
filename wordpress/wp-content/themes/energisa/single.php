@@ -61,13 +61,13 @@
             <div data-aos="flip-left" class="  mb-5 pb-5">
                 <div class="d-flex justify-content-start">
                     <button class="btn btn-outline-dark mr-2" id="btn-like" data-postid="<?php the_ID() ;?>" data-tipo="1">Gostei <span>(<?php echo $likes > 0 ? $likes : '0'; ?>)</span></button>
-                    <button class="btn btn-outline-dark mr-2">Comentar</button>
+                    <a href="#respond" class="btn btn-outline-dark mr-2">Comentar</a>
                 </div>
             </div>
 
             <?php comments_template(); ?>
 
-            <div class="d-flex justify-content-start my-4 pt-5">
+            <div style="margin-top: 100px !important" class="d-flex justify-content-start my-4 pt-5">
                 <a href="<?php bloginfo('home'); ?>/novidades" class="btn">
                     <p class="text-breadcrumb font-weight-bold mt-1"><i class="fas pr-3 pt-1 fa-chevron-left"></i>Retornar
                         para <span class="text-orange">Novidades</span></p>
