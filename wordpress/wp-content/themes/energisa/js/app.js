@@ -527,18 +527,18 @@ jQuery(function ($) {
                     str += '<img src="' + wp.template_url + '/img/jigsaw.png" alt="">';
                     str += '<p class="text-white text-modal-title font-weight-bold">Um pouco sobre o processo</p>';
                     str += '<p class="text-white font-weight-light">' + detalhes[indice].processo + '</p>';
-                    str += '<div class="d-flex justify-content-end my-4 mr-5">';
-                    str += '<a href="#design-produto-slider" role="button" data-slide="prev" class="btn btn-light btn-round">';
+                    str += '<div class="d-flex justify-content-end my-4 mr-5 pr-5">';
+                    str += '<a href="#design-produto-slider" role="button" data-slide="prev" class="btn btn-light btn-round mx-2">';
                     str += '<span class="icon pt-2 pb-2 pl-1 icon-prev-icon"></span>';
                     str += '</a>';
-                    str += '<a href="#design-produto-slider" role="button" data-slide="next" class="btn btn-light btn-round">';
+                    str += '<a href="#design-produto-slider" role="button" data-slide="next" class="btn btn-light btn-round mx-2">';
                     str += '<span class="icon pt-2 pb-2 pr-1 icon-next-icon"></span>';
                     str += '</a>';
                     str += '</div>';
                     str += '</div>';
                     str += '<div class="container-fluid">';
                     str += '<div id="design-produto-slider" class="carouselPrograms carousel slide" data-ride="carousel" data-interval="false">';
-                    str += '<div class="carousel-inner row w-100 mx-auto" role="listbox">';
+                    str += '<div class="carousel-inner design-produto-iner row w-100 mx-auto" role="listbox">';
 
                     for (var i = 0; i < images.length; i++) {
                         if (i == 0) {
@@ -549,7 +549,7 @@ jQuery(function ($) {
                         str += '<div class="panel panel-default">';
                         str += '<div class="panel-thumbnail">';
                         str += '<a href="#" title="image ' + i + '" class="thumb">';
-                        str += '<img class="img-fluid mx-auto d-block" src="' + images[i] + '" alt="slide ' + i + '">';
+                        str += '<img class="mx-auto d-block img-fit rounded" src="' + images[i] + '" alt="slide ' + i + '">';
                         str += '</a>';
                         str += '</div>';
                         str += '</div>';

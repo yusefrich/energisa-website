@@ -4,6 +4,10 @@ section {
   overflow: hidden;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* 58 */
 /* 58 */
 /* 36 */
@@ -1598,6 +1602,7 @@ a:hover {
 
 #respond form fieldset textarea {
   width: 100%;
+  height: 300px;
   border: 1px solid #9e9e9f;
   padding: 5px;
   border-radius: 5px;
@@ -1605,6 +1610,7 @@ a:hover {
 }
 
 #respond form fieldset .commentsubmit {
+  width: 220px !important;
   background: #EA6724;
   border: 1px solid #EA6724;
   color: #fff;
@@ -1612,14 +1618,19 @@ a:hover {
 }
 
 .likebtn_container span .likebtn-button .lb-a .likebtn-label {
-  border: 1px solid #343a40;
-  padding: 0.575rem 0.95rem;
   line-height: 1.5;
-  border-radius: 0.25rem;
   margin-right: 5px;
   font-weight: 400;
   font-size: 1rem;
   font-family: inherit;
+  margin-bottom: 5px;
+}
+
+.likebtn_container span .likebtn-button {
+  border: 1px solid #343a40;
+  padding: 0.275rem 0.95rem;
+  padding-bottom: 0.7rem;
+  border-radius: 0.25rem;
 }
 
 .likebtn_container span .likebtn-button .lb-a .likebtn-icon {

@@ -98,8 +98,8 @@
                         <div class="timeline style-6" id="timeline-scroll">
                             <h3 style="white-space: normal;" class="d-md-none mx-3 my-5 text-gray font-weight-bold">Principais marcos do projeto</h3>
                             <ol class="m-0">
-                                <li class="d-none d-md-block timeline-spacing">
-                                    <div style="width: 350px !important">
+                                <li class="timeline-spacing ">
+                                    <div class="d-none d-md-block" style="width: 350px !important">
 
                                         <h3 class="text-gray font-weight-bold">Principais marcos do projeto</h3>
                                     </div>

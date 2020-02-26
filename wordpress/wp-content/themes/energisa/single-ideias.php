@@ -62,7 +62,7 @@
 
                     <div class="d-flex justify-content-start">
                         <a href="#" class="btn btn-outline-dark mr-2">Votar</a>
-                        <button class="btn btn-outline-dark mr-2">Comentar</button>
+                        <a  href="#respond" class="btn btn-outline-dark mr-2">Comentar</a>
                     </div>
                 </div>
 

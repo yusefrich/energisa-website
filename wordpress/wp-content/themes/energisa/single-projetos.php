@@ -156,9 +156,8 @@
                         <h3 style="white-space: normal;" class="d-md-none mx-3 my-5 text-gray font-weight-bold">Principais marcos do projeto</h3>
 
                             <ol>
-                            <li class="d-none d-md-block timeline-spacing">
-                                    <div>
-
+                            <li class=" timeline-spacing">
+                                    <div class="d-none d-md-block">
                                         <h3 class="text-gray font-weight-bold">Principais marcos do projeto</h3>
                                     </div>
                                 </li>
