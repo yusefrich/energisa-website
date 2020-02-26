@@ -18,10 +18,10 @@
 
     <div class="container">
         <div id="parallax-detalhe-2">
-            <div data-depth="0.2" class="d-flex justify-content-between">
+            <div data-depth="0.2" class=" d-flex justify-content-between">
                 <div style="z-index: 1;" class="trace-detail-left ">
                 </div>
-                <div class="trace-detail-right trace-detail-offset-bottom">
+                <div class="d-none d-md-block trace-detail-right trace-detail-offset-bottom">
                     <img class="" src="<?php bloginfo('template_url'); ?>/img/detalhes-traco-azul.png" alt="">
                 </div>
             </div>
@@ -69,8 +69,8 @@
         <div class="container ">
 
             <div data-aos="fade-up" class="row blog py-5">
-                <div class="col-md-1 mt-4 pt-1">
-                    <a href="#blogCarousel" role="button" data-slide="prev" class="btn btn-primary btn-round mt-5"><span
+                <div class="col-md-1 mt-4 pt-1 d-none d-md-block ">
+                    <a href="#blogCarousel" role="button" data-slide="prev" class="btn btn-primary btn-round mt-5 "><span
                                 class="icon pt-2 pb-2 pl-1 icon-prev-icon"></span></a>
                 </div>
                 <div class="col-md-10">
@@ -98,7 +98,7 @@
                                 } ?>
 
 
-                                <div class="col-md-3 text-center">
+                                <div class="col-6 col-md-3 text-center">
                                     <a href="#" class="mdEquipe" data-indice="<?php echo $count; ?>">
                                         <div style=" background-image: url(<?php the_sub_field('sobre_equipe_foto'); ?>); max-width:100%;"
                                              class="team-img-holder m-auto">
@@ -135,7 +135,10 @@
                     <!--.Carousel-->
 
                 </div>
-                <div class="col-md-1  mt-4 pt-1">
+                <div class="col-md-1  mt-4 pt-1 text-center">
+                    <a href="#blogCarousel" role="button" data-slide="prev" class="d-md-none btn btn-primary btn-round mt-5"><span
+                                class="icon pt-2 pb-2 pl-1 icon-prev-icon"></span></a>
+
                     <a href="#blogCarousel" role="button" data-slide="next" class="btn btn-primary btn-round mt-5"><span
                                 class="icon pt-2 pb-2 pr-1 icon-next-icon"></span></a>
                 </div>

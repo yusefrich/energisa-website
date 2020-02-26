@@ -187,7 +187,7 @@
                                                     <small><?php echo esc_html($field['label']); ?></small>
                                                 </p>
                                                 <div class="p-0 timeline-progress-circle" id="como-estamos-graph-<?php echo $count; ?>"></div>
-                                                <p class="timeline-andamento mt-1" style="left: -48px; top: 12px; position: relative;">
+                                                <p class="timeline-andamento mt-1 timeline-andamento-projeto">
                                                     <small class="font-weight-bold "><?php the_sub_field('projet_desc_andamento'); ?>%
                                                     </small>
                                                 </p>
@@ -217,19 +217,22 @@
                             </ol>
 
                         </div>
-                                <div class="d-flex justify-content-center">
-                                    <p class="mt-3 text-gray">Navegue horizontalmente</p>
-                                    <!-- <button class="btn arrow arrow__prev disabled"><i class="fas fa-chevron-left"></i></button> -->
-                                    <!-- <div class="arrow arrow__prev disabled p-3"><i class="fas fa-chevron-left"></i></div> -->
-                                    <!-- <button class="btn arrow arrow__next"><i class="fas fa-chevron-right"></i></button> -->
-                                    <!-- <div class=" arrow arrow__next p-3"><i class="fas fa-chevron-right"></i></div> -->
-                                    <button style="box-shadow: none;" class="btn"  id="left-arrow">
-                                        <span class="icon  icon-prev-icon"></span>
-                                    </button>
-                                    <button style="box-shadow: none;" class="btn"  id="right-arrow">
-                                        <span class="icon  icon-next-icon"></span>
-                                    </button>
-                                </div>
+                        <div class="d-none d-md-block">
+
+                            <div class="d-flex justify-content-center ">
+                                <p class="mt-3 text-gray">Navegue horizontalmente</p>
+                                <!-- <button class="btn arrow arrow__prev disabled"><i class="fas fa-chevron-left"></i></button> -->
+                                <!-- <div class="arrow arrow__prev disabled p-3"><i class="fas fa-chevron-left"></i></div> -->
+                                <!-- <button class="btn arrow arrow__next"><i class="fas fa-chevron-right"></i></button> -->
+                                <!-- <div class=" arrow arrow__next p-3"><i class="fas fa-chevron-right"></i></div> -->
+                                <button style="box-shadow: none;" class="btn"  id="left-arrow">
+                                    <span class="icon  icon-prev-icon"></span>
+                                </button>
+                                <button style="box-shadow: none;" class="btn"  id="right-arrow">
+                                    <span class="icon  icon-next-icon"></span>
+                                </button>
+                            </div>
+                        </div>
 
                     </div>
                     <div id="parallax-bush-1">

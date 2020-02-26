@@ -10,6 +10,7 @@ html {
 
 /* 58 */
 /* 58 */
+/* 58 */
 /* 36 */
 .text-fade {
   font-family: Open Sans;
@@ -148,6 +149,7 @@ h1 {
   font-weight: 800;
   font-size: 4.5em;
   line-height: 98px;
+  /* line-height: 98px; */
 }
 @media (max-width: 1300px) {
   h1 {
@@ -167,6 +169,31 @@ h1 {
 @media (max-width: 640px) {
   h1 {
     font-size: 2.5em;
+  }
+}
+@media (max-width: 1300px) {
+  h1 {
+    line-height: 95px;
+  }
+}
+@media (max-width: 1170px) {
+  h1 {
+    line-height: 90px;
+  }
+}
+@media (max-width: 1024px) {
+  h1 {
+    line-height: 75px;
+  }
+}
+@media (max-width: 640px) {
+  h1 {
+    line-height: 65px;
+  }
+}
+@media (max-width: 480px) {
+  h1 {
+    line-height: 65px;
   }
 }
 
@@ -357,8 +384,8 @@ section {
 }
 
 .carousel-info {
-  margin-left: 100px;
-  margin-right: 100px;
+  margin-left: 180px;
+  margin-right: 180px;
 }
 
 .custom-control-bottom {
@@ -1666,6 +1693,33 @@ a:hover {
   color: #fff;
   border-radius: 6px;
   padding: 5px 15px;
+}
+
+.timeline-andamento-projeto {
+  left: -48px;
+  top: 12px;
+  position: relative;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .carousel-info {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .overlay-lg {
+    padding: 30px 20px;
+  }
+
+  .overlay-sm {
+    padding: 30px 23px;
+  }
+
+  .timeline-andamento-projeto {
+    left: -73px;
+    top: 40px;
+    position: relative;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

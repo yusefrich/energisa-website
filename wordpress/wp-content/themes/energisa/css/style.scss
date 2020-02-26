@@ -67,6 +67,8 @@ $p-font-size: (null: em(20),  $xl: em(18));
 $caption-font-size: (null: em(24), $xl: em(20));
 $large-caption-font-size: (null: em(28));
 $h1-font-size: (null: em(72), $xl: em(70), $lg: em(60), $md: em(50), $sm: em(40));
+$h1-line-height: (null: 98px,  $xl: 95px, $lg: 90px, $md: 75px, $sm: 65px, $xs: 65px);/* 58 */
+
 $h2-font-size: (null: em(54),  $xl: em(50), $lg: em(49), $md: em(45), $sm: em(40), $xs: em(40));/* 58 */
 $h2-line-height: (null: 79px,  $xl: 75px, $lg: 73px, $md: 65px, $sm: 60px, $xs: 60px);/* 58 */
 
@@ -139,7 +141,9 @@ h1{
     font-style: normal;
     font-weight: 800;
     @include font-size-map($h1-font-size);
-    line-height: 98px;
+    @include line-height-map($h1-line-height);
+
+    /* line-height: 98px; */
 }
 .text-img{
     background: url(./img/ultimas-not-2.png) no-repeat;
@@ -310,8 +314,8 @@ section {
     padding-left: 100px;
 }
 .carousel-info{
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 180px;
+    margin-right: 180px;
 }
 .custom-control-bottom{
     bottom: 12%;
@@ -1662,3 +1666,32 @@ a:hover{
     padding: 5px 15px;
 
 }
+.timeline-andamento-projeto{
+    left: -48px;
+    top: 12px; 
+    position: relative;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+    //CSS
+    .carousel-info{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .overlay-lg{
+        padding: 30px 20px;
+    }
+    .overlay-sm{
+        padding: 30px 23px;
+    }
+    .timeline-andamento-projeto{
+        left: -73px;
+        top: 40px;
+        position: relative;
+    }
+
+}
+
+
+  
