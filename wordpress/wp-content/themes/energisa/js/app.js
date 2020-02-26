@@ -613,7 +613,7 @@ jQuery(function ($) {
                     $("#loadUserComments").append(str);
 
 
-                    if (total == (indice +1)) {
+                    if (total == (indice + 1)) {
                         $("#BtnLoadUserComments").hide();
                     }
                 }
@@ -634,5 +634,78 @@ jQuery(function ($) {
         $(this).data('indice', indice + 1);
     })
 
+
+    // ############################ AÇÃO DO BOTÃO DE VOTAR #################################
+
+    function votarPostAjax(id, tipo) {
+        $.ajax({
+            url: wp.ajaxurl,
+            type: 'GET',
+            data: {
+                action: 'votarPost',
+                postID: id,
+                tipo: tipo
+            },
+            beforeSend: function () {
+
+            },
+            success: function (dados) {
+                let success = dados.success;
+                let votos = dados.data;
+                if (success) {
+                    if (votos > 1) {
+                        $("#qtd-votos").html(votos + ' Votos');
+                    } else {
+                        $("#qtd-votos").html(votos + ' Voto');
+                    }
+                }
+            },
+            error: function (erro) {
+                console.log("ooopss... algo deu errado na requisição")
+            },
+        })
+    }
+
+
+    $("#btn-votar").on('click', function (event) {
+        event.preventDefault();
+        let postId = $(this).data("postid");
+        let tipo = $(this).data("tipo");
+     
+        let salvos = localStorage.getItem('likes');
+
+        if (!salvos) {
+            localStorage.setItem('likes', postId.toString())
+        } else {
+            salvos = salvos.split(',');
+
+            let item = $.inArray(postId.toString(), salvos);
+
+            // Verifica se existe o ID do post do array
+            if (item == -1) {
+                salvos.push(postId.toString())
+                localStorage.setItem('likes', salvos)
+            }
+        }
+
+        if (tipo == 1) {
+            votarPostAjax(postId, tipo)
+            $(this).removeClass('btn-outline-dark');
+            $(this).addClass('btn-success');
+            $(this).data('tipo', 0);
+
+        }
+    })
+
+    function visitantesVotos() {
+        let salvos = localStorage.getItem('likes');
+        if (salvos) {
+            salvos = salvos.split(',');
+            salvos.forEach(function (id) {
+                $('[data-postid=' + id + ']#btn-votar').removeClass('btn-outline-dark').addClass('btn-success').data('tipo', 0);
+            })
+        }
+    }
+    visitantesVotos();
 
 })

@@ -1,11 +1,11 @@
 <div class="col-md-3">
-    <p class="text-caption font-weight-bold">Filtre por produto</p>
+    <!--<p class="text-caption font-weight-bold">Filtre por produto</p>
     <select class="custom-select">
         <option selected>Todos</option>
         <option value="1">One</option>
         <option value="2">Two</option>
         <option value="3">Three</option>
-    </select>
+    </select>-->
     <div class="card-outline mt-4 p-4">
         <p class="text-caption font-weight-bold">Status</p>
 
