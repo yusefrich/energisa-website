@@ -110,6 +110,7 @@ include('_ajax/lista-tags.php');
 include('_ajax/listar-designer-produto.php');
 include('_ajax/listar-user-comments.php');
 include('_ajax/votar-post.php');
+include('_ajax/like-post.php');
 
 function app_scripts()
 {

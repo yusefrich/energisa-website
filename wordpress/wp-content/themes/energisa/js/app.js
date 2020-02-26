@@ -671,7 +671,7 @@ jQuery(function ($) {
         event.preventDefault();
         let postId = $(this).data("postid");
         let tipo = $(this).data("tipo");
-     
+
         let salvos = localStorage.getItem('likes');
 
         if (!salvos) {
@@ -706,6 +706,83 @@ jQuery(function ($) {
             })
         }
     }
+
     visitantesVotos();
+
+
+    // ############################ AÇÃO DO BOTÃO DE CURTIR POST #################################
+
+
+    function likePostAjax(id, tipo) {
+        $.ajax({
+            url: wp.ajaxurl,
+            type: 'GET',
+            data: {
+                action: 'likePost',
+                postID: id,
+                tipo: tipo
+            },
+            beforeSend: function () {
+
+            },
+            success: function (dados) {
+                let success = dados.success;
+                let likes = dados.data;
+                if (success) {
+                    console.log(likes);
+                    $("#btn-like span").html(`(${likes})`);
+                    if (tipo == 1) {
+                        $("#btn-like").data('tipo', 2);
+                        $("#btn-like").removeClass('btn-outline-dark').addClass('btn-success');
+                    } else {
+                        $("#btn-like").removeClass('btn-success').addClass('btn-outline-dark');
+                        $("#btn-like").data('tipo', 1);
+                    }
+
+                }
+            },
+            error: function (erro) {
+                console.log("ooopss... algo deu errado na requisição")
+            },
+        })
+    }
+
+    $("#btn-like").on('click', function (event) {
+        event.preventDefault();
+        let postId = $(this).data("postid");
+        let tipo = $(this).data("tipo");
+        likePostAjax(postId, tipo)
+
+        let salvos = localStorage.getItem('post_likes');
+
+        if (!salvos) {
+            localStorage.setItem('post_likes', postId.toString())
+        } else {
+            salvos = salvos.split(',');
+
+            let item = $.inArray(postId.toString(), salvos);
+
+            // Verifica se existe o ID do post do array
+            if (item == -1) {
+                salvos.push(postId.toString())
+            } else {
+                salvos.splice(item, 1)
+            }
+            localStorage.setItem('post_likes', salvos)
+        }
+    })
+
+    function visitantesLikes() {
+        let salvos = localStorage.getItem('post_likes');
+        if (salvos) {
+            salvos = salvos.split(',');
+            salvos.forEach(function (id) {
+                $('#btn-like').removeClass('btn-outline-dark').addClass('btn-success').data('tipo', 2);
+            })
+        }
+    }
+
+    visitantesLikes();
+
 
 })

@@ -14,7 +14,9 @@
 
 <section class="mb-5 pb-5" id="ideias-detail">
     <?php while (have_posts()) :
-        the_post(); ?>
+        the_post();
+        $likes = get_post_meta(get_the_ID(), 'post_likes', true);
+        ?>
         <div class="container-small mx-auto">
             <div class="d-flex justify-content-start my-4 pt-4">
                 <a href="<?php bloginfo('home'); ?>/novidades" class="btn p-0">
@@ -58,10 +60,12 @@
         <div class="container-small mx-auto">
             <div data-aos="flip-left" class="  mb-5 pb-5">
                 <div class="d-flex justify-content-start">
-                    <button class="btn btn-outline-dark mr-2">Gostei</button>
+                    <button class="btn btn-outline-dark mr-2" id="btn-like" data-postid="<?php the_ID() ;?>" data-tipo="1">Gostei <span>(<?php echo $likes > 0 ? $likes : '0'; ?>)</span></button>
                     <button class="btn btn-outline-dark mr-2">Comentar</button>
                 </div>
             </div>
+
+            <?php comments_template(); ?>
 
             <div class="d-flex justify-content-start my-4 pt-5">
                 <a href="<?php bloginfo('home'); ?>/novidades" class="btn">
