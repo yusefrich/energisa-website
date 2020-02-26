@@ -52,7 +52,7 @@
                         <h2 class="font-weight-extra-bold text-caption display-h2"><?php the_title(); ?></h2>
                         <p class="m-0">
                             <small>
-                                <span class="round-outline-text border-gray text-gray py-1 px-2 mx-1"><?php echo $votos > 1 ? $votos . ' Votos' : $votos . ' Voto'; ?></span>
+                                <span class="round-outline-text border-gray text-gray py-1 px-2 mx-1" id="qtd-votos"><?php echo $votos > 1 ? $votos . ' Votos' : $votos . ' Voto'; ?></span>
                                 <span class="round-outline-text border-gray text-gray py-1 px-2 mx-1"><?php echo $respostas > 1 ? $respostas . ' Respostas' : $respostas . ' Resposta'; ?></span>
                             </small>
                         </p>
@@ -61,7 +61,7 @@
                     <p class="m-0"><?php the_content(); ?></p> <!-- text-dark font-weight-normal mb-5 -->
 
                     <div class="d-flex justify-content-start">
-                        <a href="#" class="btn btn-outline-dark mr-2">Votar</a>
+                        <button class="btn btn-outline-dark mr-2" id="btn-votar" data-postid="<?php the_ID() ;?>" data-tipo="1">Votar</button>
                         <a  href="#respond" class="btn btn-outline-dark mr-2">Comentar</a>
                     </div>
                 </div>

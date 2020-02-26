@@ -19,7 +19,7 @@
             <?php while (have_posts()) : the_post(); ?>
                 <?php
                 if (is_user_logged_in()):?>
-                
+
                 <?php $foto = get_avatar_url(get_current_user_id(), array("size" => 150));?>
 
                     <?php include(TEMPLATEPATH . '/inc/painel.php'); ?>
@@ -35,7 +35,7 @@
                             </div>
 
                             <div class="card-body">
-                                <p class="card-text text-center" style="font-size: 16px;">Para alterar sua imagem de perfil, criei uma conta no site <a href="https://pt.gravatar.com/" title="https://pt.gravatar.com/" target="_blank" class="btn btn-link">pt.gravatar.com</a> usando o mesmo email e cadastre sua melhor foto</p>
+                                <p class="card-text text-center" style="font-size: 16px;">Para alterar sua imagem de perfil, criei uma conta no site <a href="https://pt.gravatar.com/" title="https://pt.gravatar.com/" target="_blank" class="btn btn-link">pt.gravatar.com</a> usando o mesmo email e cadastre sua melhor foto.</p>
                             </div>
                         </div>
                     </div>
