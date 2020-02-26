@@ -1701,6 +1701,11 @@ a:hover {
   position: relative;
 }
 
+#respond > * {
+  position: relative;
+  top: 83px;
+}
+
 @media (min-width: 320px) and (max-width: 480px) {
   .carousel-info {
     margin-left: 0px;

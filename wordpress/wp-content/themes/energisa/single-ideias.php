@@ -67,17 +67,16 @@
                 </div>
 
                 <?php comments_template(); ?>
-
-                <div class="d-flex justify-content-start my-4">
+                <div style="margin-top: 100px !important"  class="d-flex justify-content-start my-4"> <!--style="position: relative; top: 90px"  -->
                     <a href="<?php bloginfo('home'); ?>/ideias" class="btn  btn-round">
-
+                        
                         <p class="text-breadcrumb font-weight-bold mt-1"><i class="fas pr-3 pt-1 fa-chevron-left"></i>Retornar
-                            para <span class="text-orange">Ideias</span></p>
+                        para <span class="text-orange">Ideias</span></p>
                     </a>
-
+                    
                 </div>
-            <?php endwhile; ?>
-    </section>
 
+                <?php endwhile; ?>
+            </section>
 
 <?php get_footer(); ?>
