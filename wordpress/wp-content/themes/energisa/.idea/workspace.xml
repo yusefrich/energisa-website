@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0de7631c-04d5-43ce-8736-4b956fb59ba0" name="Default Changelist" comment="Integrado a linha do tempo da página interna de projetos">
       <change beforePath="$PROJECT_DIR$/../../../../frontend/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/functions.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/single.php" beforeDir="false" afterPath="$PROJECT_DIR$/single.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,7 +40,7 @@
         <entry file="file://$PROJECT_DIR$/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="705">
-              <caret line="779" column="101" selection-start-line="779" selection-start-column="101" selection-end-line="779" selection-end-column="101" />
+              <caret line="779" column="125" selection-start-line="779" selection-start-column="125" selection-end-line="779" selection-end-column="125" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="e#43#50#1" expanded="true" />
@@ -284,7 +281,7 @@
       <workItem from="1582556548877" duration="31793000" />
       <workItem from="1582602572488" duration="696000" />
       <workItem from="1582635125186" duration="22469000" />
-      <workItem from="1582714864781" duration="18513000" />
+      <workItem from="1582714864781" duration="19352000" />
     </task>
     <task id="LOCAL-00001" summary="Concluído o carregamento dinâmico para as páginas de novidades, produtos e projetos">
       <created>1582165204409</created>
@@ -297,7 +294,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="290390000" />
+    <option name="totallyTimeSpent" value="291229000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -663,7 +660,7 @@
     <entry file="file://$PROJECT_DIR$/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="705">
-          <caret line="779" column="101" selection-start-line="779" selection-start-column="101" selection-end-line="779" selection-end-column="101" />
+          <caret line="779" column="125" selection-start-line="779" selection-start-column="125" selection-end-line="779" selection-end-column="125" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="e#43#50#1" expanded="true" />

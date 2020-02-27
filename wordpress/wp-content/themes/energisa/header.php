@@ -85,9 +85,7 @@
                 </li>
                 <?php
                 if (is_user_logged_in()):?>
-                    <li class="menu-item">
-                        <a href="<?php bloginfo('url'); ?>/painel">Meu painel</a>
-                    </li>
+                  
                 <?php endif; ?>
             </ul>
 

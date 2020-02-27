@@ -777,7 +777,7 @@ jQuery(function ($) {
         if (salvos) {
             salvos = salvos.split(',');
             salvos.forEach(function (id) {
-                $('#btn-like').removeClass('btn-outline-dark').addClass('btn-success').data('tipo', 2);
+                $('[data-postid=' + id + ']#btn-like').removeClass('btn-outline-dark').addClass('btn-success').data('tipo', 2);
             })
         }
     }
