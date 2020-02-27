@@ -3,7 +3,7 @@
     <div class="container py-5">
         <div class="row">
             <div class="col-6 col-md-2">
-                <img class="" src="<?php bloginfo('template_url'); ?>/img/logo-dark.png" width="200" alt="">
+                <img class="" src="<?php bloginfo('template_url'); ?>/img/logo-dark.png" width="135" alt="">
 
             </div>
             <div class="col-12 col-md-8">

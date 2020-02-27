@@ -33,7 +33,7 @@
     <!-- <a class="navbar-brand" href="#">Navbar</a> -->
     <div class="container">
         <a class="navbar-brand p-0" href="<?php bloginfo('home'); ?>">
-            <img class="brand-dark d-none" src="<?php bloginfo('template_url'); ?>/img/logo-dark.png" width="170" alt="">
+            <img class="brand-dark d-none" src="<?php bloginfo('template_url'); ?>/img/logo-light-topo.png" width="170" alt="">
             <img class="brand-light d-none" src="<?php bloginfo('template_url'); ?>/img/logo-light.png" width="170" alt="">
         </a>
 
