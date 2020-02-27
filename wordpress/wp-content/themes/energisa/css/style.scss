@@ -24,7 +24,7 @@ $browser-context: 16;
 };
 
 // breakpoint variables
-$xl: 1300px;
+$xl: 1366px;
 $lg: 1170px;
 $md: 1024px;
 $sm: 640px;
@@ -69,12 +69,12 @@ $large-caption-font-size: (null: em(28));
 $h1-font-size: (null: em(72), $xl: em(70), $lg: em(60), $md: em(50), $sm: em(40));
 $h1-line-height: (null: 98px,  $xl: 95px, $lg: 90px, $md: 75px, $sm: 65px, $xs: 65px);/* 58 */
 
-$h2-font-size: (null: em(54),  $xl: em(50), $lg: em(49), $md: em(45), $sm: em(40), $xs: em(40));/* 58 */
+$h2-font-size: (null: em(54),  $xl: em(48), $lg: em(47), $md: em(45), $sm: em(40), $xs: em(40));/* 58 */
 $h2-line-height: (null: 79px,  $xl: 75px, $lg: 73px, $md: 65px, $sm: 60px, $xs: 60px);/* 58 */
 
 $modal-title-font-size: (null: em(64));
 $display-h2-font-size: (null: em(48));
-$h3-font-size: (null: em(32), $md: em(30));/* 36 */
+$h3-font-size: (null: em(32), $xl: em(29), $md: em(28));/* 36 */
 .text-fade{
     font-family: Open Sans;
     font-style: normal;
@@ -859,6 +859,19 @@ a:hover{
     line-height: 25px;
     display: block;
 }
+.banner-icon{
+    width: 100px;
+}
+@media  (max-width: 1366px) {
+    .banner-icon{
+        width: 80px;
+    }
+    .carousel-info {
+        margin-left: 150px;
+        margin-right: 150px;
+    }
+}
+
 @media  (max-width: 1200px) {
     .carousel-info {
         margin-left: 50px;
@@ -940,7 +953,7 @@ a:hover{
         width: 1500px;
     } 
     .custom-carousel-caption .slider-title{
-        margin-top: 150px;
+        margin-top: 10vh;
         margin-bottom: 100px;
     }
 
