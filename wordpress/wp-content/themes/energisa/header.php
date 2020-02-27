@@ -33,8 +33,8 @@
     <!-- <a class="navbar-brand" href="#">Navbar</a> -->
     <div class="container">
         <a class="navbar-brand p-0" href="<?php bloginfo('home'); ?>">
-            <img class="brand-dark d-none" src="<?php bloginfo('template_url'); ?>/img/logo-light-topo.png" width="170" alt="">
-            <img class="brand-light d-none" src="<?php bloginfo('template_url'); ?>/img/logo-light.png" width="170" alt="">
+            <img class="brand-dark d-none" src="<?php bloginfo('template_url'); ?>/img/logo-light-topo.png" width="140" alt="">
+            <img class="brand-light d-none" src="<?php bloginfo('template_url'); ?>/img/logo-light.png" width="140" alt="">
         </a>
 
         <button style="border: none; box-shadow: none;" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -94,7 +94,7 @@
                     <!-- * input de pesquisa colapsado para pesquisa aleatória na pagina inteira -->
                     <input style="box-shadow: none;" class="form-control mr-sm-2 search-input" type="search" placeholder="Buscar" aria-label="Buscar" value="" name="s">
                 </div>
-                <button style="box-shadow: none;" class="btn search-toggle my-2 my-sm-0" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                <button style="box-shadow: none;" class="btn search-toggle my-2 my-sm-0 py-1" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                     <ion-icon class="ion-2x" name="search"></ion-icon>
                 </button>
             </form>
