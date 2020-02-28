@@ -1712,4 +1712,10 @@ a:hover{
 }
 
 
-  
+.lb-tt.lb-share-tt{
+    display: none !important;
+
+    position: absolute;
+    top: -100vh;
+    bottom: 100vh !important;
+}

@@ -5,3 +5,7 @@ Theme Name: Energisa
 Description: Tema Coordenação de Canais Digitais da Energisa
 Author: Desconhecido
 */
+
+.lb-tt.lb-share-tt{
+    display: none !important;
+}
