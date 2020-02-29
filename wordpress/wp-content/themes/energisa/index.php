@@ -495,25 +495,4 @@ if ($produtos->have_posts()) :
             </div>
         </div>
     </section>
-<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/vendors/scrolloverflow.min.js"></script>
-<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/fullpage.js"></script>
-
-<script>
-    new fullpage('#fullpage', {
-    navigation: false,
-    responsiveWidth: 700,
-    parallax: true,
-    scrollOverflow: true,
-    slideSelector: "fullpage-slide",
-    onLeave: function(origin, destination, direction){
-        console.log("Leaving section" + origin.index);
-    },
-    afterLoad: function(){
-	    $('.fp-table.active .aos-init').addClass('aos-animate');
-    },
-
-});
-
-</script>
-
 <?php get_footer(); ?>

@@ -52,6 +52,26 @@
 <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 
+<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/vendors/scrolloverflow.min.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/fullpage.js"></script>
+
+<script>
+    new fullpage('#fullpage', {
+    navigation: false,
+    responsiveWidth: 700,
+    parallax: true,
+    scrollOverflow: true,
+    slideSelector: "fullpage-slide",
+    onLeave: function(origin, destination, direction){
+        console.log("Leaving section" + origin.index);
+    },
+    afterLoad: function(){
+	    $('.fp-table.active .aos-init').addClass('aos-animate');
+    },
+
+});
+
+</script>
 
 <!-- navbar top opacity -->
 <script>
