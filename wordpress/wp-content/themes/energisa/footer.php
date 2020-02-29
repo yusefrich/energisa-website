@@ -1,4 +1,5 @@
 
+
 <section class="pt-3" id="footer">
     <div class="container py-5">
         <div class="row">
@@ -37,6 +38,8 @@
         </a>
     </div>
 </section>
+</div>
+</div>
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -12,6 +12,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/build/bootstrap.css">
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/style.css">
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/fullpage.css">
 
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i,800,800i&display=swap"
@@ -23,11 +24,13 @@
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/icons/fontawesome/css/all.css">
 
+
     <title>Energisa</title>
     <?php wp_head(); ?>
 </head>
 
 <body>
+
 <nav class="navbar navbar-expand-lg navbar-light fixed-top " id="menu">
     <div class="bg-light menu-bg"></div>
     <!-- <a class="navbar-brand" href="#">Navbar</a> -->
@@ -101,3 +104,4 @@
         </div>
     </div>
 </nav>
+<div id="fullpage">

@@ -8,7 +8,7 @@ $slider = new WP_Query($args_slider);
 if ($slider->have_posts()) :
     $contador = 0;
     ?>
-    <section id="home-carrousel">
+    <section class="section" id="home-carrousel">
         <div class="container-fluid p-0">
             <div style="background: linear-gradient(0deg, rgba(55, 55, 55, 0.4), rgba(55, 55, 55, 0.4)), url(<?php bloginfo('template_url'); ?>/img/slider-1.png);
                     background-position: center;
@@ -77,7 +77,7 @@ if ($slider->have_posts()) :
 <?php endif; ?>
 
 
-    <section class="pt-1" id="home-novidades">
+    <section class="pt-1 section" id="home-novidades">
         <div class="container">
             <div id="parallax-detalhe-1">
                 <div data-depth="0.2" class="d-flex justify-content-between">
@@ -181,7 +181,7 @@ if ($slider->have_posts()) :
             </div>
         </div>
     </section>
-    <section id="home-projetos">
+    <section class="section" id="home-projetos">
         <div class="container mb-5 pb-5">
             <div id="parallax-detalhe-2">
                 <div data-depth="0.2" class="d-flex justify-content-between">
@@ -308,9 +308,9 @@ if ($produtos->have_posts()) :
     $contador = 0;
     $count = $produtos->found_posts;
     ?>
-    <section id="home-produtos">
-        <div class="container-fluid p-0">
-            <div id="carrouselProdutos" class="carousel slide" data-ride="carousel"> <!-- carousel-fade -->
+    <!-- <section class="" id="home-produtos">
+        <div class="container-fluid p-0"> -->
+            <div id="carrouselProdutos" class="carousel slide section" data-ride="carousel"> <!-- carousel-fade -->
                 <div class="d-none d-md-block">
                     <div class=" carousel-side-indicators-holder ">
                         <ol class="carousel-indicators"><!-- d-none d-md-block -->
@@ -329,10 +329,11 @@ if ($produtos->have_posts()) :
                         $capa_produtos = get_the_post_thumbnail_url(null, 'full');
                         $contador++
                         ?>
-                        <div class="carousel-item <?php if ($contador == 1) echo "active"; ?> carousel-long zoom-hover"
+                        <div class="carousel-item <?php if ($contador == 1) echo "active"; ?> carousel-long "
                              style="background: linear-gradient(0deg, rgba(8, 107, 192, 0.7), rgba(8, 107, 192, 0.7)), url(<?php echo esc_url($capa_produtos); ?>);
                                      background-position: center;
-                                     background-size: cover;">
+                                     background-size: cover;
+                                     height: 100vh;">
                             <div class="container custom-carousel-caption">
                                 <div class="slider-title slider-title-sm">
                                     <p class="text-uppercase">Alguns produtos</p>
@@ -358,11 +359,11 @@ if ($produtos->have_posts()) :
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        <!-- </div>
+    </section> -->
 <?php endif; ?>
 
-
+<div class="section">
     <section class="pb-0" id="home-ideias">
         <div class="container mt-4 mb-0">
             <div id="parallax-detalhe-4">
@@ -494,4 +495,25 @@ if ($produtos->have_posts()) :
             </div>
         </div>
     </section>
+<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/vendors/scrolloverflow.min.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/fullpage.js"></script>
+
+<script>
+    new fullpage('#fullpage', {
+    navigation: false,
+    responsiveWidth: 700,
+    parallax: true,
+    scrollOverflow: true,
+    slideSelector: "fullpage-slide",
+    onLeave: function(origin, destination, direction){
+        console.log("Leaving section" + origin.index);
+    },
+    afterLoad: function(){
+	    $('.fp-table.active .aos-init').addClass('aos-animate');
+    },
+
+});
+
+</script>
+
 <?php get_footer(); ?>

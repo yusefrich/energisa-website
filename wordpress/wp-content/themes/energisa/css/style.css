@@ -178,12 +178,12 @@ h1 {
 }
 @media (max-width: 1366px) {
   h1 {
-    line-height: 95px;
+    line-height: 85px;
   }
 }
 @media (max-width: 1170px) {
   h1 {
-    line-height: 90px;
+    line-height: 80px;
   }
 }
 @media (max-width: 1024px) {
@@ -384,7 +384,7 @@ section {
 }
 
 .slider-title-sm {
-  max-width: 660px;
+  max-width: 760px;
   padding-left: 100px;
 }
 

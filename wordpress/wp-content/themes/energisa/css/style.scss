@@ -67,7 +67,7 @@ $p-font-size: (null: em(20),  $xl: em(18));
 $caption-font-size: (null: em(24), $xl: em(20));
 $large-caption-font-size: (null: em(28));
 $h1-font-size: (null: em(72), $xl: em(70), $lg: em(60), $md: em(50), $sm: em(40));
-$h1-line-height: (null: 98px,  $xl: 95px, $lg: 90px, $md: 75px, $sm: 65px, $xs: 65px);/* 58 */
+$h1-line-height: (null: 98px,  $xl: 85px, $lg: 80px, $md: 75px, $sm: 65px, $xs: 65px);/* 58 */
 
 $h2-font-size: (null: em(54),  $xl: em(48), $lg: em(47), $md: em(45), $sm: em(40), $xs: em(40));/* 58 */
 $h2-line-height: (null: 79px,  $xl: 75px, $lg: 73px, $md: 65px, $sm: 60px, $xs: 60px);/* 58 */
@@ -310,7 +310,7 @@ section {
     margin-bottom: 100px;
 }
 .slider-title-sm{
-    max-width: 660px;
+    max-width: 760px;
     padding-left: 100px;
 }
 .carousel-info{
