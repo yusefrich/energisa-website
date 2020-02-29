@@ -38,8 +38,9 @@
         </a>
     </div>
 </section>
-</div>
-</div>
+
+</div> <!-- fecha a div da sessão do footer -->
+</div> <!-- fecha a div do fullpage -->
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -55,23 +56,25 @@
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/vendors/scrolloverflow.min.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/fullpage.js"></script>
 
-<script>
-    new fullpage('#fullpage', {
-    navigation: false,
-    responsiveWidth: 700,
-    parallax: true,
-    scrollOverflow: true,
-    slideSelector: "fullpage-slide",
-    onLeave: function(origin, destination, direction){
-        console.log("Leaving section" + origin.index);
-    },
-    afterLoad: function(){
-	    $('.fp-table.active .aos-init').addClass('aos-animate');
-    },
+<?php if (is_front_page())  : ?> <!-- is_singular( 'projetos' ) || is_singular( 'produtos' ) || -->
+    <script>
+        new fullpage('#fullpage', {
+        navigation: false,
+        responsiveWidth: 700,
+        parallax: true,
+        scrollOverflow: true,
+        slideSelector: "fullpage-slide",
+        onLeave: function(origin, destination, direction){
+            console.log("Leaving section" + origin.index);
+        },
+        afterLoad: function(){
+            $('.fp-table.active .aos-init').addClass('aos-animate');
+        },
 
-});
+    });
 
-</script>
+    </script>
+<?php endif; ?>
 
 <!-- navbar top opacity -->
 <script>

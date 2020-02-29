@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <?php while (have_posts()) : the_post(); ?>
     <?php $img_background = get_the_post_thumbnail_url(null, 'full'); ?>
-    <section id="product-banner">
+    <section class="" id="product-banner">
         <div style="
                 background: linear-gradient(0deg, rgba(8, 155, 192, 0.7), rgba(8, 155, 192, 0.7)), url(<?php echo esc_url($img_background); ?>);
                 background-size: cover;
@@ -39,7 +39,7 @@
                         break;
                 }
                 ?>
-                <section class="<?php echo $fundo_bg; ?>">
+                <section class=" <?php echo $fundo_bg; ?>">
                     <div class="container-fluid p-0">
                         <div class="row  py-5 mr-2">
                             <div class="col-md-6">
@@ -76,7 +76,7 @@
             <!-- Verifica se existe o layout Linha do Tempo-->
             <?php if (get_row_layout() == 'layout_linha_tempo'): ?>
 
-                <section id="product-timeline">
+                <section class="" id="product-timeline">
                     <div style="bottom: -57px;
                 position: relative;" data-aos="fade-up" class="container">
                         <div id="parallax-detalhe-1">
@@ -168,6 +168,7 @@
                     </div>
                 </section>
 
+            <?php endif; ?>
                 <script>
                     const slider = document.querySelector('.timeline');
                     let isDown = false;
@@ -197,7 +198,6 @@
                         console.log(walk);
                     });
                 </script>
-            <?php endif; ?>
 
             <!-- Verifica se existe o layout Carousel-->
             <?php if (get_row_layout() == 'layout_prod_carousel'): ?>
@@ -297,7 +297,7 @@
             <?php if (get_row_layout() == 'layout_prod_indicadores'): ?>
                 <!-- Verifica se tem algum valor cadastrado no campo repetidor-->
                 <?php if (have_rows('prod_indicadores')): ?>
-                    <section id="indicadores">
+                    <section class="" id="indicadores">
                         <div class="container text-center my-5">
                             <h2 data-aos="fade-up" class="display-h2 text-orange">Conheça nossos
                                 indicadores</h2>
@@ -340,7 +340,6 @@
                     </section>
                 <?php endif; ?>
             <?php endif; ?>
-
             <!-- Verifica se existe o layout Últimas Novidades-->
             <?php if (get_row_layout() == 'layout_prod_novidades'):
 
@@ -354,7 +353,7 @@
                 ));
 
                 if ($ultimas_novidades->have_posts()): ?>
-                    <section class="text-center mt-5 pb-0" id="ultimas-noticias">
+                    <section class=" text-center mt-5 pb-0" id="ultimas-noticias">
                         <div class="container">
                             <div data-aos="flip-up" class="ultimas-novidades-title">
                                 <img src="<?php bloginfo('template_url'); ?>/img/paper.png" alt="">
