@@ -785,4 +785,8 @@ jQuery(function ($) {
     visitantesLikes();
 
 
+    $("#btn-logar").on('click', function (event) {
+        alert("Faça login para votar")
+    })
+
 })

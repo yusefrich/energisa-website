@@ -19,7 +19,7 @@
                 the_post();
                 //$foto = get_field('autor_foto', 'user_' . get_the_author_id());
                 $foto = get_avatar_url(get_the_author_id(), array("size" => 150));
-               // $thumbnail = $foto['sizes']['thumbnail'];
+                // $thumbnail = $foto['sizes']['thumbnail'];
                 $statusFiled = get_field('ideia_status');
                 $votos = get_field('ideia_votos');
                 $respostas = get_comments_number();
@@ -61,23 +61,31 @@
                     <p class="m-0"><?php the_content(); ?></p> <!-- text-dark font-weight-normal mb-5 -->
 
                     <div class="d-flex justify-content-start">
-                        <button class="btn btn-outline-dark mr-2" id="btn-votar" data-postid="<?php the_ID() ;?>" data-tipo="1">Votar</button>
-                        <a  href="#respond" class="btn btn-outline-dark mr-2">Comentar</a>
+                        <?php if (is_user_logged_in()): ?>
+                            <button class="btn btn-outline-dark mr-2" id="btn-votar" data-postid="<?php the_ID(); ?>" data-tipo="1">
+                                Votar
+                            </button>
+                        <?php endif; ?>
+                        <button class="btn btn-outline-dark mr-2" id="btn-logar" data-postid="<?php the_ID(); ?>" data-tipo="1">
+                            Votar
+                        </button>
+                        <a href="#respond" class="btn btn-outline-dark mr-2">Comentar</a>
                     </div>
                 </div>
 
                 <?php comments_template(); ?>
 
-                <div style="margin-top: 100px !important"  class="d-flex justify-content-start my-4"> <!--style="position: relative; top: 90px"  -->
+                <div style="margin-top: 100px !important" class="d-flex justify-content-start my-4">
+                    <!--style="position: relative; top: 90px"  -->
                     <a href="<?php bloginfo('home'); ?>/ideias" class="btn  btn-round">
-                        
+
                         <p class="text-breadcrumb font-weight-bold mt-1"><i class="fas pr-3 pt-1 fa-chevron-left"></i>Retornar
-                        para <span class="text-orange">Ideias</span></p>
+                            para <span class="text-orange">Ideias</span></p>
                     </a>
-                    
+
                 </div>
 
-                <?php endwhile; ?>
-            </section>
+            <?php endwhile; ?>
+    </section>
 
 <?php get_footer(); ?>

@@ -23,4 +23,4 @@ function votarPost()
 
 
 add_action('wp_ajax_votarPost', 'votarPost');
-add_action('wp_ajax_nopriv_votarPost', 'votarPost');
+//add_action('wp_ajax_nopriv_votarPost', 'votarPost');
