@@ -56,26 +56,6 @@
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/vendors/scrolloverflow.min.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/fullpage.js"></script>
 
-<?php if (is_front_page())  : ?> <!-- is_singular( 'projetos' ) || is_singular( 'produtos' ) || -->
-    <script>
-        new fullpage('#fullpage', {
-        navigation: false,
-        responsiveWidth: 700,
-        parallax: true,
-        scrollOverflow: true,
-        slideSelector: "fullpage-slide",
-        onLeave: function(origin, destination, direction){
-            console.log("Leaving section" + origin.index);
-        },
-        afterLoad: function(){
-            $('.fp-table.active .aos-init').addClass('aos-animate');
-        },
-
-    });
-
-    </script>
-<?php endif; ?>
-
 <!-- navbar top opacity -->
 <script>
     $(document).ready(function () {
@@ -128,6 +108,47 @@
 
     });
 </script>
+
+<?php if (is_front_page() || is_singular( 'produtos' ))  : ?> <!-- is_singular( 'projetos' ) || is_singular( 'produtos' ) || -->
+    <script>
+        new fullpage('#fullpage', {
+        navigation: false,
+        responsiveWidth: 700,
+        parallax: true,
+        scrollOverflow: true,
+        slideSelector: "fullpage-slide",
+        onLeave: function(origin, destination, direction){
+            console.log("Leaving section" + origin.index);
+            if(origin.index == 0){
+                jQuery(".menu-bg").removeClass("hide");
+                jQuery(".brand-light").removeClass("d-none");
+                jQuery(".brand-dark").addClass("d-none");
+
+                jQuery(".navbar").addClass("navbar-light");
+                jQuery(".navbar").removeClass("navbar-dark");
+
+                jQuery(".search-toggle").removeClass("text-white");
+
+            }else if (destination.index == 0){
+                jQuery(".menu-bg").addClass("hide");
+                    jQuery(".brand-light").addClass("d-none");
+                    jQuery(".brand-dark").removeClass("d-none");
+
+                    jQuery(".navbar").removeClass("navbar-light");
+                    jQuery(".navbar").addClass("navbar-dark");
+
+                    jQuery(".search-toggle").addClass("text-white");
+            }
+        },
+        afterLoad: function(){
+            $('.fp-table.active .aos-init').addClass('aos-animate');
+        },
+
+    });
+
+    </script>
+<?php endif; ?>
+
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
     AOS.init();

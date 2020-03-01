@@ -695,7 +695,7 @@ section {
 .timeline ol {
   font-size: 0;
   width: 100vw;
-  padding: 365px 0;
+  padding: 355px 0;
   transition: all 1s;
 }
 
@@ -732,7 +732,7 @@ section {
 .timeline ol li > div {
   position: absolute;
   left: calc(100% + 7px);
-  width: 310px;
+  width: 350px;
   padding: 15px;
   font-size: 1rem;
   white-space: normal;

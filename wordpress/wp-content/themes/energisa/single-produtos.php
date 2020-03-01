@@ -1,11 +1,12 @@
 <?php get_header(); ?>
 <?php while (have_posts()) : the_post(); ?>
     <?php $img_background = get_the_post_thumbnail_url(null, 'full'); ?>
-    <section class="" id="product-banner">
+    <section class="section" id="product-banner">
         <div style="
                 background: linear-gradient(0deg, rgba(8, 155, 192, 0.7), rgba(8, 155, 192, 0.7)), url(<?php echo esc_url($img_background); ?>);
                 background-size: cover;
                 background-position: center;
+                height: 100vh;
                 background-blend-mode: multiply, normal;
                 " class="container-fluid   product-banner-holder px-0 ">
             <!-- text-white -->
@@ -39,7 +40,7 @@
                         break;
                 }
                 ?>
-                <section class=" <?php echo $fundo_bg; ?>">
+                <section class="section <?php echo $fundo_bg; ?>">
                     <div class="container-fluid p-0">
                         <div class="row  py-5 mr-2">
                             <div class="col-md-6">
@@ -76,7 +77,7 @@
             <!-- Verifica se existe o layout Linha do Tempo-->
             <?php if (get_row_layout() == 'layout_linha_tempo'): ?>
 
-                <section class="" id="product-timeline">
+                <section class="section" id="product-timeline">
                     <div style="bottom: -57px;
                 position: relative;" data-aos="fade-up" class="container">
                         <div id="parallax-detalhe-1">
@@ -88,7 +89,7 @@
                                 </div>
                             </div>
                         </div>
-                        <h1 class="text-orange pb-5 pt-3">Linha do tempo do projeto</h1>
+                        <h1 class="text-orange pb-2 pt-2">Linha do tempo do projeto</h1>
                         <p class="text-gray">Acompanhe através da nossa linha do tempo as principais etapas deste
                             projeto e
                             veja o
@@ -227,7 +228,7 @@
 
                 <!-- Verifica se tem algum valor cadastrado no campo repetidor-->
                 <?php if (have_rows('prod_carousel_repeat')): ?>
-                    <section class="<?php echo $fundo_bg; ?>">
+                    <section class="section <?php echo $fundo_bg; ?>">
                         <div class="container-fluid p-0">
 
                             <div id="<?php echo $carousel_color; ?>" class="carousel slide" data-ride="carousel">
@@ -238,11 +239,11 @@
                                     <?php while (have_rows('prod_carousel_repeat')): the_row();
                                         $slidersCount++;
                                         ?>
-                                        <div class="carousel-item <?php if ($slidersCount == 1) echo "active"; ?> carousel-long zoom-hover">
+                                        <div class="carousel-item <?php if ($slidersCount == 1) echo "active"; ?> carousel-long">
                                             <div class="container <?php echo $detail_bg; ?>">
                                                 <div class="slider-title ">
                                                     <div class="text-center mb-5 mx-5">
-                                                        <h2 class="display-h2 ">Olha o que vem por aí</h2>
+                                                        <h2 style="line-height: 70px;" class="display-h2 ">Olha o que vem por aí</h2>
                                                         <p>Estamos cada vez mais empolgados para melhorar nossos
                                                             serviços,
                                                             acompanhe em que
@@ -260,7 +261,7 @@
                                                         </div>
                                                         <div class="col-md-6">
                                                             <p class="text-uppercase"><?php the_sub_field('prod_carousel_tagline'); ?></p>
-                                                            <h2 style="width: 300px;" class="display-h2 ">
+                                                            <h2 style="line-height: 60px; max-width: 400px;" class="display-h2 ">
                                                                 <?php the_sub_field('prod_carousel_titulo'); ?></h2>
                                                             <p class=""><?php the_sub_field('prod_carousel_descricao'); ?></p>
                                                         </div>
@@ -297,7 +298,7 @@
             <?php if (get_row_layout() == 'layout_prod_indicadores'): ?>
                 <!-- Verifica se tem algum valor cadastrado no campo repetidor-->
                 <?php if (have_rows('prod_indicadores')): ?>
-                    <section class="" id="indicadores">
+                    <section class="section" id="indicadores">
                         <div class="container text-center my-5">
                             <h2 data-aos="fade-up" class="display-h2 text-orange">Conheça nossos
                                 indicadores</h2>
@@ -341,6 +342,7 @@
                 <?php endif; ?>
             <?php endif; ?>
             <!-- Verifica se existe o layout Últimas Novidades-->
+            <!-- <div class="section"> -->
             <?php if (get_row_layout() == 'layout_prod_novidades'):
 
                 $categoriaObj = get_sub_field('prod_novidades_category');
@@ -353,6 +355,7 @@
                 ));
 
                 if ($ultimas_novidades->have_posts()): ?>
+                    <div class="section">
                     <section class=" text-center mt-5 pb-0" id="ultimas-noticias">
                         <div class="container">
                             <div data-aos="flip-up" class="ultimas-novidades-title">
