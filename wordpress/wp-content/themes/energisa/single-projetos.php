@@ -74,7 +74,8 @@
 
             <!-- Verifica se existe o layout de gráficos e indicadores-->
             <?php if (get_row_layout() == 'projet_layout_graph'): ?>
-                <section class="p-0 section" id="projeto-indicadores">
+                <div class="section">
+                <section class="p-0 " id="projeto-indicadores">
                     <div class="container ">
                         <div data-aos="fade-up" class="text-center mt-5 py-5">
                             <p class="text-gray">última atualização
@@ -83,7 +84,7 @@
                             <h2 class="text-orange font-weight-bold">Confira abaixo os indicadores</h2>
                             <p>Veja em detalhes cada passo dado até o presente momento</p>
                         </div>
-                        <div data-aos="fade-left" class="row mb-5 mt-2">
+                        <div data-aos="fade-left" style="height: 600px" class="row mb-5 mt-2">
                             <?php if (have_rows('projet_graficos_repeat')): while (have_rows('projet_graficos_repeat')):
                                 the_row();
                                 ?>
@@ -122,8 +123,8 @@
             <?php endif; ?>
             <!-- Verifica se existe o layout Status do Projeto-->
             <?php if (get_row_layout() == 'projet_layout_status'): ?>
-                <div class="section">
-                <section class="mt-0 mt-md-5" id="progresso-geral-projeto">
+                
+                <section class="mt-0 " id="progresso-geral-projeto">
                     <div data-aos="fade-left">
 
                         <div  class="d-flex justify-content-center progresso-texto-projeto mt-2">
@@ -134,10 +135,12 @@
                         <div  style="width: <?php the_sub_field('projet_status'); ?>%;" class="progresso-atual-projeto"></div>
                     </div>
                 </section>
+                </div>
             <?php endif; ?>
 
             <!-- Verifica se existe o layout Linha do tempo de Projetos-->
             <?php if (get_row_layout() == 'projet_layout_linha_tempo'): ?>
+                <div class="section">
                 <section id="como-estamos-projeto">
                     <div class="container">
                         <div class="text-center mt-5 pt-5 pb-2">
