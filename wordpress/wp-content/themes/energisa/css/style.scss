@@ -69,8 +69,8 @@ $large-caption-font-size: (null: em(28));
 $h1-font-size: (null: em(72), $xl: em(70), $lg: em(60), $md: em(50), $sm: em(40));
 $h1-line-height: (null: 98px,  $xl: 85px, $lg: 80px, $md: 75px, $sm: 65px, $xs: 65px);/* 58 */
 
-$h2-font-size: (null: em(54),  $xl: em(48), $lg: em(47), $md: em(45), $sm: em(40), $xs: em(40));/* 58 */
-$h2-line-height: (null: 79px,  $xl: 75px, $lg: 73px, $md: 65px, $sm: 60px, $xs: 60px);/* 58 */
+$h2-font-size: (null: em(54),  $xl: em(48), $lg: em(47), $md: em(45), $sm: em(35), $xs: em(32));/* 58 */
+$h2-line-height: (null: 79px,  $xl: 75px, $lg: 73px, $md: 65px, $sm: 55px, $xs: 55px);/* 58 */
 
 $modal-title-font-size: (null: em(64));
 $display-h2-font-size: (null: em(48));
@@ -135,6 +135,7 @@ h2{
     font-weight: 800;
     @include font-size-map($display-h2-font-size) ;
     line-height: 79px;
+    word-wrap: break-word;
 
 }
 h1{
@@ -1689,10 +1690,25 @@ a:hover{
     top: 83px;
     
 }
+.carousel-fullpage{
+    height: 100vh;
+}
+.product-description-info{
+    height: 50vh;
+}
 
 @media (min-width: 320px) and (max-width: 480px) {
   
     //CSS
+    .carousel-fullpage{
+        height: initial;
+    }
+    .product-description-info{
+        height: 35vh;
+    }
+    .custom-carousel-caption .slider-title{
+        margin-bottom: 10px;
+    }
     .carousel-info{
         margin-left: 0px;
         margin-right: 0px;
@@ -1708,6 +1724,7 @@ a:hover{
         top: 40px;
         position: relative;
     }
+
 
 }
 

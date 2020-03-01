@@ -234,7 +234,7 @@
                             <div id="<?php echo $carousel_color; ?>" class="carousel slide" data-ride="carousel">
                                 <!-- carousel-fade -->
 
-                                <div style="height: 100vh;" class="carousel-inner ">
+                                <div class="carousel-inner carousel-fullpage">
                                     <?php $slidersCount = 0; ?>
                                     <?php while (have_rows('prod_carousel_repeat')): the_row();
                                         $slidersCount++;
@@ -242,7 +242,7 @@
                                         <div class="carousel-item <?php if ($slidersCount == 1) echo "active"; ?> carousel-long">
                                             <div class="container <?php echo $detail_bg; ?>">
                                                 <div class="slider-title ">
-                                                    <div class="text-center mb-5 mx-5">
+                                                    <div class="text-center mb-2  mx-0 mb-md-5 mx-md-5">
                                                         <h2 style="line-height: 70px;" class="display-h2 ">Olha o que vem por aí</h2>
                                                         <p>Estamos cada vez mais empolgados para melhorar nossos
                                                             serviços,
@@ -252,7 +252,7 @@
                                                     <div class="row">
                                                         <div class="col-md-6">
                                                             <div style="
-                                                                    height: 50vh;
+                                                                    
                                                                     background-image: url(<?php the_sub_field('prod_carousel_img'); ?>);
                                                                     background-size: cover;
                                                                     background-position: center;

@@ -433,7 +433,7 @@ if ($produtos->have_posts()) :
                     $votos = get_field('ideia_votos');
                     $respostas = get_comments_number(get_the_ID());
                     ?>
-                    <div data-aos="zoom-in" class="col-md-4">
+                    <div data-aos="zoom-in" class="col-md-4 my-3">
                         <div class="card card-full-small mb-2 zoom-hover">
                             <div class=" overlay-white text-start">
                                 <div class="d-flex justify-content-start pb-5 mb-3">

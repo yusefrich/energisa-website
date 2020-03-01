@@ -35,7 +35,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div data-aos="fade-up" class="row my-5 py-5 ">
+                        <div data-aos="fade-up" class="row my-2 py-0 my-md-5 py-md-5 ">
                             <div class="col-md-5">
                                 <h2 style="line-height: 65px;" class="text-orange font-weight-bold mt-5"><?php the_sub_field('projet_info_tituloOne'); ?></h2>
                             </div>
@@ -43,7 +43,7 @@
                                 <p style="line-height: 31px;" class="text-caption text-dark"><?php the_sub_field('projet_info_descOne'); ?></p>
                             </div>
                         </div>
-                        <div data-aos="fade-up" class="row my-5 py-5">
+                        <div data-aos="fade-up" class="row my-2 py-0 my-md-5 py-md-5">
                             <div class="col-md-6">
                                 <div style="max-width: 400px">
                                     <h2 style="line-height: 65px;" class="text-orange font-weight-bold mb-3"><?php the_sub_field('projet_info_tituloTwo'); ?></h2>
@@ -123,7 +123,7 @@
             <!-- Verifica se existe o layout Status do Projeto-->
             <?php if (get_row_layout() == 'projet_layout_status'): ?>
                 <div class="section">
-                <section class="mt-5" id="progresso-geral-projeto">
+                <section class="mt-0 mt-md-5" id="progresso-geral-projeto">
                     <div data-aos="fade-left">
 
                         <div  class="d-flex justify-content-center progresso-texto-projeto mt-2">
