@@ -1,11 +1,12 @@
 <?php get_header(); ?>
 <?php while (have_posts()) : the_post(); ?>
     <?php $img_background = get_the_post_thumbnail_url(null, 'full'); ?>
-    <section id="projetos-banner">
+    <section class="section" id="projetos-banner">
         <div style="
                 background: linear-gradient(0deg, rgba(92, 40, 14, 0.8), rgba(92, 40, 14, 0.8)), url(<?php echo esc_url($img_background); ?>);
                 background-size: cover;
                 background-position: center;
+                height: 100vh;
                 background-blend-mode: multiply, normal;
                 " class="container-fluid   product-banner-holder px-0 ">
             <!-- text-white -->
@@ -23,7 +24,7 @@
 
             <!-- Verifica se existe o layout Informações do Projeto-->
             <?php if (get_row_layout() == 'projet_layout_info'): ?>
-                <section id="projeto-detail">
+                <section class="section" id="projeto-detail">
                     <div class="container">
                         <div id="parallax-detalhe-2">
                             <div data-depth="0.2" class="d-flex justify-content-between">
@@ -70,11 +71,10 @@
                 </section>
             <?php endif; ?>
 
-
             <!-- Verifica se existe o layout de gráficos e indicadores-->
             <?php if (get_row_layout() == 'projet_layout_graph'): ?>
-                <section class="p-0" id="projeto-indicadores">
-                    <div class="container">
+                <section class="p-0 section" id="projeto-indicadores">
+                    <div class="container ">
                         <div data-aos="fade-up" class="text-center mt-5 py-5">
                             <p class="text-gray">última atualização
                                 <strong><?php the_modified_time('j \d\e F \d\e  Y'); ?></strong>
@@ -82,8 +82,7 @@
                             <h2 class="text-orange font-weight-bold">Confira abaixo os indicadores</h2>
                             <p>Veja em detalhes cada passo dado até o presente momento</p>
                         </div>
-                        <div data-ao
-                             s="fade-left" class="row mb-5 mt-2">
+                        <div data-aos="fade-left" class="row mb-5 mt-2">
                             <?php if (have_rows('projet_graficos_repeat')): while (have_rows('projet_graficos_repeat')):
                                 the_row();
                                 ?>
@@ -121,10 +120,10 @@
                 </section>
             <?php endif; ?>
 
-
             <!-- Verifica se existe o layout Status do Projeto-->
             <?php if (get_row_layout() == 'projet_layout_status'): ?>
-                <section id="progresso-geral-projeto">
+                <div class="section">
+                <section class="mt-5" id="progresso-geral-projeto">
                     <div data-aos="fade-left">
 
                         <div  class="d-flex justify-content-center progresso-texto-projeto mt-2">
@@ -136,7 +135,6 @@
                     </div>
                 </section>
             <?php endif; ?>
-
 
             <!-- Verifica se existe o layout Linha do tempo de Projetos-->
             <?php if (get_row_layout() == 'projet_layout_linha_tempo'): ?>

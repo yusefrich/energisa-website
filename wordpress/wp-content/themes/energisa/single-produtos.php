@@ -229,12 +229,12 @@
                 <!-- Verifica se tem algum valor cadastrado no campo repetidor-->
                 <?php if (have_rows('prod_carousel_repeat')): ?>
                     <section class="section <?php echo $fundo_bg; ?>">
-                        <div class="container-fluid p-0">
+                        <div  class="container-fluid p-0">
 
                             <div id="<?php echo $carousel_color; ?>" class="carousel slide" data-ride="carousel">
                                 <!-- carousel-fade -->
 
-                                <div class="carousel-inner ">
+                                <div style="height: 100vh;" class="carousel-inner ">
                                     <?php $slidersCount = 0; ?>
                                     <?php while (have_rows('prod_carousel_repeat')): the_row();
                                         $slidersCount++;
@@ -252,12 +252,12 @@
                                                     <div class="row">
                                                         <div class="col-md-6">
                                                             <div style="
-                                                                    height: 431px;
+                                                                    height: 50vh;
                                                                     background-image: url(<?php the_sub_field('prod_carousel_img'); ?>);
                                                                     background-size: cover;
                                                                     background-position: center;
                                                                     " class="product-description-info">
-                                                            </div>
+                                                            </div> <!-- height: 431px; -->
                                                         </div>
                                                         <div class="col-md-6">
                                                             <p class="text-uppercase"><?php the_sub_field('prod_carousel_tagline'); ?></p>

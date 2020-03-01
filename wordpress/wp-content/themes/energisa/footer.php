@@ -109,7 +109,7 @@
     });
 </script>
 
-<?php if (is_front_page() || is_singular( 'produtos' ))  : ?> <!-- is_singular( 'projetos' ) || is_singular( 'produtos' ) || -->
+<?php if (is_front_page() || is_singular( 'produtos' ) || is_singular( 'projetos' ))  : ?> <!-- is_singular( 'projetos' ) || is_singular( 'produtos' ) || -->
     <script>
         new fullpage('#fullpage', {
         navigation: false,
