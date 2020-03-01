@@ -67,6 +67,7 @@
                 </div>
 
                 <?php comments_template(); ?>
+
                 <div style="margin-top: 100px !important"  class="d-flex justify-content-start my-4"> <!--style="position: relative; top: 90px"  -->
                     <a href="<?php bloginfo('home'); ?>/ideias" class="btn  btn-round">
                         
