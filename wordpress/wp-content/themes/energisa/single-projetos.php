@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<div id="fullpage">
 <?php while (have_posts()) : the_post(); ?>
     <?php $img_background = get_the_post_thumbnail_url(null, 'full'); ?>
     <section class="section" id="projetos-banner">
@@ -119,7 +120,6 @@
                     </div>
                 </section>
             <?php endif; ?>
-
             <!-- Verifica se existe o layout Status do Projeto-->
             <?php if (get_row_layout() == 'projet_layout_status'): ?>
                 <div class="section">
@@ -244,11 +244,11 @@
                         </div>
                     </div>
 
-                    </div>
 
                 </section>
             <?php endif; ?>
         <?php endwhile; ?>
+        
         <script>
 const slider = document.querySelector('.timeline');
 let isDown = false;
@@ -283,4 +283,9 @@ slider.addEventListener('mousemove', (e) => {
 
 
 <?php endwhile; ?>
+<?php include "footer-nav.php"; ?>
+</div>
+
+</div> <!-- fecha a div do fullpage -->
+
 <?php get_footer(); ?>

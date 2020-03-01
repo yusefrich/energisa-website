@@ -104,4 +104,3 @@
         </div>
     </div>
 </nav>
-<div id="fullpage">

@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<div id="fullpage">
 <?php
 $args_slider = array(
     'post_type' => 'carousel',
@@ -495,4 +496,8 @@ if ($produtos->have_posts()) :
             </div>
         </div>
     </section>
+    <?php include "footer-nav.php"; ?>
+    </div> <!-- fecha a div da sessão do footer -->
+</div> <!-- fecha a div do fullpage -->
+
 <?php get_footer(); ?>

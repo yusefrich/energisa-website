@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<div id="fullpage">
 <?php while (have_posts()) : the_post(); ?>
     <?php $img_background = get_the_post_thumbnail_url(null, 'full'); ?>
     <section class="section" id="product-banner">
@@ -427,14 +428,14 @@
                 <?php endif; ?>
             <?php endif; ?>
 
-            <!-- Modal Designer do Produto -->
-            <div class="modal fade" id="designProdutoModal" tabindex="-1" role="dialog" aria-labelledby="designProdutoModalLabel"
-                 aria-hidden="true">
-            </div>
         <?php endwhile; ?>
     <?php endif; ?>
 
 
 <?php endwhile; ?>
+
+<?php include "footer-nav.php"; ?>
+</div> <!-- fecha a div da sessão do footer -->
+</div> <!-- fecha a div do fullpage -->
 
 <?php get_footer(); ?>

@@ -51,5 +51,7 @@
     </div>
 
 </section>
+<?php include "footer-nav.php"; ?>
+
 <?php get_footer(); ?>
 

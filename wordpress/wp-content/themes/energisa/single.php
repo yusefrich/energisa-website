@@ -127,4 +127,5 @@ if ($posts_relacionados->have_posts()): ?>
         </div>
     </section>
 <?php endif; ?>
+<?php include "footer-nav.php"; ?>
 <?php get_footer(); ?>

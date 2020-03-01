@@ -148,10 +148,6 @@
     </section>
 
 
-    <!-- Modal -->
-    <div class="modal fade" id="equipeModal" tabindex="-1" role="dialog" aria-labelledby="equipeModalLabel"
-         aria-hidden="true">
-    </div>
 
     <section id="o-que-fazemos">
         <div data-aos="fade-up" class="container py-5 mt-5 mb-2">
@@ -256,11 +252,8 @@
         </div>
     </section>
 
-    <!-- Modal detalhes do treinamento -->
-    <div class="modal fade" id="OQueFazemosModal" tabindex="-1" role="dialog" aria-labelledby="OQueFazemosModalLabel"
-         aria-hidden="true">
-
-    </div>
 
 <?php endwhile; ?>
+<?php include "footer-nav.php"; ?>
+
 <?php get_footer(); ?>
