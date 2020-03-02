@@ -1111,6 +1111,8 @@ a:hover {
 }
 .container-small, .container-large {
   max-width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .card-link-div {

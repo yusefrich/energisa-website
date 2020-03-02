@@ -18,8 +18,16 @@
 <section id="ideias-todos">
     <div class="container">
 
-        <div class="text-start my-5 py-5">
-            <img class="float-left pr-5" src="<?php bloginfo('template_url'); ?>/img/ideias.png" alt="">
+        <div class="d-none d-sm-block text-start my-5 py-5">
+            <img class=" float-left pr-5" src="<?php bloginfo('template_url'); ?>/img/ideias.png" alt="">
+            <h2 class="text-orange display-h2">Colabore você também</h2>
+            <p>Aqui você encontrará uma serie de ideias sugeridas pelos nossos colaboradores, fique a vontade para
+                participar.</p>
+            <a href="<?php bloginfo('home'); ?>/login" class="btn btn-primary px-5">Quero colaborar</a>
+
+        </div>
+        <div class="d-sm-none text-center my-5 py-5">
+            <img class="pr-5" src="<?php bloginfo('template_url'); ?>/img/ideias.png" alt="">
             <h2 class="text-orange display-h2">Colabore você também</h2>
             <p>Aqui você encontrará uma serie de ideias sugeridas pelos nossos colaboradores, fique a vontade para
                 participar.</p>
