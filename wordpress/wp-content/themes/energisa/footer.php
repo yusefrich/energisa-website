@@ -89,6 +89,10 @@
         parallax: true,
         scrollOverflow: true,
         slideSelector: "fullpage-slide",
+        normalScrollElements: '.timeline',
+        /* scrollOverflowOptions: {
+            disableMouse: true
+        }, */
         onLeave: function(origin, destination, direction){
             console.log("Leaving section" + origin.index);
             if(origin.index == 0){
@@ -122,6 +126,53 @@
     
     </script>
 <?php endif; ?>
+<script>
+    const slider = document.querySelector('.timeline');
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    /* slider.addEventListener('mouseover', changeDefOver);
+    slider.addEventListener('mouseout', changeDefOut);
+
+    function changeDefOver(e) {
+        fullpage_api.destroy();
+    }
+
+    function changeDefOut(e) {
+        fullpage_api.reBuild();
+    } */
+
+
+    slider.addEventListener('mousedown', (e) => {
+        
+        console.log("in");
+
+        isDown = true;
+        slider.classList.add('active');
+        startX = e.pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
+    });
+    slider.addEventListener('mouseleave', () => {
+        isDown = false;
+        slider.classList.remove('active');
+    });
+    slider.addEventListener('mouseup', () => {
+        
+        
+        isDown = false;
+        slider.classList.remove('active');
+    });
+    slider.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+       
+        const x = e.pageX - slider.offsetLeft;
+        const walk = (x - startX) * 3; //scroll-fast
+        slider.scrollLeft = scrollLeft - walk;
+        /* console.log(walk); */
+    });
+</script>
+
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>

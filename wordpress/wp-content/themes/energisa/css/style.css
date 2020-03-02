@@ -1777,4 +1777,58 @@ a:hover {
   position: fixed !important;
 }
 
+#respond .login-username {
+  margin-top: 60px;
+  width: 50%;
+  /*     margin-left: auto !important;
+      margin-right: auto !important;
+   */
+}
+#respond .login-username label {
+  width: 10%;
+}
+#respond .login-username input {
+  width: 90%;
+}
+#respond .login-password {
+  width: 50%;
+  /*     margin-left: auto !important;
+      margin-right: auto !important;
+   */
+}
+#respond .login-password label {
+  width: 10%;
+}
+#respond .login-password input {
+  width: 90%;
+}
+#respond .login-remember {
+  width: 50%;
+  /*     margin-left: auto !important;
+      margin-right: auto !important;
+   */
+}
+#respond .login-remember label {
+  /* width: 10%; */
+}
+#respond .login-remember input {
+  width: 90%;
+}
+#respond .login-remember label input {
+  width: 5% !important;
+}
+#respond .login-submit {
+  width: 50%;
+  /*     margin-left: auto !important;
+      margin-right: auto !important;
+   */
+}
+#respond .login-submit input {
+  background: #EA6724;
+  border: 1px solid #EA6724;
+  color: #fff;
+  border-radius: 6px;
+  padding: 5px 15px;
+}
+
 /*# sourceMappingURL=style.css.map */

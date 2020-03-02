@@ -1740,3 +1740,59 @@ a:hover{
 .fp-enabled .modal{
     position:fixed !important;
  }
+#respond{
+    
+.login-username{
+    margin-top: 60px;
+    width: 50%;
+/*     margin-left: auto !important;
+    margin-right: auto !important;
+ */}
+.login-username label{
+    width: 10%;
+}
+.login-username input{
+    width: 90%;
+}
+
+.login-password{
+    width: 50%;
+/*     margin-left: auto !important;
+    margin-right: auto !important;
+ */}
+.login-password label{
+    width: 10%;
+}
+.login-password input{
+    width: 90%;
+}
+
+.login-remember{
+    width: 50%;
+/*     margin-left: auto !important;
+    margin-right: auto !important;
+ */}
+.login-remember label{
+    /* width: 10%; */
+}
+.login-remember input{
+    width: 90%;
+}
+.login-remember label input{
+    width: 5% !important;
+}
+.login-submit{
+    width: 50%;
+/*     margin-left: auto !important;
+    margin-right: auto !important;
+ */}
+.login-submit input{
+    background: #EA6724;
+    border: 1px solid #EA6724;
+
+    color: #fff;
+    border-radius: 6px;
+    padding: 5px 15px;
+
+}
+}
