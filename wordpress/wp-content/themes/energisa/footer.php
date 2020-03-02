@@ -89,7 +89,7 @@
         parallax: true,
         scrollOverflow: true,
         slideSelector: "fullpage-slide",
-        normalScrollElements: '.timeline',
+        /* normalScrollElements: '.timeline', */
         /* scrollOverflowOptions: {
             disableMouse: true
         }, */
