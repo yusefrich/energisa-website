@@ -7,7 +7,7 @@
             </div>
             <div class="col-12 col-md-8">
                 <div class="d-sm-flex justify-content-sm-center my-3 my-sm-0">
-                    <a class="nav-link link-light" href="#">Quem somos</a>
+                    <a class="nav-link link-light" href="<?php bloginfo('home'); ?>/quem-somos">Quem somos</a>
                     <a class="nav-link link-light" href="<?php bloginfo('home'); ?>/produtos">Produtos</a>
                     <a class="nav-link link-light" href="<?php bloginfo('home'); ?>/projetos">Projetos</a>
                     <a class="nav-link link-light" href="<?php bloginfo('home'); ?>/novidades">Novidades</a>
