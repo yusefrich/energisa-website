@@ -1627,9 +1627,9 @@ IScroll.prototype = {
             case 'touchstart':
             case 'pointerdown':
             case 'MSPointerDown':
-            case 'mousedown':
+            /* case 'mousedown':
                 this._start(e);
-                break;
+                break; */
             case 'touchmove':
             case 'pointermove':
             case 'MSPointerMove':
@@ -1778,9 +1778,9 @@ Indicator.prototype = {
             case 'touchstart':
             case 'pointerdown':
             case 'MSPointerDown':
-            case 'mousedown':
+            /* case 'mousedown':
                 this._start(e);
-                break;
+                break; */
             case 'touchmove':
             case 'pointermove':
             case 'MSPointerMove':

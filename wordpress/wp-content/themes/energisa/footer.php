@@ -25,7 +25,7 @@
 <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 
-<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/vendors/scrolloverflow.min.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/vendors/scrolloverflow.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/fullpage.js"></script>
 
 <!-- navbar top opacity -->
@@ -122,7 +122,8 @@
 
     });
 
-
+    
+    
     
     </script>
 <?php endif; ?>
@@ -142,9 +143,14 @@
     function changeDefOut(e) {
         fullpage_api.reBuild();
     } */
-
+    $(".timeline").click(function(){
+        /* alert('clicked'); */
+        /* fullpage_api.setAllowScrolling(false); */
+        /* $(this).addClass('timeline-scroll'); */
+    });
 
     slider.addEventListener('mousedown', (e) => {
+    /* $(".timeline").mousedown(function(){ */
         
         console.log("in");
 
