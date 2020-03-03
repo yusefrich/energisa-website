@@ -47,6 +47,9 @@ if (post_password_required()) { ?>
 
                     <?php else : ?>
                        <?php echo do_shortcode('[wppb-login]'); ?>
+                        <p class="text-center">Ainda não tem uma conta? <br>
+                            <a href="<?php the_permalink() ?>/register" title="Criar conta" class="btn btn-link">Criar Conta</a>
+                        </p>
                     <?php endif; ?>
 
                     <?php comment_id_fields(); ?>
