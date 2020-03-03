@@ -27,7 +27,7 @@
             <?php if (get_row_layout() == 'projet_layout_info'): ?>
                 <section class="section" id="projeto-detail">
                     <div class="container">
-                        <div id="parallax-detalhe-2">
+                        <div class="mb-5 pb-3" id="parallax-detalhe-2">
                             <div data-depth="0.2" class="d-flex justify-content-between">
                                 <div style="z-index: 1;" class="trace-detail-left trace-detail-offset-bottom">
                                     <img class="" src="<?php bloginfo('template_url'); ?>/img/detalhes-traco-laranja.png" alt="">
@@ -36,7 +36,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div data-aos="fade-up" class="row my-2 py-0 my-md-5 py-md-5 ">
+                        <div data-aos="fade-up" class="row my-2 py-0 my-md-3 py-md-3 ">
                             <div class="col-md-5">
                                 <h2 style="line-height: 65px;" class="text-orange font-weight-bold mt-5"><?php the_sub_field('projet_info_tituloOne'); ?></h2>
                             </div>
@@ -44,7 +44,7 @@
                                 <p style="line-height: 31px;" class="text-caption text-dark"><?php the_sub_field('projet_info_descOne'); ?></p>
                             </div>
                         </div>
-                        <div data-aos="fade-up" class="row my-2 py-0 my-md-5 py-md-5">
+                        <div data-aos="fade-up" class="row my-2 py-0 my-md-3 py-md-3">
                             <div class="col-md-6">
                                 <div style="max-width: 400px">
                                     <h2 style="line-height: 65px;" class="text-orange font-weight-bold mb-3"><?php the_sub_field('projet_info_tituloTwo'); ?></h2>

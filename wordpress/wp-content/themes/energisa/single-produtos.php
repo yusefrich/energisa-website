@@ -60,7 +60,7 @@
                                         $texto = get_sub_field('prod_indicador_texto');
                                         $porcentagem = get_sub_field('prod_indicador_valor');
                                         ?>
-                                        <h2 data-aos="fade-up" class="display-h2">
+                                        <h2 style="line-height: 50px;" data-aos="fade-up" class="display-h2 mb-4">
                                             <?php echo get_sub_field('prod_desc_titulo'); ?>
                                         </h2>
                                         <p data-aos="fade-up"><?php echo get_sub_field('prod_desc_descricao'); ?></p>
@@ -90,8 +90,8 @@
                                 </div>
                             </div>
                         </div>
-                        <h1 class="text-orange pb-2 pt-2">Linha do tempo do projeto</h1>
-                        <p class="text-gray">Acompanhe através da nossa linha do tempo as principais etapas deste
+                        <h1 class="text-orange pb-2 pt-2 position-relative">Linha do tempo do projeto</h1>
+                        <p class="text-gray position-relative">Acompanhe através da nossa linha do tempo as principais etapas deste
                             projeto e
                             veja o
                             seu desenvolvimento</p>
