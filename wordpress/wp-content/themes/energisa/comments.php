@@ -40,7 +40,7 @@ if (post_password_required()) { ?>
 
                         <p>Autentificado como
                             <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>.
-                            <a href="<?php echo wp_logout_url(); ?>" title="Sair desta conta">Sair desta conta &raquo;</a></p>
+                            <a href="<?php echo wp_logout_url(home_url()); ?>" title="Sair desta conta">Sair desta conta &raquo;</a></p>
                         <label for="comment">Mensagem:</label>
                         <textarea name="comment" id="comment" rows="" cols=""></textarea>
                         <input type="submit" class="commentsubmit" value="Enviar Comentário"/>
