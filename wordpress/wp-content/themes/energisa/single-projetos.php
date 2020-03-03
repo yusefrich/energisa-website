@@ -90,7 +90,7 @@
                                 ?>
 
                                 <div class="col-md-6 text-center mb-3">
-                                    <div class="white-col p-3">
+                                    <div style="height: 100%;" class="white-col p-3">
                                         <p class="text-caption font-weight-bold"><?php the_sub_field('projet_grafico_titulo') ?></p>
                                         <p class="text-gray">
                                             <small><?php the_sub_field('projet_grafico_descricao') ?></small>
