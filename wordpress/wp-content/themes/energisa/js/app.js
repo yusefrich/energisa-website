@@ -789,4 +789,17 @@ jQuery(function ($) {
         alert("Faça login para votar")
     })
 
+    $("#wppb-register-user #email").on('blur', function (event) {
+        var emailRegExp = /(\w+([-+.']\w+)*@(energisa.com.br))$/;
+
+        if (emailRegExp.test($(this).val())) {
+
+        } else{
+            alert("Email inválido");
+            $(this).val('');
+        }
+
+
+    })
+
 })

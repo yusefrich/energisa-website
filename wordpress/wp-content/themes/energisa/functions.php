@@ -149,3 +149,20 @@ add_action("wp_enqueue_scripts", "app_scripts");
  * Load Custom Comments Layout file.
  */
 require get_template_directory() . '/inc/comments-helper.php';
+
+
+if (function_exists('acf_add_options_page')) {
+
+    acf_add_options_page(array(
+        'page_title' => 'Configurações do Carousel',
+        'menu_title' => 'Carousel',
+        'menu_slug' => 'configuracoes-carousel',
+        'capability' => 'edit_posts',
+        'post_id' => 'options-carousel',
+        'redirect' => false,
+        'update_button' => __('Salvar', 'acf'),
+        'updated_message' => __("Configurações atualizadas", 'acf'),
+        'position' => '8.1',
+        'icon_url' => 'dashicons-format-gallery',
+    ));
+}

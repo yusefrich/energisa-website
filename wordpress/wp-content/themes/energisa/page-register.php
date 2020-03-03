@@ -26,12 +26,11 @@
                     <?php wp_redirect(home_url() . '/painel');
                     exit; ?>
                 <?php else: ?>
-                <div class="col-md-12 text-center mb-5">
-                    <a href="<?php the_permalink() ?>/login" class="btn btn-info ml-3">Voltar</a>
-                </div>
+                    <div class="col-md-12 text-center mb-5">
+                        <a href="<?php the_permalink() ?>/login" class="btn btn-info ml-3">Voltar</a>
+                    </div>
                     <div class="col-md-12 d-flex justify-content-center mb-3">
                         <div class="card col-md-6 p-5">
-                            <?php the_content(); ?>
                             <?php echo do_shortcode('[wppb-register role="colaboradores"]'); ?>
                         </div>
                     </div>
