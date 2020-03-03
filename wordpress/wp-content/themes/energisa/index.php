@@ -425,8 +425,8 @@
                             'posts_per_page' => '3',
                         ));
                         while ($ideias->have_posts()): $ideias->the_post();
-                            $foto = get_field('autor_foto', 'user_' . get_the_author_id());
-                            $thumbnail = $foto['sizes']['thumbnail'];
+                            $foto = get_avatar_url(get_the_author_id(), array("size" => 150));
+
                             $statusFiled = get_field('ideia_status');
                             $votos = get_field('ideia_votos');
                             $respostas = get_comments_number(get_the_ID());
@@ -437,14 +437,14 @@
                                         <div class="d-flex justify-content-start pb-5 mb-3">
                                             <div class="profile-pic mr-4"
                                                  style="
-                                                         background-image: url(<?php echo $thumbnail; ?>);
+                                                         background-image: url(<?php echo $foto; ?>);
                                                          background-size: cover;
                                                          background-position: center;
                                                          "></div>
                                             <div>
                                                 <p class="card-user-name m-0"><?php the_author_firstname(); ?>
                                                     &nbsp;<?php the_author_lastname(); ?></p>
-                                                <span class="text-fade"><small>Postado em <?php the_date('d/m/Y'); ?></small></span>
+                                                <span class="text-fade"><small>Postado em <?php echo get_the_date('d/m/Y', get_the_ID()); ?></small></span>
 
                                             </div>
                                         </div>

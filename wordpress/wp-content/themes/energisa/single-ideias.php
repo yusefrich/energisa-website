@@ -65,10 +65,12 @@
                             <button class="btn btn-outline-dark mr-2" id="btn-votar" data-postid="<?php the_ID(); ?>" data-tipo="1">
                                 Votar
                             </button>
+                        <?php else:; ?>
+                            <button class="btn btn-outline-dark mr-2" id="btn-logar" data-postid="<?php the_ID(); ?>" data-tipo="1">
+                                Votar
+                            </button>
                         <?php endif; ?>
-                        <button class="btn btn-outline-dark mr-2" id="btn-logar" data-postid="<?php the_ID(); ?>" data-tipo="1">
-                            Votar
-                        </button>
+
                         <a href="#respond" class="btn btn-outline-dark mr-2">Comentar</a>
                     </div>
                 </div>
@@ -87,6 +89,6 @@
 
             <?php endwhile; ?>
     </section>
-    <?php include "footer-nav.php"; ?>
+<?php include "footer-nav.php"; ?>
 
 <?php get_footer(); ?>

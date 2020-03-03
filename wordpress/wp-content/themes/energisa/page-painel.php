@@ -77,7 +77,7 @@
                                     <td>
                                         <a href="<?php the_permalink(); ?>" class="btn btn-link" title="<?php the_title(); ?>"><?php the_title(); ?></a>
                                     </td>
-                                    <td><?php the_date('d \d\e F \d\e Y'); ?></td>
+                                    <td><?php echo get_the_date('d/m/Y', get_the_ID()); ?></td>
                                     <td><?php echo $votos ?></td>
                                     <td><?php echo get_comments_number(get_the_ID()); ?></td>
                                     <td>

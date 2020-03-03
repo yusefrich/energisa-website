@@ -68,6 +68,13 @@ function estilo_tela_login()
 
 add_action('login_enqueue_scripts', 'estilo_tela_login');
 
+// Carrega arquivo css no painel administrativo do wordpress
+add_action('admin_head', 'custom_css_painel');
+
+function custom_css_painel() {
+    wp_enqueue_style('custom-css-admin', get_template_directory_uri() . '/assets/admin/css/style-painel.css');
+}
+
 //alterar a url da logo da página de login
 function url_logo_login()
 {

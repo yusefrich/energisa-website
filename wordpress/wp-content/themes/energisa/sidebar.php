@@ -1,14 +1,57 @@
 <div class="col-md-3">
-    <!--<p class="text-caption font-weight-bold">Filtre por produto</p>
-    <select class="custom-select">
-        <option selected>Todos</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
-    </select>-->
+    <?php
+
+    $args_projeto = [
+        'post_type' => 'ideias',
+        'posts_per_page' => -1,
+    ];
+    $projetos = new WP_Query($args_projeto);
+    ?>
+    <?php
+    // Função para remover os arrays duplicados
+    function unique_multidim_array($array, $key)
+    {
+        $temp_array = array();
+        $i = 0;
+        $key_array = array();
+        foreach ($array as $val) {
+            if (!in_array($val[$key], $key_array)) {
+                $key_array[$i] = $val[$key];
+                $temp_array[$i] = $val;
+            }
+            $i++;
+        }
+        return $temp_array;
+    }
+
+    if ($projetos->have_posts()) : ?>
+        <?php
+        $itens = [];
+        while ($projetos->have_posts()):
+            $projetos->the_post();
+            $post_objects = get_field('ideia_produto');
+            ?>
+            <?php
+            if ($post_objects):
+                $item = [
+                    'ID' => $post_objects->ID,
+                    'titulo' => $post_objects->post_title,
+                ];
+                array_push($itens, $item); ?>
+            <?php endif; ?>
+        <?php endwhile; ?>
+        <?php $post_obj = unique_multidim_array($itens, 'ID'); ?>
+        <p class="text-caption font-weight-bold">Filtre por produto</p>
+        <select class="custom-select">
+            <option selected>Todos</option>
+            <?php foreach ($post_obj as $post): ?>
+                <option value="<?php echo $post['ID']; ?>"><?php echo $post['titulo']; ?></option>
+            <?php endforeach; ?>
+        </select>
+        <?php endif; ?>
+
     <div class="card-outline mt-4 p-4">
         <p class="text-caption font-weight-bold">Status</p>
-
         <?php
         function get_post_count_by_meta($meta_key, $meta_value, $post_type)
         {
@@ -56,7 +99,8 @@
     <div class="card-outline mt-4 mb-4 p-4">
         <p class="text-caption font-weight-bold">Quem mais participa</p>
         <div id="loadUserComments"></div>
-        <button class="btn btn-sm px-5 text-gray" data-indice="0" id="BtnLoadUserComments"><strong> Mostrar mais</strong></button>
+        <button class="btn btn-sm px-5 text-gray" data-indice="0" id="BtnLoadUserComments"><strong> Mostrar
+                mais</strong></button>
     </div>
 
 </div>
