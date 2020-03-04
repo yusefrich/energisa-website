@@ -523,7 +523,7 @@ jQuery(function ($) {
                     str += '</button>';
                     str += '</div>';
                     str += '<div class="modal-body pt-0">';
-                    str += '<div class="row">';
+                    str += '<div class="row absolute-vertical-center">';
                     str += '<div class="col-md-5 p-0">';
                     str += '<div class="text-start my-2 mx-3">';/* mx-5 px-5 */
                     str += '<div class="d-flex justify-content-start">';

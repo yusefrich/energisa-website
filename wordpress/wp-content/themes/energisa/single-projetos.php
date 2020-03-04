@@ -25,7 +25,7 @@
 
             <!-- Verifica se existe o layout Informações do Projeto-->
             <?php if (get_row_layout() == 'projet_layout_info'): ?>
-                <section class="section" id="projeto-detail">
+                <section class="section bg-blue" id="projeto-detail">
                     <div class="container">
                         <div class="mb-5 pb-3" id="parallax-detalhe-2">
                             <div data-depth="0.2" class="d-flex justify-content-between">
