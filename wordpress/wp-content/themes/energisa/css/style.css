@@ -287,11 +287,11 @@ h1 {
 }
 
 .text-gray {
-  color: #828282 !important;
+  color: #828282;
 }
 
 .text-blue {
-  color: #089BC0 !important;
+  color: #089BC0;
 }
 
 .round-outline-text {
@@ -1036,15 +1036,15 @@ a:hover {
   }
 }
 .bg-gray {
-  background-color: #F4F4F4;
+  background-color: #F4F4F4 !important;
 }
 
 .bg-white {
-  background-color: #fff;
+  background-color: #fff !important;
 }
 
 .bg-blue {
-  background-color: #089BC0;
+  background-color: #089BC0 !important;
 }
 
 .bg-gray h1, .bg-gray h2, .bg-gray h3, .bg-gray h4, .bg-gray h5 {
@@ -1057,7 +1057,23 @@ a:hover {
 
 .bg-blue *:not(.btn):not(a):not(.icon) {
   /* , a, .icon */
-  color: #fff !important;
+  color: #fff;
+}
+
+.bg-blue .orange-outline-text {
+  border: 1px solid #fff;
+}
+
+.bg-blue .white-col p {
+  color: initial !important;
+}
+
+.bg-blue .white-col span {
+  color: initial !important;
+}
+
+.bg-blue .white-col h3 {
+  color: #EA6724 !important;
 }
 
 .scrollbar-custom::-webkit-scrollbar-track {
