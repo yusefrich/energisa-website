@@ -22,35 +22,6 @@
 
 
     <?php if (have_rows('projet_flexible_content')): ?>
-<<<<<<< HEAD
-    <?php while (have_rows('projet_flexible_content')):
-    the_row(); ?>
-
-    <!-- Verifica se existe o layout Informações do Projeto-->
-    <?php if (get_row_layout() == 'projet_layout_info'): ?>
-        <?php
-        $fundo_bg = "";
-        switch (get_sub_field('projet_info_bg')) {
-            case 'branco':
-                $fundo_bg = "bg-white";
-                break;
-            case 'cinza':
-                $fundo_bg = "bg-gray";
-                break;
-            case 'azul':
-                $fundo_bg = "bg-blue";
-                break;
-        }
-        ?>
-        <section class="section <?php echo $fundo_bg ?>" id="projeto-detail">
-            <div class="container">
-                <div class="mb-5 pb-3" id="parallax-detalhe-2">
-                    <div data-depth="0.2" class="d-flex justify-content-between">
-                        <div style="z-index: 1;" class="trace-detail-left trace-detail-offset-bottom">
-                            <img class="" src="<?php bloginfo('template_url'); ?>/img/detalhes-traco-laranja.png" alt="">
-                        </div>
-                        <div class="trace-detail-right">
-=======
         <?php while (have_rows('projet_flexible_content')): the_row(); ?>
 
             <!-- Verifica se existe o layout Informações do Projeto-->
@@ -65,7 +36,6 @@
                                 <div class="trace-detail-right">
                                 </div>
                             </div>
->>>>>>> ba703c724fa0833f480a7783cda534d48ea16e82
                         </div>
                         
                     </div>
