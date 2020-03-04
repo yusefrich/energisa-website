@@ -22,24 +22,36 @@
 
 
     <?php if (have_rows('projet_flexible_content')): ?>
-        <?php while (have_rows('projet_flexible_content')): the_row(); ?>
+    <?php while (have_rows('projet_flexible_content')):
+    the_row(); ?>
 
-            <!-- Verifica se existe o layout Informações do Projeto-->
-            <?php if (get_row_layout() == 'projet_layout_info'): ?>
-                <section class="section" id="projeto-detail">
-                    <div class="container">
-                        <div class="mb-5 pb-3" id="parallax-detalhe-2">
-                            <div data-depth="0.2" class="d-flex justify-content-between">
-                                <div style="z-index: 1;" class="trace-detail-left trace-detail-offset-bottom">
-                                    <img class="" src="<?php bloginfo('template_url'); ?>/img/detalhes-traco-laranja.png" alt="">
-                                </div>
-                                <div class="trace-detail-right">
-                                </div>
-                            </div>
+    <!-- Verifica se existe o layout Informações do Projeto-->
+    <?php if (get_row_layout() == 'projet_layout_info'): ?>
+        <?php
+        $fundo_bg = "";
+        switch (get_sub_field('projet_info_bg')) {
+            case 'branco':
+                $fundo_bg = "bg-white";
+                break;
+            case 'cinza':
+                $fundo_bg = "bg-gray";
+                break;
+            case 'azul':
+                $fundo_bg = "bg-blue";
+                break;
+        }
+        ?>
+        <section class="section <?php echo $fundo_bg ?>" id="projeto-detail">
+            <div class="container">
+                <div class="mb-5 pb-3" id="parallax-detalhe-2">
+                    <div data-depth="0.2" class="d-flex justify-content-between">
+                        <div style="z-index: 1;" class="trace-detail-left trace-detail-offset-bottom">
+                            <img class="" src="<?php bloginfo('template_url'); ?>/img/detalhes-traco-laranja.png" alt="">
                         </div>
-                        
+                        <div class="trace-detail-right">
+                        </div>
                     </div>
-                <div class="container">
+                </div>
                 <div data-aos="fade-up" class="row my-2 py-0 my-md-3 py-md-3 ">
                     <div class="col-md-5">
                         <h2 style="line-height: 65px;" class="text-orange font-weight-bold mt-5"><?php the_sub_field('projet_info_tituloOne'); ?></h2>
@@ -78,6 +90,7 @@
 
     <!-- Verifica se existe o layout de gráficos e indicadores-->
     <?php if (get_row_layout() == 'projet_layout_graph'): ?>
+    <div class="section">
         <?php
         $fundo_bg = "";
         switch (get_sub_field('projet_graficos_bg')) {
@@ -92,7 +105,6 @@
                 break;
         }
         ?>
-        <div class="section">
         <section class="p-0 <?php echo $fundo_bg ?>" id="projeto-indicadores">
             <div class="container ">
                 <div data-aos="fade-up" class="text-center mt-5 py-5">
@@ -154,7 +166,7 @@
             </div>
         </section>
     </div>
-        <?php endif; ?>
+<?php endif; ?>
 
     <!-- Verifica se existe o layout Linha do tempo de Projetos-->
     <?php if (get_row_layout() == 'projet_layout_linha_tempo'): ?>
