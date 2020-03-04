@@ -22,33 +22,6 @@
 
 
     <?php if (have_rows('projet_flexible_content')): ?>
-<<<<<<< HEAD
-    <?php while (have_rows('projet_flexible_content')):
-    the_row(); ?>
-
-    <!-- Verifica se existe o layout Informações do Projeto-->
-    <?php if (get_row_layout() == 'projet_layout_info'): ?>
-        <?php
-        $fundo_bg = "";
-        switch (get_sub_field('projet_info_bg')) {
-            case 'branco':
-                $fundo_bg = "bg-white";
-                break;
-            case 'cinza':
-                $fundo_bg = "bg-gray";
-                break;
-            case 'azul':
-                $fundo_bg = "bg-blue";
-                break;
-        }
-        ?>
-        <section class="section <?php echo $fundo_bg ?>" id="projeto-detail">
-            <div class="container">
-                <div class="mb-5 pb-3" id="parallax-detalhe-2">
-                    <div data-depth="0.2" class="d-flex justify-content-between">
-                        <div style="z-index: 1;" class="trace-detail-left trace-detail-offset-bottom">
-                            <img class="" src="<?php bloginfo('template_url'); ?>/img/detalhes-traco-laranja.png" alt="">
-=======
         <?php while (have_rows('projet_flexible_content')): the_row(); ?>
 
             <!-- Verifica se existe o layout Informações do Projeto-->
@@ -63,22 +36,10 @@
                                 <div class="trace-detail-right">
                                 </div>
                             </div>
->>>>>>> c3811074d77d651c431dee315c8fd17c11052486
                         </div>
-<<<<<<< HEAD
-                        <div data-aos="fade-up" class="row my-2 py-0 my-md-3 py-md-3 ">
-                            <div class="col-md-5">
-                                <h2 style="line-height: 65px;" class="text-orange font-weight-bold mt-5"><?php the_sub_field('projet_info_tituloOne'); ?></h2>
-                            </div>
-                            <div class="col-md-7">
-                                <p style="line-height: 31px;" class="text-caption"><?php the_sub_field('projet_info_descOne'); ?></p>
-                            </div>
-=======
-                        <div class="trace-detail-right">
->>>>>>> e02812fc1e7cdd8646175fea0150649569c1335d
-                        </div>
+                        
                     </div>
-                </div>
+                <div class="container">
                 <div data-aos="fade-up" class="row my-2 py-0 my-md-3 py-md-3 ">
                     <div class="col-md-5">
                         <h2 style="line-height: 65px;" class="text-orange font-weight-bold mt-5"><?php the_sub_field('projet_info_tituloOne'); ?></h2>
@@ -117,7 +78,6 @@
 
     <!-- Verifica se existe o layout de gráficos e indicadores-->
     <?php if (get_row_layout() == 'projet_layout_graph'): ?>
-    <div class="section">
         <?php
         $fundo_bg = "";
         switch (get_sub_field('projet_graficos_bg')) {
@@ -132,6 +92,7 @@
                 break;
         }
         ?>
+        <div class="section">
         <section class="p-0 <?php echo $fundo_bg ?>" id="projeto-indicadores">
             <div class="container ">
                 <div data-aos="fade-up" class="text-center mt-5 py-5">
@@ -159,22 +120,6 @@
                             </div>
                         </div>
 
-<<<<<<< HEAD
-                </section>
-            <?php endif; ?>
-
-            <!-- Verifica se existe o layout de gráficos e indicadores-->
-            <?php if (get_row_layout() == 'projet_layout_graph'): ?>
-                <div class="section">
-                <section class="p-0" id="projeto-indicadores">
-                    <div class="container ">
-                        <div data-aos="fade-up" class="text-center mt-5 py-5">
-                            <p class="text-gray">última atualização
-                                <strong><?php the_modified_time('j \d\e F \d\e  Y'); ?></strong>
-                            </p>
-                            <h2 class="text-orange font-weight-bold">Confira abaixo os indicadores</h2>
-                            <p>Veja em detalhes cada passo dado até o presente momento</p>
-=======
                     <?php endwhile; ?>
                     <?php endif; ?>
 
@@ -185,7 +130,6 @@
                                 <p class=" font-weight-bold"><?php the_sub_field('projet_indicadores_titulo') ?></p>
                                 <h3 class="text-orange font-weight-bold"><?php the_sub_field('projet_indicadores_percent') ?></h3>
                             </div>
->>>>>>> e02812fc1e7cdd8646175fea0150649569c1335d
                         </div>
                     <?php endwhile; ?>
                     <?php endif; ?>
@@ -210,7 +154,7 @@
             </div>
         </section>
     </div>
-<?php endif; ?>
+        <?php endif; ?>
 
     <!-- Verifica se existe o layout Linha do tempo de Projetos-->
     <?php if (get_row_layout() == 'projet_layout_linha_tempo'): ?>
