@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="0de7631c-04d5-43ce-8736-4b956fb59ba0" name="Default Changelist" comment="Integrado a linha do tempo da página interna de projetos">
       <change beforePath="$PROJECT_DIR$/../../../../frontend/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/single-produtos.php" beforeDir="false" afterPath="$PROJECT_DIR$/single-produtos.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/single-projetos.php" beforeDir="false" afterPath="$PROJECT_DIR$/single-projetos.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,20 +20,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/single-produtos.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="42" selection-end-column="18" />
+            <state relative-caret-position="824">
+              <caret line="224" column="82" selection-start-line="224" selection-start-column="82" selection-end-line="224" selection-end-column="82" />
+              <folding>
+                <element signature="e#12703#12729#0#HTML" expanded="true" />
+                <element signature="e#14348#14392#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/single-projetos.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="841">
-              <caret line="298" selection-start-line="298" selection-end-line="298" />
+            <state relative-caret-position="544">
+              <caret line="59" column="73" selection-start-line="59" selection-start-column="73" selection-end-line="59" selection-end-column="73" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#1;n#div#0;n#!!top" expanded="true" />
@@ -141,7 +147,6 @@
         <option value="$PROJECT_DIR$/_ajax/detalhes-equipe.php" />
         <option value="$PROJECT_DIR$/_ajax/lista-tags.php" />
         <option value="$PROJECT_DIR$/_ajax/listar-designer-produto.php" />
-        <option value="$PROJECT_DIR$/single-produtos.php" />
         <option value="$PROJECT_DIR$/search.php" />
         <option value="$PROJECT_DIR$/404.php" />
         <option value="$PROJECT_DIR$/inc/comments-helper.php" />
@@ -170,6 +175,7 @@
         <option value="$PROJECT_DIR$/page-entrar.php" />
         <option value="$PROJECT_DIR$/page-login.php" />
         <option value="$PROJECT_DIR$/single-projetos.php" />
+        <option value="$PROJECT_DIR$/single-produtos.php" />
       </list>
     </option>
   </component>
@@ -321,7 +327,7 @@
       <workItem from="1583266176204" duration="4000" />
       <workItem from="1583268983421" duration="13058000" />
       <workItem from="1583322656783" duration="9357000" />
-      <workItem from="1583341018715" duration="2704000" />
+      <workItem from="1583341018715" duration="5066000" />
     </task>
     <task id="LOCAL-00001" summary="Concluído o carregamento dinâmico para as páginas de novidades, produtos e projetos">
       <created>1582165204409</created>
@@ -334,7 +340,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="333865000" />
+    <option name="totallyTimeSpent" value="336227000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -700,13 +706,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/single-produtos.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="42" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/page-login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -723,8 +722,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/single-projetos.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="841">
-          <caret line="298" selection-start-line="298" selection-end-line="298" />
+        <state relative-caret-position="544">
+          <caret line="59" column="73" selection-start-line="59" selection-start-column="73" selection-end-line="59" selection-end-column="73" />
           <folding>
             <element signature="n#style#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#1;n#div#0;n#!!top" expanded="true" />
@@ -744,6 +743,17 @@
             <element signature="n#style#0;n#button#0;n#div#0;n#div#1;n#div#1;n#section#0;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#1;n#div#0;n#div#1;n#div#1;n#section#0;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#2;n#section#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/single-produtos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="824">
+          <caret line="224" column="82" selection-start-line="224" selection-start-column="82" selection-end-line="224" selection-end-column="82" />
+          <folding>
+            <element signature="e#12703#12729#0#HTML" expanded="true" />
+            <element signature="e#14348#14392#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>

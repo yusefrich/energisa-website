@@ -57,7 +57,7 @@
                         <h2 style="line-height: 65px;" class="text-orange font-weight-bold mt-5"><?php the_sub_field('projet_info_tituloOne'); ?></h2>
                     </div>
                     <div class="col-md-7">
-                        <p style="line-height: 31px;" class="text-caption text-dark"><?php the_sub_field('projet_info_descOne'); ?></p>
+                        <p style="line-height: 31px;" class="text-caption"><?php the_sub_field('projet_info_descOne'); ?></p>
                     </div>
                 </div>
                 <div data-aos="fade-up" class="row my-2 py-0 my-md-3 py-md-3">
