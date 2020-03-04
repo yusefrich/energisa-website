@@ -3,12 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="0de7631c-04d5-43ce-8736-4b956fb59ba0" name="Default Changelist" comment="Integrado a linha do tempo da página interna de projetos">
       <change beforePath="$PROJECT_DIR$/../../../../frontend/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/archive-ideias.php" beforeDir="false" afterPath="$PROJECT_DIR$/archive-ideias.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/sidebar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page-submeter.php" beforeDir="false" afterPath="$PROJECT_DIR$/page-submeter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/single-projetos.php" beforeDir="false" afterPath="$PROJECT_DIR$/single-projetos.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,57 +21,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/single-produtos.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="42" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/_ajax/listar-por-produto.php">
+        <entry file="file://$PROJECT_DIR$/single-projetos.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="55" column="13" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/archive-ideias.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="45" column="109" selection-start-line="45" selection-start-column="96" selection-end-line="45" selection-end-column="109" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="904" column="28" selection-start-line="904" selection-start-column="8" selection-end-line="904" selection-end-column="28" />
+            <state relative-caret-position="443">
+              <caret line="173" column="50" selection-start-line="173" selection-start-column="50" selection-end-line="173" selection-end-column="57" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#16367#17362#0" />
-                <element signature="e#17466#17628#0" />
-                <element signature="e#17820#22414#0" />
-                <element signature="e#43#50#1" expanded="true" />
-                <element signature="e#22476#22650#0" />
-                <element signature="e#22829#24065#0" />
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#24176#24337#0" />
-                <element signature="e#24472#25269#0" />
-                <element signature="e#25321#26127#0" />
-                <element signature="e#26161#26479#0" />
-                <element signature="e#26643#27717#0" />
-                <element signature="e#27767#28467#0" />
-                <element signature="e#28501#28823#0" />
-                <element signature="e#29012#29228#0" />
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#section#1;n#div#0;n#!!top" />
+                <element signature="n#style#0;n#p#0;n#li#0;n#!!top" expanded="true" />
+                <element signature="n#section#0;n#div#0;n#div#0;n#!!top" />
+                <element signature="n#section#1;n#div#0;n#div#0;n#!!top" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_ajax/listar-ideias.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1130">
-              <caret line="76" column="10" lean-forward="true" selection-start-line="76" selection-start-column="10" selection-end-line="78" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -137,7 +104,6 @@
         <option value="$PROJECT_DIR$/page-novidades.php" />
         <option value="$PROJECT_DIR$/archive-produtos.php" />
         <option value="$PROJECT_DIR$/archive-projetos.php" />
-        <option value="$PROJECT_DIR$/single-projetos.php" />
         <option value="$PROJECT_DIR$/_parts/detalhes-equipe.php" />
         <option value="$PROJECT_DIR$/_ajax/detalhes-treinamento.php" />
         <option value="$PROJECT_DIR$/_ajax/listar-novidades.php" />
@@ -155,12 +121,10 @@
         <option value="$PROJECT_DIR$/page-sobre.php" />
         <option value="$PROJECT_DIR$/page-login.php" />
         <option value="$PROJECT_DIR$/page-perfil.php" />
-        <option value="$PROJECT_DIR$/header.php" />
         <option value="$PROJECT_DIR$/single.php" />
         <option value="$PROJECT_DIR$/_ajax/like-post.php" />
         <option value="$PROJECT_DIR$/_ajax/votar-post.php" />
         <option value="$PROJECT_DIR$/footer.php" />
-        <option value="$PROJECT_DIR$/page-submeter.php" />
         <option value="$PROJECT_DIR$/inc/painel.php" />
         <option value="$PROJECT_DIR$/page-register.php" />
         <option value="$PROJECT_DIR$/comments.php" />
@@ -171,8 +135,11 @@
         <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/sidebar.php" />
         <option value="$PROJECT_DIR$/archive-ideias.php" />
-        <option value="$PROJECT_DIR$/js/app.js" />
         <option value="$PROJECT_DIR$/_ajax/listar-por-produto.php" />
+        <option value="$PROJECT_DIR$/page-submeter.php" />
+        <option value="$PROJECT_DIR$/header.php" />
+        <option value="$PROJECT_DIR$/js/app.js" />
+        <option value="$PROJECT_DIR$/single-projetos.php" />
       </list>
     </option>
   </component>
@@ -323,7 +290,7 @@
       <workItem from="1583243178227" duration="296000" />
       <workItem from="1583266176204" duration="4000" />
       <workItem from="1583268983421" duration="13058000" />
-      <workItem from="1583322656783" duration="3571000" />
+      <workItem from="1583322656783" duration="9357000" />
     </task>
     <task id="LOCAL-00001" summary="Concluído o carregamento dinâmico para as páginas de novidades, produtos e projetos">
       <created>1582165204409</created>
@@ -336,7 +303,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="325375000" />
+    <option name="totallyTimeSpent" value="331161000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -541,24 +508,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="74" column="35" selection-start-line="74" selection-start-column="35" selection-end-line="74" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_ajax/like-post.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="25" column="40" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/single-projetos.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="97" column="44" lean-forward="true" selection-start-line="97" selection-start-column="44" selection-end-line="97" selection-end-column="81" />
         </state>
       </provider>
     </entry>
@@ -576,13 +529,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page-submeter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="29" column="51" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
         </state>
       </provider>
     </entry>
@@ -680,13 +626,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/single-produtos.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="59">
-          <caret line="138" column="64" lean-forward="true" selection-start-line="138" selection-start-column="64" selection-end-line="138" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/archive-ideias.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
@@ -701,36 +640,66 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/_ajax/listar-por-produto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="55" column="13" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="904" column="28" selection-start-line="904" selection-start-column="8" selection-end-line="904" selection-end-column="28" />
+        <state relative-caret-position="790">
+          <caret line="922" column="62" selection-start-line="922" selection-start-column="62" selection-end-line="922" selection-end-column="62" />
           <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#446#453#1" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#427#434#1" expanded="true" />
+            <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="e#16367#17362#0" />
             <element signature="e#17466#17628#0" />
-            <element signature="e#17820#22414#0" />
             <element signature="e#43#50#1" expanded="true" />
-            <element signature="e#22476#22650#0" />
-            <element signature="e#22829#24065#0" />
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#24176#24337#0" />
-            <element signature="e#24472#25269#0" />
-            <element signature="e#25321#26127#0" />
-            <element signature="e#26161#26479#0" />
-            <element signature="e#26643#27717#0" />
-            <element signature="e#27767#28467#0" />
-            <element signature="e#28501#28823#0" />
-            <element signature="e#29012#29228#0" />
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_ajax/listar-por-produto.php">
+    <entry file="file://$PROJECT_DIR$/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="55" column="13" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="13" />
+        <state relative-caret-position="442">
+          <caret line="38" column="21" lean-forward="true" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page-submeter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="26" column="10" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/single-produtos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="42" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/single-projetos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="173" column="50" selection-start-line="173" selection-start-column="50" selection-end-line="173" selection-end-column="57" />
+          <folding>
+            <element signature="n#section#1;n#div#0;n#!!top" />
+            <element signature="n#style#0;n#p#0;n#li#0;n#!!top" expanded="true" />
+            <element signature="n#section#0;n#div#0;n#div#0;n#!!top" />
+            <element signature="n#section#1;n#div#0;n#div#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
