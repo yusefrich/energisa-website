@@ -3,9 +3,779 @@
   <component name="ChangeListManager">
     <list default="true" id="0de7631c-04d5-43ce-8736-4b956fb59ba0" name="Default Changelist" comment="Integrado a linha do tempo da página interna de projetos">
       <change beforePath="$PROJECT_DIR$/../../../../frontend/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page-submeter.php" beforeDir="false" afterPath="$PROJECT_DIR$/page-submeter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../languages/plugins/akismet-pt_BR.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../languages/plugins/akismet-pt_BR.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/advanced-custom-fields/acf.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/advanced-custom-fields/acf.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/advanced-custom-fields/assets/css/acf-field-group.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/advanced-custom-fields/assets/css/acf-field-group.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/advanced-custom-fields/assets/js/acf-input.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/advanced-custom-fields/assets/js/acf-input.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/advanced-custom-fields/assets/js/acf-input.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/advanced-custom-fields/assets/js/acf-input.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/advanced-custom-fields/includes/acf-field-functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/advanced-custom-fields/includes/acf-field-functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/advanced-custom-fields/includes/acf-field-group-functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/advanced-custom-fields/includes/acf-field-group-functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/advanced-custom-fields/includes/acf-helper-functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/advanced-custom-fields/includes/acf-helper-functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/advanced-custom-fields/includes/admin/admin-field-group.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/advanced-custom-fields/includes/admin/admin-field-group.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/advanced-custom-fields/includes/api/api-template.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/advanced-custom-fields/includes/api/api-template.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/advanced-custom-fields/includes/fields/class-acf-field-group.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/advanced-custom-fields/includes/fields/class-acf-field-group.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/advanced-custom-fields/includes/forms/form-nav-menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/advanced-custom-fields/includes/forms/form-nav-menu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/advanced-custom-fields/includes/local-fields.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/advanced-custom-fields/includes/local-fields.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/advanced-custom-fields/lang/acf-fr_FR.mo" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/advanced-custom-fields/lang/acf-fr_FR.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/advanced-custom-fields/lang/acf-fr_FR.po" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/advanced-custom-fields/lang/acf-fr_FR.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/advanced-custom-fields/readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/advanced-custom-fields/readme.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/akismet/.htaccess" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/akismet/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/akismet/_inc/akismet.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/akismet/_inc/akismet.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/akismet/_inc/form.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/akismet/_inc/img/logo-full-2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/akismet/akismet.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/akismet/class.akismet-admin.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/akismet/class.akismet-cli.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/akismet/class.akismet-rest-api.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/akismet/class.akismet-widget.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/akismet/class.akismet.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/akismet/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/akismet/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/akismet/views/activate.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/akismet/views/config.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/akismet/views/connect-jp.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/akismet/views/enter.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/akismet/views/get.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/akismet/views/notice.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/akismet/views/predefined.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/akismet/views/setup.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/akismet/views/start.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/akismet/views/stats.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/akismet/views/title.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/akismet/wrapper.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/hello.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/includes/bbpress.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/includes/buddypress.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/includes/gamipress.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/includes/likebtn_like_button_most_liked_widget.class.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/includes/likebtn_like_button_pagination.class.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/includes/likebtn_mycred.class.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/includes/meta_columns.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/includes/open_graph.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/includes/tab_buttons.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/includes/tab_settings.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/includes/tab_votes.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/includes/um.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/languages/likebtn-like-button-de_DE.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/languages/likebtn-like-button-de_DE.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/languages/likebtn-like-button-pl_PL.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/languages/likebtn-like-button-pl_PL.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/languages/likebtn-like-button-ru_RU.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/languages/likebtn-like-button-ru_RU.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/languages/likebtn-like-button.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/languages/likebtn-like-button.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/languages/likebtn-like-button.pot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/likebtn_like_button.class.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/likebtn_like_button.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/likebtn_like_button_db_update.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/css/addthis.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/css/admin.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/css/jquery/jquery-ui/jquery-ui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/css/jquery/jquery.datetimepicker.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/css/jquery/jquery.ui.durationPicker.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/css/jquery/select2/select2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/css/jquery/tipsy.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/img/actions/graph.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/img/actions/map.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/img/actions/votes.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/img/addthis.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/img/ajax_loader.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/img/ajax_loader_big.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/img/ajax_loader_hor.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/img/ajax_loader_round.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/img/ajax_loader_white.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/img/branding.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/img/buddypress_activity.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/img/check.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/img/gdpr_ready.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/img/graph.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/img/help.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/img/jquery/jquery-ui/ui-bg_flat_0_aaaaaa_40x100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/img/jquery/jquery-ui/ui-bg_flat_75_ffffff_40x100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/img/jquery/jquery-ui/ui-bg_glass_55_fbf9ee_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/img/jquery/jquery-ui/ui-bg_glass_65_ffffff_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/img/jquery/jquery-ui/ui-bg_glass_75_dadada_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/img/jquery/jquery-ui/ui-bg_glass_75_e6e6e6_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/img/jquery/jquery-ui/ui-bg_glass_95_fef1ec_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/img/jquery/jquery-ui/ui-bg_highlight-soft_75_cccccc_1x100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/img/jquery/jquery-ui/ui-icons_222222_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/img/jquery/jquery-ui/ui-icons_2e83ff_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/img/jquery/jquery-ui/ui-icons_454545_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/img/jquery/jquery-ui/ui-icons_888888_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/img/jquery/jquery-ui/ui-icons_cd0a0a_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/img/jquery/select2/select2-spinner.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/img/jquery/select2/select2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/img/jquery/select2/select2_arrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/img/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/img/menu_icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/img/popup_donate.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/img/popup_position/bottom.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/img/popup_position/left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/img/popup_position/right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/img/popup_position/top.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/img/popup_style/dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/img/popup_style/light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/img/preview.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/img/refresh.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/img/refresh_loader.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/img/rp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/img/share_size/large.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/img/share_size/medium.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/img/share_size/small.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/img/spinner.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/img/thumb/dislike.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/img/thumb/like.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/img/widget.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/img/widget_liked_by_user.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/js/admin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/js/dateparse.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/js/frontend.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/js/highstock/exporting.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/js/highstock/highstock.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/js/highstock/no-data-to-display.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/js/jquery/jquery-ui/jquery-ui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/js/jquery/jquery.datetimepicker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/js/jquery/jquery.tipsy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/js/jquery/jquery.ui.durationPicker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/js/jquery/select2/locale/select2_locale_ar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/js/jquery/select2/locale/select2_locale_az.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/js/jquery/select2/locale/select2_locale_bg.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/js/jquery/select2/locale/select2_locale_ca.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/js/jquery/select2/locale/select2_locale_cs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/js/jquery/select2/locale/select2_locale_da.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/js/jquery/select2/locale/select2_locale_de.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/js/jquery/select2/locale/select2_locale_el.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/js/jquery/select2/locale/select2_locale_es.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/js/jquery/select2/locale/select2_locale_et.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/js/jquery/select2/locale/select2_locale_eu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/js/jquery/select2/locale/select2_locale_fa.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/js/jquery/select2/locale/select2_locale_fi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/js/jquery/select2/locale/select2_locale_fr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/js/jquery/select2/locale/select2_locale_gl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/js/jquery/select2/locale/select2_locale_he.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/js/jquery/select2/locale/select2_locale_hr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/js/jquery/select2/locale/select2_locale_hu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/js/jquery/select2/locale/select2_locale_id.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/js/jquery/select2/locale/select2_locale_is.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/js/jquery/select2/locale/select2_locale_it.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/js/jquery/select2/locale/select2_locale_ja.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/js/jquery/select2/locale/select2_locale_ka.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/js/jquery/select2/locale/select2_locale_ko.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/js/jquery/select2/locale/select2_locale_lt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/js/jquery/select2/locale/select2_locale_lv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/js/jquery/select2/locale/select2_locale_mk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/js/jquery/select2/locale/select2_locale_ms.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/js/jquery/select2/locale/select2_locale_nl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/js/jquery/select2/locale/select2_locale_no.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/js/jquery/select2/locale/select2_locale_pl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/js/jquery/select2/locale/select2_locale_pt_BR.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/js/jquery/select2/locale/select2_locale_pt_PT.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/js/jquery/select2/locale/select2_locale_ro.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/js/jquery/select2/locale/select2_locale_rs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/js/jquery/select2/locale/select2_locale_ru.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/js/jquery/select2/locale/select2_locale_sk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/js/jquery/select2/locale/select2_locale_sv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/js/jquery/select2/locale/select2_locale_th.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/js/jquery/select2/locale/select2_locale_tr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/js/jquery/select2/locale/select2_locale_ug_CN.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/js/jquery/select2/locale/select2_locale_uk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/js/jquery/select2/locale/select2_locale_vi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/js/jquery/select2/locale/select2_locale_zh_CN.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/js/jquery/select2/locale/select2_locale_zh_TW.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/js/jquery/select2/select2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/js/jquery/select2/select2.sortable.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/public/js/wp-color-picker-alpha.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/templates/admin_mail.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/templates/like-box.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/templates/liked-by-user-widget.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/templates/most-liked-widget.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/templates/um-liked-content.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/likebtn-like-button/uninstall.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/.php_cs.dist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/class-admin-settings.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/class-admin-subscription.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/class-admin-welcome.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/class-tools.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/builder-stage/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/builder-stage/template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/field-checkbox/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/field-checkbox/template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/field-html_help_text/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/field-html_help_text/template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/field-multiselect/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/field-multiselect/template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/field-option-data/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/field-option-data/template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/field-option-pro-feature-alert/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/field-option-pro-feature-alert/template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/field-options/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/field-options/template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/field-radio/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/field-radio/template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/field-range/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/field-range/template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/field-select/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/field-select/template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/field-text-meta/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/field-text-meta/template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/field-text/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/field-text/template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/field-textarea/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/field-textarea/template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/field-visibility/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/field-visibility/template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-checkbox_field/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-checkbox_field/template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-column_field/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-column_field/template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-custom_hidden_field/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-custom_hidden_field/template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-custom_html/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-custom_html/template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-dropdown_field/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-dropdown_field/template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-email_address/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-email_address/template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-featured_image/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-featured_image/template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-fields/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-fields/template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-image_upload/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-image_upload/template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-multiple_select/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-multiple_select/template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-post_content/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-post_content/template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-post_excerpt/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-post_excerpt/template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-post_tags/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-post_tags/template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-post_title/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-post_title/template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-radio_field/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-radio_field/template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-recaptcha/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-recaptcha/template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-section_break/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-section_break/template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-taxonomy/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-taxonomy/template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-text_field/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-text_field/template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-textarea_field/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-textarea_field/template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-website_url/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-website_url/template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/help-text/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/help-text/template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/text-editor/editor.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/text-editor/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/text-editor/style.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/text-editor/template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/form-builder-assets.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/form-builder.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/jquery-siaf-end.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/jquery-siaf-start.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/mixins/form-field.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/mixins/global.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/mixins/integration.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/mixins/option-field.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/less/builder-responsive.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/less/form-builder.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/less/mixins/center-block.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/less/mixins/clearfix.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/less/mixins/custom-mixins.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/less/mixins/hide-text.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/less/mixins/opacity.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/less/mixins/reset-text.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/less/mixins/size.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/less/mixins/text-overflow.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/less/mixins/vendor-prefixes.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/less/variables.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/class-wpuf-admin-form-builder-ajax.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/class-wpuf-admin-form-builder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/class-wpuf-form-builder-field-settings.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/views/form-builder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-handler.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/html/form-settings-display.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/html/form-settings-payment.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/html/form-settings-post-edit.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/html/form-settings-post.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/html/form-submission-restriction.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/html/modal.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/html/support.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/html/whats-new.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/installer.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/post-forms-list-table-view.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/post-forms-list-table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/posting.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/premium.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/promotion.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/settings-options.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/subscribers.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/template-post.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/tools.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/transactions.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/weforms.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/css/admin.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/css/admin/admin.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/css/admin/gutenblock-editor.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/css/admin/gutenblock.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/css/admin/wpuf-setup.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/css/chosen/chosen-sprite.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/css/chosen/chosen-sprite@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/css/chosen/chosen.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/css/frontend-form/layout1.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/css/frontend-form/layout2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/css/frontend-form/layout3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/css/frontend-form/layout4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/css/frontend-form/layout5.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/css/frontend-forms.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/css/images/ui-bg_diagonals-small_75_cccccc_40x40.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/css/images/ui-bg_flat_0_aaaaaa_40x100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/css/images/ui-bg_flat_0_ffffff_40x100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/css/images/ui-bg_flat_75_ffffff_40x100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/css/images/ui-bg_glass_55_fbf9ee_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/css/images/ui-bg_glass_65_ffffff_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/css/images/ui-bg_glass_75_dadada_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/css/images/ui-bg_glass_75_e6e6e6_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/css/images/ui-bg_glass_95_fef1ec_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/css/images/ui-icons_222222_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/css/images/ui-icons_2e83ff_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/css/images/ui-icons_454545_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/css/images/ui-icons_888888_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/css/images/ui-icons_cd0a0a_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/css/jquery-ui-1.9.1.custom.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/css/jquery.smallipop.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/css/wpuf-form-builder.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/css/wpuf.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/active.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/add.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/arrow-move.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/arrows.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/completed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/cross.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/del-img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/del-pm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/del.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/delete.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/edit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/help.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/help/bugs.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/help/customization.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/help/docs.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/help/like.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/help/support.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/icon-128x128.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/icon-minus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/icon-plus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/inactive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/modules/Social-Media-Login.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/modules/campaign_monitor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/modules/convertkit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/modules/email-templates.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/modules/getresponse.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/modules/mailpoet3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/modules/message.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/modules/more.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/modules/reports.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/modules/wpuf-activity.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/modules/wpuf-buddypress.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/modules/wpuf-comment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/modules/wpuf-mailchimp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/modules/wpuf-mailpoet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/modules/wpuf-pmpro.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/modules/wpuf-qr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/modules/wpuf-sms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/modules/wpuf-stripe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/modules/wpuf-ua.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/modules/wpuf-ul.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/modules/zapier.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/move-img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/no-image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/paypal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/premium/advanced-fields.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/premium/conditional-logic.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/premium/content-restrictions.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/premium/coupon.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/premium/multi-step.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/premium/registration.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/processing.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/promo-btn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/promo-logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/promotional-offer/bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/recaptcha-placeholder.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/remove.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/templates/post.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/templates/woocommerce.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/tick.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/ufp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/welcome/Content-Locking.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/welcome/Create-Database.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/welcome/Form-Builder.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/welcome/Guest-Posting.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/welcome/My-Account.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/welcome/Post-Taxonomies.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/welcome/Profile-Builder.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/welcome/Profile-Builder.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/welcome/Registration-form.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/welcome/Subscription-Signup.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/welcome/Subscriptions.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/welcome/Support.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/welcome/User.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/welcome/frontend-posting.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/welcome/pay-per-post.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/welcome/welcome-video.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/welcome/wpuf-logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/whats-new/admin-bar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/whats-new/category.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/whats-new/column-field.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/whats-new/image_upload_label.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/whats-new/limit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/whats-new/role-base.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/whats-new/schedule.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/whats-new/wizard.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/wpspin_light.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/images/wpuf-pro.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/js-templates/form-components.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/js/admin-profile-subs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/js/admin-shortcode.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/js/admin/blockFrameSetup.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/js/admin/gutenblock.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/js/admin/wpuf-enhanced-select.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/js/admin/wpuf-enhanced-select.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/js/admin/wpuf-setup.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/js/admin/wpuf-setup.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/js/billing-address.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/js/chosen.jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/js/conditional.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/js/countries.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/js/frontend-form.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/js/frontend-form.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/js/jquery-blockui/jquery.blockUI.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/js/jquery-blockui/jquery.blockUI.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/js/jquery-ui-timepicker-addon.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/js/jquery.smallipop-0.4.0.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/js/jquery.validate.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/js/metabox-tabs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/js/selectWPUF/selectWPUF.full.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/js/selectWPUF/selectWPUF.full.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/js/selectWPUF/selectWPUF.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/js/selectWPUF/selectWPUF.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/js/subscriptions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/js/upload.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/js/upload.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/js/wpuf-admin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/js/wpuf-form-builder-components.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/js/wpuf-form-builder-mixins.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/js/wpuf-form-builder-wpuf-forms.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/js/wpuf-form-builder.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/js/wpuf-login-widget.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/js/wpuf-tmc-button.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/less/admin.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/less/frontend-forms.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/less/help.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/less/metabox-tabs.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/less/whats-new.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/vendor/clipboard/clipboard.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/vendor/clipboard/clipboard.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/vendor/font-awesome/css/font-awesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/vendor/font-awesome/fonts/FontAwesome.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/vendor/font-awesome/fonts/fontawesome-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/vendor/font-awesome/fonts/fontawesome-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/vendor/font-awesome/fonts/fontawesome-webfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/vendor/font-awesome/fonts/fontawesome-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/vendor/font-awesome/fonts/fontawesome-webfont.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/vendor/jquery.scrollTo/jquery.scrollTo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/vendor/jquery.scrollTo/jquery.scrollTo.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/vendor/selectize/css/selectize.default.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/vendor/selectize/js/standalone/selectize.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/vendor/selectize/js/standalone/selectize.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/vendor/sweetalert2/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/vendor/sweetalert2/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/vendor/sweetalert2/dist/sweetalert2.common.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/vendor/sweetalert2/dist/sweetalert2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/vendor/sweetalert2/dist/sweetalert2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/vendor/sweetalert2/dist/sweetalert2.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/vendor/sweetalert2/dist/sweetalert2.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/vendor/sweetalert2/src/colors.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/vendor/sweetalert2/src/sweetalert2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/vendor/sweetalert2/src/sweetalert2.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/vendor/sweetalert2/src/utils/classes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/vendor/sweetalert2/src/utils/dom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/vendor/sweetalert2/src/utils/params.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/vendor/sweetalert2/src/utils/utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/vendor/toastr/toastr.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/vendor/toastr/toastr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/vendor/toastr/toastr.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/vendor/toastr/toastr.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/vendor/toastr/toastr.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/vendor/tooltip/tooltip.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/vendor/tooltip/tooltip.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/vendor/tooltip/tooltip.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/vendor/vue-router/vue-router.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/vendor/vue/vue.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/vendor/vue/vue.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/vendor/vuex/vuex.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/vendor/vuex/vuex.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/class/admin-asset-loader.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/class/asset-loader.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/class/frontend-account.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/class/frontend-dashboard.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/class/payment.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/class/post-form-template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/class/post-form-templates/post.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/class/render-form.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/class/subscription.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/class/transactions-list-table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/class/upload.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/class-acf.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/class-billing-address.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/class-customizer.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/class-dokan-integration.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/class-field-manager.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/class-form-manager.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/class-form-preview.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/class-form.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/class-frontend-form-post.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/class-frontend-render-form.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/class-gutenblock.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/class-installer.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/class-list-table-subscribers.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/class-login-widget.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/class-privacy.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/class-pro-upgrades.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/class-upgrades.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/class-user-subscription.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/class-user.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/class-wc-vendors-integration.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/class-wcmp-integration.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/class-whats-new.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/countries-formated.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/countries-state.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/countries.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/fields/class-abstract-fields.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/fields/class-field-checkbox.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/fields/class-field-column.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/fields/class-field-dropdown.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/fields/class-field-email.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/fields/class-field-featured-image.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/fields/class-field-hidden.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/fields/class-field-html.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/fields/class-field-image.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/fields/class-field-multidropdown.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/fields/class-field-numeric.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/fields/class-field-post-content.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/fields/class-field-post-excerpt.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/fields/class-field-post-tags.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/fields/class-field-post-taxonomy.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/fields/class-field-post-title.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/fields/class-field-pro.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/fields/class-field-radio.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/fields/class-field-recaptcha.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/fields/class-field-sectionbreak.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/fields/class-field-text.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/fields/class-field-textarea.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/fields/class-field-url.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/fields/class-pro-upgrade-fields.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/fields/field-trait.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/free/admin/form-builder/class-wpuf-form-builder-field-settings-free.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/free/admin/form-builder/class-wpuf-form-builder-free.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/free/admin/shortcode-builder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/free/admin/shortcode-button.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/free/class-login.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/free/class-registration.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/free/edit-profile.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/free/edit-user.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/free/form-element.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/free/form.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/free/loader.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/free/post-form-templates/the_events_calendar.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/free/post-form-templates/woocommerce.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/free/prompt.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/free/subscription.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/setup-wizard.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/upgrades/upgrade-2.1.9.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/upgrades/upgrade-2.6.0.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/upgrades/upgrade-2.7.0.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/upgrades/upgrade-2.8.0.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/upgrades/upgrade-2.8.2.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/upgrades/upgrade-2.8.5.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/upgrades/upgrade-2.9.2.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/languages/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/languages/wp-user-frontend-ar.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/languages/wp-user-frontend-ar.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/languages/wp-user-frontend-es_ES.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/languages/wp-user-frontend-es_ES.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/languages/wp-user-frontend-fa_IR.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/languages/wp-user-frontend-fa_IR.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/languages/wp-user-frontend-tr_TR.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/languages/wp-user-frontend-tr_TR.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/languages/wp-user-frontend-zh_CN.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/languages/wp-user-frontend-zh_CN.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/languages/wp-user-frontend.pot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/lib/appsero/Client.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/lib/appsero/Insights.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/lib/appsero/License.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/lib/appsero/Updater.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/lib/class-wedevs-insights.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/lib/class-weforms-upsell.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/lib/class.settings-api.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/lib/gateway/bank.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/lib/gateway/paypal.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/lib/invisible_recaptcha.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/lib/recaptchalib.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/lib/recaptchalib_noCaptcha.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/templates/account.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/templates/dashboard.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/templates/dashboard/billing-address.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/templates/dashboard/dashboard.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/templates/dashboard/edit-profile.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/templates/dashboard/posts.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/templates/dashboard/subscription.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/templates/dokan/edit-post.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/templates/dokan/new-post.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/templates/dokan/post-listing.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/templates/dokan/posts.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/templates/logged-in.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/templates/login-form.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/templates/lost-pass-form.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/templates/registration-form.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/templates/reset-pass-form.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/templates/submit-post.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/templates/subscriptions/listing.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/templates/subscriptions/pack-details.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/templates/unauthorized.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/templates/wc-marketplace/edit-post.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/templates/wc-marketplace/new-post.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/templates/wc-marketplace/post-listing.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/templates/wc-marketplace/posts.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/templates/wc-vendors/edit-post.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/templates/wc-vendors/new-post.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/templates/wc-vendors/post-listing.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/templates/wc-vendors/posts.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/autoload.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/ClassLoader.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/autoload_classmap.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/autoload_namespaces.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/autoload_psr4.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/autoload_real.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/autoload_static.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installed.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/composer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/AglInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/AimeosInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/AnnotateCmsInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/AsgardInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/AttogramInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/BaseInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/BitrixInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/BonefishInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/CakePHPInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/ChefInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/CiviCrmInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/ClanCatsFrameworkInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/CockpitInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/CodeIgniterInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/Concrete5Installer.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/CraftInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/CroogoInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/DecibelInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/DframeInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/DokuWikiInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/DolibarrInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/DrupalInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/ElggInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/EliasisInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/ExpressionEngineInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/EzPlatformInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/FuelInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/FuelphpInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/GravInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/HuradInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/ImageCMSInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/Installer.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/ItopInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/JoomlaInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/KanboardInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/KirbyInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/KnownInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/KodiCMSInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/KohanaInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/LanManagementSystemInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/LaravelInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/LavaLiteInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/LithiumInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/MODULEWorkInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/MODXEvoInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/MagentoInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/MajimaInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/MakoInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/MantisBTInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/MauticInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/MayaInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/MediaWikiInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/MicroweberInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/ModxInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/MoodleInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/OctoberInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/OntoWikiInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/OsclassInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/OxidInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/PPIInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/PhiftyInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/PhpBBInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/PimcoreInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/PiwikInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/PlentymarketsInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/Plugin.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/PortoInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/PrestashopInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/PuppetInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/PxcmsInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/RadPHPInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/ReIndexInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/Redaxo5Installer.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/RedaxoInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/RoundcubeInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/SMFInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/ShopwareInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/SilverStripeInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/SiteDirectInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/SyDESInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/Symfony1Installer.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/TYPO3CmsInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/TYPO3FlowInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/TaoInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/TheliaInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/TuskInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/UserFrostingInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/VanillaInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/VgmcpInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/WHMCSInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/WolfCMSInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/WordPressInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/YawikInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/ZendInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/Composer/Installers/ZikulaInstaller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/installers/src/bootstrap.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/views/post-form.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/views/welcome-page.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/wpuf-functions.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/wpuf.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/single-projetos.php" beforeDir="false" afterPath="$PROJECT_DIR$/single-projetos.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,22 +795,55 @@
         <entry file="file://$PROJECT_DIR$/single-produtos.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
-              <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="42" selection-end-column="18" />
+              <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="42" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/single-projetos.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="461">
+              <caret line="42" column="10" lean-forward="true" selection-start-line="42" selection-start-column="10" selection-end-line="42" selection-end-column="10" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#section#1;n#div#0;n#!!top" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h2#0;n#div#0;n#div#1;n#div#0;n#section#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#1;n#div#1;n#div#0;n#section#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#0;n#section#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#div#2;n#div#0;n#section#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#2;n#div#0;n#section#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#0;n#section#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h2#0;n#div#0;n#div#1;n#div#2;n#div#0;n#section#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#li#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#section#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#section#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h3#0;n#div#0;n#div#1;n#section#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#0;n#div#1;n#div#1;n#section#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#1;n#div#0;n#div#1;n#div#1;n#section#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#2;n#section#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/page-login.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="24" column="51" lean-forward="true" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="51" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/single-projetos.php">
+        <entry file="file://$PROJECT_DIR$/comments.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="443">
-              <caret line="173" column="50" selection-start-line="173" selection-start-column="50" selection-end-line="173" selection-end-column="57" />
-              <folding>
-                <element signature="n#section#1;n#div#0;n#!!top" />
-                <element signature="n#style#0;n#p#0;n#li#0;n#!!top" expanded="true" />
-                <element signature="n#section#0;n#div#0;n#div#0;n#!!top" />
-                <element signature="n#section#1;n#div#0;n#div#0;n#!!top" />
-              </folding>
+            <state relative-caret-position="569">
+              <caret line="48" column="23" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="66" />
             </state>
           </provider>
         </entry>
@@ -119,7 +922,6 @@
         <option value="$PROJECT_DIR$/_ajax/listar-ideias.php" />
         <option value="$PROJECT_DIR$/_ajax/listar-user-comments.php" />
         <option value="$PROJECT_DIR$/page-sobre.php" />
-        <option value="$PROJECT_DIR$/page-login.php" />
         <option value="$PROJECT_DIR$/page-perfil.php" />
         <option value="$PROJECT_DIR$/single.php" />
         <option value="$PROJECT_DIR$/_ajax/like-post.php" />
@@ -140,6 +942,8 @@
         <option value="$PROJECT_DIR$/header.php" />
         <option value="$PROJECT_DIR$/js/app.js" />
         <option value="$PROJECT_DIR$/single-projetos.php" />
+        <option value="$PROJECT_DIR$/page-entrar.php" />
+        <option value="$PROJECT_DIR$/page-login.php" />
       </list>
     </option>
   </component>
@@ -154,6 +958,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -198,7 +1003,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -291,6 +1095,7 @@
       <workItem from="1583266176204" duration="4000" />
       <workItem from="1583268983421" duration="13058000" />
       <workItem from="1583322656783" duration="9357000" />
+      <workItem from="1583341018715" duration="2580000" />
     </task>
     <task id="LOCAL-00001" summary="Concluído o carregamento dinâmico para as páginas de novidades, produtos e projetos">
       <created>1582165204409</created>
@@ -303,7 +1108,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="331161000" />
+    <option name="totallyTimeSpent" value="333741000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -319,7 +1124,7 @@
     <frame x="-8" y="-8" width="2576" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12241653" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12321144" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -328,11 +1133,11 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32932165" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32827735" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32932165" />
-      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.5742145" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32936078" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -546,24 +1351,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/page-login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="31" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/inc/painel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/comments.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="42" column="77" selection-start-line="42" selection-start-column="77" selection-end-line="42" selection-end-column="77" />
         </state>
       </provider>
     </entry>
@@ -686,20 +1477,49 @@
     <entry file="file://$PROJECT_DIR$/single-produtos.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
-          <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="42" selection-end-column="18" />
+          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="42" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/single-projetos.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="173" column="50" selection-start-line="173" selection-start-column="50" selection-end-line="173" selection-end-column="57" />
+        <state relative-caret-position="461">
+          <caret line="42" column="10" lean-forward="true" selection-start-line="42" selection-start-column="10" selection-end-line="42" selection-end-column="10" />
           <folding>
+            <element signature="n#style#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#section#1;n#div#0;n#!!top" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h2#0;n#div#0;n#div#1;n#div#0;n#section#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#1;n#div#1;n#div#0;n#section#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#0;n#section#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#div#2;n#div#0;n#section#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#2;n#div#0;n#section#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#0;n#section#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h2#0;n#div#0;n#div#1;n#div#2;n#div#0;n#section#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#0;n#li#0;n#!!top" expanded="true" />
-            <element signature="n#section#0;n#div#0;n#div#0;n#!!top" />
-            <element signature="n#section#1;n#div#0;n#div#0;n#!!top" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#section#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#section#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#div#0;n#div#1;n#section#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#0;n#div#1;n#div#1;n#section#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#1;n#div#0;n#div#1;n#div#1;n#section#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#2;n#section#0;n#div#1;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page-login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="24" column="51" lean-forward="true" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comments.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="569">
+          <caret line="48" column="23" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="66" />
         </state>
       </provider>
     </entry>
