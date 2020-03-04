@@ -1,5 +1,6 @@
 <?php get_header(); ?>
     <div id="fullpage">
+        <?php $countCarousel = 0; ?>
         <?php while (have_posts()) :
         the_post(); ?>
         <?php $img_background = get_the_post_thumbnail_url(null, 'full'); ?>
@@ -176,8 +177,11 @@
 
         <?php endif; ?>
 
+
+
         <!-- Verifica se existe o layout Carousel-->
         <?php if (get_row_layout() == 'layout_prod_carousel'): ?>
+
             <?php
             $section_titulo = get_sub_field('prod_carousel_titleSection');
             $section_tagline = get_sub_field('prod_carousel_taglineSection');
@@ -189,17 +193,17 @@
                 case 'branco':
                     $fundo_bg = "bg-white";
                     $detail_bg = "normal-carousel-caption";
-                    $carousel_color = "carrouselProdutosWhite";
+                    $carousel_color = "carrouselProdutosWhite-".$countCarousel;
                     break;
                 case 'cinza':
                     $fundo_bg = "bg-gray";
                     $detail_bg = "normal-carousel-caption";
-                    $carousel_color = "carrouselProdutosGray";
+                    $carousel_color = "carrouselProdutosGray-".$countCarousel;
                     break;
                 case 'azul':
                     $fundo_bg = "bg-blue";
                     $detail_bg = "custom-carousel-caption";
-                    $carousel_color = "carrouselProdutosBlue";
+                    $carousel_color = "carrouselProdutosBlue-".$countCarousel;
                     break;
             }
             ?>
@@ -267,6 +271,8 @@
                 </section>
 
             <?php endif; ?>
+
+            <?php $countCarousel ++ ; ?>
         <?php endif; ?>
 
         <!-- Verifica se existe o layout Indicadores-->
