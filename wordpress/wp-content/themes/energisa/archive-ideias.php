@@ -46,6 +46,9 @@
                     <button class="btn btn-outline-light px-5" data-pagina="1" data-tipo="" id="btnLoadIdeias"> Mostrar
                         mais
                     </button>
+                    <button class="btn btn-outline-light px-5 d-none" data-pagina="1" data-produto="" id="btnLoadIdeias2"> Mostrar
+                        mais
+                    </button>
                 </div>
             </div>
         </div>

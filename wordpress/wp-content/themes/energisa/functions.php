@@ -118,6 +118,7 @@ include('_ajax/listar-designer-produto.php');
 include('_ajax/listar-user-comments.php');
 include('_ajax/votar-post.php');
 include('_ajax/like-post.php');
+include('_ajax/listar-por-produto.php');
 
 function app_scripts()
 {

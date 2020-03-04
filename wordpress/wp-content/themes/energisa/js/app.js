@@ -524,52 +524,52 @@ jQuery(function ($) {
                     str += '</div>';
                     str += '<div class="modal-body pt-0">';
                     str += '<div class="row">';
-                        str += '<div class="col-md-5 p-0">';
-                            str += '<div class="text-start my-2 mx-3">';/* mx-5 px-5 */
-                            str += '<div class="d-flex justify-content-start">';
-                            str += '<img src="' + wp.template_url + '/img/jigsaw.png" alt="">';
-                            str += '<h2 class="text-white font-weight-bold">Um pouco sobre o processo</h2>';
-                            str += '</div>';
-                            str += '<p class="text-white font-weight-light mt-4">' + detalhes[indice].processo + '</p>';
-                            str += '</div>';
+                    str += '<div class="col-md-5 p-0">';
+                    str += '<div class="text-start my-2 mx-3">';/* mx-5 px-5 */
+                    str += '<div class="d-flex justify-content-start">';
+                    str += '<img src="' + wp.template_url + '/img/jigsaw.png" alt="">';
+                    str += '<h2 class="text-white font-weight-bold">Um pouco sobre o processo</h2>';
+                    str += '</div>';
+                    str += '<p class="text-white font-weight-light mt-4">' + detalhes[indice].processo + '</p>';
+                    str += '</div>';
+                    str += '</div>';
+                    str += '<div class="col-md-7 p-0">';
+
+                    str += '<div class="container-fluid p-0">';
+                    str += '<div id="design-produto-slider" class="carouselPrograms carousel slide" data-ride="carousel" data-interval="false">';
+                    str += '<div class="carousel-inner design-produto-iner row w-100 mx-auto" role="listbox">';
+
+                    for (var i = 0; i < images.length; i++) {
+                        if (i == 0) {
+                            str += '<div class="carousel-item col-md-4  active">';
+                        } else {
+                            str += '<div class="carousel-item col-md-4">';
+                        }
+                        str += '<div class="panel panel-default">';
+                        str += '<div class="panel-thumbnail">';
+                        str += '<a href="#" title="image ' + i + '" class="thumb">';
+                        str += '<img class="mx-auto d-block img-fit rounded" src="' + images[i] + '" alt="slide ' + i + '">';
+                        str += '</a>';
                         str += '</div>';
-                        str += '<div class="col-md-7 p-0">';
-
-                            str += '<div class="container-fluid p-0">';
-                            str += '<div id="design-produto-slider" class="carouselPrograms carousel slide" data-ride="carousel" data-interval="false">';
-                            str += '<div class="carousel-inner design-produto-iner row w-100 mx-auto" role="listbox">';
-        
-                            for (var i = 0; i < images.length; i++) {
-                                if (i == 0) {
-                                    str += '<div class="carousel-item col-md-4  active">';
-                                } else {
-                                    str += '<div class="carousel-item col-md-4">';
-                                }
-                                str += '<div class="panel panel-default">';
-                                str += '<div class="panel-thumbnail">';
-                                str += '<a href="#" title="image ' + i + '" class="thumb">';
-                                str += '<img class="mx-auto d-block img-fit rounded" src="' + images[i] + '" alt="slide ' + i + '">';
-                                str += '</a>';
-                                str += '</div>';
-                                str += '</div>';
-                                str += '</div>';
-                            }
-        
-                            str += '</div>';
-                            str += '</div>';
-                            str += '</div>';
-                            str += '<div class="d-flex justify-content-end my-4 mr-5 pr-5">';
-                            str += '<a href="#design-produto-slider" role="button" data-slide="prev" class="btn btn-light btn-round mx-2">';
-                            str += '<span class="icon pt-2 pb-2 pl-1 icon-prev-icon"></span>';
-                            str += '</a>';
-                            str += '<a href="#design-produto-slider" role="button" data-slide="next" class="btn btn-light btn-round mx-2">';
-                            str += '<span class="icon pt-2 pb-2 pr-1 icon-next-icon"></span>';
-                            str += '</a>';
-                            str += '</div>';
-
-                            str += '</div>';    
-
                         str += '</div>';
+                        str += '</div>';
+                    }
+
+                    str += '</div>';
+                    str += '</div>';
+                    str += '</div>';
+                    str += '<div class="d-flex justify-content-end my-4 mr-5 pr-5">';
+                    str += '<a href="#design-produto-slider" role="button" data-slide="prev" class="btn btn-light btn-round mx-2">';
+                    str += '<span class="icon pt-2 pb-2 pl-1 icon-prev-icon"></span>';
+                    str += '</a>';
+                    str += '<a href="#design-produto-slider" role="button" data-slide="next" class="btn btn-light btn-round mx-2">';
+                    str += '<span class="icon pt-2 pb-2 pr-1 icon-next-icon"></span>';
+                    str += '</a>';
+                    str += '</div>';
+
+                    str += '</div>';
+
+                    str += '</div>';
                     str += '</div>';
                     str += '<div class="modal-footer"></div>';
                     str += '</div>';
@@ -795,6 +795,7 @@ jQuery(function ($) {
 
     visitantesLikes();
 
+    // #############################################################
 
     $("#btn-logar").on('click', function (event) {
         alert("Faça login para votar")
@@ -805,12 +806,117 @@ jQuery(function ($) {
 
         if (emailRegExp.test($(this).val())) {
 
-        } else{
+        } else {
             alert("Email inválido");
             $(this).val('');
         }
+    })
 
 
+    // ############################ CARREGAR OS POSTS POR PRODUTO #################################
+
+    function listarPorProdutoAjax(pagina, id) {
+        $.ajax({
+            url: wp.ajaxurl,
+            type: 'GET',
+            data: {
+                action: 'listarPorProduto',
+                id: id,
+                page: pagina,
+            },
+            beforeSend: function () {
+
+            },
+            success: function (dados) {
+                let success = dados.success;
+                let posts = dados.data.posts;
+                let hasNext = dados.data.hasNext;
+
+                if (success) {
+                    $.each(posts, function (i, post) {
+                        var tags = post.tags;
+                        let votos = parseInt(post.votos);
+                        if (isNaN(votos)) {
+                            votos = 0;
+                        }
+                        let respostas = parseInt(post.respostas);
+                        if (isNaN(respostas)) {
+                            respostas = 0;
+                        }
+                        var card = "";
+
+                        card += "<div data-aos='flip-left' class='mb-2 p-2'>";
+                        card += "<div class='pb-4 text-start'>";
+                        card += "<div class='d-flex justify-content-start pb-4'>";
+                        card += "<div class='profile-pic mr-4' style='background-image: url(" + post.foto + ");background-size: cover;background-position: center;'></div>";
+                        card += "<div>";
+                        card += "<span class='text-fade'><small>Postado em " + post.data + "</small></span>";
+                        card += "<p class='card-user-name m-0'>" + post.user + "</p>";
+                        card += "</div>";
+                        card += "</div>";
+                        card += "<p class='text-uppercase'>";
+                        card += "<small class='text-orange'>" + post.status + "</small>";
+                        card += "</p>";
+                        card += "<a href='" + post.url + "'>";
+                        card += "<p class='font-weight-extra-bold text-caption'>" + post.titulo + "</p>";
+                        card += "</a>";
+                        card += "<p>";
+                        card += "<small>";
+                        if (votos > 1) {
+                            card += "<span class='round-outline-text py-1 px-2 mx-1'>" + votos + " Votos</span>";
+                        } else {
+                            card += "<span class='round-outline-text py-1 px-2 mx-1'>" + votos + " Voto</span>";
+                        }
+                        if (respostas > 1) {
+                            card += "<span class='round-outline-text py-1 px-2 mx-1'>" + respostas + " Respostas</span>";
+                        } else {
+                            card += "<span class='round-outline-text py-1 px-2 mx-1'>" + respostas + " Resposta</span>";
+                        }
+                        card += "</small>";
+                        card += "</p>";
+                        card += "<div class='card-tags'>";
+                        for (var i = 0; i < tags.length; i++) {
+                            card += "<small class='orange-outline-text py-1 px-2 mr-2 my-1'>#" + tags[i] + "</small>";
+                        }
+                        card += "</div>";
+                        card += "</div>";
+                        card += "</div>";
+                        card += "<hr>";
+
+                        $("#loadIdeias").append(card);
+                    })
+
+                    if (hasNext === false) {
+                        $("#btnLoadIdeias2").hide();
+                    }
+                } else {
+                    $("#loadIdeias").append(`<div class="alert alert-danger text-center">${dados.data.msg}</div>`);
+                }
+            },
+            error: function (erro) {
+                console.log("ooopss... algo deu errado na requisição")
+            },
+        })
+    }
+
+    $("#loadPerProduct").on('change', function () {
+        let id = $(this).val();
+        $("#loadIdeias").html('');
+        listarPorProdutoAjax(1, id);
+
+        $("#btnLoadIdeias").addClass('d-none');
+
+        $("#btnLoadIdeias2").removeClass('d-none');
+        $("#btnLoadIdeias2").data('pagina', 1);
+        $("#btnLoadIdeias2").data('produto', id);
+    })
+
+    // Botão de carregar mais ideias por produto
+    $("#btnLoadIdeias2").on('click', function (event) {
+        paggina = $(this).data("pagina") + 1;
+        var produtoID = $(this).data("produto");
+        listarPorProdutoAjax(paggina, produtoID);
+        $(this).data('pagina', paggina);
     })
 
 })

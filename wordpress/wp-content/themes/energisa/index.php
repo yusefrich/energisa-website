@@ -11,7 +11,8 @@
                         <!--  d-none d-md-block -->
                         <div class="slider-title">
                             <div class="text-center">
-                                <h2 class="highlight m-0"><?php the_field('carousel_titulo_principal_1', 'options-carousel'); ?></h2> <br>
+                                <h2 class="highlight m-0"><?php the_field('carousel_titulo_principal_1', 'options-carousel'); ?></h2>
+                                <br>
                                 <h2 class="highlight"><?php the_field('carousel_titulo_principal_2', 'options-carousel'); ?></h2>
                             </div>
                             <p class="text-center"><?php the_field('carousel_tagline_one', 'options-carousel'); ?></p>
