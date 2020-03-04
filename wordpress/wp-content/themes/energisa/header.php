@@ -27,6 +27,34 @@
 
     <title>Energisa</title>
     <?php wp_head(); ?>
+
+    <style type="text/css">
+        #acf-form .acf-form-fields {
+            display: -webkit-flex; /* Safari */
+            display: flex;
+            flex-direction: column;
+        }
+
+        #acf-form .acf-form-fields .acf-field--post-title {
+            order: 1;
+            padding: 15px 0px;
+        }
+
+        #acf-form .acf-form-fields .acf-field-post-object {
+            order: 2;
+            border-top: none;
+            padding: 15px 0px;
+        }
+
+        #acf-form .acf-form-fields .acf-field--post-content {
+            order: 3;
+            border-top: none;
+            padding: 15px 0px;
+        }
+        #acf-form #wp-acf-editor-32-editor-tools{
+            display: none;!important;
+        }
+    </style>
 </head>
 
 <body>
@@ -88,7 +116,7 @@
                 </li>
                 <?php
                 if (is_user_logged_in()):?>
-                  
+
                 <?php endif; ?>
             </ul>
 

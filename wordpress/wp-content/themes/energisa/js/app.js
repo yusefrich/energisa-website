@@ -919,4 +919,8 @@ jQuery(function ($) {
         $(this).data('pagina', paggina);
     })
 
+    $("#acf-form label[for='acf-_post_title']").text("Título");
+    $("#acf-form label[for='acf-_post_content']").text("Minha Ideia");
+    $("#acf-form #wp-acf-editor-32-editor-tools").remove();
+
 })
