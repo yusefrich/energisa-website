@@ -1055,7 +1055,8 @@ a:hover {
   color: #EA6724;
 }
 
-.bg-blue * {
+.bg-blue *:not(.btn):not(a):not(.icon) {
+  /* , a, .icon */
   color: #fff !important;
 }
 
@@ -1761,6 +1762,124 @@ a:hover {
   height: 50vh;
 }
 
+.lb-tt.lb-share-tt {
+  display: none !important;
+  position: absolute;
+  top: -100vh;
+  bottom: 100vh !important;
+}
+
+.fp-enabled .modal {
+  position: fixed !important;
+}
+
+#respond .login-username {
+  margin-top: 60px;
+  width: 50%;
+}
+#respond .login-username label {
+  width: 10%;
+}
+#respond .login-username input {
+  width: 90%;
+}
+#respond .login-password {
+  width: 50%;
+}
+#respond .login-password label {
+  width: 10%;
+}
+#respond .login-password input {
+  width: 90%;
+}
+#respond .login-remember {
+  width: 50%;
+}
+#respond .login-remember label {
+  /* width: 10%; */
+}
+#respond .login-remember input {
+  width: 90%;
+}
+#respond .login-remember label input {
+  width: 5% !important;
+}
+#respond .login-submit {
+  width: 50%;
+  /*     margin-left: auto !important;
+      margin-right: auto !important;
+  */
+}
+#respond .login-submit input {
+  background: #EA6724;
+  border: 1px solid #EA6724;
+  color: #fff;
+  border-radius: 6px;
+  padding: 5px 15px;
+}
+
+#wppb-register-user .form-submit input {
+  background: #EA6724;
+  border: 1px solid #EA6724;
+  color: #fff;
+  border-radius: 6px;
+  padding: 5px 15px;
+}
+
+.modal-full {
+  max-width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.modal-content {
+  height: auto;
+  min-height: 100%;
+  border-radius: 0;
+}
+
+/* ************** */
+/* ** act form ** */
+/* ************** */
+#acf-form .acf-form-fields {
+  display: -webkit-flex;
+  /* Safari */
+  display: flex;
+  flex-direction: column;
+}
+
+#acf-form .acf-form-fields .acf-field--post-title {
+  order: 1;
+  padding: 15px 0px;
+}
+
+#acf-form .acf-form-fields .acf-field-post-object {
+  order: 2;
+  border-top: none;
+  padding: 15px 0px;
+}
+
+#acf-form .acf-form-fields .acf-field--post-content {
+  order: 3;
+  border-top: none;
+  padding: 15px 0px;
+}
+
+#acf-form #wp-acf-editor-32-editor-tools {
+  display: none !important;
+}
+
+/* ******************** */
+/* * global functions * */
+/* ******************** */
+.absolute-vertical-center {
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
 @media (min-width: 320px) and (max-width: 480px) {
   .carousel-fullpage {
     height: initial;
@@ -1792,91 +1911,41 @@ a:hover {
     top: 40px;
     position: relative;
   }
-}
-.lb-tt.lb-share-tt {
-  display: none !important;
-  position: absolute;
-  top: -100vh;
-  bottom: 100vh !important;
-}
 
-.fp-enabled .modal {
-  position: fixed !important;
-}
-
-#respond .login-username {
-  margin-top: 60px;
-  width: 50%;
-  /*     margin-left: auto !important;
-      margin-right: auto !important;
-   */
-}
-#respond .login-username label {
-  width: 10%;
-}
-#respond .login-username input {
-  width: 90%;
-}
-#respond .login-password {
-  width: 50%;
-  /*     margin-left: auto !important;
-      margin-right: auto !important;
-   */
-}
-#respond .login-password label {
-  width: 10%;
-}
-#respond .login-password input {
-  width: 90%;
-}
-#respond .login-remember {
-  width: 50%;
-  /*     margin-left: auto !important;
-      margin-right: auto !important;
-   */
-}
-#respond .login-remember label {
-  /* width: 10%; */
-}
-#respond .login-remember input {
-  width: 90%;
-}
-#respond .login-remember label input {
-  width: 5% !important;
-}
-#respond .login-submit {
-  width: 50%;
-  /*     margin-left: auto !important;
-      margin-right: auto !important;
-   */
-}
-#respond .login-submit input {
-  background: #EA6724;
-  border: 1px solid #EA6724;
-  color: #fff;
-  border-radius: 6px;
-  padding: 5px 15px;
-}
-
-#wppb-register-user .form-submit input {
-  background: #EA6724;
-  border: 1px solid #EA6724;
-  color: #fff;
-  border-radius: 6px;
-  padding: 5px 15px;
-}
-
-.modal-full {
-  max-width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.modal-content {
-  height: auto;
-  min-height: 100%;
-  border-radius: 0;
+  #respond .login-username {
+    margin-top: 60px;
+    width: 100%;
+  }
+  #respond .login-username label {
+    width: 10%;
+  }
+  #respond .login-username input {
+    width: 90%;
+  }
+  #respond .login-password {
+    width: 100%;
+  }
+  #respond .login-password label {
+    width: 10%;
+  }
+  #respond .login-password input {
+    width: 90%;
+  }
+  #respond .login-remember {
+    width: 100%;
+  }
+  #respond .login-remember input {
+    width: 90%;
+  }
+  #respond .login-remember label input {
+    width: 5% !important;
+  }
+  #respond .login-submit {
+    width: 100%;
+    /*     margin-left: auto !important;
+        margin-right: auto !important;
+    */
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

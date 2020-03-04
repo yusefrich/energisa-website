@@ -917,10 +917,10 @@ a:hover{
 .bg-white h1, .bg-white h2, .bg-white h3, .bg-white h4, .bg-white h5{
     color: #EA6724;
 }
-.bg-blue *{
+.bg-blue *:not(.btn):not(a):not(.icon){/* , a, .icon */
     color: #fff !important;
 }
-
+    
 .scrollbar-custom::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
     background-color: #F5F5F5;
@@ -1718,6 +1718,130 @@ a:hover{
     height: 50vh;
 }
 
+
+
+
+.lb-tt.lb-share-tt{
+    display: none !important;
+
+    position: absolute;
+    top: -100vh;
+    bottom: 100vh !important;
+}
+
+.fp-enabled .modal{
+    position:fixed !important;
+ }
+#respond{
+    .login-username{
+        margin-top: 60px;
+        width: 50%;
+    }
+    .login-username label{
+        width: 10%;
+    }
+    .login-username input{
+        width: 90%;
+    }
+
+    .login-password{
+        width: 50%;
+    }
+    .login-password label{
+        width: 10%;
+    }
+    .login-password input{
+        width: 90%;
+    }
+
+    .login-remember{
+        width: 50%;
+    }
+    .login-remember label{
+        /* width: 10%; */
+    }
+    .login-remember input{
+        width: 90%;
+    }
+    .login-remember label input{
+        width: 5% !important;
+    }
+    .login-submit{
+        width: 50%;
+    /*     margin-left: auto !important;
+        margin-right: auto !important;
+    */}
+    .login-submit input{
+        background: #EA6724;
+        border: 1px solid #EA6724;
+
+        color: #fff;
+        border-radius: 6px;
+        padding: 5px 15px;
+    }
+}
+#wppb-register-user .form-submit input{
+    background: #EA6724;
+    border: 1px solid #EA6724;
+
+    color: #fff;
+    border-radius: 6px;
+    padding: 5px 15px;
+
+}
+
+.modal-full{
+    max-width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.modal-content{
+    height: auto;
+    min-height: 100%;
+    border-radius: 0;
+}
+
+/* ************** */
+/* ** act form ** */
+/* ************** */
+#acf-form .acf-form-fields {
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    flex-direction: column;
+}
+
+#acf-form .acf-form-fields .acf-field--post-title {
+    order: 1;
+    padding: 15px 0px;
+}
+
+#acf-form .acf-form-fields .acf-field-post-object {
+    order: 2;
+    border-top: none;
+    padding: 15px 0px;
+}
+
+#acf-form .acf-form-fields .acf-field--post-content {
+    order: 3;
+    border-top: none;
+    padding: 15px 0px;
+}
+#acf-form #wp-acf-editor-32-editor-tools{
+    display: none !important;
+}
+
+/* ******************** */
+/* * global functions * */
+/* ******************** */
+
+.absolute-vertical-center{
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
 @media (min-width: 320px) and (max-width: 480px) {
   
     //CSS
@@ -1747,94 +1871,43 @@ a:hover{
     }
 
 
-}
-
-
-.lb-tt.lb-share-tt{
-    display: none !important;
-
-    position: absolute;
-    top: -100vh;
-    bottom: 100vh !important;
-}
-
-.fp-enabled .modal{
-    position:fixed !important;
- }
-#respond{
+    #respond{
+        .login-username{
+            margin-top: 60px;
+            width: 100%;
+        }
+        .login-username label{
+            width: 10%;
+        }
+        .login-username input{
+            width: 90%;
+        }
     
-.login-username{
-    margin-top: 60px;
-    width: 50%;
-/*     margin-left: auto !important;
-    margin-right: auto !important;
- */}
-.login-username label{
-    width: 10%;
-}
-.login-username input{
-    width: 90%;
-}
+        .login-password{
+            width: 100%;
+        }
+        .login-password label{
+            width: 10%;
+        }
+        .login-password input{
+            width: 90%;
+        }
+    
+        .login-remember{
+            width: 100%;
+        }
+        .login-remember input{
+            width: 90%;
+        }
+        .login-remember label input{
+            width: 5% !important;
+        }
+        .login-submit{
+            width: 100%;
+        /*     margin-left: auto !important;
+            margin-right: auto !important;
+        */}
+    }
+    
 
-.login-password{
-    width: 50%;
-/*     margin-left: auto !important;
-    margin-right: auto !important;
- */}
-.login-password label{
-    width: 10%;
-}
-.login-password input{
-    width: 90%;
-}
-
-.login-remember{
-    width: 50%;
-/*     margin-left: auto !important;
-    margin-right: auto !important;
- */}
-.login-remember label{
-    /* width: 10%; */
-}
-.login-remember input{
-    width: 90%;
-}
-.login-remember label input{
-    width: 5% !important;
-}
-.login-submit{
-    width: 50%;
-/*     margin-left: auto !important;
-    margin-right: auto !important;
- */}
-.login-submit input{
-    background: #EA6724;
-    border: 1px solid #EA6724;
-
-    color: #fff;
-    border-radius: 6px;
-    padding: 5px 15px;
-
-}
-}
-#wppb-register-user .form-submit input{
-    background: #EA6724;
-    border: 1px solid #EA6724;
-
-    color: #fff;
-    border-radius: 6px;
-    padding: 5px 15px;
-
-}
-
-.modal-full{
-    max-width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-.modal-content{
-    height: auto;
-    min-height: 100%;
-    border-radius: 0;
 }
