@@ -60,7 +60,7 @@
                                         $texto = get_sub_field('prod_indicador_texto');
                                         $porcentagem = get_sub_field('prod_indicador_valor');
                                         ?>
-                                        <h2 style="line-height: 50px;" data-aos="fade-up" class="display-h2 mb-4">
+                                        <h2 style="line-height: 50px;" data-aos="fade-up" class="display-h2 mb-3">
                                             <?php echo get_sub_field('prod_desc_titulo'); ?>
                                         </h2>
                                         <p data-aos="fade-up"><?php echo get_sub_field('prod_desc_descricao'); ?></p>

@@ -73,7 +73,7 @@ $h2-font-size: (null: em(54),  $xl: em(48), $lg: em(47), $md: em(45), $sm: em(35
 $h2-line-height: (null: 79px,  $xl: 75px, $lg: 73px, $md: 65px, $sm: 55px, $xs: 55px);/* 58 */
 
 $modal-title-font-size: (null: em(64));
-$display-h2-font-size: (null: em(48));
+$display-h2-font-size: (null: em(45));
 $h3-font-size: (null: em(32), $xl: em(29), $md: em(28));/* 36 */
 .text-fade{
     font-family: Open Sans;
@@ -508,7 +508,7 @@ section {
 }
 //! pagina: produto-interno
 .product-description-text{
-    max-width: 500px;
+    /* max-width: 500px; */
     
 }
 #indicadores .row{

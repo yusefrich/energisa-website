@@ -145,7 +145,7 @@ h2 {
   font-family: Open Sans;
   font-style: normal;
   font-weight: 800;
-  font-size: 3em;
+  font-size: 2.8125em;
   line-height: 79px;
   word-wrap: break-word;
 }
@@ -623,7 +623,7 @@ section {
 }
 
 .product-description-text {
-  max-width: 500px;
+  /* max-width: 500px; */
 }
 
 #indicadores .row {
