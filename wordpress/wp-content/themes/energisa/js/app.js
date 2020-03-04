@@ -515,7 +515,7 @@ jQuery(function ($) {
 
                 if (success) {
 
-                    str += '<div class="modal-dialog modal-lg" role="document">';
+                    str += '<div class="modal-dialog modal-full" role="document">';
                     str += '<div class="modal-content modal-blue">';
                     str += '<div class="modal-header d-flex justify-content-end pb-0">';
                     str += '<button type="button" class="btn btn-light btn-round py-1" data-dismiss="modal" aria-label="Close">';
@@ -523,42 +523,53 @@ jQuery(function ($) {
                     str += '</button>';
                     str += '</div>';
                     str += '<div class="modal-body pt-0">';
-                    str += '<div class="text-center my-2 mx-5 px-5">';
-                    str += '<img src="' + wp.template_url + '/img/jigsaw.png" alt="">';
-                    str += '<p class="text-white text-modal-title font-weight-bold">Um pouco sobre o processo</p>';
-                    str += '<p class="text-white font-weight-light">' + detalhes[indice].processo + '</p>';
-                    str += '<div class="d-flex justify-content-end my-4 mr-5 pr-5">';
-                    str += '<a href="#design-produto-slider" role="button" data-slide="prev" class="btn btn-light btn-round mx-2">';
-                    str += '<span class="icon pt-2 pb-2 pl-1 icon-prev-icon"></span>';
-                    str += '</a>';
-                    str += '<a href="#design-produto-slider" role="button" data-slide="next" class="btn btn-light btn-round mx-2">';
-                    str += '<span class="icon pt-2 pb-2 pr-1 icon-next-icon"></span>';
-                    str += '</a>';
-                    str += '</div>';
-                    str += '</div>';
-                    str += '<div class="container-fluid">';
-                    str += '<div id="design-produto-slider" class="carouselPrograms carousel slide" data-ride="carousel" data-interval="false">';
-                    str += '<div class="carousel-inner design-produto-iner row w-100 mx-auto" role="listbox">';
+                    str += '<div class="row">';
+                        str += '<div class="col-md-5 p-0">';
+                            str += '<div class="text-start my-2 mx-3">';/* mx-5 px-5 */
+                            str += '<div class="d-flex justify-content-start">';
+                            str += '<img src="' + wp.template_url + '/img/jigsaw.png" alt="">';
+                            str += '<h2 class="text-white font-weight-bold">Um pouco sobre o processo</h2>';
+                            str += '</div>';
+                            str += '<p class="text-white font-weight-light mt-4">' + detalhes[indice].processo + '</p>';
+                            str += '</div>';
+                        str += '</div>';
+                        str += '<div class="col-md-7 p-0">';
 
-                    for (var i = 0; i < images.length; i++) {
-                        if (i == 0) {
-                            str += '<div class="carousel-item col-md-4  active">';
-                        } else {
-                            str += '<div class="carousel-item col-md-4">';
-                        }
-                        str += '<div class="panel panel-default">';
-                        str += '<div class="panel-thumbnail">';
-                        str += '<a href="#" title="image ' + i + '" class="thumb">';
-                        str += '<img class="mx-auto d-block img-fit rounded" src="' + images[i] + '" alt="slide ' + i + '">';
-                        str += '</a>';
-                        str += '</div>';
-                        str += '</div>';
-                        str += '</div>';
-                    }
+                            str += '<div class="container-fluid p-0">';
+                            str += '<div id="design-produto-slider" class="carouselPrograms carousel slide" data-ride="carousel" data-interval="false">';
+                            str += '<div class="carousel-inner design-produto-iner row w-100 mx-auto" role="listbox">';
+        
+                            for (var i = 0; i < images.length; i++) {
+                                if (i == 0) {
+                                    str += '<div class="carousel-item col-md-4  active">';
+                                } else {
+                                    str += '<div class="carousel-item col-md-4">';
+                                }
+                                str += '<div class="panel panel-default">';
+                                str += '<div class="panel-thumbnail">';
+                                str += '<a href="#" title="image ' + i + '" class="thumb">';
+                                str += '<img class="mx-auto d-block img-fit rounded" src="' + images[i] + '" alt="slide ' + i + '">';
+                                str += '</a>';
+                                str += '</div>';
+                                str += '</div>';
+                                str += '</div>';
+                            }
+        
+                            str += '</div>';
+                            str += '</div>';
+                            str += '</div>';
+                            str += '<div class="d-flex justify-content-end my-4 mr-5 pr-5">';
+                            str += '<a href="#design-produto-slider" role="button" data-slide="prev" class="btn btn-light btn-round mx-2">';
+                            str += '<span class="icon pt-2 pb-2 pl-1 icon-prev-icon"></span>';
+                            str += '</a>';
+                            str += '<a href="#design-produto-slider" role="button" data-slide="next" class="btn btn-light btn-round mx-2">';
+                            str += '<span class="icon pt-2 pb-2 pr-1 icon-next-icon"></span>';
+                            str += '</a>';
+                            str += '</div>';
 
-                    str += '</div>';
-                    str += '</div>';
-                    str += '</div>';
+                            str += '</div>';    
+
+                        str += '</div>';
                     str += '</div>';
                     str += '<div class="modal-footer"></div>';
                     str += '</div>';

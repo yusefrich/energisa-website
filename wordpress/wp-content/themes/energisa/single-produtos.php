@@ -42,7 +42,7 @@
                 }
                 ?>
                 <section class="section <?php echo $fundo_bg; ?>">
-                    <div class="container-fluid p-0">
+                    <div class="container-fluid p-0 mt-5">
                         <div class="row  py-5 mr-2">
                             <div class="col-md-6">
                                 <div style="height: 100%;
