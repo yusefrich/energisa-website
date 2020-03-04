@@ -25,7 +25,7 @@
 
             <!-- Verifica se existe o layout Informações do Projeto-->
             <?php if (get_row_layout() == 'projet_layout_info'): ?>
-                <section class="section bg-blue" id="projeto-detail">
+                <section class="section" id="projeto-detail">
                     <div class="container">
                         <div class="mb-5 pb-3" id="parallax-detalhe-2">
                             <div data-depth="0.2" class="d-flex justify-content-between">
@@ -41,7 +41,7 @@
                                 <h2 style="line-height: 65px;" class="text-orange font-weight-bold mt-5"><?php the_sub_field('projet_info_tituloOne'); ?></h2>
                             </div>
                             <div class="col-md-7">
-                                <p style="line-height: 31px;" class="text-caption text-dark"><?php the_sub_field('projet_info_descOne'); ?></p>
+                                <p style="line-height: 31px;" class="text-caption"><?php the_sub_field('projet_info_descOne'); ?></p>
                             </div>
                         </div>
                         <div data-aos="fade-up" class="row my-2 py-0 my-md-3 py-md-3">
@@ -75,7 +75,7 @@
             <!-- Verifica se existe o layout de gráficos e indicadores-->
             <?php if (get_row_layout() == 'projet_layout_graph'): ?>
                 <div class="section">
-                <section class="p-0 " id="projeto-indicadores">
+                <section class="p-0" id="projeto-indicadores">
                     <div class="container ">
                         <div data-aos="fade-up" class="text-center mt-5 py-5">
                             <p class="text-gray">última atualização
