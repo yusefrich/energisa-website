@@ -3,7 +3,7 @@
 
 function listarNovidades()
 {
-    $page = $_GET['page'];
+    $page = $_POST['page'];
 
     $args = [
         'post_type' => 'post',

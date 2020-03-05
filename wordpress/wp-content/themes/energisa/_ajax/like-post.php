@@ -1,8 +1,8 @@
 <?php
 function likePost()
 {
-    $postID = (int)$_GET['postID'];
-    $tipo = (int)$_GET['tipo'];
+    $postID = (int)$_POST['postID'];
+    $tipo = (int)$_POST['tipo'];
 
     // Pega o valor do campo do post informado
     $likes = (int)get_post_meta($postID, 'post_likes', true);

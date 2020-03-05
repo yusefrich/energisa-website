@@ -3,7 +3,7 @@
 
 function treinamentoDetalhes()
 {
-    $ID = $_GET['id_post'];
+    $ID = $_POST['id_post'];
 
     $args = [
         'p' => '273',

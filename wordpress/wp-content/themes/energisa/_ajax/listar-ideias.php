@@ -3,9 +3,9 @@
 
 function listarIdeias()
 {
-    $tag = $_GET['tipo'];
-    $page = $_GET['page'];
-    $status = $_GET['status'];
+    $tag = $_POST['tipo'];
+    $page = $_POST['page'];
+    $status = $_POST['status'];
 
     $args = [
         'post_type' => 'ideias',

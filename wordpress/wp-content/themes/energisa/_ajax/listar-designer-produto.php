@@ -3,7 +3,7 @@
 
 function designerProduto()
 {
-    $id_post = $_GET['id_post'];
+    $id_post = $_POST['id_post'];
 
     $args = [
         'post_type' => 'produtos',

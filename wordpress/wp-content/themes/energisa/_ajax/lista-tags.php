@@ -1,8 +1,8 @@
 <?php
 function listarTags()
 {
-    $page = $_GET['page'] - 1;
-    $pagesize = $_GET['pagesize'];
+    $page = $_POST['page'] - 1;
+    $pagesize = $_POST['pagesize'];
 
     $hasNext = true;
 

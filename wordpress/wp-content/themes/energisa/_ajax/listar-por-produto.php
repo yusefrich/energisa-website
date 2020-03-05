@@ -1,8 +1,8 @@
 <?php
 function listarPorProduto()
 {
-    $id = $_GET['id'];
-    $page = $_GET['page'];
+    $id = $_POST['id'];
+    $page = $_POST['page'];
 
     $args_ideias = [
         'post_type' => 'ideias',

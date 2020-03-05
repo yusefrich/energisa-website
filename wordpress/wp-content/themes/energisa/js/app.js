@@ -5,7 +5,7 @@ jQuery(function ($) {
     function listarNovidadesAjax(page) {
         $.ajax({
             url: wp.ajaxurl,
-            type: 'GET',
+            type: 'POST',
             data: {
                 action: 'listarNovidades',
                 page: page
@@ -67,7 +67,7 @@ jQuery(function ($) {
     function listarProjetosAjax(page) {
         $.ajax({
             url: wp.ajaxurl,
-            type: 'GET',
+            type: 'POST',
             data: {
                 action: 'listarProjetos',
                 page: page
@@ -139,7 +139,7 @@ jQuery(function ($) {
     function listarProdutosAjax(page) {
         $.ajax({
             url: wp.ajaxurl,
-            type: 'GET',
+            type: 'POST',
             data: {
                 action: 'listarProdutos',
                 page: page
@@ -205,7 +205,7 @@ jQuery(function ($) {
     function equipeDetalhesAjax(indice) {
         $.ajax({
             url: wp.ajaxurl,
-            type: 'GET',
+            type: 'POST',
             data: {
                 action: 'equipeDetalhes',
                 indice: indice
@@ -259,7 +259,7 @@ jQuery(function ($) {
     function treinamentoDetalhesAjax(id_post) {
         $.ajax({
             url: wp.ajaxurl,
-            type: 'GET',
+            type: 'POST',
             data: {
                 action: 'treinamentoDetalhes',
                 indice: id_post
@@ -319,7 +319,7 @@ jQuery(function ($) {
     function listarIdeiasAjax(page, tipo, status) {
         $.ajax({
             url: wp.ajaxurl,
-            type: 'GET',
+            type: 'POST',
             data: {
                 action: 'listarIdeias',
                 page: page,
@@ -452,7 +452,7 @@ jQuery(function ($) {
     function listarTagsAjax(page) {
         $.ajax({
             url: wp.ajaxurl,
-            type: 'GET',
+            type: 'POST',
             data: {
                 action: 'listarTags',
                 page: page,
@@ -498,7 +498,7 @@ jQuery(function ($) {
     function designerProdutoAjax(id_post, indice) {
         $.ajax({
             url: wp.ajaxurl,
-            type: 'GET',
+            type: 'POST',
             data: {
                 action: 'designerProduto',
                 id_post: id_post
@@ -602,7 +602,7 @@ jQuery(function ($) {
     function listUserComments(indice) {
         $.ajax({
             url: wp.ajaxurl,
-            type: 'GET',
+            type: 'POST',
             data: {
                 action: 'listUserComments',
             },
@@ -652,7 +652,7 @@ jQuery(function ($) {
     function votarPostAjax(id, tipo) {
         $.ajax({
             url: wp.ajaxurl,
-            type: 'GET',
+            type: 'POST',
             data: {
                 action: 'votarPost',
                 postID: id,
@@ -728,7 +728,7 @@ jQuery(function ($) {
     function likePostAjax(id, tipo) {
         $.ajax({
             url: wp.ajaxurl,
-            type: 'GET',
+            type: 'POST',
             data: {
                 action: 'likePost',
                 postID: id,
@@ -819,7 +819,7 @@ jQuery(function ($) {
     function listarPorProdutoAjax(pagina, id) {
         $.ajax({
             url: wp.ajaxurl,
-            type: 'GET',
+            type: 'POST',
             data: {
                 action: 'listarPorProduto',
                 id: id,

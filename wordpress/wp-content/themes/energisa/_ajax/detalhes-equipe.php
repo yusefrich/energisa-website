@@ -3,7 +3,7 @@
 
 function equipeDetalhes()
 {
-    $indice = $_GET['indice'];
+    $indice = $_POST['indice'];
 
     $args = [
         'pagename' => 'quem-somos',
