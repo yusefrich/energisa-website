@@ -7,6 +7,7 @@
 
 $icon-prev-icon: unicode(ea02);
 $icon-next-icon: unicode(ea03);
+$icon-search-icon: unicode(ea04);
 
 .icon-prev-icon::before {
   content: $icon-prev-icon;
@@ -14,5 +15,9 @@ $icon-next-icon: unicode(ea03);
 
 .icon-next-icon::before {
   content: $icon-next-icon;
+}
+
+.icon-search-icon::before {
+  content: $icon-search-icon;
 }
 

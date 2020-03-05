@@ -15,7 +15,7 @@
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/fullpage.css">
 
 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i,800,800i&display=swap"
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,300i,400,400i,700,700i,800,800i&display=swap"
           rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
@@ -126,7 +126,8 @@
                     <input style="box-shadow: none;" class="form-control mr-sm-2 search-input" type="search" placeholder="Buscar" aria-label="Buscar" value="" name="s">
                 </div>
                 <button style="box-shadow: none;" class="btn search-toggle my-2 my-sm-0 py-1" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                    <ion-icon class="ion-2x" name="search"></ion-icon>
+                    <!-- <ion-icon class="ion-2x" name="search"></ion-icon> -->
+                    <span class="icon pt-2 pb-2 pl-1 icon-search-icon"></span>
                 </button>
             </form>
         </div>

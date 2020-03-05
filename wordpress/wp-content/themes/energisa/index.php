@@ -58,10 +58,10 @@
                                                 </ol>
                                                 <div class="custom-control-carrousel custom-control-bottom">
                                                     <a href="#carouselExampleCaptions" role="button" data-slide="prev"
-                                                       class="btn btn-primary btn-round"><span
+                                                       class="btn btn-primary btn-round mx-2"><span
                                                                 class="icon pt-2 pb-2 pl-1 icon-prev-icon"></span></a>
                                                     <a href="#carouselExampleCaptions" role="button" data-slide="next"
-                                                       class="btn btn-primary btn-round"><span
+                                                       class="btn btn-primary btn-round mx-2"><span
                                                                 class="icon pt-2 pb-2 pr-1 icon-next-icon"></span></a>
                                                 </div>
                                             </div>

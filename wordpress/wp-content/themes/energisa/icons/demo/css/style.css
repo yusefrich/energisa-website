@@ -154,3 +154,7 @@ icons
     content: "\ea03";
 }
 
+.icon-search-icon::before {
+    content: "\ea04";
+}
+
