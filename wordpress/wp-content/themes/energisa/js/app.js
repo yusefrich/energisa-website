@@ -44,7 +44,7 @@ jQuery(function ($) {
                         $("#btnLoadNews").remove();
                     }
                 } else {
-                    $("#loadNews").append(`<div class="alert alert-danger text-center">${dados.data.msg}</div>`);
+                    $("#loadNews").append(`<div class="alert alert-danger text-center posts-end-alert">${dados.data.msg}</div>`);
                 }
             },
             error: function (erro) {
@@ -115,7 +115,7 @@ jQuery(function ($) {
                         $("#btnLoadProjects").remove();
                     }
                 } else {
-                    $("#loadProjects").append(`<div class="alert alert-danger text-center">${dados.data.msg}</div>`);
+                    $("#loadProjects").append(`<div class="alert alert-danger text-center posts-end-alert">${dados.data.msg}</div>`);
                 }
             },
             error: function (erro) {
@@ -182,7 +182,7 @@ jQuery(function ($) {
                         $("#btnLoadProducts").remove();
                     }
                 } else {
-                    $("#loadProducts").append(`<div class="alert alert-danger text-center">${dados.data.msg}</div>`);
+                    $("#loadProducts").append(`<div class="alert alert-danger text-center posts-end-alert">${dados.data.msg}</div>`);
                 }
             },
             error: function (erro) {
@@ -393,7 +393,7 @@ jQuery(function ($) {
                         $("#btnLoadIdeias").hide();
                     }
                 } else {
-                    $("#loadIdeias").append(`<div class="alert alert-danger text-center">${dados.data.msg}</div>`);
+                    $("#loadIdeias").append(`<div class="alert alert-danger text-center posts-end-alert">${dados.data.msg}</div>`);
                 }
             },
             error: function (erro) {
@@ -550,6 +550,7 @@ jQuery(function ($) {
                         str += '<a href="#" title="image ' + i + '" class="thumb">';
                         str += '<img class="mx-auto d-block img-fit rounded" src="' + images[i] + '" alt="slide ' + i + '">';
                         str += '</a>';
+                        /* str += '<p class="text-white">Descrição da imagem</p>'; */
                         str += '</div>';
                         str += '</div>';
                         str += '</div>';
@@ -890,7 +891,7 @@ jQuery(function ($) {
                         $("#btnLoadIdeias2").hide();
                     }
                 } else {
-                    $("#loadIdeias").append(`<div class="alert alert-danger text-center">${dados.data.msg}</div>`);
+                    $("#loadIdeias").append(`<div class="alert alert-danger text-center posts-end-alert">${dados.data.msg}</div>`);
                 }
             },
             error: function (erro) {

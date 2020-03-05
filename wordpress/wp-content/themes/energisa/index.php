@@ -9,7 +9,7 @@
                      class="index-banner d-flex">
                     <div class="container custom-carousel-caption">
                         <!--  d-none d-md-block -->
-                        <div class="slider-title">
+                        <div class="banner-title-center">
                             <div class="text-center">
                                 <h2 class="highlight m-0"><?php the_field('carousel_titulo_principal_1', 'options-carousel'); ?></h2>
                                 <br>
@@ -333,7 +333,7 @@
                                      background-position: center;
                                      background-size: cover;
                                      height: 100vh;">
-                            <div class="container custom-carousel-caption">
+                            <div class="container custom-carousel-caption slider-title-center">
                                 <div class="slider-title slider-title-sm">
                                     <p class="text-uppercase">Alguns produtos</p>
                                     <a href="<?php the_permalink(); ?>">

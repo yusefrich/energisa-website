@@ -58,7 +58,7 @@
 
 
         <div class="container-small mx-auto">
-            <div data-aos="flip-left" class="  mb-5 pb-5">
+            <div data-aos="flip-left" class=" mb-2">
                 <div class="d-flex justify-content-start">
                     <button class="btn btn-outline-dark mr-2" id="btn-like" data-postid="<?php the_ID() ;?>" data-tipo="1">Gostei <span>(<?php echo $likes > 0 ? $likes : '0'; ?>)</span></button>
                     <a href="#respond" class="btn btn-outline-dark mr-2">Comentar</a>

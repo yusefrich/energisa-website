@@ -16,12 +16,12 @@
         </div>
     </section>
 
-    <div class="container">
+    <div  class="container">
         <div id="parallax-detalhe-2">
-            <div data-depth="0.2" class=" d-flex justify-content-between">
+            <div  data-depth="0.2" class=" d-flex justify-content-between">
                 <div style="z-index: 1;" class="trace-detail-left ">
                 </div>
-                <div class="d-none d-md-block trace-detail-right trace-detail-offset-bottom">
+                <div  class="d-none d-md-block trace-detail-right trace-detail-offset-bottom">
                     <img class="" src="<?php bloginfo('template_url'); ?>/img/detalhes-traco-azul.png" alt="">
                 </div>
             </div>
@@ -93,7 +93,7 @@
                                     $contador = 1;
                                     ?>
                                     <div class="carousel-item <?php echo $count == 0 ? 'active' : ''; ?>">
-                                    <div class="row">
+                                    <div class="row d-flex justify-content-center">
                                     <?php
                                 } ?>
 
@@ -157,7 +157,7 @@
 
         </div>
         <div data-aos="fade-up" class="container-fluid p-0">
-            <div class="card-slider style-6" id="sobre-scroll-left">
+            <div class="card-slider style-6 scroll-bg-gray" id="sobre-scroll-left">
 
                 <?php
                 $fazemos = new WP_Query(array(

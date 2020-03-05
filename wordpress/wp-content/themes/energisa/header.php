@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/icons/fontawesome/css/all.css">
 
 
-    <title>Energisa</title>
+    <title>Canais Digitais - Energisa </title>
     <?php wp_head(); ?>
 
     <style type="text/css">

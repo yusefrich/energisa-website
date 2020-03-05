@@ -11,7 +11,7 @@ if (post_password_required()) { ?>
 ?>
 
 <div id="comments">
-    <h3 class="text-orange font-weight-bold mt-5 pt-5"><?php comments_number('0 Comentários', '1 Comentário', '% Comentários'); ?></h3>
+    <h3 class="text-orange font-weight-bold mt-3 pt-5"><?php comments_number('0 Comentários', '1 Comentário', '% Comentários'); ?></h3>
     <hr>
 
     <?php if (have_comments()) : ?>
@@ -49,8 +49,7 @@ if (post_password_required()) { ?>
                        <?php echo do_shortcode('[wppb-login]'); ?>
                         <div class="row ">
                             <div class="col-md-6">
-                                <p class="text-center">Ainda não tem uma conta? <br>
-                                    <a href="<?php the_permalink() ?>/register" title="Criar conta" class="btn btn-link">Criar Conta</a>
+                                <p class="text-center">SemAinda não tem uma conta?<a style="font-size: 18px;" href="<?php the_permalink() ?>/register" title="Criar conta" class="btn btn-link mb-1">Criar Conta</a>
                                 </p>
                             </div>
                         </div>

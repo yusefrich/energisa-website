@@ -8,6 +8,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 /* 58 */
 /* 58 */
 /* 58 */
@@ -305,7 +309,7 @@ h1 {
 
 .orange-outline-text {
   border: 1px solid #EA6724;
-  border-radius: 15px;
+  border-radius: 30px;
 }
 
 .link-light {
@@ -365,8 +369,8 @@ section {
 
 .custom-carousel-caption {
   color: white;
-  bottom: initial;
-  top: 150px;
+  /* bottom: initial;
+  top: 150px; */
 }
 
 .normal-carousel-caption {
@@ -377,6 +381,28 @@ section {
 .custom-carousel-caption .slider-title {
   margin-top: 100px;
   margin-bottom: 100px;
+}
+
+/* .custom-carousel-caption .slider-title {
+    position: relative;
+    top: 60%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+} */
+.slider-title-center {
+  position: relative;
+  top: 45%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.banner-title-center {
+  position: relative;
+  top: 30%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .normal-carousel-caption .slider-title {
@@ -479,13 +505,14 @@ section {
   position: absolute;
   z-index: 15;
   /* left: 6%; */
-  top: 200px;
+  /* top: 200px; */
   display: flex;
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
+  top: 50%;
+  -webkit-transform: translateY(-50%) rotate(90deg);
+  -moz-transform: translateY(-50%) rotate(90deg);
+  -o-transform: translateY(-50%) rotate(90deg);
+  -ms-transform: translateY(-50%) rotate(90deg);
+  transform: translateY(-50%) rotate(90deg);
 }
 
 .carousel-side-indicators-holder .carousel-indicators {
@@ -1003,7 +1030,7 @@ a:hover {
   width: 100px;
 }
 
-@media (max-width: 1366px) {
+@media (max-width: 1367px) {
   .banner-icon {
     width: 80px;
   }
@@ -1065,7 +1092,11 @@ a:hover {
 }
 
 .bg-blue .white-col p {
-  color: initial !important;
+  color: #000 !important;
+}
+
+.bg-blue .white-col small {
+  color: #000 !important;
 }
 
 .bg-blue .white-col span {
@@ -1129,13 +1160,13 @@ a:hover {
   }
 
   .custom-carousel-caption .slider-title {
-    margin-top: 10vh;
-    margin-bottom: 100px;
+    /* margin-top: 20vh;
+    margin-bottom: 100px; */
   }
 }
 @media (max-width: 1300px) {
   .timeline ol li > div {
-    width: 290px;
+    width: 297px;
   }
 }
 .container-small, .container-large {
@@ -1338,6 +1369,24 @@ a:hover {
   width: 5vw;
   left: 0;
   right: 0;
+  /* margin-left: auto;
+  margin-right: auto; */
+  background: #E4E4E4;
+}
+
+.scroll-bg-gray::after {
+  margin-top: 476px;
+  margin-left: auto;
+  margin-right: auto;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  /* bottom: -1px; */
+  height: 10px;
+  width: 4vw;
+  left: 0;
+  right: 0;
+  /* bottom: 0; */
   /* margin-left: auto;
   margin-right: auto; */
   background: #E4E4E4;
@@ -1646,6 +1695,10 @@ a:hover {
   padding-left: 15px; */
 }
 
+.design-produto-iner div > .panel-default > .panel-thumbnail > p {
+  display: none;
+}
+
 .design-produto-iner .active + div > .panel-default > .panel-thumbnail > a > img {
   /* transform: scale(1.4); */
   /* height: 300px !important;
@@ -1664,6 +1717,10 @@ a:hover {
   margin-right: auto;
   /* padding-right: 15px;
   padding-left: 15px; */
+}
+
+.design-produto-iner .active + div > .panel-default > .panel-thumbnail > p {
+  display: initial;
 }
 
 @media (max-width: 768px) {
@@ -1906,7 +1963,7 @@ a:hover {
   }
 
   .custom-carousel-caption .slider-title {
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
   }
 
   .carousel-info {
@@ -1962,6 +2019,38 @@ a:hover {
         margin-right: auto !important;
     */
   }
+}
+.alert {
+  height: fit-content;
+  margin: 15px 5px;
+}
+
+.alert-danger {
+  background-color: #f8d7da36;
+}
+
+.posts-end-alert + .posts-end-alert {
+  display: none;
+}
+
+.cld-like-dislike-wrap {
+  border: 1px solid #202020 !important;
+  border-radius: 6px !important;
+}
+
+.cld-like-dislike-wrap > div > a {
+  margin-left: 13px !important;
+  margin-right: 5px !important;
+}
+
+.cld-like-dislike-wrap > div > a > img {
+  margin-top: 7px;
+  margin-bottom: 7px;
+  max-width: 42px !important;
+}
+
+.cld-like-dislike-wrap > div > span {
+  margin-top: 13px;
 }
 
 /*# sourceMappingURL=style.css.map */

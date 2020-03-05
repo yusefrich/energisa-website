@@ -89,6 +89,7 @@
         parallax: true,
         scrollOverflow: true,
         slideSelector: "fullpage-slide",
+        scrollOverflowEndPrevent: { delay: 500, reversal: false },
         /* normalScrollElements: '.timeline', */
         /* scrollOverflowOptions: {
             disableMouse: true
@@ -96,24 +97,29 @@
         onLeave: function(origin, destination, direction){
             console.log("Leaving section" + origin.index);
             if(origin.index == 0){
-                jQuery(".menu-bg").removeClass("hide");
-                jQuery(".brand-light").removeClass("d-none");
-                jQuery(".brand-dark").addClass("d-none");
-
-                jQuery(".navbar").addClass("navbar-light");
-                jQuery(".navbar").removeClass("navbar-dark");
-
-                jQuery(".search-toggle").removeClass("text-white");
-
+                if ($(window).width() >= 1000){
+                    jQuery(".menu-bg").removeClass("hide");
+                    jQuery(".brand-light").removeClass("d-none");
+                    jQuery(".brand-dark").addClass("d-none");
+                    
+                    jQuery(".navbar").addClass("navbar-light");
+                    jQuery(".navbar").removeClass("navbar-dark");
+                    
+                    jQuery(".search-toggle").removeClass("text-white");
+                    
+                }
             }else if (destination.index == 0){
-                jQuery(".menu-bg").addClass("hide");
+                if ($(window).width() >= 1000){
+
+                    jQuery(".menu-bg").addClass("hide");
                     jQuery(".brand-light").addClass("d-none");
                     jQuery(".brand-dark").removeClass("d-none");
-
+                    
                     jQuery(".navbar").removeClass("navbar-light");
                     jQuery(".navbar").addClass("navbar-dark");
-
+                    
                     jQuery(".search-toggle").addClass("text-white");
+                }
             }
         },
         afterLoad: function(){

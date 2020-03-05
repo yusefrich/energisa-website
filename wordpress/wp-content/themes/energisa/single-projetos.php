@@ -114,7 +114,7 @@
                     <h2 class="text-orange font-weight-bold">Confira abaixo os indicadores</h2>
                     <p>Veja em detalhes cada passo dado até o presente momento</p>
                 </div>
-                <div data-aos="fade-left" style="height: 600px" class="row mb-5 mt-2">
+                <div data-aos="fade-left" style="min-height: 600px" class="row mb-5 mt-2">
                     <?php if (have_rows('projet_graficos_repeat')): while (have_rows('projet_graficos_repeat')):
                         the_row();
                         ?>
@@ -126,7 +126,7 @@
                                     <small><?php the_sub_field('projet_grafico_descricao') ?></small>
                                 </p>
                                 <?php $grafico = get_sub_field('projet_grafico_chart') ?>
-                                <div class="d-flex justify-content-center">
+                                <div class="d-block justify-content-center">
                                     <?php echo do_shortcode($grafico); ?>
                                 </div>
                             </div>
@@ -138,7 +138,7 @@
                     <?php if (have_rows('projet_indicadores_repeat')): while (have_rows('projet_indicadores_repeat')): the_row();
                         ?>
                         <div class="col-6 col-md-3 mb-3">
-                            <div class="white-col p-3">
+                            <div style="height: 100%" class="white-col p-3">
                                 <p class=" font-weight-bold"><?php the_sub_field('projet_indicadores_titulo') ?></p>
                                 <h3 class="text-orange font-weight-bold"><?php the_sub_field('projet_indicadores_percent') ?></h3>
                             </div>
@@ -183,12 +183,12 @@
                 </div>
             </div>
             <div class="container-fluid p-0">
-                <div data-aos="fade-left" class="timeline style-6" id="timeline-scroll">
+                <div  data-aos="fade-left" class="timeline  style-6" id="timeline-scroll">
                     <h3 style="white-space: normal;" class="d-md-none mx-3 my-5 text-gray font-weight-bold">Principais
                         marcos do projeto</h3>
 
-                    <ol>
-                        <li class=" timeline-spacing">
+                    <ol style="margin-left: 300px; padding: 315px 0;">
+                        <li style="display: none;" class=" timeline-spacing">
                             <div class="d-none d-md-block">
                                 <h3 class="text-gray font-weight-bold">Principais marcos do projeto</h3>
                             </div>
@@ -203,19 +203,22 @@
                             $field = get_sub_field('projet_desc_status');
                             $count++;
                             ?>
-                            <li>
-                                <div>
-                                    <p class="text-gray text-uppercase float-left mr-2">
-                                        <small><?php echo strftime('%d de %b %Y', strtotime($date_string)); ?></small>
-                                    </p>
-                                    <span class="orange-outline-text py-1 px-2 mr-2"><?php the_sub_field('projet_desc_tarefa'); ?></span>
+                            <?php if ( $count <= 2 ): ?>
+                                <li  class="text-right">
+                                <div style="    left: -85px;">
+                                    <div class="d-flex justify-content-end">
+                                        <p class="text-gray text-uppercase mb-0  mr-2">
+                                            <small><?php echo strftime('%d de %b %Y', strtotime($date_string)); ?></small>
+                                        </p>
+                                        <span class="orange-outline-text py-1 px-2"><?php the_sub_field('projet_desc_tarefa'); ?></span>
+                                    </div>
 
-                                    <p class="text-caption font-weight-bold"><?php the_sub_field('projet_titulo_tempo'); ?></p>
-                                    <p class="text-gray">
+                                    <p class="text-caption font-weight-bold mb-0"><?php the_sub_field('projet_titulo_tempo'); ?></p>
+                                    <p style="line-height: 1.2;" class="text-gray">
                                         <small><?php the_sub_field('projet_desc_tempo'); ?></small>
                                     </p>
-                                    <div class="d-flex justify-content-start">
-                                        <p class="pt-1 pr-3">
+                                    <div class="d-flex justify-content-end">
+                                        <p class="pt-2 mt-1 pr-3">
                                             <small><?php echo esc_html($field['label']); ?></small>
                                         </p>
                                         <div class="p-0 timeline-progress-circle" id="como-estamos-graph-<?php echo $count; ?>"></div>
@@ -230,7 +233,7 @@
                                     if (document.getElementById("como-estamos-graph-<?php echo $count; ?>")) {
                                         var circle = new ProgressBar.Circle('#como-estamos-graph-<?php echo $count; ?>', {
                                             color: '#EA6724',
-                                            strokeWidth: 15,
+                                            strokeWidth: 10,
 
                                             trailColor: '#cccccc',
                                             trailWidth: 1,
@@ -244,6 +247,54 @@
                                 </script>
 
                             </li>
+
+                            <?php else: ?>
+                                <li >
+                                <div>
+                                    <div class="d-flex justify-content-start">
+                                        <span class="orange-outline-text py-1 px-2 mr-2"><?php the_sub_field('projet_desc_tarefa'); ?></span>
+                                        <p class="text-gray text-uppercase mb-0 mr-2">
+                                            <small><?php echo strftime('%d de %b %Y', strtotime($date_string)); ?></small>
+                                        </p>
+                                    </div>
+
+                                    <p class="text-caption font-weight-bold mb-0"><?php the_sub_field('projet_titulo_tempo'); ?></p>
+                                    <p style="line-height: 1.2;" class="text-gray">
+                                        <small><?php the_sub_field('projet_desc_tempo'); ?></small>
+                                    </p>
+                                    <div class="d-flex justify-content-start">
+                                        <p class="pt-2 mt-1 pr-3">
+                                            <small><?php echo esc_html($field['label']); ?></small>
+                                        </p>
+                                        <div class="p-0 timeline-progress-circle" id="como-estamos-graph-<?php echo $count; ?>"></div>
+                                        <p class="timeline-andamento mt-1 timeline-andamento-projeto">
+                                            <small class="font-weight-bold "><?php the_sub_field('projet_desc_andamento'); ?>
+                                                %
+                                            </small>
+                                        </p>
+                                    </div>
+                                </div>
+                                <script>
+                                    if (document.getElementById("como-estamos-graph-<?php echo $count; ?>")) {
+                                        var circle = new ProgressBar.Circle('#como-estamos-graph-<?php echo $count; ?>', {
+                                            color: '#EA6724',
+                                            strokeWidth: 10,
+
+                                            trailColor: '#cccccc',
+                                            trailWidth: 1,
+
+                                            duration: 3000,
+                                            easing: 'easeInOut'
+                                        });
+                                        circle.animate(+<?php the_sub_field('projet_desc_andamento'); ?>/100);
+                                    }
+
+                                </script>
+
+                            </li>
+
+                            <?php endif; ?>
+
                         <?php endwhile; ?>
                         <?php endif; ?>
                         <li></li>

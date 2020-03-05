@@ -45,8 +45,8 @@
             }
             ?>
             <section class="section <?php echo $fundo_bg; ?>">
-                <div class="container-fluid p-0 mt-5">
-                    <div class="row  py-5 mr-2">
+                <div style="min-height: 700px" class="container-fluid p-0 mt-5">
+                    <div s class="row py-5 mr-2">
                         <div class="col-md-6">
                             <div style="height: 100%;
                                     background-image: url(<?php echo get_sub_field('prod_imagem_desc'); ?>);
@@ -284,7 +284,7 @@
                         <h2 data-aos="fade-up" class="display-h2 text-orange">Conheça nossos
                             indicadores</h2>
                         <p data-aos="fade-up">Fique por dentro e acompanhe cada momento da nossa jornada</p>
-                        <div data-aos="flip-down" class="d-md-flex justify-content-center ml-5 ml-md-0 pl-3 pl-md-0">
+                        <div data-aos="flip-down" class="d-md-flex justify-content-center ">
                             <!-- row -->
                             <?php $linhas = 0; ?>
                             <?php while (have_rows('prod_indicadores')): the_row();
@@ -292,7 +292,7 @@
                                 $porcentagem = get_sub_field('prod_indicador_valor');
                                 $linhas++;
                                 ?>
-                                <div style="max-width: 250px;" class="position-relative">
+                                <div style="max-width: 250px; margin-left: auto; margin-right: auto;" class="position-relative">
                                     <div style="transform: scaleX(-1); stroke-linecap: round;" id="progress-<?php echo $linhas; ?>"></div>
                                     <div class="graph-detail-holder">
 
