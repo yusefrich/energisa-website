@@ -41,7 +41,7 @@
         <?php endwhile; ?>
         <?php $post_obj = unique_multidim_array($itens, 'ID'); ?>
         <p class="text-caption font-weight-bold">Filtre por produto</p>
-        <select class="custom-select" id="loadPerProduct">
+        <select style="font-weight: 600 !important;" class="custom-select" id="loadPerProduct">
             <option value="" selected>Todos</option>
             <?php foreach ($post_obj as $post): ?>
                 <option value="<?php echo $post['ID']; ?>"><?php echo $post['titulo']; ?></option>

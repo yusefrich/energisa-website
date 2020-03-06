@@ -48,7 +48,7 @@
             <?php endif; ?>
 
             <?php if (get_row_layout() == 'layout_post_image'): ?>
-                <div class="container-fluid img-post-container mb-5">
+                <div class="container img-post-container mb-5">
                     <img width="100%" height="auto" src="<?php the_sub_field('post_image_ful'); ?>" alt="">
                 </div>
             <?php endif; ?>
@@ -87,7 +87,7 @@ $posts_relacionados = new WP_Query(array(
 
 if ($posts_relacionados->have_posts()): ?>
     <section class="text-center mt-5 pb-0" id="novidades-artigos-relacionados">
-        <div class="container-fluid px-5">
+        <div class="container">
             <div data-aos="flip-up" class="ultimas-novidades-title">
                 <h2 class="display-h2 text-orange">Artigos relacionados</h2>
             </div>
@@ -102,13 +102,13 @@ if ($posts_relacionados->have_posts()): ?>
                         </a>
                         <a href="<?php the_permalink(); ?>">
                             <p class="img-caption  text-uppercase">
-                                <small>postado em
+                                <small><span class="text-gray-3">postado em</span>
                                     <strong> <?php echo get_the_time(__('d \d\e M  Y'), $post->id); ?> </strong></small>
                             </p>
                         </a>
-                        <a href="<?php the_permalink(); ?>"><p class="font-weight-bold"><?php the_title(); ?></p></a>
+                        <a href="<?php the_permalink(); ?>"><p style="max-width: 378px;" class="font-weight-bold text-caption-size"><?php the_title(); ?></p></a>
                         <a href="<?php the_permalink(); ?>">
-                            <p class="font-weight-light"><?php echo get_the_excerpt(); ?></p>
+                            <p class="font-weight-regular text-gray-3"><?php echo get_the_excerpt(); ?></p>
                         </a>
                     </div>
                 <?php endwhile;

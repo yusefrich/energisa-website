@@ -7,23 +7,34 @@
             background-blend-mode:  normal;
             " class="container-fluid   product-banner-holder px-0 ">
         <!-- text-white -->
-        <div class="product-banner text-center text-white ">
-            <h1 data-aos="fade-right">Vamos construir juntos?</h1>
-            <p data-aos="fade-left" class="text-caption">Colabore e construa produtos melhores ajudando nossos clientes a ter a melhor satisfação com os nossos serviços</p>
+        <div class=" text-center text-white ">
+            <h1 style="max-width: 979px;" class="ml-auto mr-auto" data-aos="fade-right">Vamos construir juntos?</h1>
+            <p style="max-width: 1001px; letter-spacing: .2px; line-height: 42px;" data-aos="fade-left" class="text-caption ml-auto mr-auto">Colabore e construa produtos melhores ajudando nossos clientes a ter a melhor satisfação com os nossos serviços</p>
         </div>
 
     </div>
 </section>
+<div class="container">
+    <div id="parallax-detalhe-2">
+            <div data-depth="0.2" class="d-flex justify-content-between">
+                <div class="trace-detail-left">
+                    </div>
+                    <div style="top: -130px;" class="trace-detail-right ">
+                        <img class="" src="<?php bloginfo('template_url'); ?>/img/detalhes-traco-laranja.png" alt="">
+                    </div>
+            </div>
+        </div>
 
+</div>
 <section id="ideias-todos">
     <div class="container">
 
         <div class="d-none d-sm-block text-start my-5 py-5">
-            <img class=" float-left pr-5" src="<?php bloginfo('template_url'); ?>/img/ideias.png" alt="">
+            <img class=" float-left pr-5 pt-4" src="<?php bloginfo('template_url'); ?>/img/ideias.png" alt="">
             <h2 class="text-orange display-h2">Colabore você também</h2>
-            <p>Aqui você encontrará uma serie de ideias sugeridas pelos nossos colaboradores, fique a vontade para
+            <p style="max-width: 850px;" class="mb-5">Aqui você encontrará uma serie de ideias sugeridas pelos nossos colaboradores, fique a vontade para
                 participar.</p>
-            <a href="<?php bloginfo('home'); ?>/login" class="btn btn-primary px-5">Quero colaborar</a>
+            <a style="padding: 8px 40px" href="<?php bloginfo('home'); ?>/login" class="btn btn-primary ">Quero colaborar</a>
 
         </div>
         <div class="d-sm-none text-center my-5 py-5">

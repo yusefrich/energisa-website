@@ -27,14 +27,14 @@ jQuery(function ($) {
     </a>
     <a href="${post.url}">
         <p class="img-caption  text-uppercase">
-            <small>postado em <strong>${post.data}</strong></small>
+            <small><span class="text-gray-3">postado em</span> <strong>${post.data}</strong></small>
         </p>
     </a>
     <a href="${post.url}">
-        <p class="font-weight-bold">${post.titulo}</p>
+        <p style="max-width: 378px;" class="font-weight-bold text-caption-size">${post.titulo}</p>
     </a>
     <a href="${post.url}">
-        <p class="font-weight-light">${post.descricao}</p>
+        <p class="font-weight-regular text-gray-3">${post.descricao}</p>
     </a>
 </div>
                         `)

@@ -26,20 +26,42 @@
         </div>
 
         <div class="d-flex justify-content-center">
-            <p class="font-weight-bold mr-2">Filtre sua exibição</p>
-            <select style="width: 25%;" class="custom-select" id="loadPerProduct">
+            <p class="font-weight-bold mr-2 mt-1">Filtre sua exibição</p>
+            <select style="width: 25%; color: #EA6724;" class="custom-select" id="loadPerProduct">
                 <option value="" selected>Totem de Autoatendimento</option>
                 <option value="#"></option>
             </select>
 
         </div>
 
+        <div style="height: 0px;"class="container">
+            <div class="mb-5 pb-3" id="parallax-detalhe-1">
+                <div data-depth="0.2" class="d-flex justify-content-between">
+                    <div class="trace-detail-left">
+                    </div>
+                    <div style="z-index: 1;" class="trace-detail-right trace-detail-offset-bottom">
+                        <img class="" src="<?php bloginfo('template_url'); ?>/img/detalhes-traco-azul.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="row" id="loadNews"></div>
+        <div style="height: 0px;class="container">
+            <div class="mb-5 pb-3" id="parallax-detalhe-2">
+                <div data-depth="0.2" class="d-flex justify-content-between">
+                    <div style="z-index: 1;" class="trace-detail-left trace-detail-offset-bottom">
+                        <img class="" src="<?php bloginfo('template_url'); ?>/img/detalhes-pontos-laranja.png" alt="">
+                    </div>
+                    <div class="trace-detail-right">
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="row">
             <div class="col-md-12">
                 <div data-aos="flip-left" class="col-md-12 text-center mt-4">
-                    <button class="btn btn-outline-light px-5" data-pagina="1" id="btnLoadNews">
+                    <button style="padding: 11px 52px;" class="btn btn-outline-light px-5" data-pagina="1" id="btnLoadNews">
                         Mostrar mais
                     </button>
                 </div>

@@ -13,7 +13,7 @@
         <div class="row">
             <div class="col-md-3">
                 <p class="text-caption font-weight-bold">Filtre por produto</p>
-                <select class="custom-select">
+                <select style="font-weight: 600 !important;" class="custom-select">
                     <option selected>Todos</option>
                     <option value="1">One</option>
                     <option value="2">Two</option>
