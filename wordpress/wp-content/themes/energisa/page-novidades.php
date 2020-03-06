@@ -7,9 +7,9 @@
             background-blend-mode: multiply, normal;
             " class="container-fluid   product-banner-holder px-0 ">
         <!-- text-white -->
-        <div class="product-banner text-center text-white ">
-            <h1 data-aos="fade-right">Fique por dentro das novidades</h1>
-            <p data-aos="fade-left" class="text-caption">Aqui vamos compartilhar as informações desenvolvido por nossa
+        <div class=" text-center text-white ">
+            <h1 style="max-width: 760px;" class="ml-auto mr-auto" data-aos="fade-right">Fique por dentro das novidades</h1>
+            <p style="max-width: 841px; letter-spacing: .2px; line-height: 42px;" data-aos="fade-left" class="text-caption ml-auto mr-auto">Aqui vamos compartilhar as informações desenvolvido por nossa
                 equipe, acompanhe nossas postagens e mantenha-se sempre bem informado.</p>
         </div>
     </div>
@@ -25,7 +25,16 @@
                 dentro do que anda acontecendo no nosso setor, fique bem informado</p>
         </div>
 
-        <div class="row mt-5" id="loadNews"></div>
+        <div class="d-flex justify-content-center">
+            <p class="font-weight-bold">Filtre sua exibição</p>
+            <select class="custom-select" id="loadPerProduct">
+                <option value="" selected>Totem de Autoatendimento</option>
+                <option value="#"></option>
+            </select>
+
+        </div>
+
+        <div class="row" id="loadNews"></div>
 
         <div class="row">
             <div class="col-md-12">
@@ -39,7 +48,7 @@
 
 
         <div class="pt-5" id="parallax-hand-1">
-            <div data-depth="0.5" class="d-flex justify-content-center mb-auto">
+            <div data-depth="0" class="d-flex justify-content-center mb-auto">
                 <img src="<?php bloginfo('template_url'); ?>/img/person-cut.png" alt="">
             </div>
         </div>

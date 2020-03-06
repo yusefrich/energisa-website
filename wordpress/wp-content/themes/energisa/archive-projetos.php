@@ -1,15 +1,16 @@
 <?php get_header(); ?>
 <section id="projetos-banner">
     <div style="
-            background: linear-gradient(0deg, rgba(92, 40, 14, 0.8), rgba(92, 40, 14, 0.8)), url(<?php bloginfo('template_url'); ?>/img/projetos-header.png);
+            background-image:  url(<?php bloginfo('template_url'); ?>/img/projetos-header.png);
+            background-color: rgba(224, 75, 0, 0.89);
             background-size: cover;
             background-position: center;
-            background-blend-mode: multiply, normal;
+            background-blend-mode: multiply;
             " class="container-fluid   product-banner-holder px-0 ">
             <!-- text-white -->
-            <div class="product-banner text-center text-white ">
-                <h1 data-aos="fade-right">Veja nossos projetos</h1>
-                <p data-aos="fade-left" class="text-caption">Acompanhe todos os nossos projetos em andamento e fique por dentro das nossas atividades.</p>
+            <div class=" text-center text-white ">
+                <h1 style="max-width: 979px;" data-aos="fade-right" class="mb-4 ml-auto mr-auto">Veja nossos projetos</h1>
+                <p style="max-width: 841px; letter-spacing: .2px; line-height: 42px;" data-aos="fade-left" class="text-caption ml-auto mr-auto">Acompanhe todos os nossos projetos em andamento e fique por dentro das nossas atividades.</p>
             </div>
         </div>
 
@@ -34,7 +35,7 @@
             </div>
         </div>
 
-        <div class="row mt-5" id="loadProjects"></div>
+        <div class="row " id="loadProjects"></div>
 
 
         <div class="row">

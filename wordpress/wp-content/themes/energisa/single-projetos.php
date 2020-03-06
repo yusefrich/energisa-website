@@ -5,17 +5,18 @@
     <?php $img_background = get_the_post_thumbnail_url(null, 'full'); ?>
     <section class="section" id="projetos-banner">
         <div style="
-                background: linear-gradient(0deg, rgba(92, 40, 14, 0.8), rgba(92, 40, 14, 0.8)), url(<?php echo esc_url($img_background); ?>);
+                background-image: url(<?php echo esc_url($img_background); ?>);
+                background-color: rgba(224, 75, 0, 0.89);
                 background-size: cover;
                 background-position: center;
                 height: 100vh;
-                background-blend-mode: multiply, normal;
+                background-blend-mode: multiply;
                 " class="container-fluid   product-banner-holder px-0 ">
             <!-- text-white -->
-            <div class="product-banner text-center text-white ">
+            <div class="product-banner slider-title-center text-center text-white ">
                 <p data-aos="fade-right" class="text-uppercase m-0">projeto</p>
                 <h1 data-aos="fade-right"><?php the_title(); ?></h1>
-                <p data-aos="fade-left" class="text-caption"><?php echo get_the_excerpt(); ?></p>
+                <p style="line-height: 42px;" data-aos="fade-left" class="text-caption"><?php echo get_the_excerpt(); ?></p>
             </div>
         </div>
     </section>
@@ -53,13 +54,14 @@
                     </div>
                 </div>
                 <div data-aos="fade-up" class="row my-2 py-0 my-md-3 py-md-3 ">
-                    <div class="col-md-5">
+                    <div class="col-md-4">
                         <h2 style="line-height: 65px;" class="text-orange font-weight-bold mt-5"><?php the_sub_field('projet_info_tituloOne'); ?></h2>
                     </div>
-                    <div class="col-md-7">
-                        <p style="line-height: 31px;" class="text-caption"><?php the_sub_field('projet_info_descOne'); ?></p>
+                    <div class="col-md-8">
+                        <p style="line-height: 31px;" class="text-caption projeto-text-width"><?php the_sub_field('projet_info_descOne'); ?></p>
                     </div>
                 </div>
+                <hr data-aos="fade-up" style="background-color: #E8E8E8;">
                 <div data-aos="fade-up" class="row my-2 py-0 my-md-3 py-md-3">
                     <div class="col-md-6">
                         <div style="max-width: 400px">
@@ -87,6 +89,18 @@
 
         </section>
     <?php endif; ?>
+    <div style="height: 0px; position:relative; z-index: 100"class="container">
+                <div class="mb-5 pb-3" id="parallax-detalhe-2">
+                    <div data-depth="0.2" class="d-flex justify-content-between">
+                        <div class="trace-detail-left">
+                        </div>
+                        <div style="z-index: 1;" class="trace-detail-right trace-detail-offset-bottom">
+                            <img class="" src="<?php bloginfo('template_url'); ?>/img/detalhes-pontos-laranja.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+    </div>
 
     <!-- Verifica se existe o layout de gráficos e indicadores-->
     <?php if (get_row_layout() == 'projet_layout_graph'): ?>
@@ -119,11 +133,11 @@
                         the_row();
                         ?>
 
-                        <div class="col-md-6 text-center mb-3">
+                        <div style="padding-right: 10px; padding-left: 10px;" class="col-md-6 text-center mb-3">
                             <div style="height: 100%;" class="white-col p-3">
                                 <p class="text-caption font-weight-bold"><?php the_sub_field('projet_grafico_titulo') ?></p>
                                 <p class="text-gray">
-                                    <small><?php the_sub_field('projet_grafico_descricao') ?></small>
+                                    <small style="color: #979797"><?php the_sub_field('projet_grafico_descricao') ?></small>
                                 </p>
                                 <?php $grafico = get_sub_field('projet_grafico_chart') ?>
                                 <div class="d-block justify-content-center">
@@ -137,7 +151,7 @@
 
                     <?php if (have_rows('projet_indicadores_repeat')): while (have_rows('projet_indicadores_repeat')): the_row();
                         ?>
-                        <div class="col-6 col-md-3 mb-3">
+                        <div style="padding-right: 10px; padding-left: 10px;" class="col-6 col-md-3 mb-3">
                             <div style="height: 100%" class="white-col p-3">
                                 <p class=" font-weight-bold"><?php the_sub_field('projet_indicadores_titulo') ?></p>
                                 <h3 class="text-orange font-weight-bold"><?php the_sub_field('projet_indicadores_percent') ?></h3>
@@ -249,7 +263,7 @@
                             </li>
 
                             <?php else: ?>
-                                <li >
+                                <li class=" <?php if( $count == 3 ) { echo 'timeline-text-left'; } ?>">
                                 <div>
                                     <div class="d-flex justify-content-start">
                                         <span class="orange-outline-text py-1 px-2 mr-2"><?php the_sub_field('projet_desc_tarefa'); ?></span>

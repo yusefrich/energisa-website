@@ -106,6 +106,10 @@ $h3-font-size: (null: em(32), $xl: em(29), $md: em(28));/* 36 */
     letter-spacing: -0.02em;
     @include font-size-map($caption-font-size);
 }
+.text-caption-size{
+    @include font-size-map($caption-font-size);
+
+}
 .card-text-ideias{
     font-style: normal;
     font-weight: normal;
@@ -236,6 +240,12 @@ h1{
 }
 .text-gray{
     color: #828282 ;
+}
+.text-gray-2{
+    color: #6F6F6F ;
+}
+.text-gray-3{
+    color: #6A6A6A;
 }
 .text-blue{
     color: #089BC0 ;
@@ -549,21 +559,22 @@ section {
     left: 50px;
     right: 50px;
     position: absolute; 
-    top: 65px;
+    top: 95px;
     max-width: 90%;
 }
 
 .ultimas-novidades-title{
-    max-width: 830px;
+    max-width: 750px;
     margin-left: auto;
     margin-right: auto;
 }
-
 #projeto-indicadores{
     background-color: #F1F1F1;
 }
 .white-col{
     background-color: #fff;
+    border: 1px solid #E4E4E4;
+    border-radius: 6px;
 }
 .label-dot{
     font-size: 60px; 
@@ -608,12 +619,14 @@ section {
   padding: 355px 0;
   transition: all 1s;
 }
-
+.timeline-text-right {
+    left: -96px !important;
+}
 .timeline ol li {
   position: relative;
   display: inline-block;
   list-style-type: none;
-  width: 160px;
+  width: 190px;
   height: 1px;
   background: #C4C4C4;
 }
@@ -644,6 +657,8 @@ section {
   left: calc(100% + 7px);
   width: 330px;
   padding: 15px;
+  padding-left: 0px;
+  padding-right: 30px;
   font-size: 1rem;
   white-space: normal;
   color: black;
@@ -912,12 +927,25 @@ a:hover{
         margin-right: 150px;
     }
 }
+.slider-width-limit{
+    max-width: 400px;
+}
+.projeto-text-width{
+    max-width: 552px;
+}
 
 @media  (max-width: 1200px) {
     .carousel-info {
         margin-left: 50px;
         margin-right: 50px;
     }
+    .slider-width-limit{
+        max-width: 1000px;
+    }
+    .projeto-text-width{
+        max-width: 1052px;
+    }
+    
 }
 //mobile to tablets
 @media (min-width: 480px) and (max-width: 1024px) {
@@ -999,6 +1027,10 @@ a:hover{
 }
 .timeline > ol > li:nth-child(2){
     background: transparent;
+    width: 395px;
+    div{
+        left: 105px !important;
+    }
 }
 
 @media (min-width: 768px) {
@@ -2062,3 +2094,12 @@ a:hover{
         margin-left: 20%;
     }
   }
+.timeline-text-left {
+    width: 100px !important;
+}
+
+.confira-nov-btn{
+    position: relative;
+    top: 100px;
+    margin-bottom: 30px;
+}

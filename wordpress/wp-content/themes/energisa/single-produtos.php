@@ -121,35 +121,68 @@
                                 $field = get_sub_field('prod_link_tempo');
                                 $destinoUrl = esc_html($field['value']);
                                 ?>
-                                <li>
-                                    <div>
-                                        <p class="text-gray text-uppercase">
-                                            <?php echo strftime('%d de %b %Y', strtotime($date_string)); ?> </p>
-                                        <p class="text-caption font-weight-bold text-blue">
-                                            <?php echo get_sub_field('prod_titulo_tempo'); ?></p>
-                                        <p class="text-gray">
-                                            <small><?php echo get_sub_field('prod_desc_tempo'); ?></small>
-                                        </p>
-                                        <?php if ($destinoUrl != 'none'): ?>
-                                            <?php if ($destinoUrl == 'interno'): ?>
-                                                <a href="<?php echo get_sub_field('prod_linkinterno_tempo'); ?>"
-                                                   class="btn btn-outline-light px-5">
-                                                    acesse nosso
-                                                    site</a>
+                                <?php if ( $count <= 1 ): ?>
+                                    <li >
+                                        <div style="left: -90px" class="text-md-right ">
+                                            <p class="text-gray-2 text-uppercase">
+                                                <?php echo strftime('%d de %b %Y', strtotime($date_string)); ?> </p>
+                                            <p class="text-caption font-weight-bold text-blue">
+                                                <?php echo get_sub_field('prod_titulo_tempo'); ?></p>
+                                            <p class="text-gray">
+                                                <small><?php echo get_sub_field('prod_desc_tempo'); ?></small>
+                                            </p>
+                                            <?php if ($destinoUrl != 'none'): ?>
+                                                <?php if ($destinoUrl == 'interno'): ?>
+                                                    <a href="<?php echo get_sub_field('prod_linkinterno_tempo'); ?>"
+                                                       class="btn btn-outline-light px-5">
+                                                        acesse nosso
+                                                        site</a>
+                                                <?php endif; ?>
+                                                <?php if ($destinoUrl == 'externo'): ?>
+                                                    <a href="<?php echo get_sub_field('prod_linkexterno_tempo'); ?>" target="_blank"
+                                                       class="btn btn-outline-light px-5">
+                                                        acesse nosso
+                                                        site</a>
+                                                <?php endif; ?>
+                                                <?php if ($destinoUrl == 'designer'): ?>
+                                                    <a href="#" class="btn btn-outline-light px-5 openDesignerProduto" data-post="<?php the_ID(); ?>" data-indice="<?php echo $count; ?>">Designer
+                                                        do produto</a>
+                                                <?php endif; ?>
                                             <?php endif; ?>
-                                            <?php if ($destinoUrl == 'externo'): ?>
-                                                <a href="<?php echo get_sub_field('prod_linkexterno_tempo'); ?>" target="_blank"
-                                                   class="btn btn-outline-light px-5">
-                                                    acesse nosso
-                                                    site</a>
+                                        </div>
+                                    </li>
+                                <?php else: ?>
+                                    
+                                    <li class=" <?php if( $count == 2 ) { echo 'timeline-text-left'; } ?>">
+                                        <div>
+                                            <p class="text-gray-2 text-uppercase">
+                                                <?php echo strftime('%d de %b %Y', strtotime($date_string)); ?> </p>
+                                            <p class="text-caption font-weight-bold text-blue">
+                                                <?php echo get_sub_field('prod_titulo_tempo'); ?></p>
+                                            <p class="text-gray">
+                                                <small><?php echo get_sub_field('prod_desc_tempo'); ?></small>
+                                            </p>
+                                            <?php if ($destinoUrl != 'none'): ?>
+                                                <?php if ($destinoUrl == 'interno'): ?>
+                                                    <a href="<?php echo get_sub_field('prod_linkinterno_tempo'); ?>"
+                                                       class="btn btn-outline-light px-5">
+                                                        acesse nosso
+                                                        site</a>
+                                                <?php endif; ?>
+                                                <?php if ($destinoUrl == 'externo'): ?>
+                                                    <a href="<?php echo get_sub_field('prod_linkexterno_tempo'); ?>" target="_blank"
+                                                       class="btn btn-outline-light px-5">
+                                                        acesse nosso
+                                                        site</a>
+                                                <?php endif; ?>
+                                                <?php if ($destinoUrl == 'designer'): ?>
+                                                    <a href="#" class="btn btn-outline-light px-5 openDesignerProduto" data-post="<?php the_ID(); ?>" data-indice="<?php echo $count; ?>">Designer
+                                                        do produto</a>
+                                                <?php endif; ?>
                                             <?php endif; ?>
-                                            <?php if ($destinoUrl == 'designer'): ?>
-                                                <a href="#" class="btn btn-outline-light px-5 openDesignerProduto" data-post="<?php the_ID(); ?>" data-indice="<?php echo $count; ?>">Designer
-                                                    do produto</a>
-                                            <?php endif; ?>
-                                        <?php endif; ?>
-                                    </div>
-                                </li>
+                                        </div>
+                                    </li>
+                                <?php endif; ?>
                                 <?php $count++; ?>
                             <?php endwhile; ?>
                             <?php endif; ?>
@@ -216,14 +249,14 @@
                         <div id="<?php echo $carousel_color; ?>" class="carousel slide" data-ride="carousel">
                             <!-- carousel-fade -->
 
-                            <div class="carousel-inner carousel-fullpage">
+                            <div class="carousel-inner">
                                 <?php $slidersCount = 0; ?>
                                 <?php while (have_rows('prod_carousel_repeat')): the_row();
                                     $slidersCount++;
                                     ?>
                                     <div class="carousel-item <?php if ($slidersCount == 1) echo "active"; ?> carousel-long">
                                         <div class="container <?php echo $detail_bg; ?>">
-                                            <div class="slider-title ">
+                                            <div class=" ">
                                                 <div class="text-center mb-2  mx-0 mb-md-5 mx-md-5">
                                                     <h2 style="line-height: 70px;" class="display-h2 "><?php echo $section_titulo; ?></h2>
                                                     <p><?php echo $section_tagline; ?></p>
@@ -231,18 +264,17 @@
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div style="
-
                                                                 background-image: url(<?php the_sub_field('prod_carousel_img'); ?>);
                                                                 background-size: cover;
                                                                 background-position: center;
                                                                 " class="product-description-info">
                                                         </div> <!-- height: 431px; -->
                                                     </div>
-                                                    <div class="col-md-6">
-                                                        <p class="text-uppercase"><?php the_sub_field('prod_carousel_tagline'); ?></p>
-                                                        <h2 style="line-height: 60px; max-width: 400px;" class="display-h2 ">
+                                                    <div  class="col-md-6 pl-md-5 ">
+                                                        <p style="letter-spacing: 0.1em;" class="text-uppercase text-gray ml-md-2"><?php the_sub_field('prod_carousel_tagline'); ?></p>
+                                                        <h2 style="line-height: 60px; max-width: 400px;" class="display-h2 mb-2 ml-md-2">
                                                             <?php the_sub_field('prod_carousel_titulo'); ?></h2>
-                                                        <p class=""><?php the_sub_field('prod_carousel_descricao'); ?></p>
+                                                        <p class="slider-width-limit ml-md-2"><?php the_sub_field('prod_carousel_descricao'); ?></p>
                                                     </div>
                                                 </div>
 
@@ -258,9 +290,9 @@
 
                                 <div class="custom-control-carrousel-center custom-control-bottom">
 
-                                    <a href="#<?php echo $carousel_color; ?>" role="button" data-slide="prev"
+                                    <a style="margin-right: 5px" href="#<?php echo $carousel_color; ?>" role="button" data-slide="prev"
                                        class="btn <?php echo $fundo_bg == 'bg-blue' ? 'btn-light' : 'btn-primary' ?> btn-round"><span class="icon pt-2 pb-2 pl-1 icon-prev-icon"></span></a>
-                                    <a href="#<?php echo $carousel_color; ?>" role="button" data-slide="next"
+                                    <a style="margin-left: 5px" href="#<?php echo $carousel_color; ?>" role="button" data-slide="next"
                                        class="btn <?php echo $fundo_bg == 'bg-blue' ? 'btn-light' : 'btn-primary' ?> btn-round"><span class="icon pt-2 pb-2 pr-1 icon-next-icon"></span></a>
                                 </div>
                             </div>
@@ -283,7 +315,7 @@
                     <div class="container text-center my-5">
                         <h2 data-aos="fade-up" class="display-h2 text-orange">Conheça nossos
                             indicadores</h2>
-                        <p data-aos="fade-up">Fique por dentro e acompanhe cada momento da nossa jornada</p>
+                        <p class="mb-5 pb-3" data-aos="fade-up">Fique por dentro e acompanhe cada momento da nossa jornada</p>
                         <div data-aos="flip-down" class="d-md-flex justify-content-center ">
                             <!-- row -->
                             <?php $linhas = 0; ?>
@@ -292,11 +324,11 @@
                                 $porcentagem = get_sub_field('prod_indicador_valor');
                                 $linhas++;
                                 ?>
-                                <div style="max-width: 250px; margin-left: auto; margin-right: auto;" class="position-relative">
+                                <div style="max-width: 265px; margin-left: auto; margin-right: auto;" class="position-relative">
                                     <div style="transform: scaleX(-1); stroke-linecap: round;" id="progress-<?php echo $linhas; ?>"></div>
                                     <div class="graph-detail-holder">
 
-                                        <h3 class="font-weight-bold"><?php echo $porcentagem; ?>%</h3>
+                                        <h3 class="font-weight-bold mb-0"><?php echo $porcentagem; ?>%</h3>
                                         <p class="text-gray"><?php echo $texto; ?></p>
                                     </div>
                                     <script>
@@ -338,7 +370,7 @@
 
         if ($ultimas_novidades->have_posts()): ?>
         <div class="section">
-            <section class=" text-center mt-5 pb-0" id="ultimas-noticias">
+            <section class=" text-center mt-5 pt-5 pb-0" id="ultimas-noticias">
                 <div class="container">
                     <div data-aos="flip-up" class="ultimas-novidades-title">
                         <img src="<?php bloginfo('template_url'); ?>/img/paper.png" alt="">
@@ -370,22 +402,22 @@
                                 <a href="<?php the_permalink(); ?>">
 
                                     <p class="img-caption  text-uppercase">
-                                        <small>postado em
+                                        <small><span class="text-gray-3">postado em</span>
                                             <strong><?php echo get_the_time(__('j \d\e M  Y'), $post->id); ?></strong>
                                         </small>
                                     </p>
                                 </a>
                                 <a href="<?php the_permalink(); ?>">
-                                    <p class="font-weight-bold"><?php the_title(); ?></p>
+                                    <p style="max-width: 378px;" class="font-weight-bold text-caption-size"><?php the_title(); ?></p>
                                 </a>
                                 <a href="<?php the_permalink(); ?>">
-                                    <p class="font-weight-light"><?php echo get_the_excerpt(); ?></p>
+                                    <p class="font-weight-regular text-gray-3"><?php echo get_the_excerpt(); ?></p>
                                 </a>
                             </div>
                         <?php endwhile;
                         wp_reset_postdata(); ?>
                         <div class="col-md-12">
-                            <div data-aos="zoom-in" class="d-flex justify-content-center py-5">
+                            <div data-aos="zoom-in" class="d-flex justify-content-center confira-nov-btn">
                                 <a href="<?php bloginfo('home'); ?>/novidades" class="btn btn-primary px-5">Confira
                                     as novidades</a>
                             </div>
@@ -395,7 +427,7 @@
                     <div id="parallax-bush-1">
                         <div data-depth="0.1" class="d-flex justify-content-between">
                             <div>
-                                <img style="transform: scaleX(-1); " src="<?php bloginfo('template_url'); ?>/img/bush-md.png"
+                                <img src="<?php bloginfo('template_url'); ?>/img/bush-md-2.png"
                                      alt="">
                             </div>
                             <div>
