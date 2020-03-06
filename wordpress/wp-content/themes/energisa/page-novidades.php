@@ -26,8 +26,8 @@
         </div>
 
         <div class="d-flex justify-content-center">
-            <p class="font-weight-bold">Filtre sua exibição</p>
-            <select class="custom-select" id="loadPerProduct">
+            <p class="font-weight-bold mr-2">Filtre sua exibição</p>
+            <select style="width: 25%;" class="custom-select" id="loadPerProduct">
                 <option value="" selected>Totem de Autoatendimento</option>
                 <option value="#"></option>
             </select>
