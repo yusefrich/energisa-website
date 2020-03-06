@@ -18,14 +18,15 @@
                             <p class="text-center"><?php the_field('carousel_tagline_one', 'options-carousel'); ?></p>
                         </div>
                         <div class="row bottom-text text-center mx-3">
-                            <div class="col-md-6">
-                                <div class="carousel-info pt-5 mt-5">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-5">
+                                <div class="carousel-banner-index pt-5 mt-5">
                                     <h3><?php the_field('carousel_titulo_secundario', 'options-carousel'); ?></h3>
                                     <p><?php the_field('carousel_tagline_two', 'options-carousel'); ?></p>
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="carousel-info text-center">
+                            <div class="col-md-5">
+                                <div class="carousel-banner-index text-center">
                                     <div id="carouselExampleCaptions" class="carousel slide " data-ride="carousel">
                                         <div style="max-width: 710px" class="carousel-inner carousel-info-container">
 
@@ -118,16 +119,16 @@
 
                                         <div class="card-img-overlay overlay-lg text-start">
                                             <h2 class="card-title"><?php the_field('titulo'); ?></h2>
-                                            <p class="card-text"><?php the_field('descricao'); ?></p>
+                                            <p style="max-width: 590px;" class="card-text mb-5"><?php the_field('descricao'); ?></p>
                                             <?php
                                             $url = get_field_object('destino_link');
                                             $url_valor = $url['value'];
                                             if ($url_valor == 'externo') { ?>
-                                                <a href="<?php the_field('link_externo'); ?>" class="btn btn-primary px-5" target="_blank" title="Saiba mais">Leia
+                                                <a href="<?php the_field('link_externo'); ?>" class="btn btn-primary primary-btn-spacing" target="_blank" title="Saiba mais">Leia
                                                     mais</a>
                                             <?php }
                                             if ($url_valor == 'interno') { ?>
-                                                <a href="<?php the_field('link_interno'); ?>" class="btn btn-primary px-5" title="Saiba mais">Saiba
+                                                <a href="<?php the_field('link_interno'); ?>" class="btn btn-primary primary-btn-spacing" title="Saiba mais">Saiba
                                                     mais</a>
                                             <?php }
                                             ?>
@@ -153,14 +154,14 @@
                         <div data-aos="fade-left" class="col-md-6">
                             <a href="<?php the_permalink(); ?>">
                                 <img src="<?php echo esc_url($capa_novidades); ?>" class="figure-img img-fluid rounded zoom-hover img-fit" alt="..."></a>
-                            <a href="<?php the_permalink(); ?>"><p class="img-caption text-white mb-5">
-                                    <strong><?php the_title(); ?></strong></p></a>
+                            <a href="<?php the_permalink(); ?>"><p style="letter-spacing: 1px; font-weight: bold;" class="img-caption text-white mb-5">
+                                    <?php the_title(); ?></p></a>
                         </div>
                     <?php endwhile;
                     wp_reset_postdata(); ?>
                     <div class="col-12">
                         <div data-aos="fade-up" class="d-flex justify-content-center">
-                            <a href="<?php bloginfo('home'); ?>/novidades" class="btn btn-light px-5 btn-confira-offset">Confira
+                            <a href="<?php bloginfo('home'); ?>/novidades" class="btn btn-light  btn-confira-offset">Confira
                                 as
                                 novidades</a>
                         </div>
@@ -203,7 +204,7 @@
                         $img_background = get_the_post_thumbnail_url(null, 'full');
                         ?>
                         <div data-aos="fade-up" class="col-md-12">
-                            <div class="card card-bg-wide text-white my-5 zoom-hover card-link-div" onclick="window.location='<?php the_field('link_interno'); ?>';">
+                            <div class="card card-bg-wide text-white margin-card-wide zoom-hover card-link-div" onclick="window.location='<?php the_field('link_interno'); ?>';">
                                 <div class="img-holder" style="
                                         background: linear-gradient(0deg, rgba(55, 55, 55, 0.4), rgba(55, 55, 55, 0.4)), url(<?php echo esc_url($img_background); ?>);
                                         background-position: center;
@@ -221,16 +222,16 @@
 
                                     <div class="card-img-overlay overlay-lg text-start">
                                         <h2 class="card-title"><?php the_field('titulo'); ?></h2>
-                                        <p class="card-text"><?php the_field('descricao'); ?></p>
+                                        <p style="max-width: 590px;" class="card-text mb-5"><?php the_field('descricao'); ?></p>
                                         <?php
                                         $url = get_field_object('destino_link');
                                         $url_valor = $url['value'];
                                         if ($url_valor == 'externo') { ?>
-                                            <a href="<?php the_field('link_externo'); ?>" class="btn btn-primary px-5" target="_blank" title="Saiba mais">Leia
+                                            <a href="<?php the_field('link_externo'); ?>" class="btn btn-primary primary-btn-spacing" target="_blank" title="Saiba mais">Leia
                                                 mais</a>
                                         <?php }
                                         if ($url_valor == 'interno') { ?>
-                                            <a href="<?php the_field('link_interno'); ?>" class="btn btn-primary px-5" title="Saiba mais">Saiba
+                                            <a href="<?php the_field('link_interno'); ?>" class="btn btn-primary primary-btn-spacing" title="Saiba mais">Saiba
                                                 mais</a>
                                         <?php }
                                         ?>
@@ -255,11 +256,14 @@
 
                             <div class="card card-bg-small text-white mb-2 zoom-hover card-link-div" onclick="window.location='<?php the_field('link_interno'); ?>';">
                                 <div class="img-holder-sm" style="
-                                        background: linear-gradient(0deg, rgba(<?php the_field('projet_cor_background'); ?>), rgba(<?php the_field('projet_cor_background'); ?>)), url(<?php the_field('projet_background'); ?>);
+                                        /* background: linear-gradient(0deg, <?php the_field('projet_cor_background'); ?>, <?php the_field('projet_cor_background'); ?>), url(<?php the_field('projet_background'); ?>); */
+                                        background-image: url(<?php the_field('projet_background'); ?>);
+                                        background-color: rgba(<?php the_field('projet_cor_background'); ?>);
                                         background-position: center;
+                                        background-blend-mode: multiply;
                                         background-size: cover;">
-                                    <a href="<?php the_permalink(); ?>" class="btn btn-light btn-round btn-sm card-btn m-3">
-                                        <span class="icon pt-2 pb-2 pr-2 icon-next-icon"></span></a>
+                                    <a href="<?php the_permalink(); ?>" class="btn btn-light btn-round btn-sm card-btn m-3 btn-next-card-sm">
+                                        <span class="icon icon-16 pt-2 pb-2 pr-2 icon-next-icon"></span></a>
                                     <div class="card-img-overlay overlay-sm text-start">
                                         <a href="<?php the_permalink(); ?>">
                                             <h3 class="card-title"><?php the_field('projet_titulo'); ?></h3>
@@ -329,9 +333,10 @@
                         $contador++
                         ?>
                         <div class="carousel-item <?php if ($contador == 1) echo "active"; ?> carousel-long "
-                             style="background: linear-gradient(0deg, rgba(8, 107, 192, 0.7), rgba(8, 107, 192, 0.7)), url(<?php echo esc_url($capa_produtos); ?>);
+                             style="background: linear-gradient(0deg, #0874c080, #0874c080), url(<?php echo esc_url($capa_produtos); ?>);
                                      background-position: center;
                                      background-size: cover;
+                                     
                                      height: 100vh;">
                             <div class="container custom-carousel-caption slider-title-center">
                                 <div class="slider-title slider-title-sm">
@@ -340,9 +345,9 @@
                                         <h1><?php the_title(); ?></h1>
                                     </a>
                                     <a href="<?php the_permalink(); ?>">
-                                        <p class=""><?php echo get_the_excerpt(); ?></p>
+                                        <p style="letter-spacing: 1px;" class="mb-5"><?php echo get_the_excerpt(); ?></p>
                                     </a>
-                                    <a href="<?php the_permalink(); ?>" class="btn btn-primary px-5">Saiba mais</a>
+                                    <a href="<?php the_permalink(); ?>" class="btn btn-primary primary-btn-spacing">Saiba mais</a>
                                 </div>
                             </div>
                         </div>
@@ -351,9 +356,9 @@
                 </div>
                 <div class="container">
                     <div class="custom-control-carrousel-left custom-control-bottom-higher">
-                        <a href="#carrouselProdutos" role="button" data-slide="prev"
+                        <a style="margin: 10px" href="#carrouselProdutos" role="button" data-slide="prev"
                            class="btn btn-light btn-round"><span class="icon pt-2 pb-2 pl-1 icon-prev-icon"></span></a>
-                        <a href="#carrouselProdutos" role="button" data-slide="next"
+                        <a style="margin: 10px" href="#carrouselProdutos" role="button" data-slide="next"
                            class="btn btn-light btn-round"><span class="icon pt-2 pb-2 pr-1 icon-next-icon"></span></a>
                     </div>
                 </div>
@@ -373,7 +378,7 @@
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div class="row mt-5">
                         <?php
                         $chamadaIdeia = new WP_Query(array(
                             'pagename' => 'chamada-ideias',
@@ -382,23 +387,33 @@
                             $img_background = get_the_post_thumbnail_url(null, 'full');
                             ?>
                             <div data-aos="fade-up" class="col-md-12">
-                                <div class="card card-bg-wide text-white my-5 zoom-hover card-link-div" onclick="window.location='<?php the_field('link_interno'); ?>';">
+                                <div class="card card-bg-wide text-white mt-5 mb-2 zoom-hover card-link-div" onclick="window.location='<?php the_field('link_interno'); ?>';">
                                     <div class="img-holder" style="
                                             background: linear-gradient(0deg, rgba(55, 55, 55, 0.4), rgba(55, 55, 55, 0.4)), url(<?php echo esc_url($img_background); ?>);
                                             background-position: center;
                                             background-size: cover;">
+                                        <?php
+                                        $url = get_field_object('destino_link');
+                                        $url_valor = $url['value'];
+                                        if ($url_valor == 'externo') { ?>
+                                            <a href="<?php the_field('link_externo'); ?>" class="btn btn-light btn-round card-btn m-5" target="_blank" title="Saiba mais"><span class="icon pt-2 pb-2 pr-1 icon-next-icon"></span></a>
+                                        <?php }
+                                        if ($url_valor == 'interno') { ?>
+                                            <a href="<?php the_field('link_interno'); ?>" class="btn btn-light btn-round card-btn m-5" title="Saiba mais"><span class="icon pt-2 pb-2 pr-1 icon-next-icon"></span></a>
+                                        <?php }
+                                        ?>
                                         <div class="card-img-overlay overlay-lg text-start">
                                             <h2 class="card-title"><?php the_field('titulo'); ?></h2>
-                                            <p class="card-text"><?php the_field('descricao'); ?></p>
+                                            <p style="max-width: 540px;" class="card-text card-text-ideias mb-5"><?php the_field('descricao'); ?></p>
                                             <?php
                                             $url = get_field_object('destino_link');
                                             $url_valor = $url['value'];
                                             if ($url_valor == 'externo') { ?>
-                                                <a href="<?php the_field('link_externo'); ?>" class="btn btn-primary px-5" target="_blank" title="Saiba mais">Leia
+                                                <a href="<?php the_field('link_externo'); ?>" class="btn btn-primary primary-btn-spacing" target="_blank" title="Saiba mais">Leia
                                                     mais</a>
                                             <?php }
                                             if ($url_valor == 'interno') { ?>
-                                                <a href="<?php the_field('link_interno'); ?>" class="btn btn-primary px-5" title="Saiba mais">Saiba
+                                                <a href="<?php the_field('link_interno'); ?>" class="btn btn-primary primary-btn-spacing" title="Saiba mais">Saiba
                                                     mais</a>
                                             <?php }
                                             ?>
@@ -450,7 +465,7 @@
                                             </div>
                                         </div>
                                         <p class="text-uppercase mb-0">
-                                            <small class="text-orange"><?php echo esc_html($statusFiled['label']); ?></small>
+                                            <small style="letter-spacing: 1px" class="text-orange"><?php echo esc_html($statusFiled['label']); ?></small>
                                         </p>
                                         <a href="<?php the_permalink(); ?>">
                                             <p class="font-weight-extra-bold text-caption"><?php the_title(); ?></p>
@@ -483,8 +498,8 @@
                         wp_reset_postdata(); ?>
 
                         <div class="col-12">
-                            <div data-aos="zoom-in" class="d-flex justify-content-center my-5 py-5">
-                                <a href="<?php bloginfo('home'); ?>/ideias" class="btn btn-primary px-5">Quero
+                            <div data-aos="zoom-in" class="d-flex justify-content-center quero-colaborar-margin">
+                                <a href="<?php bloginfo('home'); ?>/ideias" class="btn btn-primary  primary-btn-spacing">Quero
                                     colaborar</a>
                             </div>
                         </div>

@@ -10,8 +10,8 @@
                 " class="container-fluid   product-banner-holder px-0 ">
             <!-- text-white -->
             <div class=" text-center text-white ">
-                <h1 data-aos="fade-right" class="large-banner"><?php the_field('sobre_topo_titulo'); ?></h1>
-                <p data-aos="fade-left" class="text-caption product-banner"><?php the_field('sobre_topo_desc'); ?></p>
+                <h1 data-aos="fade-right" class="large-banner mb-4"><?php the_field('sobre_topo_titulo'); ?></h1>
+                <p style="letter-spacing: 1px;max-width: 979px;" data-aos="fade-left" class="text-caption ml-auto mr-auto"><?php the_field('sobre_topo_desc'); ?></p>
             </div>
         </div>
     </section>
@@ -31,7 +31,7 @@
         <div class="container">
             <div data-aos="fade-up" class="row my-5 py-5 ">
                 <div class="col-md-5">
-                    <h2 class="text-orange font-weight-bold mt-5">Propósito</h2>
+                    <h2 class="text-orange font-weight-bold mt-3 float-md-right mr-3">Propósito</h2>
                 </div>
                 <div class="col-md-7">
                     <p style="max-width: 450px;" class="text-caption text-dark"><?php the_field('sobre_proposito_text'); ?>
@@ -61,7 +61,7 @@
             </div>
             <div class="d-flex justify-content-end">
 
-                <p style="max-width: 460px" class="text-caption text-right">Conheça nossa equipe e fique por dentro da
+                <p style="max-width: 579px" class="text-caption text-right">Conheça nossa equipe e fique por dentro da
                     Coordenação de Canais Digitais</p>
             </div>
 
@@ -151,7 +151,7 @@
 
     <section id="o-que-fazemos">
         <div data-aos="fade-up" class="container py-5 mt-5 mb-2">
-            <h1 class="font-weight-bold text-orange"><?php the_field('sobre_fazemos_titulo'); ?></h1>
+            <h1 class="font-weight-bold text-orange mb-4"><?php the_field('sobre_fazemos_titulo'); ?></h1>
             <p style="max-width: 560px;"><?php the_field('sobre_fazemos_desc'); ?></p>
 
 

@@ -13,9 +13,9 @@
                     background-blend-mode: multiply, normal;
                     " class="container-fluid   product-banner-holder px-0 ">
                 <!-- text-white -->
-                <div class="product-banner text-center text-white ">
+                <div class="product-banner slider-title-center text-center text-white ">
                     <h1><?php the_title(); ?></h1>
-                    <p class="text-caption"><?php echo get_the_excerpt(); ?></p>
+                    <p style="line-height: 42px;" class="text-caption"><?php echo get_the_excerpt(); ?></p>
                 </div>
             </div>
         </section>
@@ -47,12 +47,12 @@
             <section class="section <?php echo $fundo_bg; ?>">
                 <div style="min-height: 700px" class="container-fluid p-0 mt-5">
                     <div s class="row py-5 mr-2">
-                        <div class="col-md-6">
+                        <div class="col-md-6 pr-md-5 ">
                             <div style="height: 100%;
                                     background-image: url(<?php echo get_sub_field('prod_imagem_desc'); ?>);
                                     background-size: cover;
                                     background-position: center;
-                                    " class="product-description-info">
+                                    " class="product-description-info mr-md-2">
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -63,10 +63,10 @@
                                     $texto = get_sub_field('prod_indicador_texto');
                                     $porcentagem = get_sub_field('prod_indicador_valor');
                                     ?>
-                                    <h2 style="line-height: 50px;" data-aos="fade-up" class="display-h2 mb-3">
+                                    <h2 style="line-height: 50px;" data-aos="fade-up" class="display-h2 mb-4">
                                         <?php echo get_sub_field('prod_desc_titulo'); ?>
                                     </h2>
-                                    <p data-aos="fade-up"><?php echo get_sub_field('prod_desc_descricao'); ?></p>
+                                    <p class="mb-3" data-aos="fade-up"><?php echo get_sub_field('prod_desc_descricao'); ?></p>
                                 <?php endwhile; ?>
 
                             </div>

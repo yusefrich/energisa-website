@@ -106,6 +106,14 @@ $h3-font-size: (null: em(32), $xl: em(29), $md: em(28));/* 36 */
     letter-spacing: -0.02em;
     @include font-size-map($caption-font-size);
 }
+.card-text-ideias{
+    font-style: normal;
+    font-weight: normal;
+    @include font-size-map($caption-font-size);
+}
+.card-text{
+    letter-spacing: 1px;
+}
 .text-caption-lg{
     font-style: normal;
     line-height: 33px;
@@ -435,7 +443,7 @@ section {
 }
 .card-bg-small{
     height: 95%;
-    margin: 20px 0px;
+    margin: 12px 0px;
     border: 0px;
     border-radius: 6px;
     z-index: 2;
@@ -451,7 +459,7 @@ section {
     padding: 80px 70px;
 }
 .overlay-sm{
-    padding: 70px 43px;
+    padding: 92px 43px 70px 43px;
 }
 .overlay-xs{
     padding: 30px 40px;
@@ -522,7 +530,7 @@ section {
     margin: auto;
 }
 .product-banner{
-    max-width: 900px;
+    max-width: 979px;
     margin: auto;
 }
 .large-banner{
@@ -918,6 +926,8 @@ a:hover{
     .bottom-text{
         position: relative;
         bottom: 0;
+        margin-top: 150px;
+
     }
 
   }
@@ -927,9 +937,11 @@ a:hover{
     .index-banner{
         height: initial;
     }
+
     .bottom-text{
         position: relative;
         bottom: 0;
+        margin-top: 150px;
     }
     
 }
@@ -1210,13 +1222,13 @@ a:hover{
 .style-6::-webkit-scrollbar-track-piece:end {
     background: transparent;
     /* margin-bottom: 100px;  */
-    margin-right: 47vw;
+    margin-right: 39vw;
 }
 
 .style-6::-webkit-scrollbar-track-piece:start {
     background: transparent;
     /* margin-top: 100px; */
-    margin-left: 47vw;
+    margin-left: 39vw;
 }
 .style-6::-webkit-scrollbar-track {
     background: transparent;
@@ -1237,7 +1249,7 @@ a:hover{
     z-index: -1;
     /* bottom: -1px; */
     height: 10px;
-    width: 5vw;
+    width: 20vw;
     left: 0;
     right: 0;
     /* margin-left: auto;
@@ -1246,7 +1258,7 @@ a:hover{
 }
 
 .scroll-bg-gray::after {
-    margin-top: 476px;
+    margin-top: 469px;
     margin-left: auto;
     margin-right: auto;
     content:'';
@@ -1254,7 +1266,7 @@ a:hover{
     z-index: -1;
     /* bottom: -1px; */
     height: 10px;
-    width: 4vw;
+    width: 20vw;
     left: 0;
     right: 0;
     /* bottom: 0; */
@@ -1547,7 +1559,8 @@ a:hover{
 }
 
 .btn-confira-offset{
-    margin-top: 5rem !important;
+    margin-top: 40px !important;
+    padding: 12px 43px !important;
 }
 @media (min-width: 768px) {
 /* slider edsign de produtos */
@@ -1921,6 +1934,9 @@ a:hover{
     .carousel-fullpage{
         height: initial;
     }
+    .card-bg-small{
+        margin: 23px 0px;
+    }
     .product-description-info{
         height: 35vh;
     }
@@ -2012,3 +2028,37 @@ a:hover{
     margin-top: 13px;
 
 }
+.carousel-banner-index{
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.primary-btn-spacing{
+    padding: 12px 50px;
+}
+#home-projetos{
+    background-color: #f4f4f4;
+}
+.margin-card-wide{
+    margin-top: 58px;
+    margin-bottom: 12px;
+}
+.btn-next-card-sm{
+    padding: 0px 5px;
+}
+.quero-colaborar-margin{
+    margin-top: 69px;
+    margin-bottom: 60px;
+}
+@media (min-width: 1500px) and (max-width: 1700px ) {
+  
+    .card-slider > div:first-of-type {
+        margin-left: 13%;
+    }
+  }
+@media (min-width: 1701px) {
+  
+    .card-slider > div:first-of-type {
+        margin-left: 20%;
+    }
+  }

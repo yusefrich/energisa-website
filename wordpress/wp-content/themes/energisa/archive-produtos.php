@@ -8,9 +8,9 @@
                 background-blend-mode: multiply, normal;
                 " class="container-fluid   product-banner-holder px-0 ">
             <!-- text-white -->
-            <div class="product-banner text-center text-white ">
-                <h1>Confira nosso portfólio de produtos</h1>
-                <p class="text-caption">Fique por dentro de todos os produtos feitos pela nossa equipe e sinta-se a
+            <div class=" text-center text-white ">
+                <h1 style="max-width: 979px;" class="mb-4 ml-auto mr-auto">Confira nosso portfólio de produtos</h1>
+                <p style="max-width: 841px; letter-spacing: .2px; line-height: 42px;" class="text-caption ml-auto mr-auto">Fique por dentro de todos os produtos feitos pela nossa equipe e sinta-se a
                     vontade para colaborar conosco.</p>
             </div>
         </div>
@@ -34,7 +34,7 @@
                 </div>
             </div>
 
-            <div class="row mt-5" id="loadProducts"></div>
+            <div class="row" id="loadProducts"></div>
 
             <div class="row">
                 <div class="col-md-12">
