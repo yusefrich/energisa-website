@@ -44,7 +44,7 @@
         ?>
         <section class="section <?php echo $fundo_bg ?>" id="projeto-detail">
             <div class="container">
-                <div class="mb-5 pb-3" id="parallax-detalhe-2">
+                <div class="mb-5 pb-3" id="parallax-detalhe-1">
                     <div data-depth="0.2" class="d-flex justify-content-between">
                         <div style="z-index: 1;" class="trace-detail-left trace-detail-offset-bottom">
                             <img class="" src="<?php bloginfo('template_url'); ?>/img/detalhes-traco-laranja.png" alt="">
@@ -58,7 +58,7 @@
                         <h2 style="line-height: 65px;" class="text-orange font-weight-bold mt-5"><?php the_sub_field('projet_info_tituloOne'); ?></h2>
                     </div>
                     <div class="col-md-8">
-                        <p style="line-height: 31px;" class="text-caption projeto-text-width"><?php the_sub_field('projet_info_descOne'); ?></p>
+                        <p style="line-height: 31px;" class="text-caption projeto-text-width ml-md-auto"><?php the_sub_field('projet_info_descOne'); ?></p>
                     </div>
                 </div>
                 <hr data-aos="fade-up" style="background-color: #E8E8E8;">
@@ -70,7 +70,7 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div style="max-width: 400px">
+                        <div style="max-width: 400px" class="ml-md-auto">
                             <h2 style="line-height: 65px;" class="text-orange font-weight-bold mb-3"><?php the_sub_field('projet_info_tituloThree'); ?></h2>
                             <ul>
                                 <?php
@@ -88,9 +88,8 @@
             </div>
 
         </section>
-    <?php endif; ?>
-    <div style="height: 0px; position:relative; z-index: 100"class="container">
-                <div class="mb-5 pb-3" id="parallax-detalhe-2">
+        <div style="height: 0px; position:relative; z-index: 100"class="container">
+                <div class="mb-5 pb-3" id="parallax-detalhe-3">
                     <div data-depth="0.2" class="d-flex justify-content-between">
                         <div class="trace-detail-left">
                         </div>
@@ -101,6 +100,8 @@
                 </div>
 
     </div>
+
+    <?php endif; ?>
 
     <!-- Verifica se existe o layout de gráficos e indicadores-->
     <?php if (get_row_layout() == 'projet_layout_graph'): ?>
@@ -237,8 +238,7 @@
                                         </p>
                                         <div class="p-0 timeline-progress-circle" id="como-estamos-graph-<?php echo $count; ?>"></div>
                                         <p class="timeline-andamento mt-1 timeline-andamento-projeto">
-                                            <small class="font-weight-bold "><?php the_sub_field('projet_desc_andamento'); ?>
-                                                %
+                                            <small class="font-weight-bold "><?php the_sub_field('projet_desc_andamento'); ?>%
                                             </small>
                                         </p>
                                     </div>

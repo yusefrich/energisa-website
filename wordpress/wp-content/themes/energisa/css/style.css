@@ -2106,7 +2106,8 @@ a:hover {
   background-color: #f8d7da36;
 }
 
-.posts-end-alert + .posts-end-alert {
+.posts-end-alert {
+  /*  + .posts-end-alert */
   display: none;
 }
 
