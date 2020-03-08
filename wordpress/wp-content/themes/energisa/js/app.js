@@ -2,13 +2,14 @@ jQuery(function ($) {
 
     var page = 1;
 
-    function listarNovidadesAjax(page) {
+    function listarNovidadesAjax(page, categoriaSlug) {
         $.ajax({
             url: wp.ajaxurl,
             type: 'POST',
             data: {
                 action: 'listarNovidades',
-                page: page
+                page: page,
+                categoria: categoriaSlug
             },
             beforeSend: function () {
 
@@ -41,7 +42,7 @@ jQuery(function ($) {
                     })
 
                     if (hasNext === false) {
-                        $("#btnLoadNews").remove();
+                        $("#btnLoadNews").addClass('d-none');
                     }
                 } else {
                     $("#loadNews").append(`<div class="alert alert-danger text-center posts-end-alert">${dados.data.msg}</div>`);
@@ -53,13 +54,26 @@ jQuery(function ($) {
         })
     }
 
-    listarNovidadesAjax(page)
+    listarNovidadesAjax(page, '')
 
     // Carregar posts novidades
     $("#btnLoadNews").on('click', function () {
         paggina = $(this).data("pagina");
-        listarNovidadesAjax(paggina + 1)
+        let categoria = $(this).data("categoria");
+
+        listarNovidadesAjax(paggina + 1, categoria)
         $(this).data('pagina', paggina + 1);
+    })
+
+    // Carregar posts novidades por categoria
+    $("#loadPerCategory").on('change', function () {
+        let categorySlug = $(this).val();
+
+        $("#loadNews").html('');
+        $("#btnLoadNews").removeClass('d-none');
+        listarNovidadesAjax(1, categorySlug)
+        $("#btnLoadNews").data('pagina', 1);
+        $("#btnLoadNews").data('categoria', categorySlug);
     })
 
     // ########################################################## CARREGAR PROJETOS ##########################################

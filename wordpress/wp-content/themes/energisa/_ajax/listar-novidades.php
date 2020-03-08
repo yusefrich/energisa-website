@@ -4,10 +4,12 @@
 function listarNovidades()
 {
     $page = $_POST['page'];
+    $categoria = $_POST['categoria'];
 
     $args = [
         'post_type' => 'post',
         'posts_per_page' => 6,
+        'category_name' => $categoria,
         'paged' => $page,
     ];
 
