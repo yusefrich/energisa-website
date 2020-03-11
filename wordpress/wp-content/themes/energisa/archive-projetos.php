@@ -1,19 +1,27 @@
 <?php get_header(); ?>
 <section id="projetos-banner">
-    <div style="
-            background-image:  url(<?php bloginfo('template_url'); ?>/img/projetos-header.png);
-            background-color: rgba(224, 75, 0, 0.89);
-            background-size: cover;
-            background-position: center;
-            background-blend-mode: multiply;
-            " class="container-fluid   product-banner-holder px-0 ">
+    <?php
+    $topo = new WP_Query(array(
+        'pagename' => 'chamada-projetos',
+    ));
+    while ($topo->have_posts()): $topo->the_post();
+        ?>
+        <div style="
+                background-image:  url(<?php the_field('page_interna_img'); ?>);
+                background-color: rgba(224, 75, 0, 0.89);
+                background-size: cover;
+                background-position: center;
+                background-blend-mode: multiply;
+                " class="container-fluid   product-banner-holder px-0 ">
             <!-- text-white -->
             <div class=" text-center text-white ">
-                <h1 style="max-width: 979px;" data-aos="fade-right" class="mb-4 ml-auto mr-auto">Veja nossos projetos</h1>
-                <p style="max-width: 841px; letter-spacing: .2px; line-height: 42px;" data-aos="fade-left" class="text-caption ml-auto mr-auto">Acompanhe todos os nossos projetos em andamento e fique por dentro das nossas atividades.</p>
+                <h1 style="max-width: 979px;" data-aos="fade-right" class="mb-4 ml-auto mr-auto"><?php the_field('page_interna_titulo'); ?></h1>
+                <p style="max-width: 841px; letter-spacing: .2px; line-height: 42px;" data-aos="fade-left" class="text-caption ml-auto mr-auto">
+                    <?php the_field('page_interna_desc'); ?></p>
             </div>
         </div>
-
+    <?php endwhile;
+    wp_reset_postdata(); ?>
 </section>
 
 <section id="projetos-todos">

@@ -1,19 +1,25 @@
 <?php get_header(); ?>
-
     <section id="product-banner">
-        <div style="
-                background: linear-gradient(0deg, rgba(8, 155, 192, 0.7), rgba(8, 155, 192, 0.7)), url(<?php bloginfo('template_url'); ?>/img/product-header.png);
-                background-size: cover;
-                background-position: center;
-                background-blend-mode: multiply, normal;
-                " class="container-fluid   product-banner-holder px-0 ">
-            <!-- text-white -->
-            <div class=" text-center text-white ">
-                <h1 style="max-width: 979px;" class="mb-4 ml-auto mr-auto">Confira nosso portfólio de produtos</h1>
-                <p style="max-width: 841px; letter-spacing: .2px; line-height: 42px;" class="text-caption ml-auto mr-auto">Fique por dentro de todos os produtos feitos pela nossa equipe e sinta-se a
-                    vontade para colaborar conosco.</p>
+        <?php
+        $topo = new WP_Query(array(
+            'pagename' => 'chamada-produtos',
+        ));
+        while ($topo->have_posts()): $topo->the_post();
+            ?>
+            <div style="
+                    background: linear-gradient(0deg, rgba(8, 155, 192, 0.7), rgba(8, 155, 192, 0.7)), url(<?php the_field('page_interna_img'); ?>);
+                    background-size: cover;
+                    background-position: center;
+                    background-blend-mode: multiply, normal;
+                    " class="container-fluid   product-banner-holder px-0 ">
+                <!-- text-white -->
+                <div class=" text-center text-white ">
+                    <h1 style="max-width: 979px;" class="mb-4 ml-auto mr-auto"><?php the_field('page_interna_titulo'); ?></h1>
+                    <p style="max-width: 841px; letter-spacing: .2px; line-height: 42px;" class="text-caption ml-auto mr-auto"><?php the_field('page_interna_desc'); ?></p>
+                </div>
             </div>
-        </div>
+        <?php endwhile;
+        wp_reset_postdata(); ?>
     </section>
 
     <section id="product-todos">
@@ -60,6 +66,6 @@
         </div>
 
     </section>
-    <?php include "footer-nav.php"; ?>
+<?php include "footer-nav.php"; ?>
 
 <?php get_footer(); ?>
