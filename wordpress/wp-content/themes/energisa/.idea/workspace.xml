@@ -21,14 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/page-novidades.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" selection-start-line="21" selection-end-line="22" selection-end-column="27" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#section#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="153">
+              <caret line="9" column="145" selection-start-line="9" selection-start-column="145" selection-end-line="9" selection-end-column="145" />
             </state>
           </provider>
         </entry>
@@ -37,11 +34,7 @@
         <entry file="file://$PROJECT_DIR$/archive-ideias.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
-              <caret line="9" column="101" lean-forward="true" selection-start-line="9" selection-start-column="101" selection-end-line="9" selection-end-column="140" />
-              <folding>
-                <element signature="n#style#0;n#h1#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
-              </folding>
+              <caret line="9" column="145" selection-start-line="9" selection-start-column="145" selection-end-line="9" selection-end-column="145" />
             </state>
           </provider>
         </entry>
@@ -49,20 +42,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/archive-produtos.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="9" column="107" selection-start-line="9" selection-start-column="107" selection-end-line="9" selection-end-column="146" />
+            <state relative-caret-position="153">
+              <caret line="9" column="100" selection-start-line="9" selection-start-column="100" selection-end-line="9" selection-end-column="100" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/archive-projetos.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="4" column="39" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#section#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="170">
+              <caret line="10" column="39" lean-forward="true" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="80" />
             </state>
           </provider>
         </entry>
@@ -159,17 +149,17 @@
         <option value="$PROJECT_DIR$/_ajax/listar-por-produto.php" />
         <option value="$PROJECT_DIR$/_ajax/listar-novidades.php" />
         <option value="$PROJECT_DIR$/js/app.js" />
+        <option value="$PROJECT_DIR$/archive-projetos.php" />
+        <option value="$PROJECT_DIR$/archive-produtos.php" />
         <option value="$PROJECT_DIR$/archive-ideias.php" />
         <option value="$PROJECT_DIR$/page-novidades.php" />
-        <option value="$PROJECT_DIR$/archive-produtos.php" />
-        <option value="$PROJECT_DIR$/archive-projetos.php" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
+    <option name="x" value="-10" />
     <option name="width" value="1245" />
-    <option name="height" value="1049" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -314,7 +304,9 @@
       <workItem from="1583441494420" duration="248000" />
       <workItem from="1583693418115" duration="4554000" />
       <workItem from="1583883603763" duration="24000" />
-      <workItem from="1583964377143" duration="1608000" />
+      <workItem from="1583964377143" duration="2211000" />
+      <workItem from="1584035306082" duration="504000" />
+      <workItem from="1584040684835" duration="609000" />
     </task>
     <task id="LOCAL-00001" summary="Concluído o carregamento dinâmico para as páginas de novidades, produtos e projetos">
       <created>1582165204409</created>
@@ -327,7 +319,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="348604000" />
+    <option name="totallyTimeSpent" value="350320000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -343,7 +335,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18456376" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18993288" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -695,41 +687,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/archive-ideias.php">
+    <entry file="file://$PROJECT_DIR$/archive-projetos.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="101" lean-forward="true" selection-start-line="9" selection-start-column="101" selection-end-line="9" selection-end-column="140" />
-          <folding>
-            <element signature="n#style#0;n#h1#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page-novidades.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" selection-start-line="21" selection-end-line="22" selection-end-column="27" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#section#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="170">
+          <caret line="10" column="39" lean-forward="true" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="80" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/archive-produtos.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="9" column="107" selection-start-line="9" selection-start-column="107" selection-end-line="9" selection-end-column="146" />
+        <state relative-caret-position="153">
+          <caret line="9" column="100" selection-start-line="9" selection-start-column="100" selection-end-line="9" selection-end-column="100" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/archive-projetos.php">
+    <entry file="file://$PROJECT_DIR$/archive-ideias.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="4" column="39" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#section#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="153">
+          <caret line="9" column="145" selection-start-line="9" selection-start-column="145" selection-end-line="9" selection-end-column="145" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page-novidades.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="145" selection-start-line="9" selection-start-column="145" selection-end-line="9" selection-end-column="145" />
         </state>
       </provider>
     </entry>

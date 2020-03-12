@@ -7,7 +7,7 @@
     while ($topo->have_posts()): $topo->the_post();
         ?>
         <div style="
-                background: linear-gradient(0deg, rgba(8, 155, 192, 0.7), rgba(8, 155, 192, 0.7)), url(<?php the_field('page_interna_img'); ?>);
+                background: linear-gradient(0deg, rgba(<?php the_field('page_interna_color'); ?>), rgba(<?php the_field('page_interna_color'); ?>)), url(<?php the_field('page_interna_img'); ?>);
                 background-size: cover;
                 background-position: center;
                 background-blend-mode: multiply, normal;

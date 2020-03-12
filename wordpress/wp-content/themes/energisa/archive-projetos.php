@@ -8,7 +8,7 @@
         ?>
         <div style="
                 background-image:  url(<?php the_field('page_interna_img'); ?>);
-                background-color: rgba(224, 75, 0, 0.89);
+                background-color: rgba(<?php the_field('page_interna_color'); ?>);
                 background-size: cover;
                 background-position: center;
                 background-blend-mode: multiply;
