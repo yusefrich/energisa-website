@@ -328,7 +328,7 @@
                                     <div style="transform: scaleX(-1); stroke-linecap: round;" id="progress-<?php echo $linhas; ?>"></div>
                                     <div class="graph-detail-holder">
 
-                                        <h3 class="font-weight-bold mb-0"><?php echo $porcentagem; ?>%</h3>
+                                        <h3 class="font-weight-bold mb-0"><?php echo $porcentagem; ?></h3>
                                         <p class="text-gray"><?php echo $texto; ?></p>
                                     </div>
                                     <script>
