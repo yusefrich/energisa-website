@@ -6,7 +6,6 @@
     <section class="section" id="projetos-banner">
         <div style="
                 background-image: url(<?php echo esc_url($img_background); ?>);
-                background-color: rgba(224, 75, 0, 0.89);
                 background-size: cover;
                 background-position: center;
                 height: 100vh;
@@ -88,18 +87,18 @@
             </div>
 
         </section>
-        <div style="height: 0px; position:relative; z-index: 100"class="container">
-                <div class="mb-5 pb-3" id="parallax-detalhe-3">
-                    <div data-depth="0.2" class="d-flex justify-content-between">
-                        <div class="trace-detail-left">
-                        </div>
-                        <div style="z-index: 1;" class="trace-detail-right trace-detail-offset-bottom">
-                            <img class="" src="<?php bloginfo('template_url'); ?>/img/detalhes-pontos-laranja.png" alt="">
-                        </div>
+        <div style="height: 0px; position:relative; z-index: 100" class="container">
+            <div class="mb-5 pb-3" id="parallax-detalhe-3">
+                <div data-depth="0.2" class="d-flex justify-content-between">
+                    <div class="trace-detail-left">
+                    </div>
+                    <div style="z-index: 1;" class="trace-detail-right trace-detail-offset-bottom">
+                        <img class="" src="<?php bloginfo('template_url'); ?>/img/detalhes-pontos-laranja.png" alt="">
                     </div>
                 </div>
+            </div>
 
-    </div>
+        </div>
 
     <?php endif; ?>
 
@@ -198,7 +197,7 @@
                 </div>
             </div>
             <div class="container-fluid p-0">
-                <div  data-aos="fade-left" class="timeline  style-6" id="timeline-scroll">
+                <div data-aos="fade-left" class="timeline  style-6" id="timeline-scroll">
                     <h3 style="white-space: normal;" class="d-md-none mx-3 my-5 text-gray font-weight-bold">Principais
                         marcos do projeto</h3>
 
@@ -218,94 +217,97 @@
                             $field = get_sub_field('projet_desc_status');
                             $count++;
                             ?>
-                            <?php if ( $count <= 2 ): ?>
-                                <li  class="text-right">
-                                <div style="    left: -85px;">
-                                    <div class="d-flex justify-content-end">
-                                        <p class="text-gray text-uppercase mb-0  mr-2">
-                                            <small><?php echo strftime('%d de %b %Y', strtotime($date_string)); ?></small>
+                            <?php if ($count <= 2): ?>
+                                <li class="text-right">
+                                    <div style="    left: -85px;">
+                                        <div class="d-flex justify-content-end">
+                                            <p class="text-gray text-uppercase mb-0  mr-2">
+                                                <small><?php echo strftime('%d de %b %Y', strtotime($date_string)); ?></small>
+                                            </p>
+                                            <span class="orange-outline-text py-1 px-2"><?php the_sub_field('projet_desc_tarefa'); ?></span>
+                                        </div>
+
+                                        <p class="text-caption font-weight-bold mb-0"><?php the_sub_field('projet_titulo_tempo'); ?></p>
+                                        <p style="line-height: 1.2;" class="text-gray">
+                                            <small><?php the_sub_field('projet_desc_tempo'); ?></small>
                                         </p>
-                                        <span class="orange-outline-text py-1 px-2"><?php the_sub_field('projet_desc_tarefa'); ?></span>
+                                        <div class="d-flex justify-content-end">
+                                            <p class="pt-2 mt-1 pr-3">
+                                                <small><?php echo esc_html($field['label']); ?></small>
+                                            </p>
+                                            <div class="p-0 timeline-progress-circle" id="como-estamos-graph-<?php echo $count; ?>"></div>
+                                            <p class="timeline-andamento mt-1 timeline-andamento-projeto">
+                                                <small class="font-weight-bold "><?php the_sub_field('projet_desc_andamento'); ?>
+                                                    %
+                                                </small>
+                                            </p>
+                                        </div>
                                     </div>
+                                    <script>
+                                        if (document.getElementById("como-estamos-graph-<?php echo $count; ?>")) {
+                                            var circle = new ProgressBar.Circle('#como-estamos-graph-<?php echo $count; ?>', {
+                                                color: '#EA6724',
+                                                strokeWidth: 10,
 
-                                    <p class="text-caption font-weight-bold mb-0"><?php the_sub_field('projet_titulo_tempo'); ?></p>
-                                    <p style="line-height: 1.2;" class="text-gray">
-                                        <small><?php the_sub_field('projet_desc_tempo'); ?></small>
-                                    </p>
-                                    <div class="d-flex justify-content-end">
-                                        <p class="pt-2 mt-1 pr-3">
-                                            <small><?php echo esc_html($field['label']); ?></small>
-                                        </p>
-                                        <div class="p-0 timeline-progress-circle" id="como-estamos-graph-<?php echo $count; ?>"></div>
-                                        <p class="timeline-andamento mt-1 timeline-andamento-projeto">
-                                            <small class="font-weight-bold "><?php the_sub_field('projet_desc_andamento'); ?>%
-                                            </small>
-                                        </p>
-                                    </div>
-                                </div>
-                                <script>
-                                    if (document.getElementById("como-estamos-graph-<?php echo $count; ?>")) {
-                                        var circle = new ProgressBar.Circle('#como-estamos-graph-<?php echo $count; ?>', {
-                                            color: '#EA6724',
-                                            strokeWidth: 10,
+                                                trailColor: '#cccccc',
+                                                trailWidth: 1,
 
-                                            trailColor: '#cccccc',
-                                            trailWidth: 1,
+                                                duration: 3000,
+                                                easing: 'easeInOut'
+                                            });
+                                            circle.animate(+<?php the_sub_field('projet_desc_andamento'); ?>/100);
+                                        }
 
-                                            duration: 3000,
-                                            easing: 'easeInOut'
-                                        });
-                                        circle.animate(+<?php the_sub_field('projet_desc_andamento'); ?>/100);
-                                    }
+                                    </script>
 
-                                </script>
-
-                            </li>
+                                </li>
 
                             <?php else: ?>
-                                <li class=" <?php if( $count == 3 ) { echo 'timeline-text-left'; } ?>">
-                                <div>
-                                    <div class="d-flex justify-content-start">
-                                        <span class="orange-outline-text py-1 px-2 mr-2"><?php the_sub_field('projet_desc_tarefa'); ?></span>
-                                        <p class="text-gray text-uppercase mb-0 mr-2">
-                                            <small><?php echo strftime('%d de %b %Y', strtotime($date_string)); ?></small>
+                                <li class=" <?php if ($count == 3) {
+                                    echo 'timeline-text-left';
+                                } ?>">
+                                    <div>
+                                        <div class="d-flex justify-content-start">
+                                            <span class="orange-outline-text py-1 px-2 mr-2"><?php the_sub_field('projet_desc_tarefa'); ?></span>
+                                            <p class="text-gray text-uppercase mb-0 mr-2">
+                                                <small><?php echo strftime('%d de %b %Y', strtotime($date_string)); ?></small>
+                                            </p>
+                                        </div>
+
+                                        <p class="text-caption font-weight-bold mb-0"><?php the_sub_field('projet_titulo_tempo'); ?></p>
+                                        <p style="line-height: 1.2;" class="text-gray">
+                                            <small><?php the_sub_field('projet_desc_tempo'); ?></small>
                                         </p>
+                                        <div class="d-flex justify-content-start">
+                                            <p class="pt-2 mt-1 pr-3">
+                                                <small><?php echo esc_html($field['label']); ?></small>
+                                            </p>
+                                            <div class="p-0 timeline-progress-circle" id="como-estamos-graph-<?php echo $count; ?>"></div>
+                                            <p class="timeline-andamento mt-1 timeline-andamento-projeto">
+                                                <small class="font-weight-bold "><?php the_sub_field('projet_desc_andamento'); ?>
+                                                    %
+                                                </small>
+                                            </p>
+                                        </div>
                                     </div>
+                                    <script>
+                                        if (document.getElementById("como-estamos-graph-<?php echo $count; ?>")) {
+                                            var circle = new ProgressBar.Circle('#como-estamos-graph-<?php echo $count; ?>', {
+                                                color: '#EA6724',
+                                                strokeWidth: 10,
 
-                                    <p class="text-caption font-weight-bold mb-0"><?php the_sub_field('projet_titulo_tempo'); ?></p>
-                                    <p style="line-height: 1.2;" class="text-gray">
-                                        <small><?php the_sub_field('projet_desc_tempo'); ?></small>
-                                    </p>
-                                    <div class="d-flex justify-content-start">
-                                        <p class="pt-2 mt-1 pr-3">
-                                            <small><?php echo esc_html($field['label']); ?></small>
-                                        </p>
-                                        <div class="p-0 timeline-progress-circle" id="como-estamos-graph-<?php echo $count; ?>"></div>
-                                        <p class="timeline-andamento mt-1 timeline-andamento-projeto">
-                                            <small class="font-weight-bold "><?php the_sub_field('projet_desc_andamento'); ?>
-                                                %
-                                            </small>
-                                        </p>
-                                    </div>
-                                </div>
-                                <script>
-                                    if (document.getElementById("como-estamos-graph-<?php echo $count; ?>")) {
-                                        var circle = new ProgressBar.Circle('#como-estamos-graph-<?php echo $count; ?>', {
-                                            color: '#EA6724',
-                                            strokeWidth: 10,
+                                                trailColor: '#cccccc',
+                                                trailWidth: 1,
 
-                                            trailColor: '#cccccc',
-                                            trailWidth: 1,
+                                                duration: 3000,
+                                                easing: 'easeInOut'
+                                            });
+                                            circle.animate(+<?php the_sub_field('projet_desc_andamento'); ?>/100);
+                                        }
 
-                                            duration: 3000,
-                                            easing: 'easeInOut'
-                                        });
-                                        circle.animate(+<?php the_sub_field('projet_desc_andamento'); ?>/100);
-                                    }
+                                    </script>
 
-                                </script>
-
-                            </li>
+                                </li>
 
                             <?php endif; ?>
 

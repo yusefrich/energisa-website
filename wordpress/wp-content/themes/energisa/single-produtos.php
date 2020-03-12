@@ -6,7 +6,7 @@
         <?php $img_background = get_the_post_thumbnail_url(null, 'full'); ?>
         <section class="section" id="product-banner">
             <div style="
-                    background: linear-gradient(0deg, rgba(8, 155, 192, 0.7), rgba(8, 155, 192, 0.7)), url(<?php echo esc_url($img_background); ?>);
+                    background-image: url(<?php echo esc_url($img_background); ?>);
                     background-size: cover;
                     background-position: center;
                     height: 100vh;
