@@ -212,6 +212,80 @@
     </div>
 <?php endif; ?>
 
+    <?php if (get_row_layout() == 'projet_layout_indicadores'): ?>
+        <?php if (have_rows('projet_indicadores')): ?>
+            <section class="section" id="indicadores">
+                <div class="container text-center my-5">
+                    <h2 data-aos="fade-up" class="display-h2 text-orange">Conheça nossos
+                        indicadores</h2>
+                    <p class="mb-5 pb-3" data-aos="fade-up">Fique por dentro e acompanhe cada momento da nossa
+                        jornada</p>
+                    <div data-aos="flip-down" class="d-md-flex justify-content-center ">
+                        <!-- row -->
+                        <?php $linhas = 0; ?>
+                        <?php while (have_rows('projet_indicadores')): the_row();
+                            $texto = get_sub_field('projet_indicador_texto');
+                            $porcentagem = get_sub_field('projet_indicador_valor');
+                            $porcentagem_cond = get_sub_field('projet_indicador_porcent');
+                            $linhas++;
+                            ?>
+                            <div style="max-width: 265px; margin-left: auto; margin-right: auto;" class="position-relative">
+                                <div style="transform: scaleX(-1); stroke-linecap: round;" id="progress-<?php echo $linhas; ?>"></div>
+                                <div class="graph-detail-holder">
+                                    <?php if ($porcentagem_cond == 'sim'): ?>
+                                        <h3 class="font-weight-bold mb-0"><?php echo $porcentagem; ?>%</h3>
+                                    <?php endif; ?>
+                                    <?php if ($porcentagem_cond == 'nao'): ?>
+                                        <h3 class="font-weight-bold mb-0"><?php echo $porcentagem; ?></h3>
+                                    <?php endif; ?>
+
+                                    <p class="text-gray"><?php echo $texto; ?></p>
+                                </div>
+                                <?php if ($porcentagem_cond == 'sim'): ?>
+                                    <script>
+                                        if (document.getElementById("progress-<?php echo $linhas; ?>")) {
+                                            var circle = new ProgressBar.Circle('#progress-<?php echo $linhas; ?>', {
+                                                color: '#EA6724',
+                                                strokeWidth: 7,
+
+                                                trailColor: '#cccccc',
+                                                trailWidth: 1,
+
+                                                duration: 3000,
+                                                easing: 'easeInOut'
+                                            });
+                                            circle.animate(+<?php echo $porcentagem; ?>/100);
+                                        }
+
+                                    </script>
+                                <?php endif; ?>
+                                <?php if ($porcentagem_cond == 'nao'): ?>
+                                    <script>
+                                        if (document.getElementById("progress-<?php echo $linhas; ?>")) {
+                                            var circle = new ProgressBar.Circle('#progress-<?php echo $linhas; ?>', {
+                                                color: '#EA6724',
+                                                strokeWidth: 7,
+
+                                                trailColor: '#cccccc',
+                                                trailWidth: 1,
+
+                                                duration: 3000,
+                                                easing: 'easeInOut'
+                                            });
+                                            circle.animate(0/100);
+                                        }
+
+                                    </script>
+                                <?php endif; ?>
+
+                            </div>
+                        <?php endwhile; ?>
+                    </div>
+                </div>
+            </section>
+        <?php endif; ?>
+    <?php endif; ?>
+
     <?php if (get_row_layout() == 'projet_layout_linha_tempo'): ?>
     <div class="section">
         <section id="como-estamos-projeto" class="bg-gray">
