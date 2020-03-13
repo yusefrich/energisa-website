@@ -1,4 +1,4 @@
-<?php get_header(); /* Template Name: Login */ ?>
+<?php get_header(); /* Template Name: Entrar */ ?>
 <section id="product-banner">
     <div style="
             background: linear-gradient(0deg, rgba(8, 155, 192, 0.7), rgba(8, 155, 192, 0.7)), url(<?php bloginfo('template_url'); ?>/img/novidades-header.png);
@@ -19,6 +19,13 @@
     <div class="container">
         <div class="row mt-5">
             <?php while (have_posts()) : the_post(); ?>
+                <div class="col-md-12 d-flex justify-content-center mb-3">
+                    <div class="card col-md-6 p-5">
+                        <?php the_content(); ?>
+                        <p class="text-center">Ainda não tem uma conta?<a style="font-size: 18px;" href="<?php the_permalink() ?>/register" title="Criar conta" class="btn btn-link mb-1">Criar Conta</a>
+                        </p>
+                    </div>
+                </div>
                 <?php
 
                 if (is_user_logged_in()):?>
@@ -33,8 +40,6 @@
                     </div>
                 <?php endif;
                 ?>
-
-
             <?php endwhile; ?>
         </div>
 

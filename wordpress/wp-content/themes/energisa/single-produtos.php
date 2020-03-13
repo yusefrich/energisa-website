@@ -121,8 +121,8 @@
                                 $field = get_sub_field('prod_link_tempo');
                                 $destinoUrl = esc_html($field['value']);
                                 ?>
-                                <?php if ( $count <= 1 ): ?>
-                                    <li >
+                                <?php if ($count <= 1): ?>
+                                    <li>
                                         <div style="left: -90px" class="text-md-right ">
                                             <p class="text-gray-2 text-uppercase">
                                                 <?php echo strftime('%d de %b %Y', strtotime($date_string)); ?> </p>
@@ -152,8 +152,10 @@
                                         </div>
                                     </li>
                                 <?php else: ?>
-                                    
-                                    <li class=" <?php if( $count == 2 ) { echo 'timeline-text-left'; } ?>">
+
+                                    <li class=" <?php if ($count == 2) {
+                                        echo 'timeline-text-left';
+                                    } ?>">
                                         <div>
                                             <p class="text-gray-2 text-uppercase">
                                                 <?php echo strftime('%d de %b %Y', strtotime($date_string)); ?> </p>
@@ -211,7 +213,6 @@
         <?php endif; ?>
 
 
-
         <!-- Verifica se existe o layout Carousel-->
         <?php if (get_row_layout() == 'layout_prod_carousel'): ?>
 
@@ -226,17 +227,17 @@
                 case 'branco':
                     $fundo_bg = "bg-white";
                     $detail_bg = "normal-carousel-caption";
-                    $carousel_color = "carrouselProdutosWhite-".$countCarousel;
+                    $carousel_color = "carrouselProdutosWhite-" . $countCarousel;
                     break;
                 case 'cinza':
                     $fundo_bg = "bg-gray";
                     $detail_bg = "normal-carousel-caption";
-                    $carousel_color = "carrouselProdutosGray-".$countCarousel;
+                    $carousel_color = "carrouselProdutosGray-" . $countCarousel;
                     break;
                 case 'azul':
                     $fundo_bg = "bg-blue";
                     $detail_bg = "custom-carousel-caption";
-                    $carousel_color = "carrouselProdutosBlue-".$countCarousel;
+                    $carousel_color = "carrouselProdutosBlue-" . $countCarousel;
                     break;
             }
             ?>
@@ -270,7 +271,7 @@
                                                                 " class="product-description-info">
                                                         </div> <!-- height: 431px; -->
                                                     </div>
-                                                    <div  class="col-md-6 pl-md-5 ">
+                                                    <div class="col-md-6 pl-md-5 ">
                                                         <p style="letter-spacing: 0.1em;" class="text-uppercase text-gray ml-md-2"><?php the_sub_field('prod_carousel_tagline'); ?></p>
                                                         <h2 style="line-height: 60px; max-width: 400px;" class="display-h2 mb-2 ml-md-2">
                                                             <?php the_sub_field('prod_carousel_titulo'); ?></h2>
@@ -304,7 +305,7 @@
 
             <?php endif; ?>
 
-            <?php $countCarousel ++ ; ?>
+            <?php $countCarousel++; ?>
         <?php endif; ?>
 
         <!-- Verifica se existe o layout Indicadores-->
@@ -315,13 +316,15 @@
                     <div class="container text-center my-5">
                         <h2 data-aos="fade-up" class="display-h2 text-orange">Conheça nossos
                             indicadores</h2>
-                        <p class="mb-5 pb-3" data-aos="fade-up">Fique por dentro e acompanhe cada momento da nossa jornada</p>
+                        <p class="mb-5 pb-3" data-aos="fade-up">Fique por dentro e acompanhe cada momento da nossa
+                            jornada</p>
                         <div data-aos="flip-down" class="d-md-flex justify-content-center ">
                             <!-- row -->
                             <?php $linhas = 0; ?>
                             <?php while (have_rows('prod_indicadores')): the_row();
                                 $texto = get_sub_field('prod_indicador_texto');
                                 $porcentagem = get_sub_field('prod_indicador_valor');
+                                $porcentagem_cond = get_sub_field('prod_indicador_porcent');
                                 $linhas++;
                                 ?>
                                 <div style="max-width: 265px; margin-left: auto; margin-right: auto;" class="position-relative">
@@ -331,22 +334,24 @@
                                         <h3 class="font-weight-bold mb-0"><?php echo $porcentagem; ?></h3>
                                         <p class="text-gray"><?php echo $texto; ?></p>
                                     </div>
-                                    <script>
-                                        if (document.getElementById("progress-<?php echo $linhas; ?>")) {
-                                            var circle = new ProgressBar.Circle('#progress-<?php echo $linhas; ?>', {
-                                                color: '#EA6724',
-                                                strokeWidth: 7,
+                                    <?php if ($porcentagem_cond == 'sim'): ?>
+                                        <script>
+                                            if (document.getElementById("progress-<?php echo $linhas; ?>")) {
+                                                var circle = new ProgressBar.Circle('#progress-<?php echo $linhas; ?>', {
+                                                    color: '#EA6724',
+                                                    strokeWidth: 7,
 
-                                                trailColor: '#cccccc',
-                                                trailWidth: 1,
+                                                    trailColor: '#cccccc',
+                                                    trailWidth: 1,
 
-                                                duration: 3000,
-                                                easing: 'easeInOut'
-                                            });
-                                            circle.animate(+<?php echo $porcentagem; ?>/100);
-                                        }
+                                                    duration: 3000,
+                                                    easing: 'easeInOut'
+                                                });
+                                                circle.animate(+<?php echo $porcentagem; ?>/100);
+                                            }
 
-                                    </script>
+                                        </script>
+                                    <?php endif; ?>
 
                                 </div>
                             <?php endwhile; ?>
