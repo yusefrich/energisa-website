@@ -25,7 +25,7 @@
     <?php while (have_rows('projet_flexible_content')):
     the_row(); ?>
 
-    <!-- Verifica se existe o layout Informações do Projeto-->
+
     <?php if (get_row_layout() == 'projet_layout_info'): ?>
         <?php
         $fundo_bg = "";
@@ -102,7 +102,38 @@
 
     <?php endif; ?>
 
-    <!-- Verifica se existe o layout de gráficos e indicadores-->
+    <?php if (get_row_layout() == 'layout_projet_texto'): ?>
+        <?php
+        $fundo_bg = "";
+        switch (get_sub_field('projet_texto_bg')) {
+            case 'branco':
+                $fundo_bg = "bg-white";
+                break;
+            case 'cinza':
+                $fundo_bg = "bg-gray";
+                break;
+            case 'azul':
+                $fundo_bg = "bg-blue";
+                break;
+        }
+        ?>
+        <section class="section <?php echo $fundo_bg; ?>">
+            <div class="container ">
+                <div class="product-description-text  normal-detail-bg">
+                    <h2 style="line-height: 50px;" data-aos="fade-up" class="display-h2 mb-4 aos-init aos-animate">
+                        <?php the_sub_field('projet_texto_titulo'); ?>
+                    </h2>
+                    <h3 style="line-height: 50px;" data-aos="fade-up" class=" mb-4 aos-init aos-animate">
+                        <?php the_sub_field('projet_texto_subtitulo'); ?>
+                    </h3>
+                    <div class="mb-3 aos-init aos-animate" data-aos="fade-up">
+                        <?php the_sub_field('projet_texto_paragrafo'); ?>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <?php endif; ?>
+
     <?php if (get_row_layout() == 'projet_layout_graph'): ?>
     <div class="section">
         <?php
@@ -165,8 +196,7 @@
         </section>
         <?php endif; ?>
 
-        <!-- Verifica se existe o layout Status do Projeto-->
-        <?php if (get_row_layout() == 'projet_layout_status'): ?>
+    <?php if (get_row_layout() == 'projet_layout_status'): ?>
 
         <section class="mt-0" id="progresso-geral-projeto">
             <div data-aos="fade-left">
@@ -182,7 +212,6 @@
     </div>
 <?php endif; ?>
 
-    <!-- Verifica se existe o layout Linha do tempo de Projetos-->
     <?php if (get_row_layout() == 'projet_layout_linha_tempo'): ?>
     <div class="section">
         <section id="como-estamos-projeto" class="bg-gray">
@@ -351,10 +380,7 @@
         <?php endif; ?>
         <?php endwhile; ?>
 
-
-
         <?php endif; ?>
-
 
         <?php endwhile; ?>
         <?php include "footer-nav.php"; ?>
