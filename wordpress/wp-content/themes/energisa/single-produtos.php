@@ -24,7 +24,6 @@
         <?php while (have_rows('flexible_content')):
         the_row(); ?>
 
-        <!-- Verifica se existe o layout Informações do Produto-->
         <?php if (get_row_layout() == 'layout_prod_info'): ?>
             <?php
             $fundo_bg = "";
@@ -78,7 +77,6 @@
 
         <?php endif; ?>
 
-        <!-- Verifica se existe o layout Linha do Tempo-->
         <?php if (get_row_layout() == 'layout_linha_tempo'): ?>
 
             <section class="section" id="product-timeline">
@@ -212,8 +210,6 @@
 
         <?php endif; ?>
 
-
-        <!-- Verifica se existe o layout Carousel-->
         <?php if (get_row_layout() == 'layout_prod_carousel'): ?>
 
             <?php
@@ -308,7 +304,6 @@
             <?php $countCarousel++; ?>
         <?php endif; ?>
 
-        <!-- Verifica se existe o layout Indicadores-->
         <?php if (get_row_layout() == 'layout_prod_indicadores'): ?>
             <!-- Verifica se tem algum valor cadastrado no campo repetidor-->
             <?php if (have_rows('prod_indicadores')): ?>
@@ -383,7 +378,39 @@
                 </section>
             <?php endif; ?>
         <?php endif; ?>
-        <!-- Verifica se existe o layout Últimas Novidades-->
+
+        <?php if (get_row_layout() == 'layout_prod_texto'): ?>
+            <?php
+            $fundo_bg = "";
+            switch (get_sub_field('prod_texto_bg')) {
+                case 'branco':
+                    $fundo_bg = "bg-white";
+                    break;
+                case 'cinza':
+                    $fundo_bg = "bg-gray";
+                    break;
+                case 'azul':
+                    $fundo_bg = "bg-blue";
+                    break;
+            }
+            ?>
+            <section class="section <?php echo $fundo_bg; ?>">
+                <div class="container ">
+                    <div class="product-description-text  normal-detail-bg">
+                        <h2 style="line-height: 50px;" data-aos="fade-up" class="display-h2 mb-4 aos-init aos-animate">
+                            <?php the_sub_field('prod_texto_titulo'); ?>
+                        </h2>
+                        <h3 style="line-height: 50px;" data-aos="fade-up" class=" mb-4 aos-init aos-animate">
+                            <?php the_sub_field('prod_texto_subtitulo'); ?>
+                        </h3>
+                        <div class="mb-3 aos-init aos-animate" data-aos="fade-up">
+                            <?php the_sub_field('prod_texto_paragrafo'); ?>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        <?php endif; ?>
+
         <!-- <div class="section"> -->
         <?php if (get_row_layout() == 'layout_prod_novidades'):
 
