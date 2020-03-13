@@ -330,8 +330,13 @@
                                 <div style="max-width: 265px; margin-left: auto; margin-right: auto;" class="position-relative">
                                     <div style="transform: scaleX(-1); stroke-linecap: round;" id="progress-<?php echo $linhas; ?>"></div>
                                     <div class="graph-detail-holder">
+                                        <?php if ($porcentagem_cond == 'sim'): ?>
+                                            <h3 class="font-weight-bold mb-0"><?php echo $porcentagem; ?>%</h3>
+                                        <?php endif; ?>
+                                        <?php if ($porcentagem_cond == 'nao'): ?>
+                                            <h3 class="font-weight-bold mb-0"><?php echo $porcentagem; ?></h3>
+                                        <?php endif; ?>
 
-                                        <h3 class="font-weight-bold mb-0"><?php echo $porcentagem; ?></h3>
                                         <p class="text-gray"><?php echo $texto; ?></p>
                                     </div>
                                     <?php if ($porcentagem_cond == 'sim'): ?>
@@ -348,6 +353,24 @@
                                                     easing: 'easeInOut'
                                                 });
                                                 circle.animate(+<?php echo $porcentagem; ?>/100);
+                                            }
+
+                                        </script>
+                                    <?php endif; ?>
+                                    <?php if ($porcentagem_cond == 'nao'): ?>
+                                        <script>
+                                            if (document.getElementById("progress-<?php echo $linhas; ?>")) {
+                                                var circle = new ProgressBar.Circle('#progress-<?php echo $linhas; ?>', {
+                                                    color: '#EA6724',
+                                                    strokeWidth: 7,
+
+                                                    trailColor: '#cccccc',
+                                                    trailWidth: 1,
+
+                                                    duration: 3000,
+                                                    easing: 'easeInOut'
+                                                });
+                                                circle.animate(0/100);
                                             }
 
                                         </script>
