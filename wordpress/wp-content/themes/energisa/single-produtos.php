@@ -395,8 +395,8 @@
             }
             ?>
             <section class="section <?php echo $fundo_bg; ?>">
-                <div class="container ">
-                    <div class="product-description-text  normal-detail-bg">
+                <div style="margin-top: 90px" class="container ">
+                    <div  class="product-description-text  normal-detail-bg ">
                         <h2 style="line-height: 50px;" data-aos="fade-up" class="display-h2 mb-4 aos-init aos-animate">
                             <?php the_sub_field('prod_texto_titulo'); ?>
                         </h2>
