@@ -286,6 +286,100 @@
         <?php endif; ?>
     <?php endif; ?>
 
+    <?php if (get_row_layout() == 'layout_projet_carousel'): ?>
+
+        <?php
+        $section_titulo = get_sub_field('projet_carousel_titleSection');
+        $section_tagline = get_sub_field('projet_carousel_taglineSection');
+
+        $fundo_bg = "";
+        $detail_bg = "";
+        $carousel_color = "";
+        switch (get_sub_field('projet_carousel_background')) {
+            case 'branco':
+                $fundo_bg = "bg-white";
+                $detail_bg = "normal-carousel-caption";
+                $carousel_color = "carrouselProdutosWhite-" . $countCarousel;
+                break;
+            case 'cinza':
+                $fundo_bg = "bg-gray";
+                $detail_bg = "normal-carousel-caption";
+                $carousel_color = "carrouselProdutosGray-" . $countCarousel;
+                break;
+            case 'azul':
+                $fundo_bg = "bg-blue";
+                $detail_bg = "custom-carousel-caption";
+                $carousel_color = "carrouselProdutosBlue-" . $countCarousel;
+                break;
+        }
+        ?>
+
+        <!-- Verifica se tem algum valor cadastrado no campo repetidor-->
+        <?php if (have_rows('projet_carousel_repeat')): ?>
+            <section class="section <?php echo $fundo_bg; ?>">
+                <div class="container-fluid p-0">
+
+                    <div id="<?php echo $carousel_color; ?>" class="carousel slide" data-ride="carousel">
+                        <!-- carousel-fade -->
+
+                        <div class="carousel-inner">
+                            <?php $slidersCount = 0; ?>
+                            <?php while (have_rows('projet_carousel_repeat')): the_row();
+                                $slidersCount++;
+                                ?>
+                                <div class="carousel-item <?php if ($slidersCount == 1) echo "active"; ?> carousel-long">
+                                    <div class="container <?php echo $detail_bg; ?>">
+                                        <div class=" ">
+                                            <div class="text-center mb-2  mx-0 mb-md-5 mx-md-5">
+                                                <h2 style="line-height: 70px;" class="display-h2 "><?php echo $section_titulo; ?></h2>
+                                                <p><?php echo $section_tagline; ?></p>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div style="
+                                                            background-image: url(<?php the_sub_field('projet_carousel_img'); ?>);
+                                                            background-size: cover;
+                                                            background-position: center;
+                                                            " class="product-description-info">
+                                                    </div> <!-- height: 431px; -->
+                                                </div>
+                                                <div class="col-md-6 pl-md-5 ">
+                                                    <p style="letter-spacing: 0.1em;" class="text-uppercase text-gray ml-md-2"><?php the_sub_field('projet_carousel_tagline'); ?></p>
+                                                    <h2 style="line-height: 60px; max-width: 400px;" class="display-h2 mb-2 ml-md-2">
+                                                        <?php the_sub_field('projet_carousel_titulo'); ?></h2>
+                                                    <p class="slider-width-limit ml-md-2"><?php the_sub_field('projet_carousel_descricao'); ?></p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            <?php endwhile; ?>
+                        </div>
+
+
+                        <div class="container">
+
+                            <div class="custom-control-carrousel-center custom-control-bottom">
+
+                                <a style="margin-right: 5px" href="#<?php echo $carousel_color; ?>" role="button" data-slide="prev"
+                                   class="btn <?php echo $fundo_bg == 'bg-blue' ? 'btn-light' : 'btn-primary' ?> btn-round"><span class="icon pt-2 pb-2 pl-1 icon-prev-icon"></span></a>
+                                <a style="margin-left: 5px" href="#<?php echo $carousel_color; ?>" role="button" data-slide="next"
+                                   class="btn <?php echo $fundo_bg == 'bg-blue' ? 'btn-light' : 'btn-primary' ?> btn-round"><span class="icon pt-2 pb-2 pr-1 icon-next-icon"></span></a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </section>
+
+        <?php endif; ?>
+
+        <?php $countCarousel++; ?>
+    <?php endif; ?>
+
     <?php if (get_row_layout() == 'projet_layout_linha_tempo'): ?>
     <div class="section">
         <section id="como-estamos-projeto" class="bg-gray">
