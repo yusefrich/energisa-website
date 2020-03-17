@@ -106,31 +106,15 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/single-projetos.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="228" column="9" lean-forward="true" selection-end-line="557" />
+            <state relative-caret-position="189">
+              <caret line="250" column="23" lean-forward="true" selection-start-line="250" selection-start-column="23" selection-end-line="250" selection-end-column="23" />
               <folding>
                 <element signature="e#1142#4986#0#PHP" />
                 <element signature="n#style#0;n#p#0;n#li#0;n#!!top" expanded="true" />
                 <element signature="e#5001#6273#0#PHP" />
                 <element signature="e#6288#9356#0#PHP" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#section#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#section#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#small#0;n#p#1;n#div#0;n#div#0;n#div#1;n#div#0;n#section#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#section#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#section#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#section#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#section#3;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#3;n#div#0;n#!!top" expanded="true" />
                 <element signature="e#14377#19447#0#PHP" />
-                <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h2#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#div#0;n#div#0;n#section#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#1;n#div#0;n#div#1;n#div#0;n#div#0;n#section#4;n#div#0;n#!!top" expanded="true" />
                 <element signature="e#19462#29285#0#PHP" />
-                <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#section#0;n#div#2;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -139,27 +123,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/single-produtos.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="206" column="23" lean-forward="true" selection-start-line="206" selection-start-column="23" selection-end-line="206" selection-end-column="23" />
+            <state relative-caret-position="510">
+              <caret line="64" column="8" lean-forward="true" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="8" />
               <folding>
                 <element signature="e#3642#12601#0#PHP" />
-                <element signature="e#4825#4853#0#HTML" expanded="true" />
-                <element signature="e#5135#5166#0#HTML" expanded="true" />
-                <element signature="e#6215#6234#0#HTML" expanded="true" />
-                <element signature="e#12103#12128#0#HTML" expanded="true" />
-                <element signature="e#12307#12332#0#HTML" expanded="true" />
                 <element signature="e#12620#17978#0#PHP" />
-                <element signature="e#14913#14939#0#HTML" expanded="true" />
-                <element signature="e#15344#15731#0#HTML" expanded="true" />
-                <element signature="e#16055#16085#0#HTML" expanded="true" />
-                <element signature="e#16240#16284#0#HTML" expanded="true" />
-                <element signature="e#17118#17143#0#HTML" expanded="true" />
-                <element signature="e#17443#17467#0#HTML" expanded="true" />
                 <element signature="e#17997#22622#0#PHP" />
-                <element signature="e#19336#19400#0#HTML" expanded="true" />
-                <element signature="e#19469#19522#0#HTML" expanded="true" />
-                <element signature="e#22664#24046#0#PHP" />
-                <element signature="e#24104#28613#0#PHP" />
               </folding>
             </state>
           </provider>
@@ -204,8 +173,8 @@
       <find>html('')</find>
       <find>novid</find>
       <find>%</find>
-      <find>Linha do tempo do projeto</find>
       <find>layout_linha_tempo</find>
+      <find>Linha do tempo do projeto</find>
     </findStrings>
     <dirStrings>
       <dir>C:\xampp\htdocs\energisa-website\wordpress\wp-content\themes\energisa</dir>
@@ -280,6 +249,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -324,7 +294,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -428,6 +397,7 @@
       <workItem from="1584048828934" duration="481000" />
       <workItem from="1584120281973" duration="194000" />
       <workItem from="1584123588570" duration="2060000" />
+      <workItem from="1584445485923" duration="271000" />
     </task>
     <task id="LOCAL-00001" summary="Concluído o carregamento dinâmico para as páginas de novidades, produtos e projetos">
       <created>1582165204409</created>
@@ -457,13 +427,20 @@
       <option name="project" value="LOCAL" />
       <updated>1584412934592</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="ajustes">
+      <created>1584413178077</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1584413178077</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="354426000" />
+    <option name="totallyTimeSpent" value="354952000" />
   </component>
-  <component name="TodoView" selected-index="1">
+  <component name="TodoView">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
       <is-preview-enabled value="true" />
@@ -475,10 +452,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49872774" visible="true" weight="0.14944357" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49945828" visible="true" weight="0.15063593" />
       <window_info id="Structure" order="1" sideWeight="0.50127226" side_tool="true" weight="0.14944357" />
-      <window_info id="Favorites" order="2" sideWeight="0.50127226" side_tool="true" visible="true" weight="0.14944357" />
+      <window_info id="Favorites" order="2" sideWeight="0.5005417" side_tool="true" weight="0.14944357" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -488,7 +466,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32827735" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="9" visible="true" weight="0.5742145" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.5742145" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32936078" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="12" />
@@ -555,6 +533,20 @@
                 </list>
               </option>
             </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
           </value>
         </entry>
       </map>
@@ -860,58 +852,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/single-projetos.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="228" column="9" lean-forward="true" selection-end-line="557" />
+        <state relative-caret-position="189">
+          <caret line="250" column="23" lean-forward="true" selection-start-line="250" selection-start-column="23" selection-end-line="250" selection-end-column="23" />
           <folding>
             <element signature="e#1142#4986#0#PHP" />
             <element signature="n#style#0;n#p#0;n#li#0;n#!!top" expanded="true" />
             <element signature="e#5001#6273#0#PHP" />
             <element signature="e#6288#9356#0#PHP" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#section#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#section#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#small#0;n#p#1;n#div#0;n#div#0;n#div#1;n#div#0;n#section#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#section#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#section#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#section#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#section#3;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#3;n#div#0;n#!!top" expanded="true" />
             <element signature="e#14377#19447#0#PHP" />
-            <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h2#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#div#0;n#div#0;n#section#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#1;n#div#0;n#div#1;n#div#0;n#div#0;n#section#4;n#div#0;n#!!top" expanded="true" />
             <element signature="e#19462#29285#0#PHP" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#section#0;n#div#2;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/single-produtos.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="206" column="23" lean-forward="true" selection-start-line="206" selection-start-column="23" selection-end-line="206" selection-end-column="23" />
+        <state relative-caret-position="510">
+          <caret line="64" column="8" lean-forward="true" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="8" />
           <folding>
             <element signature="e#3642#12601#0#PHP" />
-            <element signature="e#4825#4853#0#HTML" expanded="true" />
-            <element signature="e#5135#5166#0#HTML" expanded="true" />
-            <element signature="e#6215#6234#0#HTML" expanded="true" />
-            <element signature="e#12103#12128#0#HTML" expanded="true" />
-            <element signature="e#12307#12332#0#HTML" expanded="true" />
             <element signature="e#12620#17978#0#PHP" />
-            <element signature="e#14913#14939#0#HTML" expanded="true" />
-            <element signature="e#15344#15731#0#HTML" expanded="true" />
-            <element signature="e#16055#16085#0#HTML" expanded="true" />
-            <element signature="e#16240#16284#0#HTML" expanded="true" />
-            <element signature="e#17118#17143#0#HTML" expanded="true" />
-            <element signature="e#17443#17467#0#HTML" expanded="true" />
             <element signature="e#17997#22622#0#PHP" />
-            <element signature="e#19336#19400#0#HTML" expanded="true" />
-            <element signature="e#19469#19522#0#HTML" expanded="true" />
-            <element signature="e#22664#24046#0#PHP" />
-            <element signature="e#24104#28613#0#PHP" />
           </folding>
         </state>
       </provider>
