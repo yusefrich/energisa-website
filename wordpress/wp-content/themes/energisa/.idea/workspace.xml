@@ -2,9 +2,90 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0de7631c-04d5-43ce-8736-4b956fb59ba0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../plugins/profile-builder/features/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/profile-builder/features/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/profile-builder/front-end/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/profile-builder/front-end/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/profile-builder/front-end/recover.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/profile-builder/front-end/recover.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/profile-builder/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/profile-builder/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/profile-builder/readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/profile-builder/readme.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/profile-builder/translation/profile-builder.pot" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/profile-builder/translation/profile-builder.pot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/class-admin-settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/class-admin-settings.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/class-tools.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/class-tools.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-checkbox_field/template.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-checkbox_field/template.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-column_field/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-column_field/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-custom_hidden_field/template.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-custom_hidden_field/template.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-dropdown_field/template.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-dropdown_field/template.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-email_address/template.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-email_address/template.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-featured_image/template.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-featured_image/template.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-image_upload/template.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-image_upload/template.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-multiple_select/template.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-multiple_select/template.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-post_content/template.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-post_content/template.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-post_excerpt/template.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-post_excerpt/template.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-post_tags/template.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-post_tags/template.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-post_title/template.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-post_title/template.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-radio_field/template.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-radio_field/template.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-taxonomy/template.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-taxonomy/template.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-text_field/template.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-text_field/template.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-textarea_field/template.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-textarea_field/template.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-website_url/template.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/components/form-website_url/template.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/form-builder.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/form-builder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/mixins/global.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/assets/js/mixins/global.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/class-wpuf-admin-form-builder-ajax.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/class-wpuf-admin-form-builder-ajax.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/class-wpuf-admin-form-builder.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/form-builder/class-wpuf-admin-form-builder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/html/form-settings-post.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/html/form-settings-post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/html/support.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/html/support.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/html/whats-new.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/html/whats-new.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/posting.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/posting.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/premium.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/premium.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/promotion.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/promotion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/admin/weforms.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/js-templates/form-components.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/js-templates/form-components.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/js/frontend-form.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/js/frontend-form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/js/frontend-form.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/js/frontend-form.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/js/upload.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/js/upload.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/js/upload.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/js/upload.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/js/wpuf-form-builder-components.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/js/wpuf-form-builder-components.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/js/wpuf-form-builder-mixins.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/js/wpuf-form-builder-mixins.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/js/wpuf-form-builder.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/assets/js/wpuf-form-builder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/class/frontend-account.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/class/frontend-account.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/class/render-form.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/class/render-form.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/class/subscription.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/class/subscription.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/class/upload.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/class/upload.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/class-billing-address.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/class-billing-address.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/class-form-manager.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/class-form-manager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/class-frontend-form-post.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/class-frontend-form-post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/class-frontend-render-form.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/class-frontend-render-form.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/class-privacy.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/class-privacy.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/class-user-subscription.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/class-user-subscription.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/class-whats-new.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/class-whats-new.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/fields/class-abstract-fields.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/fields/class-abstract-fields.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/fields/class-field-checkbox.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/fields/class-field-checkbox.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/fields/class-field-dropdown.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/fields/class-field-dropdown.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/fields/class-field-featured-image.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/fields/class-field-featured-image.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/fields/class-field-image.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/fields/class-field-image.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/fields/class-field-post-taxonomy.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/fields/class-field-post-taxonomy.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/fields/class-field-radio.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/fields/class-field-radio.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/fields/class-field-recaptcha.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/fields/class-field-recaptcha.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/free/class-login.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/free/class-login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/free/edit-user.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/free/edit-user.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/setup-wizard.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/includes/setup-wizard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/languages/wp-user-frontend.pot" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/languages/wp-user-frontend.pot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/lib/class.settings-api.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/lib/class.settings-api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/lib/gateway/paypal.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/lib/gateway/paypal.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/readme.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/templates/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/templates/dashboard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/templates/dashboard/billing-address.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/templates/dashboard/billing-address.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/templates/dashboard/posts.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/templates/dashboard/posts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/templates/dashboard/subscription.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/templates/dashboard/subscription.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/autoload.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/autoload_real.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/autoload_real.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/views/welcome-page.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/views/welcome-page.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/wpuf-functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/wpuf-functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../plugins/wp-user-frontend/wpuf.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/wp-user-frontend/wpuf.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page-login.php" beforeDir="false" afterPath="$PROJECT_DIR$/page-entrar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page-entrar.php" beforeDir="false" afterPath="$PROJECT_DIR$/page-entrar.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/single-produtos.php" beforeDir="false" afterPath="$PROJECT_DIR$/single-produtos.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/single-projetos.php" beforeDir="false" afterPath="$PROJECT_DIR$/single-projetos.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,22 +98,40 @@
       <executable />
     </execution>
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="energisa" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/components/bloco-texto.php">
+        <entry file="file://$PROJECT_DIR$/single-projetos.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/page-entrar.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
+            <state relative-caret-position="266">
+              <caret line="228" column="9" lean-forward="true" selection-end-line="557" />
+              <folding>
+                <element signature="e#1142#4986#0#PHP" />
+                <element signature="n#style#0;n#p#0;n#li#0;n#!!top" expanded="true" />
+                <element signature="e#5001#6273#0#PHP" />
+                <element signature="e#6288#9356#0#PHP" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#section#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#section#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#small#0;n#p#1;n#div#0;n#div#0;n#div#1;n#div#0;n#section#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#section#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#section#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#section#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#section#3;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#3;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#14377#19447#0#PHP" />
+                <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#4;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#4;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#4;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h2#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#4;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#div#0;n#div#0;n#section#4;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#1;n#div#0;n#div#1;n#div#0;n#div#0;n#section#4;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#19462#29285#0#PHP" />
+                <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#section#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -40,13 +139,27 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/single-produtos.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="330" column="34" lean-forward="true" selection-start-line="330" selection-start-column="34" selection-end-line="330" selection-end-column="138" />
+            <state relative-caret-position="104">
+              <caret line="206" column="23" lean-forward="true" selection-start-line="206" selection-start-column="23" selection-end-line="206" selection-end-column="23" />
               <folding>
-                <element signature="e#1206#3690#0#PHP" />
-                <element signature="e#3768#12810#0#PHP" />
-                <element signature="e#12884#18239#0#PHP" />
-                <element signature="e#19730#19783#0#HTML" expanded="true" />
+                <element signature="e#3642#12601#0#PHP" />
+                <element signature="e#4825#4853#0#HTML" expanded="true" />
+                <element signature="e#5135#5166#0#HTML" expanded="true" />
+                <element signature="e#6215#6234#0#HTML" expanded="true" />
+                <element signature="e#12103#12128#0#HTML" expanded="true" />
+                <element signature="e#12307#12332#0#HTML" expanded="true" />
+                <element signature="e#12620#17978#0#PHP" />
+                <element signature="e#14913#14939#0#HTML" expanded="true" />
+                <element signature="e#15344#15731#0#HTML" expanded="true" />
+                <element signature="e#16055#16085#0#HTML" expanded="true" />
+                <element signature="e#16240#16284#0#HTML" expanded="true" />
+                <element signature="e#17118#17143#0#HTML" expanded="true" />
+                <element signature="e#17443#17467#0#HTML" expanded="true" />
+                <element signature="e#17997#22622#0#PHP" />
+                <element signature="e#19336#19400#0#HTML" expanded="true" />
+                <element signature="e#19469#19522#0#HTML" expanded="true" />
+                <element signature="e#22664#24046#0#PHP" />
+                <element signature="e#24104#28613#0#PHP" />
               </folding>
             </state>
           </provider>
@@ -63,10 +176,8 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Confira as novidades</find>
       <find>$destaque</find>
       <find>Olha o que vem por aí</find>
-      <find>Linha do tempo do projeto</find>
       <find>product-timeline</find>
       <find>product-todos</find>
       <find>product-description</find>
@@ -93,6 +204,8 @@
       <find>html('')</find>
       <find>novid</find>
       <find>%</find>
+      <find>Linha do tempo do projeto</find>
+      <find>layout_linha_tempo</find>
     </findStrings>
     <dirStrings>
       <dir>C:\xampp\htdocs\energisa-website\wordpress\wp-content\themes\energisa</dir>
@@ -100,6 +213,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/../../../.." value="sergio" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -145,9 +263,9 @@
         <option value="$PROJECT_DIR$/archive-produtos.php" />
         <option value="$PROJECT_DIR$/archive-ideias.php" />
         <option value="$PROJECT_DIR$/page-novidades.php" />
-        <option value="$PROJECT_DIR$/single-projetos.php" />
         <option value="$PROJECT_DIR$/page-entrar.php" />
         <option value="$PROJECT_DIR$/single-produtos.php" />
+        <option value="$PROJECT_DIR$/single-projetos.php" />
       </list>
     </option>
   </component>
@@ -162,7 +280,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -207,6 +324,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -332,11 +450,18 @@
       <option name="project" value="LOCAL" />
       <updated>1584049175242</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="ajustes">
+      <created>1584412934592</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1584412934592</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="353883000" />
+    <option name="totallyTimeSpent" value="354426000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -349,12 +474,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="2576" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19798657" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49872774" visible="true" weight="0.14944357" />
+      <window_info id="Structure" order="1" sideWeight="0.50127226" side_tool="true" weight="0.14944357" />
+      <window_info id="Favorites" order="2" sideWeight="0.50127226" side_tool="true" visible="true" weight="0.14944357" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -364,7 +488,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32827735" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.5742145" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="9" visible="true" weight="0.5742145" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32936078" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="12" />
@@ -410,12 +534,39 @@
       </list>
     </option>
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Integrado a linha do tempo da página interna de projetos" />
     <MESSAGE value="Concluído o carregamento dinâmico para as páginas de novidades, produtos e projetos" />
     <MESSAGE value="Ajuste" />
     <MESSAGE value="Retirado a cor de fundo das iamgens do topo das internas de produtos e projetos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Retirado a cor de fundo das iamgens do topo das internas de produtos e projetos" />
+    <MESSAGE value="ajustes" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajustes" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/index.html" />
@@ -672,13 +823,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/single-projetos.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="30" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/archive-projetos.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -714,15 +858,60 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/single-projetos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="228" column="9" lean-forward="true" selection-end-line="557" />
+          <folding>
+            <element signature="e#1142#4986#0#PHP" />
+            <element signature="n#style#0;n#p#0;n#li#0;n#!!top" expanded="true" />
+            <element signature="e#5001#6273#0#PHP" />
+            <element signature="e#6288#9356#0#PHP" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#section#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#section#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#small#0;n#p#1;n#div#0;n#div#0;n#div#1;n#div#0;n#section#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#section#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#section#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#section#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#section#3;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#3;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#14377#19447#0#PHP" />
+            <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#4;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#4;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#4;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h2#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#4;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#div#0;n#div#0;n#section#4;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#1;n#div#0;n#div#1;n#div#0;n#div#0;n#section#4;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#19462#29285#0#PHP" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#section#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/single-produtos.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="330" column="34" lean-forward="true" selection-start-line="330" selection-start-column="34" selection-end-line="330" selection-end-column="138" />
+        <state relative-caret-position="104">
+          <caret line="206" column="23" lean-forward="true" selection-start-line="206" selection-start-column="23" selection-end-line="206" selection-end-column="23" />
           <folding>
-            <element signature="e#1206#3690#0#PHP" />
-            <element signature="e#3768#12810#0#PHP" />
-            <element signature="e#12884#18239#0#PHP" />
-            <element signature="e#19730#19783#0#HTML" expanded="true" />
+            <element signature="e#3642#12601#0#PHP" />
+            <element signature="e#4825#4853#0#HTML" expanded="true" />
+            <element signature="e#5135#5166#0#HTML" expanded="true" />
+            <element signature="e#6215#6234#0#HTML" expanded="true" />
+            <element signature="e#12103#12128#0#HTML" expanded="true" />
+            <element signature="e#12307#12332#0#HTML" expanded="true" />
+            <element signature="e#12620#17978#0#PHP" />
+            <element signature="e#14913#14939#0#HTML" expanded="true" />
+            <element signature="e#15344#15731#0#HTML" expanded="true" />
+            <element signature="e#16055#16085#0#HTML" expanded="true" />
+            <element signature="e#16240#16284#0#HTML" expanded="true" />
+            <element signature="e#17118#17143#0#HTML" expanded="true" />
+            <element signature="e#17443#17467#0#HTML" expanded="true" />
+            <element signature="e#17997#22622#0#PHP" />
+            <element signature="e#19336#19400#0#HTML" expanded="true" />
+            <element signature="e#19469#19522#0#HTML" expanded="true" />
+            <element signature="e#22664#24046#0#PHP" />
+            <element signature="e#24104#28613#0#PHP" />
           </folding>
         </state>
       </provider>

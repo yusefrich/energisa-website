@@ -76,18 +76,59 @@ if(!function_exists('wppb_curpageurl')){
 	function wppb_curpageurl(){
         $req_uri = $_SERVER['REQUEST_URI'];
 
-        $home_path = trim( parse_url( home_url(), PHP_URL_PATH ), '/' );
-        $home_path_regex = sprintf( '|^%s|i', preg_quote( $home_path, '|' ) );
+        if( function_exists('wppb_get_abs_home') ) {
+            $home_path = trim(parse_url(wppb_get_abs_home(), PHP_URL_PATH), '/');
+            $home_path_regex = sprintf('|^%s|i', preg_quote($home_path, '|'));
 
-        // Trim path info from the end and the leading home path from the front.
-        $req_uri = ltrim($req_uri, '/');
-        $req_uri = preg_replace( $home_path_regex, '', $req_uri );
-        $req_uri = trim(home_url(), '/') . '/' . ltrim( $req_uri, '/' );
-
+            // Trim path info from the end and the leading home path from the front.
+            $req_uri = ltrim($req_uri, '/');
+            $req_uri = preg_replace($home_path_regex, '', $req_uri);
+            $req_uri = trim(wppb_get_abs_home(), '/') . '/' . ltrim($req_uri, '/');
+        }
 
         if ( function_exists('apply_filters') ) $req_uri = apply_filters('wppb_curpageurl', $req_uri);
 
         return $req_uri;
+    }
+}
+
+/**
+ * Return absolute home url as stored in database, unfiltered.
+ *
+ * @return string
+ */
+if(!function_exists('wppb_get_abs_home')) {
+    function wppb_get_abs_home(){
+        global $wpdb;
+
+        // returns the unfiltered home_url by directly retrieving it from wp_options.
+        $absolute_home = (!is_multisite() && defined('WP_HOME')
+            ? WP_HOME
+            : (is_multisite() && !is_main_site()
+                ? (preg_match('/^(https)/', get_option('home')) === 1 ? 'https://'
+                    : 'http://') . $wpdb->get_var("	SELECT CONCAT(b.domain, b.path)
+                                                FROM {$wpdb->blogs} b
+                                                WHERE blog_id = {$wpdb->blogid}
+                                                LIMIT 1")
+
+                : $wpdb->get_var("	SELECT option_value
+                                                FROM {$wpdb->options}
+                                                WHERE option_name = 'home'
+                                                LIMIT 1"))
+        );
+
+        if (empty($absolute_home)) {
+            $absolute_home = get_option("siteurl");
+        }
+
+        // always return absolute_home based on the http or https version of the current page request. This means no more redirects.
+        if (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') {
+            $absolute_home = str_replace('http://', 'https://', $absolute_home);
+        } else {
+            $absolute_home = str_replace('https://', 'http://', $absolute_home);
+        }
+
+        return $absolute_home;
     }
 }
 

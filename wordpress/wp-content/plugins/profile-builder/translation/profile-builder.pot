@@ -425,63 +425,63 @@ msgstr ""
 msgid "The email confirmation does not match your email address."
 msgstr ""
 
-#: ../pb-add-on-field-visibility/index.php:214, admin/admin-bar.php:63
+#: ../pb-add-on-field-visibility/index.php:215, admin/admin-bar.php:63
 msgid "Visibility"
 msgstr ""
 
-#: ../pb-add-on-field-visibility/index.php:214
+#: ../pb-add-on-field-visibility/index.php:215
 msgid "<strong>Admin Only</strong> field is visible only for administrators. <strong>User Locked</strong> field is visible for both administrators and users, but only administrators have the capability to edit it."
 msgstr ""
 
-#: ../pb-add-on-field-visibility/index.php:215
+#: ../pb-add-on-field-visibility/index.php:216
 msgid "User Role Visibility"
 msgstr ""
 
-#: ../pb-add-on-field-visibility/index.php:215
+#: ../pb-add-on-field-visibility/index.php:216
 msgid "Select which user roles see this field"
 msgstr ""
 
-#: ../pb-add-on-field-visibility/index.php:216
+#: ../pb-add-on-field-visibility/index.php:217
 msgid "Location Visibility"
 msgstr ""
 
-#: ../pb-add-on-field-visibility/index.php:216
+#: ../pb-add-on-field-visibility/index.php:217
 msgid "Select the locations you wish the field to appear"
 msgstr ""
 
-#: ../pb-add-on-field-visibility/index.php:234
+#: ../pb-add-on-field-visibility/index.php:235
 msgid "<pre>Title</pre><pre>Type</pre><pre>Meta Name</pre><pre class=\"wppb-mb-head-required\">Required</pre><pre class=\"wppb-mb-head-visibility\"></pre>"
 msgstr ""
 
-#: ../pb-add-on-field-visibility/index.php:234, ../pb-add-on-labels-edit/pble.php:381, admin/manage-fields.php:1307, features/functions.php:812, features/functions.php:819, features/admin-approval/class-admin-approval.php:108, features/roles-editor/roles-editor.php:866, modules/custom-redirects/custom_redirects_admin.php:183, modules/custom-redirects/custom_redirects_admin.php:197, modules/custom-redirects/custom_redirects_admin.php:211, modules/custom-redirects/custom_redirects_admin.php:225, modules/multiple-forms/multiple-forms.php:406
+#: ../pb-add-on-field-visibility/index.php:235, ../pb-add-on-labels-edit/pble.php:381, admin/manage-fields.php:1307, features/functions.php:853, features/functions.php:860, features/admin-approval/class-admin-approval.php:108, features/roles-editor/roles-editor.php:866, modules/custom-redirects/custom_redirects_admin.php:183, modules/custom-redirects/custom_redirects_admin.php:197, modules/custom-redirects/custom_redirects_admin.php:211, modules/custom-redirects/custom_redirects_admin.php:225, modules/multiple-forms/multiple-forms.php:406
 msgid "Edit"
 msgstr ""
 
-#: ../pb-add-on-field-visibility/index.php:234, admin/manage-fields.php:1307, features/functions.php:805, features/functions.php:819, features/admin-approval/class-admin-approval.php:113, features/email-confirmation/class-email-confirmation.php:121, features/email-confirmation/class-email-confirmation.php:218, features/roles-editor/roles-editor.php:179, features/roles-editor/roles-editor.php:884, features/roles-editor/roles-editor.php:893, features/roles-editor/roles-editor.php:904, modules/custom-redirects/custom_redirects_admin.php:183, modules/custom-redirects/custom_redirects_admin.php:197, modules/custom-redirects/custom_redirects_admin.php:211, modules/custom-redirects/custom_redirects_admin.php:225, front-end/default-fields/gdpr-delete/gdpr-delete.php:18
+#: ../pb-add-on-field-visibility/index.php:235, admin/manage-fields.php:1307, features/functions.php:846, features/functions.php:860, features/admin-approval/class-admin-approval.php:113, features/email-confirmation/class-email-confirmation.php:121, features/email-confirmation/class-email-confirmation.php:218, features/roles-editor/roles-editor.php:179, features/roles-editor/roles-editor.php:884, features/roles-editor/roles-editor.php:893, features/roles-editor/roles-editor.php:904, modules/custom-redirects/custom_redirects_admin.php:183, modules/custom-redirects/custom_redirects_admin.php:197, modules/custom-redirects/custom_redirects_admin.php:211, modules/custom-redirects/custom_redirects_admin.php:225, front-end/default-fields/gdpr-delete/gdpr-delete.php:18
 msgid "Delete"
 msgstr ""
 
-#: ../pb-add-on-field-visibility/index.php:255
+#: ../pb-add-on-field-visibility/index.php:256
 msgid "This field is visible only for administrators."
 msgstr ""
 
-#: ../pb-add-on-field-visibility/index.php:258
+#: ../pb-add-on-field-visibility/index.php:259
 msgid "This field is visible for both administrators and users, but only administrators have the capability to edit it."
 msgstr ""
 
-#: ../pb-add-on-field-visibility/index.php:281
+#: ../pb-add-on-field-visibility/index.php:282
 msgid "This field is visible only for the following user roles: %1$s"
 msgstr ""
 
-#: ../pb-add-on-field-visibility/index.php:327
+#: ../pb-add-on-field-visibility/index.php:328
 msgid "This field is visible only in the following locations: %1$s"
 msgstr ""
 
-#: ../pb-add-on-field-visibility/index.php:469
+#: ../pb-add-on-field-visibility/index.php:470
 msgid "Get file"
 msgstr ""
 
-#: ../pb-add-on-field-visibility/index.php:598
+#: ../pb-add-on-field-visibility/index.php:603
 msgid "You do not have the capabilities necessary to edit this field."
 msgstr ""
 
@@ -883,7 +883,7 @@ msgstr ""
 msgid "You will be redirected in 5 seconds. If not, click %%."
 msgstr ""
 
-#: ../pb-add-on-social-connect/index.php:392, features/functions.php:1099
+#: ../pb-add-on-social-connect/index.php:392, features/functions.php:1140
 msgid "here"
 msgstr ""
 
@@ -1195,7 +1195,7 @@ msgstr ""
 msgid "Click to edit"
 msgstr ""
 
-#: ../pb-add-on-campaign-monitor-integration/admin/cmonitor-page.php:451, ../pb-add-on-mailchimp-integration/admin/mailchimp-page.php:171, features/functions.php:798, ../pb-add-on-labels-edit/assets/lib/wck-api/wordpress-creation-kit.php:403, assets/lib/wck-api/wordpress-creation-kit.php:406
+#: ../pb-add-on-campaign-monitor-integration/admin/cmonitor-page.php:451, ../pb-add-on-mailchimp-integration/admin/mailchimp-page.php:171, features/functions.php:839, ../pb-add-on-labels-edit/assets/lib/wck-api/wordpress-creation-kit.php:403, assets/lib/wck-api/wordpress-creation-kit.php:406
 msgid "Cancel"
 msgstr ""
 
@@ -1769,15 +1769,15 @@ msgstr ""
 msgid "Very weak"
 msgstr ""
 
-#: admin/admin-functions.php:137, admin/general-settings.php:282, features/functions.php:632, features/functions.php:656
+#: admin/admin-functions.php:137, admin/general-settings.php:282, features/functions.php:673, features/functions.php:697
 msgid "Weak"
 msgstr ""
 
-#: admin/admin-functions.php:137, admin/general-settings.php:283, features/functions.php:632, features/functions.php:656
+#: admin/admin-functions.php:137, admin/general-settings.php:283, features/functions.php:673, features/functions.php:697
 msgid "Medium"
 msgstr ""
 
-#: admin/admin-functions.php:137, admin/general-settings.php:284, features/functions.php:632, features/functions.php:656
+#: admin/admin-functions.php:137, admin/general-settings.php:284, features/functions.php:673, features/functions.php:697
 msgid "Strong"
 msgstr ""
 
@@ -4489,7 +4489,7 @@ msgstr ""
 msgid "We recommend \"<a href=\"%s\" target=\"_blank\">Custom Profile Menus</a>\" addon if you need different menu items for logged in / logged out users."
 msgstr ""
 
-#: admin/private-website.php:129, features/functions.php:791, ../pb-add-on-customization-toolbox/includes/views/view-admin.php:47, ../pb-add-on-customization-toolbox/includes/views/view-fields.php:275, ../pb-add-on-customization-toolbox/includes/views/view-forms.php:321, ../pb-add-on-customization-toolbox/includes/views/view-shortcodes.php:77, ../pb-add-on-customization-toolbox/includes/views/view-userlisting.php:91, features/content-restriction/content-restriction.php:161, modules/class-mustache-templates/class-mustache-templates.php:390, ../pb-add-on-labels-edit/assets/lib/wck-api/wordpress-creation-kit.php:402, assets/lib/wck-api/wordpress-creation-kit.php:405
+#: admin/private-website.php:129, features/functions.php:832, ../pb-add-on-customization-toolbox/includes/views/view-admin.php:47, ../pb-add-on-customization-toolbox/includes/views/view-fields.php:275, ../pb-add-on-customization-toolbox/includes/views/view-forms.php:321, ../pb-add-on-customization-toolbox/includes/views/view-shortcodes.php:77, ../pb-add-on-customization-toolbox/includes/views/view-userlisting.php:91, features/content-restriction/content-restriction.php:161, modules/class-mustache-templates/class-mustache-templates.php:390, ../pb-add-on-labels-edit/assets/lib/wck-api/wordpress-creation-kit.php:402, assets/lib/wck-api/wordpress-creation-kit.php:405
 msgid "Save Changes"
 msgstr ""
 
@@ -4569,63 +4569,63 @@ msgstr ""
 msgid "<p>Your <strong>Profile Builder</strong> license is about to expire on %5$s. <br/>Please %1$sRenew Your Licence%2$s to continue receiving access to product downloads, automatic updates and support. %3$sRenew now %4$s %6$sDismiss%7$s</p>"
 msgstr ""
 
-#: features/functions.php:277
+#: features/functions.php:318
 msgid "GDPR Checkbox"
 msgstr ""
 
-#: features/functions.php:277
+#: features/functions.php:318
 msgid "I allow the website to collect and store the data I submit through this form."
 msgstr ""
 
-#: features/functions.php:606
+#: features/functions.php:647
 msgid "Strength indicator"
 msgstr ""
 
-#: features/functions.php:632, features/functions.php:656
+#: features/functions.php:673, features/functions.php:697
 msgid "Very Weak"
 msgstr ""
 
-#: features/functions.php:646
+#: features/functions.php:687
 msgid "Minimum length of %d characters."
 msgstr ""
 
-#: features/functions.php:657
+#: features/functions.php:698
 msgid "The password must have a minimum strength of %s."
 msgstr ""
 
-#: features/functions.php:734
+#: features/functions.php:775
 msgid "This field is required"
 msgstr ""
 
-#: features/functions.php:772, front-end/default-fields/recaptcha/recaptcha.php:474, front-end/default-fields/recaptcha/recaptcha.php:483, front-end/default-fields/recaptcha/recaptcha.php:536, front-end/default-fields/recaptcha/recaptcha.php:581
+#: features/functions.php:813, front-end/default-fields/recaptcha/recaptcha.php:474, front-end/default-fields/recaptcha/recaptcha.php:483, front-end/default-fields/recaptcha/recaptcha.php:536, front-end/default-fields/recaptcha/recaptcha.php:581
 msgid "Please enter a (valid) reCAPTCHA value"
 msgstr ""
 
-#: features/functions.php:779
+#: features/functions.php:820
 msgid "Incorrect phone number"
 msgstr ""
 
-#: features/functions.php:819, ../pb-add-on-labels-edit/assets/lib/wck-api/wordpress-creation-kit.php:444, assets/lib/wck-api/wordpress-creation-kit.php:447
+#: features/functions.php:860, ../pb-add-on-labels-edit/assets/lib/wck-api/wordpress-creation-kit.php:444, assets/lib/wck-api/wordpress-creation-kit.php:447
 msgid "Content"
 msgstr ""
 
-#: features/functions.php:1001
+#: features/functions.php:1042
 msgid "<br><br>Also, you will be able to visit your site at "
 msgstr ""
 
-#: features/functions.php:1014
+#: features/functions.php:1055
 msgid "<br><br>You can visit your site at "
 msgstr ""
 
-#: features/functions.php:1100
+#: features/functions.php:1141
 msgid "You will soon be redirected automatically. If you see this page for more than %1$d seconds, please click %2$s.%3$s"
 msgstr ""
 
-#: features/functions.php:1230
+#: features/functions.php:1271
 msgid "No feed available,please visit our <a href=\"%s\">homepage</a>!"
 msgstr ""
 
-#: features/functions.php:1265
+#: features/functions.php:1306
 msgid "You are not currently logged in."
 msgstr ""
 
@@ -4709,7 +4709,7 @@ msgstr ""
 msgid "Something went wrong. Please try again!"
 msgstr ""
 
-#: front-end/login.php:309, front-end/login.php:330, front-end/recover.php:16, front-end/recover.php:303, front-end/extra-fields/extra-fields.php:93
+#: front-end/login.php:309, front-end/login.php:330, front-end/recover.php:16, front-end/recover.php:304, front-end/extra-fields/extra-fields.php:93
 msgid "ERROR"
 msgstr ""
 
@@ -4817,59 +4817,59 @@ msgstr ""
 msgid "%1$s has requested a password change via the password reset feature.<br/>His/her new password is:%2$s"
 msgstr ""
 
-#: front-end/recover.php:255
+#: front-end/recover.php:256
 msgid "You are already logged in. You can change your password on the edit profile form."
 msgstr ""
 
-#: front-end/recover.php:278
+#: front-end/recover.php:279
 msgid "The username entered wasn't found in the database!"
 msgstr ""
 
-#: front-end/recover.php:278
+#: front-end/recover.php:279
 msgid "Please check that you entered the correct username."
 msgstr ""
 
-#: front-end/recover.php:291
+#: front-end/recover.php:292
 msgid "Check your e-mail for the confirmation link."
 msgstr ""
 
-#: front-end/recover.php:303
+#: front-end/recover.php:304
 msgid "There was an error while trying to send the activation link to %1$s!"
 msgstr ""
 
-#: front-end/recover.php:314
+#: front-end/recover.php:315
 msgid "The email address entered wasn't found in the database!"
 msgstr ""
 
-#: front-end/recover.php:314
+#: front-end/recover.php:315
 msgid "Please check that you entered the correct email address."
 msgstr ""
 
-#: front-end/recover.php:327
+#: front-end/recover.php:328
 msgid "The entered passwords don't match!"
 msgstr ""
 
-#: front-end/recover.php:333, front-end/default-fields/password/password.php:50
+#: front-end/recover.php:334, front-end/default-fields/password/password.php:50
 msgid "The password must have the minimum length of %s characters"
 msgstr ""
 
-#: front-end/recover.php:337, front-end/default-fields/password/password.php:54
+#: front-end/recover.php:338, front-end/default-fields/password/password.php:54
 msgid "The password must have a minimum strength of %s"
 msgstr ""
 
-#: front-end/recover.php:344
+#: front-end/recover.php:345
 msgid "Your password has been successfully changed!"
 msgstr ""
 
-#: front-end/recover.php:380
+#: front-end/recover.php:381
 msgid "The password must not be empty!"
 msgstr ""
 
-#: front-end/recover.php:405
+#: front-end/recover.php:406
 msgid "ERROR:"
 msgstr ""
 
-#: front-end/recover.php:405
+#: front-end/recover.php:406
 msgid "Invalid key!"
 msgstr ""
 
@@ -6473,7 +6473,7 @@ msgstr ""
 msgid "After Registration..."
 msgstr ""
 
-#: modules/repeater-field/repeater-field.php:287
+#: modules/repeater-field/repeater-field.php:298
 msgid "Are you sure you want to delete this?"
 msgstr ""
 

@@ -24,7 +24,6 @@
         <?php while (have_rows('flexible_content')):
         the_row(); ?>
 
-        <!-- Verifica se existe o layout Informações do Produto-->
         <?php if (get_row_layout() == 'layout_prod_info'): ?>
             <?php
             $fundo_bg = "";
@@ -78,7 +77,6 @@
 
         <?php endif; ?>
 
-        <!-- Verifica se existe o layout Linha do Tempo-->
         <?php if (get_row_layout() == 'layout_linha_tempo'): ?>
 
             <section class="section" id="product-timeline">
@@ -93,12 +91,8 @@
                             </div>
                         </div>
                     </div>
-                    <h1 class="text-orange pb-2 pt-2 position-relative">Linha do tempo do projeto</h1>
-                    <p class="text-gray position-relative">Acompanhe através da nossa linha do tempo as principais
-                        etapas deste
-                        projeto e
-                        veja o
-                        seu desenvolvimento</p>
+                    <h1 class="text-orange pb-2 pt-2 position-relative"><?php the_sub_field('prod_linha_temporal_secTitle') ?></h1>
+                    <p class="text-gray position-relative"><?php the_sub_field('prod_linha_temporal_secDesc') ?></p>
                 </div>
                 <div class="container-fluid p-0">
                     <div class="timeline style-6" id="timeline-scroll">
@@ -212,8 +206,6 @@
 
         <?php endif; ?>
 
-
-        <!-- Verifica se existe o layout Carousel-->
         <?php if (get_row_layout() == 'layout_prod_carousel'): ?>
 
             <?php
@@ -308,16 +300,17 @@
             <?php $countCarousel++; ?>
         <?php endif; ?>
 
-        <!-- Verifica se existe o layout Indicadores-->
         <?php if (get_row_layout() == 'layout_prod_indicadores'): ?>
+            <?php
+            $section_title = get_sub_field('prod_indicadores_secTitle');
+            $section_desc = get_sub_field('prod_indicadores_secDesc');
+            ?>
             <!-- Verifica se tem algum valor cadastrado no campo repetidor-->
             <?php if (have_rows('prod_indicadores')): ?>
                 <section class="section" id="indicadores">
                     <div class="container text-center my-5">
-                        <h2 data-aos="fade-up" class="display-h2 text-orange">Conheça nossos
-                            indicadores</h2>
-                        <p class="mb-5 pb-3" data-aos="fade-up">Fique por dentro e acompanhe cada momento da nossa
-                            jornada</p>
+                        <h2 data-aos="fade-up" class="display-h2 text-orange"><?php echo $section_title; ?></h2>
+                        <p class="mb-5 pb-3" data-aos="fade-up"><?php echo $section_desc; ?></p>
                         <div data-aos="flip-down" class="d-md-flex justify-content-center ">
                             <!-- row -->
                             <?php $linhas = 0; ?>
@@ -330,8 +323,13 @@
                                 <div style="max-width: 265px; margin-left: auto; margin-right: auto;" class="position-relative">
                                     <div style="transform: scaleX(-1); stroke-linecap: round;" id="progress-<?php echo $linhas; ?>"></div>
                                     <div class="graph-detail-holder">
+                                        <?php if ($porcentagem_cond == 'sim'): ?>
+                                            <h3 class="font-weight-bold mb-0"><?php echo $porcentagem; ?>%</h3>
+                                        <?php endif; ?>
+                                        <?php if ($porcentagem_cond == 'nao'): ?>
+                                            <h3 class="font-weight-bold mb-0"><?php echo $porcentagem; ?></h3>
+                                        <?php endif; ?>
 
-                                        <h3 class="font-weight-bold mb-0"><?php echo $porcentagem; ?></h3>
                                         <p class="text-gray"><?php echo $texto; ?></p>
                                     </div>
                                     <?php if ($porcentagem_cond == 'sim'): ?>
@@ -352,6 +350,24 @@
 
                                         </script>
                                     <?php endif; ?>
+                                    <?php if ($porcentagem_cond == 'nao'): ?>
+                                        <script>
+                                            if (document.getElementById("progress-<?php echo $linhas; ?>")) {
+                                                var circle = new ProgressBar.Circle('#progress-<?php echo $linhas; ?>', {
+                                                    color: '#EA6724',
+                                                    strokeWidth: 7,
+
+                                                    trailColor: '#cccccc',
+                                                    trailWidth: 1,
+
+                                                    duration: 3000,
+                                                    easing: 'easeInOut'
+                                                });
+                                                circle.animate(0 / 100);
+                                            }
+
+                                        </script>
+                                    <?php endif; ?>
 
                                 </div>
                             <?php endwhile; ?>
@@ -360,7 +376,39 @@
                 </section>
             <?php endif; ?>
         <?php endif; ?>
-        <!-- Verifica se existe o layout Últimas Novidades-->
+
+        <?php if (get_row_layout() == 'layout_prod_texto'): ?>
+            <?php
+            $fundo_bg = "";
+            switch (get_sub_field('prod_texto_bg')) {
+                case 'branco':
+                    $fundo_bg = "bg-white";
+                    break;
+                case 'cinza':
+                    $fundo_bg = "bg-gray";
+                    break;
+                case 'azul':
+                    $fundo_bg = "bg-blue";
+                    break;
+            }
+            ?>
+            <section class="section <?php echo $fundo_bg; ?>">
+                <div class="container ">
+                    <div class="product-description-text  normal-detail-bg">
+                        <h2 style="line-height: 50px;" data-aos="fade-up" class="display-h2 mb-4 aos-init aos-animate">
+                            <?php the_sub_field('prod_texto_titulo'); ?>
+                        </h2>
+                        <h3 style="line-height: 50px;" data-aos="fade-up" class=" mb-4 aos-init aos-animate">
+                            <?php the_sub_field('prod_texto_subtitulo'); ?>
+                        </h3>
+                        <div class="mb-3 aos-init aos-animate" data-aos="fade-up">
+                            <?php the_sub_field('prod_texto_paragrafo'); ?>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        <?php endif; ?>
+
         <!-- <div class="section"> -->
         <?php if (get_row_layout() == 'layout_prod_novidades'):
 

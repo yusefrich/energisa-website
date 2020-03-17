@@ -90,7 +90,7 @@ function wppb_create_recover_password_form( $user, $post_data ){
 		</ul>
 		<p class="form-submit">
 			<?php $button_name = __('Reset Password', 'profile-builder'); ?>
-			<input name="recover_password2" type="submit" id="wppb-recover-password-button" class="<?php echo apply_filters( 'wppb_recover_submit_class', "submit button" );?>" value="<?php echo apply_filters('wppb_recover_password_button_name1', $button_name); ?>" />
+			<input name="recover_password2" type="submit" id="wppb-recover-password-button" class="<?php echo apply_filters( 'wppb_recover_submit_class', "submit button" ); ?>" value="<?php echo apply_filters('wppb_recover_password_button_name1', $button_name); ?>" />
 			<input name="action2" type="hidden" id="action2" value="recover_password2" />
 		</p><!-- .form-submit -->
 		<?php wp_nonce_field( 'verify_true_password_recovery2_'.$user->ID, 'password_recovery_nonce_field2' ); ?>
@@ -134,7 +134,7 @@ function wppb_create_recover_password_form( $user, $post_data ){
 		?>
 	<p class="form-submit">
 		<?php $button_name = __('Get New Password', 'profile-builder'); ?>
-		<input name="recover_password" type="submit" id="wppb-recover-password-button" class="submit button" value="<?php echo apply_filters('wppb_recover_password_button_name3', $button_name); ?>" />
+		<input name="recover_password" type="submit" id="wppb-recover-password-button" class="<?php echo apply_filters( 'wppb_recover_submit_class', "submit button" );?>" value="<?php echo apply_filters('wppb_recover_password_button_name3', $button_name); ?>" />
 		<input name="action" type="hidden" id="action" value="recover_password" />
 	</p>
 	<?php wp_nonce_field( 'verify_true_password_recovery', 'password_recovery_nonce_field' ); ?>
@@ -246,6 +246,7 @@ function wppb_front_end_password_recovery(){
     global $wppb_shortcode_on_front;
     $wppb_shortcode_on_front = true;
     $password_email_sent = false;
+    $password_changed_success = false;
 
     $output = '<div class="wppb_holder" id="wppb-recover-password-container">';
 

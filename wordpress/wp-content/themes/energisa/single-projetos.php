@@ -25,7 +25,7 @@
     <?php while (have_rows('projet_flexible_content')):
     the_row(); ?>
 
-    <!-- Verifica se existe o layout Informações do Projeto-->
+
     <?php if (get_row_layout() == 'projet_layout_info'): ?>
         <?php
         $fundo_bg = "";
@@ -102,7 +102,38 @@
 
     <?php endif; ?>
 
-    <!-- Verifica se existe o layout de gráficos e indicadores-->
+    <?php if (get_row_layout() == 'layout_projet_texto'): ?>
+        <?php
+        $fundo_bg = "";
+        switch (get_sub_field('projet_texto_bg')) {
+            case 'branco':
+                $fundo_bg = "bg-white";
+                break;
+            case 'cinza':
+                $fundo_bg = "bg-gray";
+                break;
+            case 'azul':
+                $fundo_bg = "bg-blue";
+                break;
+        }
+        ?>
+        <section class="section <?php echo $fundo_bg; ?>">
+            <div class="container ">
+                <div class="product-description-text  normal-detail-bg">
+                    <h2 style="line-height: 50px;" data-aos="fade-up" class="display-h2 mb-4 aos-init aos-animate">
+                        <?php the_sub_field('projet_texto_titulo'); ?>
+                    </h2>
+                    <h3 style="line-height: 50px;" data-aos="fade-up" class=" mb-4 aos-init aos-animate">
+                        <?php the_sub_field('projet_texto_subtitulo'); ?>
+                    </h3>
+                    <div class="mb-3 aos-init aos-animate" data-aos="fade-up">
+                        <?php the_sub_field('projet_texto_paragrafo'); ?>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <?php endif; ?>
+
     <?php if (get_row_layout() == 'projet_layout_graph'): ?>
     <div class="section">
         <?php
@@ -125,8 +156,8 @@
                     <p class="text-gray">última atualização
                         <strong><?php the_modified_time('j \d\e F \d\e  Y'); ?></strong>
                     </p>
-                    <h2 class="text-orange font-weight-bold">Confira abaixo os indicadores</h2>
-                    <p>Veja em detalhes cada passo dado até o presente momento</p>
+                    <h2 class="text-orange font-weight-bold"><?php the_sub_field('projet_graficos_secTitle') ?></h2>
+                    <p><?php the_sub_field('projet_graficos_secDesc') ?></p>
                 </div>
                 <div data-aos="fade-left" style="min-height: 600px" class="row mb-5 mt-2">
                     <?php if (have_rows('projet_graficos_repeat')): while (have_rows('projet_graficos_repeat')):
@@ -165,7 +196,6 @@
         </section>
         <?php endif; ?>
 
-        <!-- Verifica se existe o layout Status do Projeto-->
         <?php if (get_row_layout() == 'projet_layout_status'): ?>
 
         <section class="mt-0" id="progresso-geral-projeto">
@@ -182,18 +212,183 @@
     </div>
 <?php endif; ?>
 
-    <!-- Verifica se existe o layout Linha do tempo de Projetos-->
+    <?php if (get_row_layout() == 'projet_layout_indicadores'): ?>
+        <?php
+        $section_title = get_sub_field('projet_indicadores_secTitle');
+        $section_desc = get_sub_field('projet_indicadores_secDesc');
+        ?>
+        <?php if (have_rows('projet_indicadores')): ?>
+            <section class="section" id="indicadores">
+                <div class="container text-center my-5">
+                    <h2 data-aos="fade-up" class="display-h2 text-orange"><?php echo $section_title; ?></h2>
+                    <p class="mb-5 pb-3" data-aos="fade-up"><?php echo $section_desc;?></p>
+                    <div data-aos="flip-down" class="d-md-flex justify-content-center ">
+                        <!-- row -->
+                        <?php $linhas = 0; ?>
+                        <?php while (have_rows('projet_indicadores')): the_row();
+                            $texto = get_sub_field('projet_indicador_texto');
+                            $porcentagem = get_sub_field('projet_indicador_valor');
+                            $porcentagem_cond = get_sub_field('projet_indicador_porcent');
+                            $linhas++;
+                            ?>
+                            <div style="max-width: 265px; margin-left: auto; margin-right: auto;" class="position-relative">
+                                <div style="transform: scaleX(-1); stroke-linecap: round;" id="progress-<?php echo $linhas; ?>"></div>
+                                <div class="graph-detail-holder">
+                                    <?php if ($porcentagem_cond == 'sim'): ?>
+                                        <h3 class="font-weight-bold mb-0"><?php echo $porcentagem; ?>%</h3>
+                                    <?php endif; ?>
+                                    <?php if ($porcentagem_cond == 'nao'): ?>
+                                        <h3 class="font-weight-bold mb-0"><?php echo $porcentagem; ?></h3>
+                                    <?php endif; ?>
+
+                                    <p class="text-gray"><?php echo $texto; ?></p>
+                                </div>
+                                <?php if ($porcentagem_cond == 'sim'): ?>
+                                    <script>
+                                        if (document.getElementById("progress-<?php echo $linhas; ?>")) {
+                                            var circle = new ProgressBar.Circle('#progress-<?php echo $linhas; ?>', {
+                                                color: '#EA6724',
+                                                strokeWidth: 7,
+
+                                                trailColor: '#cccccc',
+                                                trailWidth: 1,
+
+                                                duration: 3000,
+                                                easing: 'easeInOut'
+                                            });
+                                            circle.animate(+<?php echo $porcentagem; ?>/100);
+                                        }
+
+                                    </script>
+                                <?php endif; ?>
+                                <?php if ($porcentagem_cond == 'nao'): ?>
+                                    <script>
+                                        if (document.getElementById("progress-<?php echo $linhas; ?>")) {
+                                            var circle = new ProgressBar.Circle('#progress-<?php echo $linhas; ?>', {
+                                                color: '#EA6724',
+                                                strokeWidth: 7,
+
+                                                trailColor: '#cccccc',
+                                                trailWidth: 1,
+
+                                                duration: 3000,
+                                                easing: 'easeInOut'
+                                            });
+                                            circle.animate(0 / 100);
+                                        }
+
+                                    </script>
+                                <?php endif; ?>
+
+                            </div>
+                        <?php endwhile; ?>
+                    </div>
+                </div>
+            </section>
+        <?php endif; ?>
+    <?php endif; ?>
+
+    <?php if (get_row_layout() == 'layout_projet_carousel'): ?>
+
+        <?php
+        $section_titulo = get_sub_field('projet_carousel_titleSection');
+        $section_tagline = get_sub_field('projet_carousel_taglineSection');
+
+        $fundo_bg = "";
+        $detail_bg = "";
+        $carousel_color = "";
+        switch (get_sub_field('projet_carousel_background')) {
+            case 'branco':
+                $fundo_bg = "bg-white";
+                $detail_bg = "normal-carousel-caption";
+                $carousel_color = "carrouselProdutosWhite-" . $countCarousel;
+                break;
+            case 'cinza':
+                $fundo_bg = "bg-gray";
+                $detail_bg = "normal-carousel-caption";
+                $carousel_color = "carrouselProdutosGray-" . $countCarousel;
+                break;
+            case 'azul':
+                $fundo_bg = "bg-blue";
+                $detail_bg = "custom-carousel-caption";
+                $carousel_color = "carrouselProdutosBlue-" . $countCarousel;
+                break;
+        }
+        ?>
+
+        <!-- Verifica se tem algum valor cadastrado no campo repetidor-->
+        <?php if (have_rows('projet_carousel_repeat')): ?>
+            <section class="section <?php echo $fundo_bg; ?>">
+                <div class="container-fluid p-0">
+
+                    <div id="<?php echo $carousel_color; ?>" class="carousel slide" data-ride="carousel">
+                        <!-- carousel-fade -->
+
+                        <div class="carousel-inner">
+                            <?php $slidersCount = 0; ?>
+                            <?php while (have_rows('projet_carousel_repeat')): the_row();
+                                $slidersCount++;
+                                ?>
+                                <div class="carousel-item <?php if ($slidersCount == 1) echo "active"; ?> carousel-long">
+                                    <div class="container <?php echo $detail_bg; ?>">
+                                        <div class=" ">
+                                            <div class="text-center mb-2  mx-0 mb-md-5 mx-md-5">
+                                                <h2 style="line-height: 70px;" class="display-h2 "><?php echo $section_titulo; ?></h2>
+                                                <p><?php echo $section_tagline; ?></p>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div style="
+                                                            background-image: url(<?php the_sub_field('projet_carousel_img'); ?>);
+                                                            background-size: cover;
+                                                            background-position: center;
+                                                            " class="product-description-info">
+                                                    </div> <!-- height: 431px; -->
+                                                </div>
+                                                <div class="col-md-6 pl-md-5 ">
+                                                    <p style="letter-spacing: 0.1em;" class="text-uppercase text-gray ml-md-2"><?php the_sub_field('projet_carousel_tagline'); ?></p>
+                                                    <h2 style="line-height: 60px; max-width: 400px;" class="display-h2 mb-2 ml-md-2">
+                                                        <?php the_sub_field('projet_carousel_titulo'); ?></h2>
+                                                    <p class="slider-width-limit ml-md-2"><?php the_sub_field('projet_carousel_descricao'); ?></p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            <?php endwhile; ?>
+                        </div>
+
+
+                        <div class="container">
+
+                            <div class="custom-control-carrousel-center custom-control-bottom">
+
+                                <a style="margin-right: 5px" href="#<?php echo $carousel_color; ?>" role="button" data-slide="prev"
+                                   class="btn <?php echo $fundo_bg == 'bg-blue' ? 'btn-light' : 'btn-primary' ?> btn-round"><span class="icon pt-2 pb-2 pl-1 icon-prev-icon"></span></a>
+                                <a style="margin-left: 5px" href="#<?php echo $carousel_color; ?>" role="button" data-slide="next"
+                                   class="btn <?php echo $fundo_bg == 'bg-blue' ? 'btn-light' : 'btn-primary' ?> btn-round"><span class="icon pt-2 pb-2 pr-1 icon-next-icon"></span></a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </section>
+
+        <?php endif; ?>
+
+        <?php $countCarousel++; ?>
+    <?php endif; ?>
+
     <?php if (get_row_layout() == 'projet_layout_linha_tempo'): ?>
     <div class="section">
         <section id="como-estamos-projeto" class="bg-gray">
             <div class="container">
                 <div class="text-center mt-5 pt-5 pb-2">
-                    <h2 class="text-orange font-weight-bold">Como estamos</h2>
-                    <p style="max-width: 620px" class="text-gray m-auto">Acompanhe através da nossa linha do
-                        tempo
-                        as principais
-                        etapas deste projeto e veja o
-                        seu desenvolvimento</p>
+                    <h2 class="text-orange font-weight-bold"><?php the_sub_field('projet_linha_temporal_secTitle') ?></h2>
+                    <p style="max-width: 620px" class="text-gray m-auto"><?php the_sub_field('projet_linha_temporal_secDesc') ?></p>
                 </div>
             </div>
             <div class="container-fluid p-0">
@@ -351,10 +546,7 @@
         <?php endif; ?>
         <?php endwhile; ?>
 
-
-
         <?php endif; ?>
-
 
         <?php endwhile; ?>
         <?php include "footer-nav.php"; ?>

@@ -22,19 +22,19 @@
                 <div class="col-md-12 d-flex justify-content-center mb-3">
                     <div class="card col-md-6 p-5">
                         <?php the_content(); ?>
-                        <p class="text-center">Ainda não tem uma conta?<a style="font-size: 18px;" href="<?php the_permalink() ?>/register" title="Criar conta" class="btn btn-link mb-1">Criar Conta</a>
-                        </p>
                     </div>
                 </div>
                 <?php
 
                 if (is_user_logged_in()):?>
-                    <?php wp_redirect( home_url().'/painel' ); exit; ?>
+                    <?php wp_redirect(home_url() . '/painel'); ?>
                 <?php else: ?>
                     <div class="col-md-12 d-flex justify-content-center mb-3">
                         <div class="card col-md-6 p-5">
                             <?php the_content(); ?>
-                            <p class="text-center">Ainda não tem uma conta?<a style="font-size: 18px;" href="<?php the_permalink() ?>/register" title="Criar conta" class="btn btn-link mb-1">Criar Conta</a>
+                            <p class="text-center">Ainda não tem uma
+                                conta?<a style="font-size: 18px;" href="<?php the_permalink() ?>/register" title="Criar conta" class="btn btn-link mb-1">Criar
+                                    Conta</a>
                             </p>
                         </div>
                     </div>
