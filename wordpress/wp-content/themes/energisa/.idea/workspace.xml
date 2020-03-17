@@ -538,9 +538,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/footer-nav.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/page-register.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -751,17 +748,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/bloco-texto.php">
+    <entry file="file://$PROJECT_DIR$/footer-nav.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
-        </state>
+        <state relative-caret-position="-124" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/page-entrar.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/bloco-texto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="23" selection-end-column="10" />
         </state>
       </provider>
     </entry>

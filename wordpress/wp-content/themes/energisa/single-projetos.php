@@ -196,7 +196,7 @@
         </section>
         <?php endif; ?>
 
-        <?php if (get_row_layout() == 'projet_layout_status'): ?>
+    <?php if (get_row_layout() == 'projet_layout_status'): ?>
 
         <section class="mt-0" id="progresso-geral-projeto">
             <div data-aos="fade-left">
@@ -274,7 +274,7 @@
                                                 duration: 3000,
                                                 easing: 'easeInOut'
                                             });
-                                            circle.animate(0 / 100);
+                                            circle.animate(0/100);
                                         }
 
                                     </script>
