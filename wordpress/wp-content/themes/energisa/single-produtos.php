@@ -245,6 +245,7 @@
                             <div class="carousel-inner">
                                 <?php $slidersCount = 0; ?>
                                 <?php while (have_rows('prod_carousel_repeat')): the_row();
+                                    $destinoUrl = get_sub_field('prod_link_carousel');
                                     $slidersCount++;
                                     ?>
                                     <div class="carousel-item <?php if ($slidersCount == 1) echo "active"; ?> carousel-long">
@@ -268,6 +269,14 @@
                                                         <h2 style="line-height: 60px; max-width: 400px;" class="display-h2 mb-2 ml-md-2">
                                                             <?php the_sub_field('prod_carousel_titulo'); ?></h2>
                                                         <p class="slider-width-limit ml-md-2"><?php the_sub_field('prod_carousel_descricao'); ?></p>
+                                                        <?php if ($destinoUrl != 'none'): ?>
+                                                            <?php if ($destinoUrl == 'interno'): ?>
+                                                                <a href="<?php echo get_sub_field('prod_linkinterno_carousel'); ?>" class="btn btn-outline-light bg-white px-5" title="Acessar">Acessar</a>
+                                                            <?php endif; ?>
+                                                            <?php if ($destinoUrl == 'externo'): ?>
+                                                                <a href="<?php echo get_sub_field('prod_linkexterno_carousel'); ?>" class="btn btn-outline-light bg-white px-5" title="Acessar" target="_blank">Acessar</a>
+                                                            <?php endif; ?>
+                                                        <?php endif; ?>
                                                     </div>
                                                 </div>
 
@@ -363,7 +372,7 @@
                                                     duration: 3000,
                                                     easing: 'easeInOut'
                                                 });
-                                                circle.animate(0/100);
+                                                circle.animate(0 / 100);
                                             }
 
                                         </script>
@@ -394,7 +403,7 @@
             ?>
             <section class="section <?php echo $fundo_bg; ?>">
                 <div style="margin-top: 90px" class="container ">
-                    <div  class="product-description-text  normal-detail-bg ">
+                    <div class="product-description-text  normal-detail-bg ">
                         <h2 style="line-height: 50px;" data-aos="fade-up" class="display-h2 mb-4 aos-init aos-animate">
                             <?php the_sub_field('prod_texto_titulo'); ?>
                         </h2>
