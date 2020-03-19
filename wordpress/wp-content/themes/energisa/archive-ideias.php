@@ -44,7 +44,7 @@
             <p style="max-width: 850px;" class="mb-5">Aqui você encontrará uma serie de ideias sugeridas pelos nossos
                 colaboradores, fique a vontade para
                 participar.</p>
-            <a style="padding: 8px 40px" href="<?php bloginfo('home'); ?>/login" class="btn btn-primary ">Quero
+            <a style="padding: 8px 40px" href="<?php bloginfo('home'); ?>/entrar" class="btn btn-primary ">Quero
                 colaborar</a>
 
         </div>
