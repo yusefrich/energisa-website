@@ -499,7 +499,7 @@
 
                         <div class="col-12">
                             <div data-aos="zoom-in" class="d-flex justify-content-center quero-colaborar-margin">
-                                <a href="<?php bloginfo('home'); ?>/ideias" class="btn btn-primary  primary-btn-spacing">Quero
+                                <a href="<?php bloginfo('home'); ?>/entrar" class="btn btn-primary  primary-btn-spacing">Quero
                                     colaborar</a>
                             </div>
                         </div>
