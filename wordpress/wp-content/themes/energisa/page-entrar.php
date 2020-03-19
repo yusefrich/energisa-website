@@ -19,16 +19,15 @@
     <div class="container">
         <div class="row mt-5">
             <?php while (have_posts()) : the_post(); ?>
-                <div class="col-md-12 d-flex justify-content-center mb-3">
-                    <div class="card col-md-6 p-5">
-                        <?php the_content(); ?>
-                    </div>
-                </div>
                 <?php
-
                 if (is_user_logged_in()):?>
-                    <?php wp_redirect(home_url() . '/painel'); ?>
+
+                    <script type="text/javascript">
+                        window.location.href = "http://energisa.digital/painel";
+                    </script>
+
                 <?php else: ?>
+
                     <div class="col-md-12 d-flex justify-content-center mb-3">
                         <div class="card col-md-6 p-5">
                             <?php the_content(); ?>
