@@ -2191,4 +2191,20 @@ a:hover {
   margin-left: 45px;
 }
 
+.comment .comment-reply-login {
+  border: 1px solid #202020 !important;
+  border-radius: 6px !important;
+  padding: 2px 13px;
+  top: 1px;
+  position: relative;
+}
+
+.comment .comment-reply-link {
+  border: 1px solid #202020 !important;
+  border-radius: 6px !important;
+  padding: 2px 13px;
+  top: 1px;
+  position: relative;
+}
+
 /*# sourceMappingURL=style.css.map */
