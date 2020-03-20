@@ -23,8 +23,11 @@
                 $current_user = wp_get_current_user();
 
                 if (is_user_logged_in()):?>
-                    <?php wp_redirect(home_url() . '/painel');
-                    exit; ?>
+
+                    <script type="text/javascript">
+                        window.location.href = "http://energisa.digital/painel";
+                    </script>
+
                 <?php else: ?>
                     <div class="col-md-12 text-center mb-5">
                         <a href="<?php the_permalink() ?>/entrar" class="btn btn-info ml-3">Voltar</a>

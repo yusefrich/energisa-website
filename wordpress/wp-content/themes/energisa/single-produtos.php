@@ -108,8 +108,9 @@
                             <!-- Verifica se tem algum valor cadastrado no campo repetidor-->
                             <?php $count = 0; ?>
                             <?php if (have_rows('prod_linha_temporal')): while (have_rows('prod_linha_temporal')): the_row();
-                                setlocale(LC_TIME, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
-                                date_default_timezone_set('America/Sao_Paulo');
+                                // setlocale(LC_TIME, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
+                                //date_default_timezone_set('America/Sao_Paulo');
+                                //$date_string = get_sub_field('prod_data_tempo');
                                 $date_string = get_sub_field('prod_data_tempo');
 
                                 $field = get_sub_field('prod_link_tempo');
@@ -119,7 +120,10 @@
                                     <li>
                                         <div style="left: -90px" class="text-md-right ">
                                             <p class="text-gray-2 text-uppercase">
-                                                <?php echo strftime('%d de %b %Y', strtotime($date_string)); ?> </p>
+                                                <?php //echo strftime('%d de %b %Y', strtotime($date_string)); ?>
+                                                <?php echo date_i18n('j \d\e M  Y', strtotime($date_string)) ?>
+
+                                            </p>
                                             <p class="text-caption font-weight-bold text-blue">
                                                 <?php echo get_sub_field('prod_titulo_tempo'); ?></p>
                                             <p class="text-gray">
@@ -152,7 +156,10 @@
                                     } ?>">
                                         <div>
                                             <p class="text-gray-2 text-uppercase">
-                                                <?php echo strftime('%d de %b %Y', strtotime($date_string)); ?> </p>
+                                                <?//php echo strftime('%d de %b %Y', strtotime($date_string)); ?>
+                                                <?php echo date_i18n('j \d\e M  Y', strtotime($date_string)) ?>
+                                            </p>
+
                                             <p class="text-caption font-weight-bold text-blue">
                                                 <?php echo get_sub_field('prod_titulo_tempo'); ?></p>
                                             <p class="text-gray">

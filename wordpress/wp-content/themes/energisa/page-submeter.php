@@ -39,7 +39,7 @@
                         'html_submit_button' => '<input type="submit" class="acf-button btn btn-primary mt-3" value="%s" />',
                         'updated_message' => __("Ideia enviada com sucesso", 'acf'),
                         'html_updated_message' => '<div id="message" class="updated"><p class="alert alert-success">%s</p></div>',
-                        'return' => get_option('home') . '/painel'
+                        'return' => 'http://energisa.digital/painel'
 
                     )); ?>
 
