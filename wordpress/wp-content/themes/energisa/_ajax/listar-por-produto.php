@@ -6,6 +6,7 @@ function listarPorProduto()
 
     $args_ideias = [
         'post_type' => 'ideias',
+        'post_status' => 'publish',
         'posts_per_page' => 6,
         'meta_key' => 'ideia_produto',
         'meta_value' => $id,
