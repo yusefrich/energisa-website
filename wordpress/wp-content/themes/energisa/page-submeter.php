@@ -46,8 +46,9 @@
                 </div>
 
             <?php else: ?>
-                <?php wp_redirect(home_url());
-                exit; ?>
+                <script type="text/javascript">
+                    window.location.href = "http://energisa.digital";
+                </script>
             <?php endif;
             ?>
 
