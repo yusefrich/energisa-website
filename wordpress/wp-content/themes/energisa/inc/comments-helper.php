@@ -17,7 +17,7 @@ if (!function_exists('better_comments')):
                     <p class="card-user-name m-0 font-weight-bold"> <?php echo $user->user_firstname . " " . $user->user_lastname ?></p>
                 </div>
             </div>
-            <p class="font-weight-normal"><?php comment_text() ?></p>
+            <?php comment_text() ?>
             <?php comment_reply_link(array_merge($args, array(
                     'reply_text' => __('Responder', 'textdomain'),
                     'depth' => $depth,
