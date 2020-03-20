@@ -469,7 +469,7 @@
                                             <span class="orange-outline-text py-1 px-2 mr-2"><?php the_sub_field('projet_desc_tarefa'); ?></span>
                                             <p class="text-gray text-uppercase mb-0 mr-2">
                                                 <small>
-                                                    <?php echo strftime('%d de %b %Y', strtotime($date_string)); ?>
+                                                    <?//php echo strftime('%d de %b %Y', strtotime($date_string)); ?>
                                                     <?php echo date_i18n('j \d\e M  Y', strtotime($date_string)) ?>
                                                 </small>
                                             </p>
