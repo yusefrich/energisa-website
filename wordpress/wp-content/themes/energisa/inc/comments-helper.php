@@ -6,7 +6,7 @@ if (!function_exists('better_comments')):
         $thumbnail = get_avatar_url($comment, array("size" => 150));
         ?>
 
-        <div class="comment my-5">
+        <li class="comment my-5">
             <div class="d-flex justify-content-start pb-4">
                 <div class="profile-pic mr-4" style="background-image: url(<?php echo $thumbnail; ?>); background-size: cover;background-position: center;"></div>
                 <div>
@@ -18,9 +18,16 @@ if (!function_exists('better_comments')):
                 </div>
             </div>
             <p class="font-weight-normal"><?php comment_text() ?></p>
+            <?php comment_reply_link(array_merge($args, array(
+                    'reply_text' => __('Responder', 'textdomain'),
+                    'depth' => $depth,
+                    'max_depth' => $args['max_depth']
+                )
+            )); ?>
+
             <!--<button class="btn btn-outline-dark mr-2">Gostei (5)</button>-->
-        </div>
-        <hr>
+        </li>
+        <!--<hr>-->
         <?php
     }
 endif;

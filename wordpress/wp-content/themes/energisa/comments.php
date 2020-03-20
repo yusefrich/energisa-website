@@ -1,5 +1,5 @@
 <?php
-// Do not delete these lines
+
 if (!empty($_SERVER['SCRIPT_FILENAME']) && 'comments.php' == basename($_SERVER['SCRIPT_FILENAME']))
     die ('Please do not load this page directly. Thanks!');
 
@@ -49,7 +49,7 @@ if (post_password_required()) { ?>
                        <?php echo do_shortcode('[wppb-login]'); ?>
                         <div class="row ">
                             <div class="col-md-6">
-                                <p class="text-center">SemAinda não tem uma conta?<a style="font-size: 18px;" href="<?php the_permalink() ?>/register" title="Criar conta" class="btn btn-link mb-1">Criar Conta</a>
+                                <p class="text-center">Ainda não tem uma conta?<a style="font-size: 18px;" href="<?php the_permalink() ?>/register" title="Criar conta" class="btn btn-link mb-1">Criar Conta</a>
                                 </p>
                             </div>
                         </div>
