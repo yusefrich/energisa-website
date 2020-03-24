@@ -246,7 +246,7 @@ jQuery(function ($) {
                         background-image: linear-gradient(0deg, rgba(67, 67, 67, 0.6), rgba(67, 67, 67, 0.6)), url(${detalhes.foto});
                         background-position: center;
                         background-size: cover;
-                        max-height: 500px;" class="col-5">
+                        height: 500px;" class="col-5">
                         <div style="bottom: 0;
                                     position: absolute;
                                     left: 0;
