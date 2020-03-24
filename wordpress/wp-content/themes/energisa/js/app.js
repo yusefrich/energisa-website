@@ -234,26 +234,55 @@ jQuery(function ($) {
             success: function (dados) {
                 let success = dados.success;
                 let detalhes = dados.data;
+                console.log(detalhes);
 
                 if (success) {
                     $("#equipeModal").html(`
 <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-        <div style="background-image: linear-gradient(0deg, rgba(67, 67, 67, 0.6), rgba(67, 67, 67, 0.6)), url(${detalhes.foto})" class="modal-header d-flex justify-content-end bg-header">
+    <div style="border-radius: 6px" class="modal-content">
+        <div class="d-none d-md-block  modal-body p-0">
+            <div class="row m-0">
+                <div style="border-radius: 6px;
+                        background-image: linear-gradient(0deg, rgba(67, 67, 67, 0.6), rgba(67, 67, 67, 0.6)), url(${detalhes.foto});
+                        background-position: center;
+                        background-size: cover;
+                        max-height: 500px;" class="col-5">
+                        <div style="bottom: 0;
+                                    position: absolute;
+                                    left: 0;
+                                    right: 0;" class="text-center">
+                            <h3 class="text-white">João Roberto</h3>
+                            <p class="text-white">Full-stack Developer</p>
+                        </div>
+                </div>
+                <div class="col-7">
+                    <button style="margin-top: 24px" type="button" class="btn btn-primary btn-round py-1 float-right" data-dismiss="modal" aria-label="Close">
+                        <span class="text-white" aria-hidden="true">&times;</span>
+                    </button>
+                    <div style="padding: 29px 46px;">
+    
+                        <h3 class=" font-weight-bold">Bio</h3>
+                        <p style="font-size: 16px; line-height: 28px;" class=" font-weight-light text-caption">${detalhes.biografica}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="background-image: linear-gradient(0deg, rgba(67, 67, 67, 0.6), rgba(67, 67, 67, 0.6)), url(${detalhes.foto})" class="d-md-none modal-header d-flex justify-content-end bg-header">
             <button type="button" class="btn btn-light btn-round py-1" data-dismiss="modal" aria-label="Close">
                 <span class="text-gray" aria-hidden="true">&times;</span>
             </button>
         </div>
-        <div class="modal-body p-5 m-4">
+        <div class="d-md-none modal-body p-5 m-4">
             <div class="text-start my-2">
                 <h3 class=" font-weight-bold">Bio</h3>
                 <p class=" font-weight-light text-caption">${detalhes.biografica}</p>
             </div>
         </div>
-        <div class="modal-footer">
+        <div class="d-md-none modal-footer">
         </div>
     </div>
-</div>`);
+</div>
+`);
                     $("#equipeModal").modal('show');
                 }
             },

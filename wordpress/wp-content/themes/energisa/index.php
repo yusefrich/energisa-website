@@ -20,12 +20,12 @@
                         <div class="row bottom-text text-center mx-3">
                             <div class="col-md-1"></div>
                             <div class="col-md-5">
-                                <div class="carousel-banner-index pt-5 mt-5">
+                                <div class="carousel-banner-index  pt-5 mt-5 pt-md-5 mt-md-5 home-banner-left">
                                     <h3><?php the_field('carousel_titulo_secundario', 'options-carousel'); ?></h3>
                                     <p><?php the_field('carousel_tagline_two', 'options-carousel'); ?></p>
                                 </div>
                             </div>
-                            <div class="col-md-5">
+                            <div class="col-md-5 anim-trans-all">
                                 <div class="carousel-banner-index text-center">
                                     <div id="carouselExampleCaptions" class="carousel slide " data-ride="carousel">
                                         <div style="max-width: 710px" class="carousel-inner carousel-info-container">

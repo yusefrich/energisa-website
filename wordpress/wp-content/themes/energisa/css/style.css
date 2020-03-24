@@ -2207,4 +2207,13 @@ a:hover {
   position: relative;
 }
 
+@media (min-width: 767px) {
+  .home-banner-left {
+    position: absolute;
+    bottom: 124px;
+    left: 0;
+    right: 0;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
