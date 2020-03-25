@@ -100,9 +100,7 @@
                     <?php endif; ?>
 
                 <?php else: ?>
-                    <script type="text/javascript">
-                        window.location.href = "http://energisa.digital";
-                    </script>
+
                 <?php endif;
                 ?>
 

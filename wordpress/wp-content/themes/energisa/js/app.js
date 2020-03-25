@@ -251,8 +251,8 @@ jQuery(function ($) {
                                     position: absolute;
                                     left: 0;
                                     right: 0;" class="text-center">
-                            <h3 class="text-white">João Roberto</h3>
-                            <p class="text-white">Full-stack Developer</p>
+                            <h3 class="text-white">${detalhes.nome}</h3>
+                            <p class="text-white">${detalhes.cargo}</p>
                         </div>
                 </div>
                 <div class="col-7">

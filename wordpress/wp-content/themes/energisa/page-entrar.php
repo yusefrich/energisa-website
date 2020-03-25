@@ -22,9 +22,7 @@
                 <?php
                 if (is_user_logged_in()):?>
 
-                    <script type="text/javascript">
-                        window.location.href = "http://energisa.digital/painel";
-                    </script>
+                    <?php wp_redirect( home_url().'/painel' ); exit; ?>
 
                 <?php else: ?>
 
