@@ -549,14 +549,14 @@
 
 
         </section>
-        <?php endif; ?>
-        <?php endwhile; ?>
-
-        <?php endif; ?>
-
-        <?php endwhile; ?>
-        <?php include "footer-nav.php"; ?>
+    <?php include "footer-nav.php"; ?>
     </div>
+        <?php endif; ?>
+        <?php endwhile; ?>
+
+        <?php endif; ?>
+
+        <?php endwhile; ?>
 
 </div> <!-- fecha a div do fullpage -->
 
