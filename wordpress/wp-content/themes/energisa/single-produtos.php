@@ -551,7 +551,6 @@
         <?php endif; // fecha flexible_content
             ?>
 
-
         <?php endwhile; // fecha have_posts ?>
 
     </div> <!-- fecha a div do fullpage -->
