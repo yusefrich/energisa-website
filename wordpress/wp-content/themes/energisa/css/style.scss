@@ -557,6 +557,9 @@ section {
 #indicadores .row{
     padding: 0px 170px;
 }
+#indicadores h2{
+    margin-top: 90px;
+}
 .graph-detail-holder{
     left: 50px;
     right: 50px;
@@ -2135,10 +2138,4 @@ a:hover{
         left: 0;
         right: 0;
     }
-}
-#indicadores #footer{
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
 }

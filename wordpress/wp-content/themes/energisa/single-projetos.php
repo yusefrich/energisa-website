@@ -97,6 +97,7 @@
                 </div>
                 <?php
                 if ($flexible_content_count === $layout_count): ?>
+                    <?php include "bush-paralax-bottom.php"; ?>
                     <?php include "footer-nav.php"; ?>
                 <?php endif; ?>
             </section>
@@ -145,6 +146,7 @@
                 </div>
                 <?php
                 if ($flexible_content_count === $layout_count): ?>
+                    <?php include "bush-paralax-bottom.php"; ?>
                     <?php include "footer-nav.php"; ?>
                 <?php endif; ?>
             </section>
@@ -227,6 +229,7 @@
             </section>
             <?php
             if ($flexible_content_count === $layout_count): ?>
+                <?php include "bush-paralax-bottom.php"; ?>
                 <?php include "footer-nav.php"; ?>
             <?php endif; ?>
             </div>
@@ -306,6 +309,7 @@
                     </div>
                     <?php
                     if ($flexible_content_count === $layout_count): ?>
+                        <?php include "bush-paralax-bottom.php"; ?> 
                         <?php include "footer-nav.php"; ?>
                     <?php endif; ?>
                 </section>
@@ -400,6 +404,7 @@
                     </div>
                     <?php
                     if ($flexible_content_count === $layout_count): ?>
+                        <?php include "bush-paralax-bottom.php"; ?>
                         <?php include "footer-nav.php"; ?>
                     <?php endif; ?>
                 </section>
@@ -493,7 +498,7 @@
                                             echo 'timeline-text-left';
                                         } ?>">
                                             <div>
-                                                <div class="d-flex justify-content-start">
+                                                <div style="min-width: 270px;" class="d-flex justify-content-start">
                                                     <span class="orange-outline-text py-1 px-2 mr-2"><?php the_sub_field('projet_desc_tarefa'); ?></span>
                                                     <p class="text-gray text-uppercase mb-0 mr-2">
                                                         <small>
@@ -564,21 +569,12 @@
                         </div>
 
                     </div>
-                    <div id="parallax-bush-1">
-                        <div data-depth="0.1" class="d-flex justify-content-between">
-                            <div>
-                                <img style="margin-top: 96px; " src="<?php bloginfo('template_url'); ?>/img/bush-sm.png" alt="">
-                            </div>
-                            <div>
-                                <img style="" src="<?php bloginfo('template_url'); ?>/img/bush-md.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-
-
+                    
+                    
                 </section>
                 <?php
                 if ($flexible_content_count === $layout_count): ?>
+                    <?php include "bush-paralax-bottom.php"; ?>
                     <?php include "footer-nav.php"; ?>
                 <?php endif; ?>
             </div>
