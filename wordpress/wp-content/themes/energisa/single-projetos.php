@@ -26,15 +26,25 @@
         if (is_array($flex_field_array)) {
             $flexible_content_count = count($flex_field_array);
         }
+
+        //Bloco acima de onde deve imprimir o bloco de código status do projeto
+        $row_statusProjeto = array_search('projet_layout_status', $flex_field_array) + 2;
         ?>
 
 
         <?php if (have_rows('projet_flexible_content')): ?>
-        <?php $layout_count = 0; ?>
+        <?php $layout_count = 0;
+        $statusDoProjeto = "";
+        ?>
+
         <?php while (have_rows('projet_flexible_content')):
             the_row(); ?>
-            <?php $layout_count++; ?>
+            <?php $layout_count++;
+            ?>
 
+            <?php if (get_row_layout() == 'projet_layout_status') {
+            $statusDoProjeto = get_sub_field('projet_status');
+        } ?>
 
             <?php if (get_row_layout() == 'projet_layout_info'): ?>
             <?php
@@ -96,6 +106,11 @@
                     </div>
                 </div>
                 <?php
+                if ($statusDoProjeto != "" && ($layout_count === $row_statusProjeto)) {
+                    include(TEMPLATEPATH . '/inc/status-projeto.php');
+                }
+                ?>
+                <?php
                 if ($flexible_content_count === $layout_count): ?>
                     <?php include "bush-paralax-bottom.php"; ?>
                     <?php include "footer-nav.php"; ?>
@@ -145,6 +160,11 @@
                     </div>
                 </div>
                 <?php
+                if ($statusDoProjeto != "" && ($layout_count === $row_statusProjeto)) {
+                    include(TEMPLATEPATH . '/inc/status-projeto.php');
+                }
+                ?>
+                <?php
                 if ($flexible_content_count === $layout_count): ?>
                     <?php include "bush-paralax-bottom.php"; ?>
                     <?php include "footer-nav.php"; ?>
@@ -154,88 +174,79 @@
 
             <?php if (get_row_layout() == 'projet_layout_graph'): ?>
             <div class="section">
-            <?php
-            $fundo_bg = "";
-            switch (get_sub_field('projet_graficos_bg')) {
-                case 'branco':
-                    $fundo_bg = "bg-white";
-                    break;
-                case 'cinza':
-                    $fundo_bg = "bg-gray";
-                    break;
-                case 'azul':
-                    $fundo_bg = "bg-blue";
-                    break;
-            }
-            ?>
-            <section class="p-0 <?php echo $fundo_bg ?>" id="projeto-indicadores">
-                <div class="container ">
-                    <div data-aos="fade-up" class="text-center mt-5 py-5">
-                        <p class="text-gray">última atualização
-                            <strong><?php the_modified_time('j \d\e F \d\e  Y'); ?></strong>
-                        </p>
-                        <h2 class="text-orange font-weight-bold"><?php the_sub_field('projet_graficos_secTitle') ?></h2>
-                        <p><?php the_sub_field('projet_graficos_secDesc') ?></p>
-                    </div>
-                    <div data-aos="fade-left" style="min-height: 600px" class="row mb-5 mt-2">
-                        <?php if (have_rows('projet_graficos_repeat')): while (have_rows('projet_graficos_repeat')):
-                            the_row();
-                            ?>
+                <?php
+                $fundo_bg = "";
+                switch (get_sub_field('projet_graficos_bg')) {
+                    case 'branco':
+                        $fundo_bg = "bg-white";
+                        break;
+                    case 'cinza':
+                        $fundo_bg = "bg-gray";
+                        break;
+                    case 'azul':
+                        $fundo_bg = "bg-blue";
+                        break;
+                }
+                ?>
+                <section class="p-0 <?php echo $fundo_bg ?>" id="projeto-indicadores">
+                    <div class="container ">
+                        <div data-aos="fade-up" class="text-center mt-5 py-5">
+                            <p class="text-gray">última atualização
+                                <strong><?php the_modified_time('j \d\e F \d\e  Y'); ?></strong>
+                            </p>
+                            <h2 class="text-orange font-weight-bold"><?php the_sub_field('projet_graficos_secTitle') ?></h2>
+                            <p><?php the_sub_field('projet_graficos_secDesc') ?></p>
+                        </div>
+                        <div data-aos="fade-left" style="min-height: 600px" class="row mb-5 mt-2">
+                            <?php if (have_rows('projet_graficos_repeat')): while (have_rows('projet_graficos_repeat')):
+                                the_row();
+                                ?>
 
-                            <div style="padding-right: 10px; padding-left: 10px;" class="col-md-6 text-center mb-3">
-                                <div style="height: 100%;" class="white-col p-3">
-                                    <p class="text-caption font-weight-bold"><?php the_sub_field('projet_grafico_titulo') ?></p>
-                                    <p class="text-gray">
-                                        <small style="color: #979797"><?php the_sub_field('projet_grafico_descricao') ?></small>
-                                    </p>
-                                    <?php $grafico = get_sub_field('projet_grafico_chart') ?>
-                                    <div class="d-block justify-content-center">
-                                        <?php echo do_shortcode($grafico); ?>
+                                <div style="padding-right: 10px; padding-left: 10px;" class="col-md-6 text-center mb-3">
+                                    <div style="height: 100%;" class="white-col p-3">
+                                        <p class="text-caption font-weight-bold"><?php the_sub_field('projet_grafico_titulo') ?></p>
+                                        <p class="text-gray">
+                                            <small style="color: #979797"><?php the_sub_field('projet_grafico_descricao') ?></small>
+                                        </p>
+                                        <?php $grafico = get_sub_field('projet_grafico_chart') ?>
+                                        <div class="d-block justify-content-center">
+                                            <?php echo do_shortcode($grafico); ?>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                        <?php endwhile; ?>
-                        <?php endif; ?>
+                            <?php endwhile; ?>
+                            <?php endif; ?>
 
-                        <?php if (have_rows('projet_indicadores_repeat')): while (have_rows('projet_indicadores_repeat')): the_row();
-                            ?>
-                            <div style="padding-right: 10px; padding-left: 10px;" class="col-6 col-md-3 mb-3">
-                                <div style="height: 100%" class="white-col p-3">
-                                    <p class=" font-weight-bold"><?php the_sub_field('projet_indicadores_titulo') ?></p>
-                                    <h3 class="text-orange font-weight-bold"><?php the_sub_field('projet_indicadores_percent') ?></h3>
+                            <?php if (have_rows('projet_indicadores_repeat')): while (have_rows('projet_indicadores_repeat')): the_row();
+                                ?>
+                                <div style="padding-right: 10px; padding-left: 10px;" class="col-6 col-md-3 mb-3">
+                                    <div style="height: 100%" class="white-col p-3">
+                                        <p class=" font-weight-bold"><?php the_sub_field('projet_indicadores_titulo') ?></p>
+                                        <h3 class="text-orange font-weight-bold"><?php the_sub_field('projet_indicadores_percent') ?></h3>
+                                    </div>
                                 </div>
-                            </div>
-                        <?php endwhile; ?>
-                        <?php endif; ?>
+                            <?php endwhile; ?>
+                            <?php endif; ?>
 
+                        </div>
                     </div>
-                </div>
-            </section>
-        <?php endif; ?>
-
-            <?php if (get_row_layout() == 'projet_layout_status'): ?>
-
-            <section class="mt-0" id="progresso-geral-projeto">
-                <div data-aos="fade-left">
-
-                    <div class="d-flex justify-content-center progresso-texto-projeto mt-2">
-                        <p class="text-caption text-white mt-4 mr-3">Status do projeto</p>
-                        <h2 class="display-h2 font-weight-bold text-white"><?php the_sub_field('projet_status'); ?>
-                            %</h2>
-                    </div>
-                    <div style="width: <?php the_sub_field('projet_status'); ?>%;" class="progresso-atual-projeto"></div>
-                </div>
-            </section>
-            <?php
-            if ($flexible_content_count === $layout_count): ?>
-                <?php include "bush-paralax-bottom.php"; ?>
-                <?php include "footer-nav.php"; ?>
-            <?php endif; ?>
+                </section>
+                <?php
+                if ($statusDoProjeto != "" && ($layout_count === $row_statusProjeto)) {
+                    include(TEMPLATEPATH . '/inc/status-projeto.php');
+                }
+                ?>
+                <?php
+                if ($flexible_content_count === $layout_count): ?>
+                    <?php include "bush-paralax-bottom.php"; ?>
+                    <?php include "footer-nav.php"; ?>
+                <?php endif; ?>
             </div>
         <?php endif; ?>
 
             <?php if (get_row_layout() == 'projet_layout_indicadores'): ?>
+
             <?php
             $section_title = get_sub_field('projet_indicadores_secTitle');
             $section_desc = get_sub_field('projet_indicadores_secDesc');
@@ -308,8 +319,13 @@
                         </div>
                     </div>
                     <?php
+                    if ($statusDoProjeto != "" && ($layout_count === $row_statusProjeto)) {
+                        include(TEMPLATEPATH . '/inc/status-projeto.php');
+                    }
+                    ?>
+                    <?php
                     if ($flexible_content_count === $layout_count): ?>
-                        <?php include "bush-paralax-bottom.php"; ?> 
+                        <?php include "bush-paralax-bottom.php"; ?>
                         <?php include "footer-nav.php"; ?>
                     <?php endif; ?>
                 </section>
@@ -402,6 +418,11 @@
 
                         </div>
                     </div>
+                    <?php
+                    if ($statusDoProjeto != "" && ($layout_count === $row_statusProjeto)) {
+                        include(TEMPLATEPATH . '/inc/status-projeto.php');
+                    }
+                    ?>
                     <?php
                     if ($flexible_content_count === $layout_count): ?>
                         <?php include "bush-paralax-bottom.php"; ?>
@@ -569,9 +590,14 @@
                         </div>
 
                     </div>
-                    
-                    
+
+
                 </section>
+                <?php
+                if ($statusDoProjeto != "" && ($layout_count === $row_statusProjeto)) {
+                    include(TEMPLATEPATH . '/inc/status-projeto.php');
+                }
+                ?>
                 <?php
                 if ($flexible_content_count === $layout_count): ?>
                     <?php include "bush-paralax-bottom.php"; ?>
