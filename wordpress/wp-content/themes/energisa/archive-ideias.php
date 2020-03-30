@@ -40,19 +40,16 @@
 
         <div class="d-none d-sm-block text-start my-5 py-5">
             <img class=" float-left pr-5 pt-4" src="<?php bloginfo('template_url'); ?>/img/ideias.png" alt="">
-            <h2 class="text-orange display-h2">Colabore você também</h2>
-            <p style="max-width: 850px;" class="mb-5">Aqui você encontrará uma serie de ideias sugeridas pelos nossos
-                colaboradores, fique a vontade para
-                participar.</p>
+            <h2 class="text-orange display-h2">Participe!</h2>
+            <p style="max-width: 850px;" class="mb-5">Veja o que já foi sugerido e deixe sua ideia para que possamos construir o futuro juntos.</p>
             <a style="padding: 8px 40px" href="<?php bloginfo('home'); ?>/entrar" class="btn btn-primary ">Quero
                 colaborar</a>
 
         </div>
         <div class="d-sm-none text-center my-5 py-5">
             <img class="pr-5" src="<?php bloginfo('template_url'); ?>/img/ideias.png" alt="">
-            <h2 class="text-orange display-h2">Colabore você também</h2>
-            <p>Aqui você encontrará uma serie de ideias sugeridas pelos nossos colaboradores, fique a vontade para
-                participar.</p>
+            <h2 class="text-orange display-h2">Participe!</h2>
+            <p>Veja o que já foi sugerido e deixe sua ideia para que possamos construir o futuro juntos.</p>
             <a href="<?php bloginfo('home'); ?>/login" class="btn btn-primary px-5">Quero colaborar</a>
 
         </div>

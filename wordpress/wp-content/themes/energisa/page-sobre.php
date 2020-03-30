@@ -61,8 +61,7 @@
             </div>
             <div class="d-flex justify-content-end">
 
-                <p style="max-width: 579px" class="text-caption text-right">Conheça nossa equipe e fique por dentro da
-                    Coordenação de Canais Digitais</p>
+                <p style="max-width: 579px" class="text-caption text-right">Saiba quem faz parte dessa conexão cheia de energia e fique por dentro dos Canais Digitais</p>
             </div>
 
         </div>

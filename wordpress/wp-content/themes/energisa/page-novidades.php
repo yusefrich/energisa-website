@@ -29,8 +29,7 @@
         <div class="text-center my-5">
             <img src="<?php bloginfo('template_url'); ?>/img/paper.png" alt="">
             <h1 class="text-orange">Novidades</h1>
-            <p style="max-width: 640px;" class="text-gray m-auto">Encontre abaixo nossas últimas postagens e fique por
-                dentro do que anda acontecendo no nosso setor, fique bem informado</p>
+            <p style="max-width: 640px;" class="text-gray m-auto">Fique por dentro do que está acontecendo e deixe seu comentário.</p>
         </div>
 
         <div class="d-flex justify-content-center">
