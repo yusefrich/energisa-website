@@ -23,17 +23,43 @@
     wp_reset_postdata(); ?>
 </section>
 
+<section id="releases-todos">
+    <div class="container">
+        <div class="text-center my-5">
+            <img src="<?php bloginfo('template_url'); ?>/img/release-icon.png" alt="">
+            <h2 class="text-orange display-h2">Confira as últimas releases</h2>
+            <p style="max-width: 640px;" class="text-gray m-auto">Fique por dentro de cada atualização.</p>
+        </div>
+        <div class="d-flex justify-content-center">
+            <p class="font-weight-bold mr-2 mt-1 text-gray-4">Filtre sua exibição</p>
+            <select style="width: 25%; color: #EA6724;" class="custom-select" id="loadPerCategory">
+                <option value="">Selecione</option>
+                <option value="">2019</option>
+                <option value="">2020</option>
+            </select>
+            
+        </div>
+        <div style="margin-top: 72px;" class="text-center">
+            <p style="max-width: 640px;" class="text-gray m-auto"><small>20/03/2020</small></p>
+
+            <h3>Últimas atualizações</h3>
+        </div>
+
+
+    </div>
+</section>
+
 
 <section id="product-todos">
     <div class="container">
         <div class="text-center my-5">
             <img src="<?php bloginfo('template_url'); ?>/img/paper.png" alt="">
-            <h1 class="text-orange">Novidades</h1>
+            <h2 class="text-orange display-h2">Novidades</h2>
             <p style="max-width: 640px;" class="text-gray m-auto">Fique por dentro do que está acontecendo e deixe seu comentário.</p>
         </div>
 
         <div class="d-flex justify-content-center">
-            <p class="font-weight-bold mr-2 mt-1">Filtre sua exibição</p>
+            <p class="font-weight-bold mr-2 mt-1 text-gray-4">Filtre sua exibição</p>
             <select style="width: 25%; color: #EA6724;" class="custom-select" id="loadPerCategory">
                 <option value="">Selecione</option>
                 <?php
