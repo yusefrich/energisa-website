@@ -19,6 +19,74 @@
                     </div>
                 </div>
             </section>
+
+            <!-- SESSÃO DE DESIGN DE RELEASES -->
+
+            <section id="releases-todos" class="section bg-gray">
+                <div class="container">
+                    <div class="text-center my-5">
+                        <h2 class="text-orange display-h2">Últimas Releases</h2>
+                        <p style="max-width: 640px;" class="text-gray m-auto">Fique por dentro das últimas atualizações deste projeto</p>
+                    </div>
+                </div>
+                <div class="container-fluid  p-0">
+                    <section class="release ">
+                        <ul>
+                            <li>
+                                <div class="text-right">
+                                    <p style="background: #EA6724; max-width: 220px" class="paragraph text-white font-weight-bold tittle-badge">Totem de Autoatendimento</p>
+                                    <br>
+                                    <time>23 dez 2019</time> 
+                                    <p style="max-width: 230px" class="paragraph-text-small font-weight-bold">Funcionalidade de pagamento</p>
+                                    <p style="max-width: 234px" class="release-text text-gray-2 ">
+                                        É uma seqüência de palavras latinas que, como estão posicionadas, não formem frases com um sentido completo.
+                                        <br>
+                                        <a style="padding: 7px 37px;" href="#" class="btn btn-outline-light px-5 font-weight-600 release-btn" >
+                                            Acesse nosso site
+                                        </a>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <time>23 dez 2019</time> 
+                                    <p style="max-width: 230px" class="paragraph-text-small font-weight-bold">Funcionalidade de pagamento</p>
+                                    <p style="max-width: 234px" class="release-text text-gray-2">
+                                        Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos
+                                    </p>
+                                    
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <time>23 dez 2019</time> 
+                                    <p style="max-width: 230px" class="paragraph-text-small font-weight-bold">Funcionalidade de pagamento</p>
+                                    <p style="max-width: 234px" class="release-text text-gray-2">
+                                        Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos
+                                        <br>
+                                        <a style="padding: 7px 37px;" href="#" class="btn btn-outline-light px-5 font-weight-600 release-btn" >
+                                            Acesse nosso site
+                                        </a>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <time>23 dez 2019</time> 
+                                    <p style="max-width: 230px" class="paragraph-text-small font-weight-bold">Funcionalidade de pagamento</p>
+                                    <p style="max-width: 234px" class="release-text text-gray-2">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <div data-aos="zoom-in" class="d-flex justify-content-center py-5">
+                            <button style="padding-left: 22px !important; padding-right: 22px !important;" class="btn btn-primary px-5">Exibir mais releases</button>
+                        </div>
+                    </section>        
+
+
+                </div>
+            </section>
+
             <?php
             $post->ID;
             $flex_field_array = get_post_meta($post->ID, 'flexible_content', true);

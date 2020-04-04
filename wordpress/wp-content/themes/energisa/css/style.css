@@ -15,6 +15,91 @@ body {
 /* 58 */
 /* 58 */
 /* 58 */
+.paragraph {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+}
+@media (max-width: 1170px) {
+  .paragraph {
+    font-size: 17px;
+  }
+}
+@media (max-width: 1024px) {
+  .paragraph {
+    font-size: 16px;
+  }
+}
+@media (max-width: 640px) {
+  .paragraph {
+    font-size: 15px;
+  }
+}
+@media (max-width: 480px) {
+  .paragraph {
+    font-size: 14px;
+  }
+}
+
+.paragraph-text-small {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+}
+@media (max-width: 1170px) {
+  .paragraph-text-small {
+    font-size: 16px;
+  }
+}
+@media (max-width: 1024px) {
+  .paragraph-text-small {
+    font-size: 15px;
+  }
+}
+@media (max-width: 640px) {
+  .paragraph-text-small {
+    font-size: 14px;
+  }
+}
+@media (max-width: 480px) {
+  .paragraph-text-small {
+    font-size: 13px;
+  }
+}
+
+.release-text {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  font-size: 14px;
+  line-height: 26px;
+}
+@media (max-width: 1170px) {
+  .release-text {
+    font-size: 14px;
+  }
+}
+@media (max-width: 1024px) {
+  .release-text {
+    font-size: 14px;
+  }
+}
+@media (max-width: 640px) {
+  .release-text {
+    font-size: 14px;
+  }
+}
+@media (max-width: 480px) {
+  .release-text {
+    font-size: 14px;
+  }
+}
+
 /* 36 */
 .text-fade {
   font-family: Open Sans;
@@ -247,6 +332,10 @@ h1 {
   background-position-x: 60px;
   background-repeat: no-repeat;
   display: inline;
+}
+
+.font-weight-600 {
+  font-weight: 600;
 }
 
 .font-weight-extra-bold {
@@ -1050,12 +1139,18 @@ a:hover {
   /* transform: scale(1.01); */
 }
 
-.navbar-light .navbar-nav .show > a, .navbar-light .navbar-nav .current-menu-item > a, .navbar-light .navbar-nav a.show, .navbar-light .navbar-nav a.current-menu-item {
+.navbar-light .navbar-nav .show > a,
+.navbar-light .navbar-nav .current-menu-item > a,
+.navbar-light .navbar-nav a.show,
+.navbar-light .navbar-nav a.current-menu-item {
   color: rgba(0, 0, 0, 0.9);
   font-weight: bold;
 }
 
-.navbar-dark .navbar-nav .show > a, .navbar-dark .navbar-nav .current-menu-item > a, .navbar-dark .navbar-nav a.show, .navbar-dark .navbar-nav a.current-menu-item {
+.navbar-dark .navbar-nav .show > a,
+.navbar-dark .navbar-nav .current-menu-item > a,
+.navbar-dark .navbar-nav a.show,
+.navbar-dark .navbar-nav a.current-menu-item {
   color: #fff;
   font-weight: bold;
 }
@@ -1152,11 +1247,19 @@ a:hover {
   background-color: #089BC0 !important;
 }
 
-.bg-gray h1, .bg-gray h2, .bg-gray h3, .bg-gray h4, .bg-gray h5 {
+.bg-gray h1,
+.bg-gray h2,
+.bg-gray h3,
+.bg-gray h4,
+.bg-gray h5 {
   color: #EA6724;
 }
 
-.bg-white h1, .bg-white h2, .bg-white h3, .bg-white h4, .bg-white h5 {
+.bg-white h1,
+.bg-white h2,
+.bg-white h3,
+.bg-white h4,
+.bg-white h5 {
   color: #EA6724;
 }
 
@@ -1251,7 +1354,8 @@ a:hover {
     width: 297px;
   }
 }
-.container-small, .container-large {
+.container-small,
+.container-large {
   max-width: 100%;
   padding-left: 15px;
   padding-right: 15px;
@@ -1286,7 +1390,7 @@ a:hover {
   /* Internet Explorer/Edge */
   user-select: none;
   /* Non-prefixed version, currently
-     supported by Chrome, Opera and Firefox */
+                                supported by Chrome, Opera and Firefox */
   overflow-x: auto !important;
   transition: all 0.2s;
   cursor: pointer;
@@ -1848,6 +1952,14 @@ a:hover {
   border-radius: 6px;
 }
 
+.text-dark-2 {
+  color: #202020 !important;
+}
+
+.bg-blue .text-dark-2 {
+  color: #fff !important;
+}
+
 .likebtn_container span .likebtn-button .lb-a .likebtn-label {
   line-height: 1.5;
   margin-right: 5px;
@@ -2223,6 +2335,237 @@ a:hover {
     bottom: 124px;
     left: 0;
     right: 0;
+  }
+}
+/* TIMELINE
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.release ul {
+  padding-bottom: 151px;
+}
+
+.release ul li {
+  list-style-type: none;
+  position: relative;
+  width: 2px;
+  margin: 0 auto;
+  padding-top: 50px;
+  background: #C4C4C4;
+}
+
+.release time {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  padding: 6px 10px;
+  /* identical to box height */
+  text-transform: uppercase;
+  display: inline-block;
+  border: 1px solid #EA6724;
+  margin: 0;
+}
+
+.release .release-btn {
+  padding: 7px 37px;
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+.bg-blue .release .release-btn {
+  color: #fff !important;
+}
+
+.bg-blue .release .release-btn:hover {
+  color: #000 !important;
+}
+
+.release .paragraph {
+  word-wrap: break-word;
+}
+
+.release .paragraph-text-small {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.release .tittle-badge {
+  display: inline-block;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.07);
+  border-radius: 6px;
+  padding: 14px 24px;
+  margin-bottom: 24px;
+}
+
+.release ul li::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 35px;
+  /* top: 55%; */
+  transform: translateX(-50%);
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: inherit;
+  border: 5px solid #fff;
+}
+
+.bg-blue .release ul li::after {
+  border: 5px solid #089BC0;
+}
+
+.bg-gray .release ul li::after {
+  border: 5px solid #F4F4F4;
+}
+
+.release ul li div {
+  position: relative;
+  bottom: 0;
+  width: 400px;
+  padding: 15px;
+  /* background: #F45B69; */
+}
+
+/* .release ul li div::before {
+  content: '';
+  position: absolute;
+  bottom: 7px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+} */
+.release ul li:nth-child(even) div {
+  left: 45px;
+}
+
+/* .release ul li:nth-child(odd) div::before {
+  left: -15px;
+  border-width: 8px 16px 8px 0;
+  border-color: transparent #F45B69 transparent transparent;
+} */
+.release ul li:nth-child(odd) div {
+  left: -439px;
+  text-align: right !important;
+}
+
+.release ul li:nth-child(odd) div .paragraph-text-small,
+.release ul li:nth-child(odd) div .release-text {
+  left: -439px;
+  text-align: right !important;
+  margin-left: auto;
+}
+
+.release ul li:nth-child(odd) div .release-text {
+  position: absolute;
+  right: 15px;
+}
+
+.release ul li:nth-child(even) div .release-text {
+  position: absolute;
+  left: 15px;
+}
+
+/* .release ul li:nth-child(even) div::before {
+  right: -15px;
+  border-width: 8px 0 8px 16px;
+  border-color: transparent transparent transparent #F45B69;
+} */
+time {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+/* EFFECTS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.release ul li::after {
+  transition: background 0.5s ease-in-out;
+}
+
+.release ul li.in-view::after {
+  background: #EA6724;
+}
+
+.bg-blue .release ul li.in-view::after {
+  background: #ffffff;
+}
+
+.release ul li div {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.release ul li:nth-child(even) div {
+  transform: translate3d(200px, 0, 0);
+}
+
+.release ul li:nth-child(odd) div {
+  transform: translate3d(-200px, 0, 0);
+}
+
+.release ul li.in-view div {
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+}
+
+/* GENERAL MEDIA QUERIES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media screen and (max-width: 900px) {
+  .release ul li div {
+    width: 250px;
+  }
+
+  .release ul li:nth-child(odd) div {
+    left: -289px;
+    /*250+45-6*/
+  }
+}
+@media screen and (max-width: 600px) {
+  .release ul li::after {
+    bottom: initial;
+    top: 55%;
+  }
+
+  .release ul li {
+    margin-left: 20px;
+  }
+
+  .release ul li div {
+    width: calc(100vw - 91px);
+  }
+
+  .release ul li:nth-child(odd) div {
+    left: 45px;
+  }
+
+  .release ul li:nth-child(odd) div::before {
+    left: -15px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent #F45B69 transparent transparent;
+  }
+
+  .release ul li:nth-child(odd) div {
+    text-align: initial !important;
+  }
+
+  .release ul li:nth-child(odd) div .paragraph-text-small,
+.release ul li:nth-child(odd) div .release-text {
+    text-align: initial !important;
+    margin-left: initial;
+  }
+
+  .release ul li:nth-child(odd) div .release-text {
+    position: initial;
+    right: initial;
+  }
+
+  .release ul li:nth-child(even) div .release-text {
+    position: initial;
+    left: initial;
   }
 }
 
