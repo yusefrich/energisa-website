@@ -20,73 +20,6 @@
                 </div>
             </section>
 
-            <!-- SESSÃO DE DESIGN DE RELEASES -->
-
-            <section id="releases-todos" class="section bg-gray">
-                <div class="container">
-                    <div class="text-center my-5">
-                        <h2 class="text-orange display-h2">Últimas Releases</h2>
-                        <p style="max-width: 640px;" class="text-gray m-auto">Fique por dentro das últimas atualizações deste projeto</p>
-                    </div>
-                </div>
-                <div class="container-fluid  p-0">
-                    <section class="release ">
-                        <ul>
-                            <li>
-                                <div class="text-right">
-                                    <p style="background: #EA6724; max-width: 220px" class="paragraph text-white font-weight-bold tittle-badge">Totem de Autoatendimento</p>
-                                    <br>
-                                    <time>23 dez 2019</time> 
-                                    <p style="max-width: 230px" class="paragraph-text-small font-weight-bold">Funcionalidade de pagamento</p>
-                                    <p style="max-width: 234px" class="release-text text-gray-2 ">
-                                        É uma seqüência de palavras latinas que, como estão posicionadas, não formem frases com um sentido completo.
-                                        <br>
-                                        <a style="padding: 7px 37px;" href="#" class="btn btn-outline-light px-5 font-weight-600 release-btn" >
-                                            Acesse nosso site
-                                        </a>
-                                    </p>
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <time>23 dez 2019</time> 
-                                    <p style="max-width: 230px" class="paragraph-text-small font-weight-bold">Funcionalidade de pagamento</p>
-                                    <p style="max-width: 234px" class="release-text text-gray-2">
-                                        Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos
-                                    </p>
-                                    
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <time>23 dez 2019</time> 
-                                    <p style="max-width: 230px" class="paragraph-text-small font-weight-bold">Funcionalidade de pagamento</p>
-                                    <p style="max-width: 234px" class="release-text text-gray-2">
-                                        Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos
-                                        <br>
-                                        <a style="padding: 7px 37px;" href="#" class="btn btn-outline-light px-5 font-weight-600 release-btn" >
-                                            Acesse nosso site
-                                        </a>
-                                    </p>
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <time>23 dez 2019</time> 
-                                    <p style="max-width: 230px" class="paragraph-text-small font-weight-bold">Funcionalidade de pagamento</p>
-                                    <p style="max-width: 234px" class="release-text text-gray-2">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos</p>
-                                </div>
-                            </li>
-                        </ul>
-                        <div data-aos="zoom-in" class="d-flex justify-content-center py-5">
-                            <button style="padding-left: 22px !important; padding-right: 22px !important;" class="btn btn-primary px-5">Exibir mais releases</button>
-                        </div>
-                    </section>        
-
-
-                </div>
-            </section>
-
             <?php
             $post->ID;
             $flex_field_array = get_post_meta($post->ID, 'flexible_content', true);
@@ -100,6 +33,83 @@
             <?php while (have_rows('flexible_content')):
                 the_row(); ?>
                 <?php $layout_count++; ?>
+
+                <?php if (get_row_layout() == 'layout_prod_releases'): ?>
+                <?php
+                $fundo_bg = "";
+                switch (get_sub_field('prod_releases_background')) {
+                    case 'branco':
+                        $fundo_bg = "bg-white";
+                        break;
+                    case 'cinza':
+                        $fundo_bg = "bg-gray";
+                        break;
+                    case 'azul':
+                        $fundo_bg = "bg-blue";
+                        break;
+                }
+                ?>
+                <section id="releases-todos" class="section <?php echo $fundo_bg; ?>">
+                    <div class="container">
+                        <div class="text-center my-5">
+                            <h2 class="text-orange display-h2"><?php the_sub_field('prod_releases_secTitle') ?></h2>
+                            <p style="max-width: 640px;" class="text-gray m-auto"><?php the_sub_field('prod_releases_secDesc') ?></p>
+                        </div>
+                    </div>
+                    <div class="container-fluid  p-0">
+                        <section class="release ">
+                            <ul>
+                                <?php $releaseCount = 0; ?>
+                                <?php while (have_rows('prod_releases_repeat')): the_row();
+                                    setlocale(LC_TIME, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
+                                    date_default_timezone_set('America/Sao_Paulo');
+                                    $date_string = get_sub_field('prod_release_date');
+
+                                    $destinoUrl = get_sub_field('prod_link_release');
+                                    $releaseCount++;
+                                    ?>
+                                    <li>
+                                        <div class="<?php echo $releaseCount === 1 ? "text-right" : ""; ?>">
+                                            <?php if ($releaseCount === 1) : ?>
+                                                <p style="background: #EA6724; max-width: 220px" class="paragraph text-white font-weight-bold tittle-badge"><?php the_title(); ?></p>
+                                                <br>
+                                            <?php endif; ?>
+                                            <time><?php echo date_i18n('j \d\e M  Y', strtotime($date_string)) ?></time>
+                                            <p style="max-width: 230px" class="paragraph-text-small font-weight-bold"><?php the_sub_field('prod_release_title'); ?></p>
+                                            <p style="max-width: 234px" class="release-text text-gray-2"><?php the_sub_field('prod_release_desc'); ?>
+                                                <?php if ($destinoUrl != 'none'): ?>
+                                                    <?php if ($destinoUrl == 'interno'): ?>
+                                                        <br>
+                                                        <a style="padding: 7px 37px;" href="<?php echo get_sub_field('prod_linkinterno_release'); ?>" class="btn btn-outline-light px-5 font-weight-600 release-btn">
+                                                            Acesse nosso site
+                                                        </a>
+                                                    <?php endif; ?>
+                                                    <?php if ($destinoUrl == 'externo'): ?>
+                                                        <br>
+                                                        <a style="padding: 7px 37px;" href="<?php echo get_sub_field('prod_linkexterno_release'); ?>" target="_blank" class="btn btn-outline-light px-5 font-weight-600 release-btn">
+                                                            Acesse nosso site
+                                                        </a>
+                                                    <?php endif; ?>
+                                                <?php endif; ?>
+                                            </p>
+                                        </div>
+                                    </li>
+                                <?php endwhile; ?>
+                            </ul>
+                            <div data-aos="zoom-in" class="d-flex justify-content-center py-5">
+                                <button style="padding-left: 22px !important; padding-right: 22px !important;" class="btn btn-primary px-5">
+                                    Exibir mais releases
+                                </button>
+                            </div>
+                        </section>
+                    </div>
+                    <?php
+                    if ($flexible_content_count === $layout_count): ?>
+                        <?php include "footer-nav.php"; ?>
+                    <?php endif; ?>
+                </section>
+
+            <?php endif; ?>
 
                 <?php if (get_row_layout() == 'layout_prod_info'): ?>
                 <?php
