@@ -4,6 +4,12 @@
         <?php while (have_posts()) :
             the_post(); ?>
             <?php $img_background = get_the_post_thumbnail_url(null, 'full'); ?>
+            <?php
+            //Pega o código rgba do card
+            $campo_card_rgba = explode(',', get_field('prod_cor_background'));
+            // Transforma a string em um array
+            $card_rgba = "$campo_card_rgba[0],$campo_card_rgba[1],$campo_card_rgba[2],1";
+            ?>
             <section class="section" id="product-banner">
                 <div style="
                         background-image: url(<?php echo esc_url($img_background); ?>);
@@ -71,7 +77,7 @@
                                     <li>
                                         <div class="<?php echo $releaseCount === 1 ? "text-right" : ""; ?>">
                                             <?php if ($releaseCount === 1) : ?>
-                                                <p style="background: #EA6724; max-width: 220px" class="paragraph text-white font-weight-bold tittle-badge"><?php the_title(); ?></p>
+                                                <p style="background: rgba(<?php echo $card_rgba; ?>); max-width: 220px" class="paragraph text-white font-weight-bold tittle-badge"><?php the_title(); ?></p>
                                                 <br>
                                             <?php endif; ?>
                                             <time><?php echo date_i18n('j \d\e M  Y', strtotime($date_string)) ?></time>
