@@ -37,10 +37,12 @@
                 <option value="">2019</option>
                 <option value="">2020</option>
             </select>
-            
+
         </div>
         <div style="margin-top: 72px;" class="text-center">
-            <p style="max-width: 640px;" class="text-gray m-auto"><small>20/03/2020</small></p>
+            <p style="max-width: 640px;" class="text-gray m-auto">
+                <small>20/03/2020</small>
+            </p>
 
             <h3 class="text-dark-2">Últimas atualizações</h3>
         </div>
@@ -48,77 +50,100 @@
     <div class="container-fluid  p-0">
         <section class="release ">
             <ul>
-                <li>
-                    <div class="text-right">
-                        <p style="background: #EA6724; max-width: 220px" class="paragraph text-white font-weight-bold tittle-badge">Totem de Autoatendimento</p>
-                        <br>
-                        <time>23 dez 2019</time> 
-                        <p style="max-width: 230px" class="paragraph-text-small font-weight-bold">Funcionalidade de pagamento</p>
-                        <p style="max-width: 234px" class="release-text text-gray-2 ">
-                            É uma seqüência de palavras latinas que, como estão posicionadas, não formem frases com um sentido completo.
+                <?php
+                $releases = new WP_Query(array(
+                    'post_type' => 'produtos',
+                    'posts_per_page' => -1,
+                ));
+
+                // Array que vai armazenar todas as releases
+                $itens = [];
+
+                while ($releases->have_posts()): $releases->the_post();
+                    //Pega o código rgba do card
+                    $campo_card_rgba = explode(',', get_field('prod_cor_background'));
+                    // Transforma a string em um array
+                    $card_rgba = "$campo_card_rgba[0],$campo_card_rgba[1],$campo_card_rgba[2],1";
+                    ?>
+                    <?php if (have_rows('flexible_content')): ?>
+                        <?php while (have_rows('flexible_content')): the_row(); ?>
+                            <?php if (get_row_layout() == 'layout_prod_releases'): ?>
+                                <?php while (have_rows('prod_releases_repeat')): the_row();
+                                    setlocale(LC_TIME, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
+                                    date_default_timezone_set('America/Sao_Paulo');
+                                    $date_string = get_sub_field('prod_release_date');
+                                    $destinoUrl = get_sub_field('prod_link_release');
+                                    $release_url = get_sub_field('prod_linkinterno_release') != "" ? get_sub_field('prod_linkinterno_release') : get_sub_field('prod_linkexterno_release');
+                                    ?>
+                                    <?php
+
+                                    // Armazena todos os campos do post e da release
+                                    $item = [
+                                        'post_ID' => get_the_ID(),
+                                        'post_titulo' => get_the_title(),
+                                        'post_color' => $card_rgba,
+                                        'release_data' => date_i18n('j \d\e M  Y', strtotime($date_string)),
+                                        'datetime' => date_i18n('Y-m-j', strtotime($date_string)),
+                                        'ano' => date_i18n('Y', strtotime($date_string)),
+                                        'release_titulo' => get_sub_field('prod_release_title'),
+                                        'release_descricao' => get_sub_field('prod_release_desc'),
+                                        'release_target' => $destinoUrl,
+                                        'release_url' => $release_url,
+                                    ];
+
+                                    // Puxa cada release para o array itens
+                                    array_push($itens, $item);
+                                    ?>
+                                <?php endwhile; ?>
+                            <?php endif; ?>
+                        <?php endwhile; ?>
+                    <?php endif; ?>
+                <?php endwhile;
+                wp_reset_postdata(); ?>
+
+                <?php
+                // Ordena o array pela chave datetime
+                foreach ($itens as $key => $part) {
+                    $sort[$key] = strtotime($part['datetime']);
+                }
+                array_multisort($sort, SORT_DESC, $itens);
+                ?>
+
+                <?php foreach ($itens as $release): ?>
+                    <?php $destinoUrl = $release['release_target']; ?>
+                    <li>
+                        <div>
+                            <p style="background: rgba(<?php echo $release['post_color']; ?>); max-width: 220px" class="paragraph text-white font-weight-bold tittle-badge"><?php echo $release['post_titulo']; ?></p>
                             <br>
-                            <a style="padding: 7px 37px;" href="#" class="btn btn-outline-light px-5 font-weight-600 release-btn" >
-                                Acesse nosso site
-                            </a>
-                        </p>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <p style="background: #EA6724; max-width: 220px" class="paragraph text-white font-weight-bold tittle-badge">Totem de Autoatendimento</p>
-                        <br>
-                        <time>23 dez 2019</time> 
-                        <p style="max-width: 230px" class="paragraph-text-small font-weight-bold">Funcionalidade de pagamento</p>
-                        <p style="max-width: 234px" class="release-text text-gray-2">
-                            Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos
-                        </p>
-                        
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <p style="background: #089BC0; max-width: 220px" class="paragraph text-white font-weight-bold tittle-badge">Gisa Chatbot</p>
-                        <br>
-                        <time>23 dez 2019</time> 
-                        <p style="max-width: 230px" class="paragraph-text-small font-weight-bold">Funcionalidade de pagamento</p>
-                        <p style="max-width: 234px" class="release-text text-gray-2">
-                            Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos
-                            <br>
-                            <a style="padding: 7px 37px;" href="#" class="btn btn-outline-light px-5 font-weight-600 release-btn" >
-                                Acesse nosso site
-                            </a>
-                        </p>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <p style="background: #FF9900; max-width: 220px" class="paragraph text-white font-weight-bold tittle-badge">Sac Produtivo</p>
-                        <br>
-                        <time>23 dez 2019</time> 
-                        <p style="max-width: 230px" class="paragraph-text-small font-weight-bold">Funcionalidade de pagamento</p>
-                        <p style="max-width: 234px" class="release-text text-gray-2">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos</p>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <p style="background: #EA6724; max-width: 220px" class="paragraph text-white font-weight-bold tittle-badge">Totem de Autoatendimento</p>
-                        <br>
-                        <time>23 dez 2019</time> 
-                        <p style="max-width: 230px" class="paragraph-text-small font-weight-bold">Funcionalidade de pagamento</p>
-                        <p style="max-width: 234px" class="release-text text-gray-2">
-                            É uma seqüência de palavras latinas que, como estão posicionadas, não formem frases com um sentido completo.
-                            <br>
-                            <a style="padding: 7px 37px;" href="#" class="btn btn-outline-light px-5 font-weight-600 release-btn" >
-                                Acesse nosso site
-                            </a>
-                        </p>
-                    </div>
-                </li>
+                            <time><?php echo $release['release_data']; ?></time>
+                            <p style="max-width: 230px" class="paragraph-text-small font-weight-bold"><?php echo $release['release_titulo']; ?></p>
+                            <p style="max-width: 234px" class="release-text text-gray-2"><?php echo $release['release_descricao']; ?>
+                                <?php if ($destinoUrl != 'none'): ?>
+                                    <?php if ($destinoUrl == 'interno'): ?>
+                                        <br>
+                                        <a style="padding: 7px 37px;" href="<?php echo $release['release_url']; ?>" class="btn btn-outline-light px-5 font-weight-600 release-btn">
+                                            Acesse nosso site
+                                        </a>
+                                    <?php endif; ?>
+                                    <?php if ($destinoUrl == 'externo'): ?>
+                                        <br>
+                                        <a style="padding: 7px 37px;" href="<?php echo $release['release_url']; ?>" target="_blank" class="btn btn-outline-light px-5 font-weight-600 release-btn">
+                                            Acesse nosso site
+                                        </a>
+                                    <?php endif; ?>
+                                <?php endif; ?>
+                            </p>
+                        </div>
+                    </li>
+                <?php endforeach; ?>
             </ul>
+
             <div data-aos="zoom-in" class="d-flex justify-content-center py-5">
-                <button style="padding-left: 22px !important; padding-right: 22px !important;" class="btn btn-primary px-5">Exibir mais releases</button>
+                <button style="padding-left: 22px !important; padding-right: 22px !important;" class="btn btn-primary px-5">
+                    Exibir mais releases
+                </button>
             </div>
-        </section>        
+        </section>
 
 
     </div>
@@ -130,7 +155,8 @@
         <div class="text-center my-5">
             <img src="<?php bloginfo('template_url'); ?>/img/paper.png" alt="">
             <h2 class="text-orange display-h2">Novidades</h2>
-            <p style="max-width: 640px;" class="text-gray m-auto">Fique por dentro do que está acontecendo e deixe seu comentário.</p>
+            <p style="max-width: 640px;" class="text-gray m-auto">Fique por dentro do que está acontecendo e deixe seu
+                comentário.</p>
         </div>
 
         <div class="d-flex justify-content-center">
