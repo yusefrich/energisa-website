@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0de7631c-04d5-43ce-8736-4b956fb59ba0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/page-novidades.php" beforeDir="false" afterPath="$PROJECT_DIR$/page-novidades.php" afterDir="false" />
-    </list>
+    <list default="true" id="0de7631c-04d5-43ce-8736-4b956fb59ba0" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +30,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/page-novidades.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="724">
+            <state relative-caret-position="1030">
               <caret line="138" selection-start-line="138" selection-end-line="138" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#section#0;n#!!top" expanded="true" />
@@ -340,7 +338,7 @@
       <workItem from="1585521869675" duration="17000" />
       <workItem from="1585868323321" duration="619000" />
       <workItem from="1585914292115" duration="46000" />
-      <workItem from="1586004185964" duration="13269000" />
+      <workItem from="1586004185964" duration="13541000" />
     </task>
     <task id="LOCAL-00001" summary="Concluído o carregamento dinâmico para as páginas de novidades, produtos e projetos">
       <created>1582165204409</created>
@@ -381,7 +379,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="412261000" />
+    <option name="totallyTimeSpent" value="412533000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -870,7 +868,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/page-novidades.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="724">
+        <state relative-caret-position="1030">
           <caret line="138" selection-start-line="138" selection-end-line="138" />
           <folding>
             <element signature="n#style#0;n#div#0;n#section#0;n#!!top" expanded="true" />
