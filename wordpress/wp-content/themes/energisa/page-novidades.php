@@ -48,8 +48,9 @@
         </div>
     </div>
     <div class="container-fluid  p-0">
-        <section class="release ">
+        <section class="release reselase-all">
             <ul>
+                <li style="margin-top: 80px"></li>
                 <?php
                 $releases = new WP_Query(array(
                     'post_type' => 'produtos',

@@ -57,14 +57,15 @@
                 ?>
                 <section id="releases-todos" class="section <?php echo $fundo_bg; ?>">
                     <div class="container">
-                        <div class="text-center my-5">
+                        <div  style="margin-top: 100px" class="text-center mb-5">
                             <h2 class="text-orange display-h2"><?php the_sub_field('prod_releases_secTitle') ?></h2>
                             <p style="max-width: 640px;" class="text-gray m-auto"><?php the_sub_field('prod_releases_secDesc') ?></p>
                         </div>
                     </div>
                     <div class="container-fluid  p-0">
-                        <section class="release ">
+                        <section class="release release-single">
                             <ul>
+                                <li  style="margin-top: 70px"></li>
                                 <?php $releaseCount = 0; ?>
                                 <?php while (have_rows('prod_releases_repeat')): the_row();
                                     setlocale(LC_TIME, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');

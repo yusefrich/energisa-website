@@ -2401,7 +2401,7 @@ a:hover {
   content: "";
   position: absolute;
   left: 50%;
-  bottom: 35px;
+  bottom: 0px;
   /* top: 55%; */
   transform: translateX(-50%);
   width: 25px;
@@ -2421,7 +2421,7 @@ a:hover {
 
 .release ul li div {
   position: relative;
-  bottom: 0;
+  bottom: -35px;
   width: 400px;
   padding: 15px;
   /* background: #F45B69; */
@@ -2435,7 +2435,7 @@ a:hover {
   height: 0;
   border-style: solid;
 } */
-.release ul li:nth-child(even) div {
+.release ul li:nth-child(odd) div {
   left: 45px;
 }
 
@@ -2444,24 +2444,24 @@ a:hover {
   border-width: 8px 16px 8px 0;
   border-color: transparent #F45B69 transparent transparent;
 } */
-.release ul li:nth-child(odd) div {
+.release ul li:nth-child(even) div {
   left: -439px;
   text-align: right !important;
 }
 
-.release ul li:nth-child(odd) div .paragraph-text-small,
-.release ul li:nth-child(odd) div .release-text {
+.release ul li:nth-child(even) div .paragraph-text-small,
+.release ul li:nth-child(even) div .release-text {
   left: -439px;
   text-align: right !important;
   margin-left: auto;
 }
 
-.release ul li:nth-child(odd) div .release-text {
+.release ul li:nth-child(even) div .release-text {
   position: absolute;
   right: 15px;
 }
 
-.release ul li:nth-child(even) div .release-text {
+.release ul li:nth-child(odd) div .release-text {
   position: absolute;
   left: 15px;
 }
@@ -2498,11 +2498,11 @@ time {
   transition: all 0.5s ease-in-out;
 }
 
-.release ul li:nth-child(even) div {
+.release ul li:nth-child(odd) div {
   transform: translate3d(200px, 0, 0);
 }
 
-.release ul li:nth-child(odd) div {
+.release ul li:nth-child(even) div {
   transform: translate3d(-200px, 0, 0);
 }
 
@@ -2519,7 +2519,7 @@ time {
     width: 250px;
   }
 
-  .release ul li:nth-child(odd) div {
+  .release ul li:nth-child(even) div {
     left: -289px;
     /*250+45-6*/
   }
@@ -2538,35 +2538,68 @@ time {
     width: calc(100vw - 91px);
   }
 
-  .release ul li:nth-child(odd) div {
+  .release ul li:nth-child(even) div {
     left: 45px;
   }
 
-  .release ul li:nth-child(odd) div::before {
+  .release ul li:nth-child(even) div::before {
     left: -15px;
     border-width: 8px 16px 8px 0;
     border-color: transparent #F45B69 transparent transparent;
   }
 
-  .release ul li:nth-child(odd) div {
+  .release ul li:nth-child(even) div {
     text-align: initial !important;
   }
 
-  .release ul li:nth-child(odd) div .paragraph-text-small,
-.release ul li:nth-child(odd) div .release-text {
+  .release ul li:nth-child(even) div .paragraph-text-small,
+.release ul li:nth-child(even) div .release-text {
     text-align: initial !important;
     margin-left: initial;
   }
 
-  .release ul li:nth-child(odd) div .release-text {
+  .release ul li:nth-child(even) div .release-text {
     position: initial;
     right: initial;
   }
 
-  .release ul li:nth-child(even) div .release-text {
+  .release ul li:nth-child(odd) div .release-text {
     position: initial;
     left: initial;
   }
+}
+.reselase-all ul li:nth-child(2) div {
+  top: -115px;
+}
+
+.reselase-all ul li:nth-child(2) {
+  height: 135px;
+}
+
+.reselase-all ul li:nth-child(1)::after {
+  border-radius: 0;
+}
+
+.reselase-all ul li:nth-child(1) {
+  border-radius: 0;
+  background: transparent;
+}
+
+.release-single ul li:nth-child(2) div {
+  top: -115px;
+}
+
+.release-single ul li:nth-child(2) {
+  height: 135px;
+}
+
+.release-single ul li:nth-child(1)::after {
+  border-radius: 0;
+}
+
+.release-single ul li:nth-child(1) {
+  border-radius: 0;
+  background: transparent;
 }
 
 /*# sourceMappingURL=style.css.map */
