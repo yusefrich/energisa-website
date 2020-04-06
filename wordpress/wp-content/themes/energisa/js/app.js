@@ -979,7 +979,7 @@ jQuery(function ($) {
     function listarReleasesSingle(page) {
         $.ajax({
             url: wp.ajaxurl,
-            type: 'GET',
+            type: 'POST',
             data: {
                 action: 'listarReleasesSingle',
                 page: page,
@@ -1041,13 +1041,14 @@ jQuery(function ($) {
 
     //############################# CARREGA RELEASES EM NOVIDADES ####################################
 
-    function listarReleasesAll(page) {
+    function listarReleasesAll(page, ano) {
         $.ajax({
             url: wp.ajaxurl,
-            type: 'GET',
+            type: 'POST',
             data: {
                 action: 'listarReleasesAll',
                 page: page,
+                ano: ano
             },
 
             success: function (dados) {
@@ -1056,7 +1057,11 @@ jQuery(function ($) {
                 let releases = dados.data.releases;
                 if (success) {
                     $.each(releases, function (i, release) {
+                        releaseCount++;
                         var str = "";
+                        if (releaseCount === 1) {
+                            str += '<li style="margin-top: 80px"></li>';
+                        }
                         str += '<li class="in-view">';
                         str += '<div>';
                         str += '<p style="background-color: rgba(' + release.post_color + '); max-width: 220px" class="paragraph text-white font-weight-bold tittle-badge">' + release.post_titulo + '</p><br>';
@@ -1089,14 +1094,27 @@ jQuery(function ($) {
         })
     }
 
-    listarReleasesAll(page)
+    listarReleasesAll(page, "")
 
     // Carrega mais Releases
     $("#btnLoadReleasesAll").on('click', function (event) {
         event.preventDefault();
         paggina = $(this).data("pagina");
-        listarReleasesAll(paggina + 1)
+        var ano = $(this).data("ano");
+
+        listarReleasesAll(paggina + 1, ano)
         $(this).data('pagina', paggina + 1);
+    })
+
+    $("#loadReleaseYars").on('change', function () {
+        let ano = $(this).val();
+        releaseCount = 0;
+        $("#loadReleaseAll").html('');
+        listarReleasesAll(1, ano)
+
+        $("#btnLoadReleasesAll").show();
+        $("#btnLoadReleasesAll").data('pagina', 1);
+        $("#btnLoadReleasesAll").data('ano', ano);
     })
 
 })

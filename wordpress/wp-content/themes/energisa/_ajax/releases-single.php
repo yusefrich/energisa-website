@@ -3,9 +3,9 @@
 
 function listarReleasesSingle()
 {
-    $post = $_GET['postId'];
-    $postType = $_GET['post_type'];
-    $page = $_GET['page'] - 1;
+    $post = $_POST['postId'];
+    $postType = $_POST['post_type'];
+    $page = $_POST['page'] - 1;
     $hasNext = true;
 
     if ($postType === 'produtos') {

@@ -4,7 +4,8 @@
 function listarReleasesAll()
 {
 
-    $page = $_GET['page'] - 1;
+    $page = $_POST['page'] - 1;
+    $ano = $_POST['ano'];
     $hasNext = true;
 
 
@@ -104,14 +105,37 @@ function listarReleasesAll()
     endwhile;
 
 
+    //Filtrar array multidimensional por coluna
+    function array_filter_by_value($my_array, $index, $value)
+    {
+        if (is_array($my_array) && count($my_array) > 0) {
+            foreach (array_keys($my_array) as $key) {
+                $temp[$key] = $my_array[$key][$index];
+
+                if ($temp[$key] == $value) {
+                    $new_array[$key] = $my_array[$key];
+                }
+            }
+        }
+        return $new_array;
+    }
+
+
+    if ($ano != "") {
+        $results = array_filter_by_value($itens, 'ano', $ano);
+    } else {
+        $results = $itens;
+    }
+
+
     // Ordena o array pela chave datetime
-    foreach ($itens as $key => $part) {
+    foreach ($results as $key => $part) {
         $sort[$key] = strtotime($part['datetime']);
     }
-    array_multisort($sort, SORT_DESC, $itens);
+    array_multisort($sort, SORT_DESC, $results);
 
     //Total de itens do array
-    $releases_count = count($itens);
+    $releases_count = count($results);
     // Calcula a quantidade de páginas que será gerada: total de itens do array dividido pela quantidade de itens de cada página
     $paginas = ceil($releases_count / 3);
 
@@ -120,7 +144,7 @@ function listarReleasesAll()
     }
 
     //array_chunk divide o array em dois em dois
-    $releses = array_chunk($itens, 3);
+    $releses = array_chunk($results, 3);
 
 
     // Envia na resposta todos os dados

@@ -32,7 +32,7 @@
         </div>
         <div class="d-flex justify-content-center">
             <p class="font-weight-bold mr-2 mt-1 text-gray-4">Filtre sua exibição</p>
-            <select style="width: 25%; color: #EA6724;" class="custom-select" id="loadPerCategory">
+            <select style="width: 25%; color: #EA6724;" class="custom-select" id="loadReleaseYars">
                 <option value="">Selecione</option>
                 <?php
                 $yars = [];
@@ -128,11 +128,11 @@
     <div class="container-fluid  p-0">
         <section class="release reselase-all">
             <ul id="loadReleaseAll">
-                <li style="margin-top: 80px"></li>
+
             </ul>
 
             <div data-aos="zoom-in" class="d-flex justify-content-center py-5">
-                <button style="padding-left: 22px !important; padding-right: 22px !important;" class="btn btn-primary px-5" data-pagina="1" id="btnLoadReleasesAll">
+                <button style="padding-left: 22px !important; padding-right: 22px !important;" class="btn btn-primary px-5" data-pagina="1" data-ano="" id="btnLoadReleasesAll">
                     Exibir mais releases
                 </button>
             </div>
