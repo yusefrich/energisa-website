@@ -57,54 +57,18 @@
                 ?>
                 <section id="releases-todos" class="section <?php echo $fundo_bg; ?>">
                     <div class="container">
-                        <div  style="margin-top: 100px" class="text-center mb-5">
+                        <div style="margin-top: 100px" class="text-center mb-5">
                             <h2 class="text-orange display-h2"><?php the_sub_field('prod_releases_secTitle') ?></h2>
                             <p style="max-width: 640px;" class="text-gray m-auto"><?php the_sub_field('prod_releases_secDesc') ?></p>
                         </div>
                     </div>
                     <div class="container-fluid  p-0">
                         <section class="release release-single">
-                            <ul>
-                                <li  style="margin-top: 70px"></li>
-                                <?php $releaseCount = 0; ?>
-                                <?php while (have_rows('prod_releases_repeat')): the_row();
-                                    setlocale(LC_TIME, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
-                                    date_default_timezone_set('America/Sao_Paulo');
-                                    $date_string = get_sub_field('prod_release_date');
-
-                                    $destinoUrl = get_sub_field('prod_link_release');
-                                    $releaseCount++;
-                                    ?>
-                                    <li>
-                                        <div class="<?php echo $releaseCount === 1 ? "text-right" : ""; ?>">
-                                            <?php if ($releaseCount === 1) : ?>
-                                                <p style="background: rgba(<?php echo $card_rgba; ?>); max-width: 220px" class="paragraph text-white font-weight-bold tittle-badge"><?php the_title(); ?></p>
-                                                <br>
-                                            <?php endif; ?>
-                                            <time><?php echo date_i18n('j \d\e M  Y', strtotime($date_string)) ?></time>
-                                            <p style="max-width: 230px" class="paragraph-text-small font-weight-bold"><?php the_sub_field('prod_release_title'); ?></p>
-                                            <p style="max-width: 234px" class="release-text text-gray-2"><?php the_sub_field('prod_release_desc'); ?>
-                                                <?php if ($destinoUrl != 'none'): ?>
-                                                    <?php if ($destinoUrl == 'interno'): ?>
-                                                        <br>
-                                                        <a style="padding: 7px 37px;" href="<?php echo get_sub_field('prod_linkinterno_release'); ?>" class="btn btn-outline-light px-5 font-weight-600 release-btn">
-                                                            Acesse nosso site
-                                                        </a>
-                                                    <?php endif; ?>
-                                                    <?php if ($destinoUrl == 'externo'): ?>
-                                                        <br>
-                                                        <a style="padding: 7px 37px;" href="<?php echo get_sub_field('prod_linkexterno_release'); ?>" target="_blank" class="btn btn-outline-light px-5 font-weight-600 release-btn">
-                                                            Acesse nosso site
-                                                        </a>
-                                                    <?php endif; ?>
-                                                <?php endif; ?>
-                                            </p>
-                                        </div>
-                                    </li>
-                                <?php endwhile; ?>
+                            <ul id="loadReleaseSingle">
+                                <li style="margin-top: 70px"></li>
                             </ul>
                             <div data-aos="zoom-in" class="d-flex justify-content-center py-5">
-                                <button style="padding-left: 22px !important; padding-right: 22px !important;" class="btn btn-primary px-5">
+                                <button style="padding-left: 22px !important; padding-right: 22px !important;" class="btn btn-primary px-5" data-pagina="1" id="btnLoadReleases">
                                     Exibir mais releases
                                 </button>
                             </div>

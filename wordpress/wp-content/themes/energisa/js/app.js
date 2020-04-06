@@ -972,13 +972,9 @@ jQuery(function ($) {
     $("#acf-form #wp-acf-editor-32-editor-tools").remove();
 
 
-    if ($("#loadReleaseSingle").length) {
-        //alert("existe");
-    } else {
-        //alert("Não existe");
-    }
-
     //############################# CARREGA RELEASES ####################################
+
+    var releaseCount = 0;
 
     function listarReleasesSingle(page) {
         $.ajax({
@@ -990,31 +986,39 @@ jQuery(function ($) {
                 post_type: wp.post_type,
                 postId: wp.post_id,
             },
-
             success: function (dados) {
                 let success = dados.success;
+                let hasNext = dados.data.hasNext;
                 let releases = dados.data.releases;
-                var str = "";
 
                 if (success) {
                     $.each(releases, function (i, release) {
-                        str += '<li>';
+                        releaseCount++;
+                        var str = "";
+                        str += '<li class="in-view">';
                         str += '<div>';
-                        str += '<time>5 de jan 2020</time>';
-                        str += '<p style="max-width: 230px" class="paragraph-text-small font-weight-bold">Funcionalidade de pagamento 2</p>';
-                        str += '<p style="max-width: 234px" class="release-text text-gray-2">2 - pagamento Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos';
+                        if (releaseCount === 1) {
+                            str += '<p style="background-color: rgba(' + release.post_color + '); max-width: 220px" class="paragraph text-white font-weight-bold tittle-badge">' + release.post_titulo + '</p><br>';
+                        }
+                        str += '<time>' + release.release_data + '</time>';
+                        str += '<p style="max-width: 230px" class="paragraph-text-small font-weight-bold">' + release.release_titulo + '</p>';
+                        str += '<p style="max-width: 234px" class="release-text text-gray-2">' + release.release_descricao;
                         str += '<br>';
-                        str += '<a style="padding: 7px 37px;" href="https://www.energisa.com.br/" target="_blank" class="btn btn-outline-light px-5 font-weight-600 release-btn">Acesse nosso site</a>';
+                        if (release.release_target == 'interno') {
+                            str += '<a style="padding: 7px 37px;" href="' + release.release_url + '" class="btn btn-outline-light px-5 font-weight-600 release-btn">Acesse nosso site</a>';
+                        }
+                        if (release.release_target == 'externo') {
+                            str += '<a style="padding: 7px 37px;" href="' + release.release_url + '" target="_blank" class="btn btn-outline-light px-5 font-weight-600 release-btn">Acesse nosso site</a>';
+                        }
                         str += '</p>';
                         str += '</div>';
                         str += '</li>';
-
-                        //$("#loadReleaseSingle").append(str);
-
-                        console.log(release.release_data);
+                        $("#loadReleaseSingle").append(str);
                     })
+                    if (hasNext === false) {
+                        $("#btnLoadReleases").hide();
+                    }
                 }
-
             },
             error: function (erro) {
                 console.log("ooopss... algo deu errado na requisição")
@@ -1022,7 +1026,17 @@ jQuery(function ($) {
         })
     }
 
-    listarReleasesSingle(page)
+    if ($("#loadReleaseSingle").length) {
+        listarReleasesSingle(page)
+    }
+
+    // Carrega mais Tags
+    $("#btnLoadReleases").on('click', function (event) {
+        event.preventDefault();
+        paggina = $(this).data("pagina");
+        listarReleasesSingle(paggina + 1)
+        $(this).data('pagina', paggina + 1);
+    })
 
 
     //############################# CARREGA RELEASES EM NOVIDADES ####################################
@@ -1040,25 +1054,27 @@ jQuery(function ($) {
                 let success = dados.success;
                 let hasNext = dados.data.hasNext;
                 let releases = dados.data.releases;
-                var str = "";
-
                 if (success) {
                     $.each(releases, function (i, release) {
-                        str += '<li>';
+                        var str = "";
+                        str += '<li class="in-view">';
                         str += '<div>';
                         str += '<p style="background-color: rgba(' + release.post_color + '); max-width: 220px" class="paragraph text-white font-weight-bold tittle-badge">' + release.post_titulo + '</p><br>';
                         str += '<time>' + release.release_data + '</time>';
                         str += '<p style="max-width: 230px" class="paragraph-text-small font-weight-bold">' + release.release_titulo + '</p>';
                         str += '<p style="max-width: 234px" class="release-text text-gray-2">' + release.release_descricao;
                         str += '<br>';
-                        str += '<a style="padding: 7px 37px;" href="https://www.energisa.com.br/" target="_blank" class="btn btn-outline-light px-5 font-weight-600 release-btn">Acesse nosso site</a>';
+                        if (release.release_target == 'interno') {
+                            str += '<a style="padding: 7px 37px;" href="' + release.release_url + '" class="btn btn-outline-light px-5 font-weight-600 release-btn">Acesse nosso site</a>';
+                        }
+                        if (release.release_target == 'externo') {
+                            str += '<a style="padding: 7px 37px;" href="' + release.release_url + '" target="_blank" class="btn btn-outline-light px-5 font-weight-600 release-btn">Acesse nosso site</a>';
+                        }
                         str += '</p>';
                         str += '</div>';
                         str += '</li>';
 
                         $("#loadReleaseAll").append(str);
-
-                        console.log("Título:",release.release_titulo, "Data:", release.release_data);
                     })
 
                     if (hasNext === false) {
