@@ -34,8 +34,86 @@
             <p class="font-weight-bold mr-2 mt-1 text-gray-4">Filtre sua exibição</p>
             <select style="width: 25%; color: #EA6724;" class="custom-select" id="loadPerCategory">
                 <option value="">Selecione</option>
-                <option value="">2019</option>
-                <option value="">2020</option>
+                <?php
+                $yars = [];
+
+                $yars_produtos = new WP_Query(array(
+                    'post_type' => 'produtos',
+                    'post_status' => 'publish',
+                    'posts_per_page' => -1,
+                ));
+
+                while ($yars_produtos->have_posts()): $yars_produtos->the_post();
+                    if (have_rows('flexible_content')):
+                        while (have_rows('flexible_content')): the_row();
+                            if (get_row_layout() == 'layout_prod_releases'):
+                                while (have_rows('prod_releases_repeat')): the_row();
+                                    setlocale(LC_TIME, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
+                                    date_default_timezone_set('America/Sao_Paulo');
+                                    $date_string = get_sub_field('prod_release_date');
+                                    $item = [
+                                        'ano' => date_i18n('Y', strtotime($date_string)),
+                                    ];
+                                    array_push($yars, $item);
+                                endwhile;
+                            endif;
+                        endwhile;
+                    endif;
+                endwhile;
+                wp_reset_postdata();
+
+                $yars_projetos = new WP_Query(array(
+                    'post_type' => 'projetos',
+                    'post_status' => 'publish',
+                    'posts_per_page' => -1,
+                ));
+
+                while ($yars_projetos->have_posts()): $yars_projetos->the_post();
+                    if (have_rows('projet_flexible_content')):
+                        while (have_rows('projet_flexible_content')): the_row();
+                            if (get_row_layout() == 'layout_projet_releases'):
+                                while (have_rows('projet_releases_repeat')): the_row();
+                                    setlocale(LC_TIME, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
+                                    date_default_timezone_set('America/Sao_Paulo');
+                                    $date_string = get_sub_field('projet_release_date');
+                                    $item_projet = [
+                                        'ano' => date_i18n('Y', strtotime($date_string)),
+                                    ];
+                                    array_push($yars, $item_projet);
+                                endwhile;
+                            endif;
+                        endwhile;
+                    endif;
+                endwhile;
+                wp_reset_postdata();
+
+                // Ordena o array pela chave datetime
+                foreach ($yars as $key => $part) {
+                    $sort[$key] = strtotime($part['ano']);
+                }
+                array_multisort($sort, SORT_DESC, $yars);
+
+                // Função para remover os arrays duplicados
+                function unique_multidim_array($array, $key)
+                {
+                    $temp_array = array();
+                    $i = 0;
+                    $key_array = array();
+                    foreach ($array as $val) {
+                        if (!in_array($val[$key], $key_array)) {
+                            $key_array[$i] = $val[$key];
+                            $temp_array[$i] = $val;
+                        }
+                        $i++;
+                    }
+                    return $temp_array;
+                }
+
+                $anos = unique_multidim_array($yars, 'ano');
+
+                foreach ($anos as $ano) : ?>
+                    <option value="<?php echo $ano['ano']; ?>"><?php echo $ano['ano']; ?></option>
+                <?php endforeach; ?>
             </select>
 
         </div>
@@ -51,32 +129,33 @@
         <section class="release reselase-all">
             <ul>
                 <li style="margin-top: 80px"></li>
+
                 <?php
-                $releases = new WP_Query(array(
+                // Array que vai armazenar todas as releases
+                $itens = [];
+                ?>
+                <?php
+                $releases_produtos = new WP_Query(array(
                     'post_type' => 'produtos',
+                    'post_status' => 'publish',
                     'posts_per_page' => -1,
                 ));
 
-                // Array que vai armazenar todas as releases
-                $itens = [];
-
-                while ($releases->have_posts()): $releases->the_post();
+                while ($releases_produtos->have_posts()): $releases_produtos->the_post();
                     //Pega o código rgba do card
                     $campo_card_rgba = explode(',', get_field('prod_cor_background'));
                     // Transforma a string em um array
                     $card_rgba = "$campo_card_rgba[0],$campo_card_rgba[1],$campo_card_rgba[2],1";
-                    ?>
-                    <?php if (have_rows('flexible_content')): ?>
-                        <?php while (have_rows('flexible_content')): the_row(); ?>
-                            <?php if (get_row_layout() == 'layout_prod_releases'): ?>
-                                <?php while (have_rows('prod_releases_repeat')): the_row();
+
+                    if (have_rows('flexible_content')):
+                        while (have_rows('flexible_content')): the_row();
+                            if (get_row_layout() == 'layout_prod_releases'):
+                                while (have_rows('prod_releases_repeat')): the_row();
                                     setlocale(LC_TIME, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
                                     date_default_timezone_set('America/Sao_Paulo');
                                     $date_string = get_sub_field('prod_release_date');
                                     $destinoUrl = get_sub_field('prod_link_release');
                                     $release_url = get_sub_field('prod_linkinterno_release') != "" ? get_sub_field('prod_linkinterno_release') : get_sub_field('prod_linkexterno_release');
-                                    ?>
-                                    <?php
 
                                     // Armazena todos os campos do post e da release
                                     $item = [
@@ -94,12 +173,58 @@
 
                                     // Puxa cada release para o array itens
                                     array_push($itens, $item);
-                                    ?>
-                                <?php endwhile; ?>
-                            <?php endif; ?>
-                        <?php endwhile; ?>
-                    <?php endif; ?>
-                <?php endwhile;
+
+                                endwhile;
+                            endif;
+                        endwhile;
+                    endif;
+                endwhile;
+                wp_reset_postdata(); ?>
+
+                <?php
+                $releases_projetos = new WP_Query(array(
+                    'post_type' => 'projetos',
+                    'post_status' => 'publish',
+                    'posts_per_page' => -1,
+                ));
+
+                while ($releases_projetos->have_posts()): $releases_projetos->the_post();
+                    //Pega o código rgba do card
+                    $campo_card_rgba = explode(',', get_field('projet_cor_background'));
+                    // Transforma a string em um array
+                    $card_rgba = "$campo_card_rgba[0],$campo_card_rgba[1],$campo_card_rgba[2],1";
+
+                    if (have_rows('projet_flexible_content')):
+                        while (have_rows('projet_flexible_content')): the_row();
+                            if (get_row_layout() == 'layout_projet_releases'):
+                                while (have_rows('projet_releases_repeat')): the_row();
+                                    setlocale(LC_TIME, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
+                                    date_default_timezone_set('America/Sao_Paulo');
+                                    $date_string = get_sub_field('projet_release_date');
+                                    $destinoUrl = get_sub_field('projet_link_release');
+                                    $release_url = get_sub_field('projet_linkinterno_release') != "" ? get_sub_field('projet_linkinterno_release') : get_sub_field('projet_linkexterno_release');
+
+                                    // Armazena todos os campos do post e da release
+                                    $item_projet = [
+                                        'post_ID' => get_the_ID(),
+                                        'post_titulo' => get_the_title(),
+                                        'post_color' => $card_rgba,
+                                        'release_data' => date_i18n('j \d\e M  Y', strtotime($date_string)),
+                                        'datetime' => date_i18n('Y-m-j', strtotime($date_string)),
+                                        'ano' => date_i18n('Y', strtotime($date_string)),
+                                        'release_titulo' => get_sub_field('projet_release_title'),
+                                        'release_descricao' => get_sub_field('projet_release_desc'),
+                                        'release_target' => $destinoUrl,
+                                        'release_url' => $release_url,
+                                    ];
+
+                                    // Puxa cada release para o array itens
+                                    array_push($itens, $item_projet);
+                                endwhile;
+                            endif;
+                        endwhile;
+                    endif;
+                endwhile;
                 wp_reset_postdata(); ?>
 
                 <?php

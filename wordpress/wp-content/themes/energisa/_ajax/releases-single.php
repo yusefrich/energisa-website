@@ -10,6 +10,7 @@ function listarReleasesSingle()
 
     $releases = new WP_Query(array(
         'post_type' => $postType,
+        'post_status' => 'publish',
         'p' => $post,
         'posts_per_page' => -1,
     ));
