@@ -70,9 +70,6 @@ function listarReleasesSingle()
                     //array_chunk divide o array em dois em dois
                     $releses = array_chunk($itens, 3);
 
-                    //for ($i = 3; $i < 5; $i++) {
-                        //array_push($releses, $itens[$i]);
-                    //}
 
                     // Envia na resposta todos os dados
                     $resposta = [

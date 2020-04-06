@@ -980,8 +980,6 @@ jQuery(function ($) {
 
     //############################# CARREGA RELEASES ####################################
 
-    // ########################################### CARREGAR TAGS ###############################################
-
     function listarReleasesSingle(page) {
         $.ajax({
             url: wp.ajaxurl,
@@ -1001,7 +999,7 @@ jQuery(function ($) {
                 if (success) {
                     $.each(releases, function (i, release) {
                         str += '<li>';
-                        str += '<div class="in-view">';
+                        str += '<div>';
                         str += '<time>5 de jan 2020</time>';
                         str += '<p style="max-width: 230px" class="paragraph-text-small font-weight-bold">Funcionalidade de pagamento 2</p>';
                         str += '<p style="max-width: 234px" class="release-text text-gray-2">2 - pagamento Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos';
@@ -1025,5 +1023,56 @@ jQuery(function ($) {
     }
 
     listarReleasesSingle(page)
+
+
+    //############################# CARREGA RELEASES EM NOVIDADES ####################################
+
+    function listarReleasesAll(page) {
+        $.ajax({
+            url: wp.ajaxurl,
+            type: 'GET',
+            data: {
+                action: 'listarReleasesAll',
+                page: page,
+            },
+
+            success: function (dados) {
+                let success = dados.success;
+                let hasNext = dados.data.hasNext;
+                let releases = dados.data.releases;
+                var str = "";
+
+                if (success) {
+                    $.each(releases, function (i, release) {
+                        str += '<li>';
+                        str += '<div>';
+                        str += '<p style="background-color: rgba(' + release.post_color + '); max-width: 220px" class="paragraph text-white font-weight-bold tittle-badge">' + release.post_titulo + '</p><br>';
+                        str += '<time>' + release.release_data + '</time>';
+                        str += '<p style="max-width: 230px" class="paragraph-text-small font-weight-bold">' + release.release_titulo + '</p>';
+                        str += '<p style="max-width: 234px" class="release-text text-gray-2">' + release.release_descricao;
+                        str += '<br>';
+                        str += '<a style="padding: 7px 37px;" href="https://www.energisa.com.br/" target="_blank" class="btn btn-outline-light px-5 font-weight-600 release-btn">Acesse nosso site</a>';
+                        str += '</p>';
+                        str += '</div>';
+                        str += '</li>';
+
+                        $("#loadReleaseAll").append(str);
+
+                        console.log("Título:",release.release_titulo, "Data:", release.release_data);
+                    })
+
+                    if (hasNext === false) {
+                        $("#btnLoadIdeias").hide();
+                    }
+                }
+
+            },
+            error: function (erro) {
+                console.log("ooopss... algo deu errado na requisição")
+            },
+        })
+    }
+
+    listarReleasesAll(page)
 
 })

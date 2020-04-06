@@ -127,141 +127,8 @@
     </div>
     <div class="container-fluid  p-0">
         <section class="release reselase-all">
-            <ul>
+            <ul id="loadReleaseAll">
                 <li style="margin-top: 80px"></li>
-
-                <?php
-                // Array que vai armazenar todas as releases
-                $itens = [];
-                ?>
-                <?php
-                $releases_produtos = new WP_Query(array(
-                    'post_type' => 'produtos',
-                    'post_status' => 'publish',
-                    'posts_per_page' => -1,
-                ));
-
-                while ($releases_produtos->have_posts()): $releases_produtos->the_post();
-                    //Pega o código rgba do card
-                    $campo_card_rgba = explode(',', get_field('prod_cor_background'));
-                    // Transforma a string em um array
-                    $card_rgba = "$campo_card_rgba[0],$campo_card_rgba[1],$campo_card_rgba[2],1";
-
-                    if (have_rows('flexible_content')):
-                        while (have_rows('flexible_content')): the_row();
-                            if (get_row_layout() == 'layout_prod_releases'):
-                                while (have_rows('prod_releases_repeat')): the_row();
-                                    setlocale(LC_TIME, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
-                                    date_default_timezone_set('America/Sao_Paulo');
-                                    $date_string = get_sub_field('prod_release_date');
-                                    $destinoUrl = get_sub_field('prod_link_release');
-                                    $release_url = get_sub_field('prod_linkinterno_release') != "" ? get_sub_field('prod_linkinterno_release') : get_sub_field('prod_linkexterno_release');
-
-                                    // Armazena todos os campos do post e da release
-                                    $item = [
-                                        'post_ID' => get_the_ID(),
-                                        'post_titulo' => get_the_title(),
-                                        'post_color' => $card_rgba,
-                                        'release_data' => date_i18n('j \d\e M  Y', strtotime($date_string)),
-                                        'datetime' => date_i18n('Y-m-j', strtotime($date_string)),
-                                        'ano' => date_i18n('Y', strtotime($date_string)),
-                                        'release_titulo' => get_sub_field('prod_release_title'),
-                                        'release_descricao' => get_sub_field('prod_release_desc'),
-                                        'release_target' => $destinoUrl,
-                                        'release_url' => $release_url,
-                                    ];
-
-                                    // Puxa cada release para o array itens
-                                    array_push($itens, $item);
-
-                                endwhile;
-                            endif;
-                        endwhile;
-                    endif;
-                endwhile;
-                wp_reset_postdata(); ?>
-
-                <?php
-                $releases_projetos = new WP_Query(array(
-                    'post_type' => 'projetos',
-                    'post_status' => 'publish',
-                    'posts_per_page' => -1,
-                ));
-
-                while ($releases_projetos->have_posts()): $releases_projetos->the_post();
-                    //Pega o código rgba do card
-                    $campo_card_rgba = explode(',', get_field('projet_cor_background'));
-                    // Transforma a string em um array
-                    $card_rgba = "$campo_card_rgba[0],$campo_card_rgba[1],$campo_card_rgba[2],1";
-
-                    if (have_rows('projet_flexible_content')):
-                        while (have_rows('projet_flexible_content')): the_row();
-                            if (get_row_layout() == 'layout_projet_releases'):
-                                while (have_rows('projet_releases_repeat')): the_row();
-                                    setlocale(LC_TIME, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
-                                    date_default_timezone_set('America/Sao_Paulo');
-                                    $date_string = get_sub_field('projet_release_date');
-                                    $destinoUrl = get_sub_field('projet_link_release');
-                                    $release_url = get_sub_field('projet_linkinterno_release') != "" ? get_sub_field('projet_linkinterno_release') : get_sub_field('projet_linkexterno_release');
-
-                                    // Armazena todos os campos do post e da release
-                                    $item_projet = [
-                                        'post_ID' => get_the_ID(),
-                                        'post_titulo' => get_the_title(),
-                                        'post_color' => $card_rgba,
-                                        'release_data' => date_i18n('j \d\e M  Y', strtotime($date_string)),
-                                        'datetime' => date_i18n('Y-m-j', strtotime($date_string)),
-                                        'ano' => date_i18n('Y', strtotime($date_string)),
-                                        'release_titulo' => get_sub_field('projet_release_title'),
-                                        'release_descricao' => get_sub_field('projet_release_desc'),
-                                        'release_target' => $destinoUrl,
-                                        'release_url' => $release_url,
-                                    ];
-
-                                    // Puxa cada release para o array itens
-                                    array_push($itens, $item_projet);
-                                endwhile;
-                            endif;
-                        endwhile;
-                    endif;
-                endwhile;
-                wp_reset_postdata(); ?>
-
-                <?php
-                // Ordena o array pela chave datetime
-                foreach ($itens as $key => $part) {
-                    $sort[$key] = strtotime($part['datetime']);
-                }
-                array_multisort($sort, SORT_DESC, $itens);
-                ?>
-
-                <?php foreach ($itens as $release): ?>
-                    <?php $destinoUrl = $release['release_target']; ?>
-                    <li>
-                        <div>
-                            <p style="background: rgba(<?php echo $release['post_color']; ?>); max-width: 220px" class="paragraph text-white font-weight-bold tittle-badge"><?php echo $release['post_titulo']; ?></p>
-                            <br>
-                            <time><?php echo $release['release_data']; ?></time>
-                            <p style="max-width: 230px" class="paragraph-text-small font-weight-bold"><?php echo $release['release_titulo']; ?></p>
-                            <p style="max-width: 234px" class="release-text text-gray-2"><?php echo $release['release_descricao']; ?>
-                                <?php if ($destinoUrl != 'none'): ?>
-                                    <?php if ($destinoUrl == 'interno'): ?>
-                                        <br>
-                                        <a style="padding: 7px 37px;" href="<?php echo $release['release_url']; ?>" class="btn btn-outline-light px-5 font-weight-600 release-btn">
-                                            Acesse nosso site
-                                        </a>
-                                    <?php endif; ?>
-                                    <?php if ($destinoUrl == 'externo'): ?>
-                                        <br>
-                                        <a style="padding: 7px 37px;" href="<?php echo $release['release_url']; ?>" target="_blank" class="btn btn-outline-light px-5 font-weight-600 release-btn">
-                                            Acesse nosso site
-                                        </a>
-                                    <?php endif; ?>
-                                <?php endif; ?>
-                            </p>
-                        </div>
-                    </li>
-                <?php endforeach; ?>
             </ul>
 
             <div data-aos="zoom-in" class="d-flex justify-content-center py-5">
@@ -270,8 +137,6 @@
                 </button>
             </div>
         </section>
-
-
     </div>
 </section>
 

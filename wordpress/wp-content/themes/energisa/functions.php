@@ -120,6 +120,8 @@ include('_ajax/votar-post.php');
 include('_ajax/like-post.php');
 include('_ajax/listar-por-produto.php');
 include('_ajax/releases-single.php');
+include('_ajax/releases-all.php');
+
 
 function app_scripts()
 {
