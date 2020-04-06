@@ -119,6 +119,7 @@ include('_ajax/listar-user-comments.php');
 include('_ajax/votar-post.php');
 include('_ajax/like-post.php');
 include('_ajax/listar-por-produto.php');
+include('_ajax/releases-single.php');
 
 function app_scripts()
 {
@@ -142,7 +143,11 @@ function app_scripts()
 
     $wpVars = [
         'ajaxurl' => admin_url('admin-ajax.php'),
-        'template_url' => get_template_directory_uri()
+        'template_url' => get_template_directory_uri(),
+        'site_home' => get_option('home'),
+        'post_id' => get_the_ID(),
+        'post_url' => get_permalink(get_the_ID()),
+        'post_type' => get_post_type()
     ];
 
     wp_localize_script('app', 'wp', $wpVars);

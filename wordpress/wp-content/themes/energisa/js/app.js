@@ -971,4 +971,59 @@ jQuery(function ($) {
     $("#acf-form label[for='acf-_post_content']").text("Minha Ideia");
     $("#acf-form #wp-acf-editor-32-editor-tools").remove();
 
+
+    if ($("#loadReleaseSingle").length) {
+        //alert("existe");
+    } else {
+        //alert("Não existe");
+    }
+
+    //############################# CARREGA RELEASES ####################################
+
+    // ########################################### CARREGAR TAGS ###############################################
+
+    function listarReleasesSingle(page) {
+        $.ajax({
+            url: wp.ajaxurl,
+            type: 'GET',
+            data: {
+                action: 'listarReleasesSingle',
+                page: page,
+                post_type: wp.post_type,
+                postId: wp.post_id,
+            },
+
+            success: function (dados) {
+                let success = dados.success;
+                let releases = dados.data.releases;
+                var str = "";
+
+                if (success) {
+                    $.each(releases, function (i, release) {
+                        str += '<li>';
+                        str += '<div class="in-view">';
+                        str += '<time>5 de jan 2020</time>';
+                        str += '<p style="max-width: 230px" class="paragraph-text-small font-weight-bold">Funcionalidade de pagamento 2</p>';
+                        str += '<p style="max-width: 234px" class="release-text text-gray-2">2 - pagamento Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos';
+                        str += '<br>';
+                        str += '<a style="padding: 7px 37px;" href="https://www.energisa.com.br/" target="_blank" class="btn btn-outline-light px-5 font-weight-600 release-btn">Acesse nosso site</a>';
+                        str += '</p>';
+                        str += '</div>';
+                        str += '</li>';
+
+                        //$("#loadReleaseSingle").append(str);
+
+                        console.log(release.release_data);
+                    })
+                }
+
+            },
+            error: function (erro) {
+                console.log("ooopss... algo deu errado na requisição")
+            },
+        })
+    }
+
+    listarReleasesSingle(page)
+
 })
