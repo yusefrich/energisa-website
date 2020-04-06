@@ -132,7 +132,7 @@
             </ul>
 
             <div data-aos="zoom-in" class="d-flex justify-content-center py-5">
-                <button style="padding-left: 22px !important; padding-right: 22px !important;" class="btn btn-primary px-5">
+                <button style="padding-left: 22px !important; padding-right: 22px !important;" class="btn btn-primary px-5" data-pagina="1" id="btnLoadReleasesAll">
                     Exibir mais releases
                 </button>
             </div>

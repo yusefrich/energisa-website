@@ -1030,7 +1030,7 @@ jQuery(function ($) {
         listarReleasesSingle(page)
     }
 
-    // Carrega mais Tags
+    // Carrega mais Releases
     $("#btnLoadReleases").on('click', function (event) {
         event.preventDefault();
         paggina = $(this).data("pagina");
@@ -1078,7 +1078,7 @@ jQuery(function ($) {
                     })
 
                     if (hasNext === false) {
-                        $("#btnLoadIdeias").hide();
+                        $("#btnLoadReleasesAll").hide();
                     }
                 }
 
@@ -1090,5 +1090,13 @@ jQuery(function ($) {
     }
 
     listarReleasesAll(page)
+
+    // Carrega mais Releases
+    $("#btnLoadReleasesAll").on('click', function (event) {
+        event.preventDefault();
+        paggina = $(this).data("pagina");
+        listarReleasesAll(paggina + 1)
+        $(this).data('pagina', paggina + 1);
+    })
 
 })
