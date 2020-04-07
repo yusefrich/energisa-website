@@ -2578,6 +2578,7 @@ time {
 
 .reselase-all ul li:nth-child(1)::after {
   border-radius: 0;
+  background: #EA6724;
 }
 
 .reselase-all ul li:nth-child(1) {
@@ -2595,6 +2596,7 @@ time {
 
 .release-single ul li:nth-child(1)::after {
   border-radius: 0;
+  background: #EA6724;
 }
 
 .release-single ul li:nth-child(1) {
