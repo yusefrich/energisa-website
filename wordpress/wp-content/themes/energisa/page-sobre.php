@@ -52,6 +52,41 @@
             </div>
         </div>
     </div>
+
+
+   <?php if (get_field('sobre_textOne_visivel') === 'sim'): ?>
+        <?php
+        $bg_tetOne = "";
+        switch (get_field('sobre_textOne_bg')) {
+            case 'branco':
+                $bg_tetOne = "bg-white";
+                break;
+            case 'cinza':
+                $bg_tetOne = "bg-gray";
+                break;
+            case 'azul':
+                $bg_tetOne = "bg-blue";
+                break;
+        }
+        ?>
+        <section class="section <?php echo $bg_tetOne; ?>">
+            <div class="container ">
+                <div class="product-description-text  normal-detail-bg">
+                    <h2 style="line-height: 50px;" data-aos="fade-up" class="display-h2 mb-4 aos-init aos-animate">
+                        <?php the_field('sobre_textOne_titulo'); ?>
+                    </h2>
+                    <h3 style="line-height: 50px;" data-aos="fade-up" class=" mb-4 aos-init aos-animate">
+                        <?php the_field('sobre_textOne_subtitulo'); ?>
+                    </h3>
+                    <div class="mb-3 aos-init aos-animate" data-aos="fade-up">
+                        <?php the_field('sobre_textOne_paragrafo'); ?>
+                    </div>
+                </div>
+            </div>
+           </section>
+ <?php endif;?>
+
+
     <section id="nossa-equipe">
         <div data-aos="fade-left" class="container-fluid pl-0 pr-5">
 
@@ -146,7 +181,37 @@
         </div>
     </section>
 
-
+    <?php if (get_field('sobre_textTwo_visivel') === 'sim'): ?>
+        <?php
+        $bg_tetOne = "";
+        switch (get_field('sobre_textTwo_bg')) {
+            case 'branco':
+                $bg_tetOne = "bg-white";
+                break;
+            case 'cinza':
+                $bg_tetOne = "bg-gray";
+                break;
+            case 'azul':
+                $bg_tetOne = "bg-blue";
+                break;
+        }
+        ?>
+        <section class="section <?php echo $bg_tetOne; ?>">
+            <div class="container ">
+                <div class="product-description-text  normal-detail-bg">
+                    <h2 style="line-height: 50px;" data-aos="fade-up" class="display-h2 mb-4 aos-init aos-animate">
+                        <?php the_field('sobre_textTwo_titulo'); ?>
+                    </h2>
+                    <h3 style="line-height: 50px;" data-aos="fade-up" class=" mb-4 aos-init aos-animate">
+                        <?php the_field('sobre_textTwo_subtitulo'); ?>
+                    </h3>
+                    <div class="mb-3 aos-init aos-animate" data-aos="fade-up">
+                        <?php the_field('sobre_textTwo_paragrafo'); ?>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <?php endif;?>
 
     <section id="o-que-fazemos">
         <div data-aos="fade-up" class="container py-5 mt-5 mb-2">
