@@ -2700,4 +2700,25 @@ time {
     border-radius: 0;
     background: transparent;
   }
-  
+
+.badge-orange{
+    border-radius: 4px;
+    background: #EA6724;
+    padding: 5px 10px;
+    color: #fff;
+    /* color: #EA6724; */
+}
+.badge-blue{
+    border-radius: 4px;
+    background: #089BC0;
+    padding: 5px 10px;
+    color: #fff;
+    /* color: #089BC0; */
+}
+.badge-green{
+    border-radius: 4px;
+    background: #08c045;
+    padding: 5px 10px;
+    color: #fff;
+    /* color: #08c045; */
+}

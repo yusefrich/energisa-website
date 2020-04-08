@@ -25,7 +25,7 @@
                 $respostas = get_comments_number();
                 ?>
                 <div class="d-flex justify-content-start my-4">
-                    <a href="<?php bloginfo('home'); ?>/ideias" class="btn  btn-round">
+                    <a style="box-shadow: none" href="<?php bloginfo('home'); ?>/ideias" class="btn ">
 
                         <p class="text-breadcrumb font-weight-bold mt-1"><i class="fas pr-3 pt-1 fa-chevron-left"></i>Retornar
                             para <span class="text-orange">Ideias</span></p>
@@ -47,7 +47,14 @@
                             </div>
                         </div>
                         <p class="text-uppercase m-0">
-                            <small class="text-orange"><?php echo esc_html($statusFiled['label']); ?></small>
+                        <?php if ($statusFiled['label'] === "Concluído") : ?>
+                            <small class="text-orange badge-green"><?php echo esc_html($statusFiled['label']); ?></small>
+                        <?php elseif ($statusFiled['label'] === "Em análise") : ?>
+                            <small class="text-orange badge-blue"><?php echo esc_html($statusFiled['label']); ?></small>
+                        <?php else : ?>
+                            <small class="text-orange badge-orange"><?php echo esc_html($statusFiled['label']); ?></small>
+                        <?php endif; ?>
+                            
                         </p>
                         <h2 class="font-weight-extra-bold text-caption display-h2"><?php the_title(); ?></h2>
                         <p class="m-0">
@@ -79,7 +86,7 @@
 
                 <div style="margin-top: 100px !important" class="d-flex justify-content-start my-4">
                     <!--style="position: relative; top: 90px"  -->
-                    <a href="<?php bloginfo('home'); ?>/ideias" class="btn  btn-round">
+                    <a style="box-shadow: none" href="<?php bloginfo('home'); ?>/ideias" class="btn">
 
                         <p class="text-breadcrumb font-weight-bold mt-1"><i class="fas pr-3 pt-1 fa-chevron-left"></i>Retornar
                             para <span class="text-orange">Ideias</span></p>

@@ -404,7 +404,12 @@ jQuery(function ($) {
                         card += "</div>";
                         card += "</div>";
                         card += "<p class='text-uppercase'>";
-                        card += "<small class='text-orange'>" + post.status + "</small>";
+                        if(post.status == "Em votação")
+                            card += "<small class='text-orange badge-orange'>" + post.status + "</small>";
+                        if(post.status == "Em análise")
+                            card += "<small class='text-orange badge-blue'>" + post.status + "</small>";
+                        if(post.status == "Concluído")
+                            card += "<small class='text-orange badge-green'>" + post.status + "</small>";
                         card += "</p>";
                         card += "<a href='" + post.url + "'>";
                         card += "<p class='font-weight-extra-bold text-caption'>" + post.titulo + "</p>";
