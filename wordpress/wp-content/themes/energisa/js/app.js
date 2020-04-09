@@ -1010,7 +1010,7 @@ jQuery(function ($) {
                         str += '<p style="max-width: 234px" class="release-text text-gray-2">' + release.release_descricao;
                         str += '<br>';
                         if (release.release_target == 'interno') {
-                            str += '<a style="padding: 7px 37px;" href="' + release.release_url + '" class="btn btn-outline-light px-5 font-weight-600 release-btn">Acesse nosso site</a>';
+                            str += '<a style="padding: 7px 37px;" href="' + release.release_url + '" class="btn btn-outline-light px-5 font-weight-600 release-btn">Saiba mais</a>';
                         }
                         if (release.release_target == 'externo') {
                             str += '<a style="padding: 7px 37px;" href="' + release.release_url + '" target="_blank" class="btn btn-outline-light px-5 font-weight-600 release-btn">Acesse nosso site</a>';
@@ -1075,10 +1075,10 @@ jQuery(function ($) {
                         str += '<p style="max-width: 234px" class="release-text text-gray-2">' + release.release_descricao;
                         str += '<br>';
                         if (release.release_target == 'interno') {
-                            str += '<a style="padding: 7px 37px;" href="' + release.release_url + '" class="btn btn-outline-light px-5 font-weight-600 release-btn">Acesse nosso site</a>';
+                            str += '<a style="padding: 7px 37px;" href="' + release.release_url + '" class="btn btn-outline-light px-5 font-weight-600 release-btn">Saiba mais</a>';
                         }
                         if (release.release_target == 'externo') {
-                            str += '<a style="padding: 7px 37px;" href="' + release.release_url + '" target="_blank" class="btn btn-outline-light px-5 font-weight-600 release-btn">Acesse nosso site</a>';
+                            str += '<a style="padding: 7px 37px;" href="' + release.release_url + '" target="_blank" class="btn btn-outline-light px-5 font-weight-600 release-btn">Saiba mais</a>';
                         }
                         str += '</p>';
                         str += '</div>';
