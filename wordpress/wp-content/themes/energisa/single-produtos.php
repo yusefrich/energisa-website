@@ -26,6 +26,7 @@
                 </div>
             </section>
 
+
             <?php
             $post->ID;
             $flex_field_array = get_post_meta($post->ID, 'flexible_content', true);

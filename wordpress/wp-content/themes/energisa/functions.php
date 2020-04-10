@@ -121,6 +121,7 @@ include('_ajax/like-post.php');
 include('_ajax/listar-por-produto.php');
 include('_ajax/releases-single.php');
 include('_ajax/releases-all.php');
+include('_ajax/post_release.php');
 
 
 function app_scripts()

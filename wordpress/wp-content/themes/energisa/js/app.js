@@ -986,7 +986,7 @@ jQuery(function ($) {
             url: wp.ajaxurl,
             type: 'POST',
             data: {
-                action: 'listarReleasesSingle',
+                action: 'listarPostRelease',
                 page: page,
                 post_type: wp.post_type,
                 postId: wp.post_id,
