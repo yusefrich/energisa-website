@@ -16,14 +16,9 @@
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script
-        src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-        crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
-<?php wp_footer(); ?>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
 
 <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
@@ -31,6 +26,92 @@
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/vendors/scrolloverflow.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/fullpage.js"></script>
 
+<script>
+    var Fp = function() {
+        
+        var init = function () {
+            <?php if (is_front_page() || is_singular( 'produtos' ) || is_singular( 'projetos' ))  : ?> <!-- is_singular( 'projetos' ) || is_singular( 'produtos' ) || -->
+            new fullpage('#fullpage', {
+                navigation: false,
+                responsiveWidth: 700,
+                parallax: true,
+                scrollOverflow: true,
+                slideSelector: "fullpage-slide",
+                scrollOverflowEndPrevent: { delay: 500, reversal: false },
+                /* normalScrollElements: '.timeline', */
+                /* scrollOverflowOptions: {
+                    disableMouse: true
+                }, */
+                onLeave: function(origin, destination, direction){
+                    console.log("Leaving section" + origin.index);
+                    if(origin.index == 0){
+                        if ($(window).width() >= 1000){
+                            jQuery(".menu-bg").removeClass("hide");
+                            jQuery(".brand-light").removeClass("d-none");
+                            jQuery(".brand-dark").addClass("d-none");
+                            
+                            jQuery(".navbar").addClass("navbar-light");
+                            jQuery(".navbar").removeClass("navbar-dark");
+                            
+                            jQuery(".search-toggle").removeClass("text-white");
+                            
+                        }
+                    }else if (destination.index == 0){
+                        if ($(window).width() >= 1000){
+
+                            jQuery(".menu-bg").addClass("hide");
+                            jQuery(".brand-light").addClass("d-none");
+                            jQuery(".brand-dark").removeClass("d-none");
+                            
+                            jQuery(".navbar").removeClass("navbar-light");
+                            jQuery(".navbar").addClass("navbar-dark");
+                            
+                            jQuery(".search-toggle").addClass("text-white");
+                        }
+                    }
+                },
+                afterLoad: function(){
+                    $('.fp-table.active .aos-init').addClass('aos-animate');
+                },
+            });
+            <?php endif; ?>
+            return;
+        }
+        var restart_scroll = function (value) {
+            <?php if (is_front_page() || is_singular( 'produtos' ) || is_singular( 'projetos' ))  : ?> <!-- is_singular( 'projetos' ) || is_singular( 'produtos' ) || -->
+
+            fullpage_api.setAutoScrolling(value);
+            <?php endif; ?>
+            return;
+        }
+        var turn_off = function () {
+            <?php if (is_front_page() || is_singular( 'produtos' ) || is_singular( 'projetos' ))  : ?> <!-- is_singular( 'projetos' ) || is_singular( 'produtos' ) || -->
+
+            fullpage_api.destroy('all');
+            <?php endif; ?>
+            /* fullpage_api.setAutoScrolling(false); */
+            return;
+        }
+
+        return {
+            init: function () {
+                return init();
+            },
+            restart_scroll: function (value) {
+                return restart_scroll(value);
+            },
+            turn_off: function () {
+                return turn_off();
+            },
+        }
+    }();
+</script>
+    <script>
+        Fp.init();
+        
+    </script>
+
+<?php wp_footer(); ?>
 <script>
 (function() {
 
@@ -123,58 +204,6 @@
     });
 </script>
 
-<?php if (is_front_page() || is_singular( 'produtos' ) || is_singular( 'projetos' ))  : ?> <!-- is_singular( 'projetos' ) || is_singular( 'produtos' ) || -->
-    <script>
-        new fullpage('#fullpage', {
-        navigation: false,
-        responsiveWidth: 700,
-        parallax: true,
-        scrollOverflow: true,
-        slideSelector: "fullpage-slide",
-        scrollOverflowEndPrevent: { delay: 500, reversal: false },
-        /* normalScrollElements: '.timeline', */
-        /* scrollOverflowOptions: {
-            disableMouse: true
-        }, */
-        onLeave: function(origin, destination, direction){
-            console.log("Leaving section" + origin.index);
-            if(origin.index == 0){
-                if ($(window).width() >= 1000){
-                    jQuery(".menu-bg").removeClass("hide");
-                    jQuery(".brand-light").removeClass("d-none");
-                    jQuery(".brand-dark").addClass("d-none");
-                    
-                    jQuery(".navbar").addClass("navbar-light");
-                    jQuery(".navbar").removeClass("navbar-dark");
-                    
-                    jQuery(".search-toggle").removeClass("text-white");
-                    
-                }
-            }else if (destination.index == 0){
-                if ($(window).width() >= 1000){
-
-                    jQuery(".menu-bg").addClass("hide");
-                    jQuery(".brand-light").addClass("d-none");
-                    jQuery(".brand-dark").removeClass("d-none");
-                    
-                    jQuery(".navbar").removeClass("navbar-light");
-                    jQuery(".navbar").addClass("navbar-dark");
-                    
-                    jQuery(".search-toggle").addClass("text-white");
-                }
-            }
-        },
-        afterLoad: function(){
-            $('.fp-table.active .aos-init').addClass('aos-animate');
-        },
-
-    });
-
-    
-    
-    
-    </script>
-<?php endif; ?>
 <script>
     const slider = document.querySelector('.timeline');
     let isDown = false;

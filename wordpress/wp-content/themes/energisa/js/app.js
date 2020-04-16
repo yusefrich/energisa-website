@@ -980,7 +980,7 @@ jQuery(function ($) {
     //############################# CARREGA RELEASES ####################################
 
     var releaseCount = 0;
-
+    
     function listarReleasesSingle(page) {
         $.ajax({
             url: wp.ajaxurl,
@@ -997,6 +997,7 @@ jQuery(function ($) {
                 let releases = dados.data.releases;
 
                 if (success) {
+                    Fp.turn_off();
                     $.each(releases, function (i, release) {
                         releaseCount++;
                         var str = "";
@@ -1020,6 +1021,7 @@ jQuery(function ($) {
                         str += '</li>';
                         $("#loadReleaseSingle").append(str);
                     })
+                    Fp.init();
                     if (hasNext === false) {
                         $("#btnLoadReleases").hide();
                     }
@@ -1030,7 +1032,7 @@ jQuery(function ($) {
             },
         })
     }
-
+    /* Fp.init(); */
     if ($("#loadReleaseSingle").length) {
         listarReleasesSingle(page)
     }
@@ -1038,15 +1040,19 @@ jQuery(function ($) {
     // Carrega mais Releases
     $("#btnLoadReleases").on('click', function (event) {
         event.preventDefault();
+        Fp.turn_off();
         paggina = $(this).data("pagina");
         listarReleasesSingle(paggina + 1)
         $(this).data('pagina', paggina + 1);
+
+        /* fullpage_api.setAutoScrolling(false); */
     })
 
 
     //############################# CARREGA RELEASES EM NOVIDADES ####################################
 
     function listarReleasesAll(page, ano) {
+        /* Fp.turn_off(); */
         $.ajax({
             url: wp.ajaxurl,
             type: 'POST',
@@ -1086,6 +1092,7 @@ jQuery(function ($) {
 
                         $("#loadReleaseAll").append(str);
                     })
+                    /* Fp.init(); */
 
                     if (hasNext === false) {
                         $("#btnLoadReleasesAll").hide();
@@ -1104,6 +1111,7 @@ jQuery(function ($) {
     // Carrega mais Releases
     $("#btnLoadReleasesAll").on('click', function (event) {
         event.preventDefault();
+        /* Fp.turn_off(); */
         paggina = $(this).data("pagina");
         var ano = $(this).data("ano");
 
@@ -1122,4 +1130,6 @@ jQuery(function ($) {
         $("#btnLoadReleasesAll").data('ano', ano);
     })
 
+
+    
 })
