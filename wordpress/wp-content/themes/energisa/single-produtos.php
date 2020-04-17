@@ -1,4 +1,19 @@
 <?php get_header(); ?>
+    <div  class="btn-next-section d-flex justify-content-center  pr-4">
+        <button  class="btn btn-primary p-4 btn-round btn-next hide"  id="btnReleasesNextS">
+            <!-- <ion-icon name="chevron-down"></ion-icon> -->
+            <i class="fas fa-angle-down first-icon"></i>
+            <i class="fas fa-angle-down second-icon"></i>
+        </button>
+    </div>
+    <div class="btn-prev-section d-flex justify-content-center  pr-4">
+        <button  class="btn btn-primary p-4 btn-round btn-next hide"  id="btnReleasesPrevS">
+            <!-- <ion-icon name="chevron-down"></ion-icon> -->
+            <i class="fas fa-angle-up first-icon"></i>
+            <i class="fas fa-angle-up second-icon"></i>
+        </button>
+    </div>
+
     <div id="fullpage">
         <?php $countCarousel = 0; ?>
         <?php while (have_posts()) :
@@ -71,12 +86,6 @@
                             <div data-aos="zoom-in" class="d-flex justify-content-center py-5">
                                 <button style="padding-left: 22px !important; padding-right: 22px !important;" class="btn btn-primary px-5" data-pagina="1" id="btnLoadReleases">
                                     Exibir mais releases
-                                </button>
-                            </div>
-                            <div data-aos="zoom-in" class="btn-next-section d-flex justify-content-center py-5">
-                                <button style="padding-left: 22px !important; padding-right: 22px !important;" class="btn btn-primary px-5"  id="btnReleasesNextS">
-                                    <!-- <ion-icon name="chevron-down"></ion-icon> -->
-                                    <i class="fas fa-angle-down"></i>
                                 </button>
                             </div>
                         </section>

@@ -24,7 +24,8 @@
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/icons/fontawesome/css/all.css">
 
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    
     <title>Canais Digitais - Energisa </title>
     <?php wp_head(); ?>
 

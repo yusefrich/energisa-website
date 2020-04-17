@@ -43,7 +43,27 @@
                     disableMouse: true
                 }, */
                 onLeave: function(origin, destination, direction){
-                    console.log("Leaving section" + origin.index);
+                    /* console.log("Leaving section" + origin.index);
+                    console.log(origin.item.id);
+                    console.log("Entering section" + destination.index);
+                    console.log(destination.item.id);
+                    console.log("Direction" + direction); */
+                    if (destination.item.id == "releases-todos"){
+                        $("#btnReleasesNextS").removeClass("d-none");
+                        $("#btnReleasesPrevS").removeClass("d-none");
+                        $("#btnReleasesNextS").addClass("animated bounceIn");
+                        $("#btnReleasesPrevS").addClass("animated bounceIn");
+                        console.log("mostrar botoes");
+                    }
+                    if (origin.item.id == "releases-todos"){
+                        $("#btnReleasesNextS").removeClass("bounceIn");
+                        $("#btnReleasesPrevS").removeClass("bounceIn");
+
+                        $("#btnReleasesNextS").addClass("d-none");
+                        $("#btnReleasesPrevS").addClass("d-none");
+
+                        console.log("esconder botoes");
+                    }
                     if(origin.index == 0){
                         if ($(window).width() >= 1000){
                             jQuery(".menu-bg").removeClass("hide");
@@ -100,6 +120,14 @@
             /* fullpage_api.setAutoScrolling(false); */
             return;
         }
+        var prev = function () {
+            <?php if (is_front_page() || is_singular( 'produtos' ) || is_singular( 'projetos' ))  : ?> <!-- is_singular( 'projetos' ) || is_singular( 'produtos' ) || -->
+
+            fullpage_api.moveSectionUp();
+            <?php endif; ?>
+            /* fullpage_api.setAutoScrolling(false); */
+            return;
+        }
 
         return {
             init: function () {
@@ -114,6 +142,9 @@
             next: function () {
                 return next();
             },
+            prev: function () {
+                return prev();
+            },
         }
     }();
 </script>
@@ -125,8 +156,9 @@
     /* btnReleasesNextS */
     $("#btnReleasesNextS").on('click', function (event) {
         Fp.next();
-
-        /* fullpage_api.setAutoScrolling(false); */
+    })
+    $("#btnReleasesPrevS").on('click', function (event) {
+        Fp.prev();
     })
 
 
