@@ -92,6 +92,14 @@
             /* fullpage_api.setAutoScrolling(false); */
             return;
         }
+        var next = function () {
+            <?php if (is_front_page() || is_singular( 'produtos' ) || is_singular( 'projetos' ))  : ?> <!-- is_singular( 'projetos' ) || is_singular( 'produtos' ) || -->
+
+            fullpage_api.moveSectionDown();
+            <?php endif; ?>
+            /* fullpage_api.setAutoScrolling(false); */
+            return;
+        }
 
         return {
             init: function () {
@@ -103,13 +111,26 @@
             turn_off: function () {
                 return turn_off();
             },
+            next: function () {
+                return next();
+            },
         }
     }();
 </script>
-    <script>
-        Fp.init();
-        
-    </script>
+<script>
+    Fp.init();
+    
+</script>
+<script>
+    /* btnReleasesNextS */
+    $("#btnReleasesNextS").on('click', function (event) {
+        Fp.next();
+
+        /* fullpage_api.setAutoScrolling(false); */
+    })
+
+
+</script>
 
 <?php wp_footer(); ?>
 <script>

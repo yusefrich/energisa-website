@@ -84,6 +84,13 @@
                                 Exibir mais releases
                             </button>
                         </div>
+                        <div data-aos="zoom-in" class="btn-next-section d-flex justify-content-center py-5">
+                            <button style="padding-left: 22px !important; padding-right: 22px !important;" class="btn btn-primary px-5"  id="btnReleasesNextS">
+                                <!-- <ion-icon name="chevron-down"></ion-icon> -->
+                                <i class="fas fa-angle-down"></i>
+                            </button>
+                        </div>
+
                     </section>
                 </div>
                 <?php
