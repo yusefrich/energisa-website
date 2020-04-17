@@ -77,19 +77,22 @@ function listarPostRelease()
     // Calcula a quantidade de páginas que será gerada: total de itens do array dividido pela quantidade de itens de cada página
     $paginas = ceil($releases_count / 3);
 
-    if (($page + 1) >= $paginas) {
-        $hasNext = false;
-    }
+    // Páginação removida a pedido do richard
+//    if (($page + 1) >= $paginas) {
+//        $hasNext = false;
+//    }
+    $hasNext = false;
 
     //array_chunk divide o array em dois em dois
-    $releses = array_chunk($itens, 3);
+    //$releses = array_chunk($itens, 3);
 
     $resposta = [
         'hasNext' => $hasNext,
         'total' => $releases_count,
         'page' => $page + 1,
         'pages' => $paginas,
-        'releases' => $releses[$page]
+        'releases' => $itens
+       // 'releases' => $releses[$page]
     ];
 
     wp_send_json_success($resposta);
